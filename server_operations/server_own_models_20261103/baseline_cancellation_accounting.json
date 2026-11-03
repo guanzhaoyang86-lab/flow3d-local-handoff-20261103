@@ -1,0 +1,78 @@
+{
+  "captured_at_utc": "2026-11-03T21:51:02.540507+00:00",
+  "raw": "3487248|b12_fs_sph_pod_calibration|CANCELLED by 98230|0:0\n3487249|b12_fs_sph_rbf_calibration|CANCELLED by 98230|0:0\n3492898|b12_jhtdb_deeponet|CANCELLED by 98230|0:0\n3492899|b12_jhtdb_unet|CANCELLED by 98230|0:0\n3492900|b12_jhtdb_fno|CANCELLED by 98230|0:0\n3492901|b12_jhtdb_unet_diffusion|CANCELLED by 98230|0:0\n3492902|b12_jhtdb_pod_calibration|CANCELLED by 98230|0:0\n3492903|b12_jhtdb_rbf_calibration|CANCELLED by 98230|0:0\n",
+  "released": [
+    {
+      "job_id": "3492898",
+      "dataset": "jhtdb",
+      "model": "deeponet",
+      "stage": "train",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3487248",
+      "dataset": "fs_sph",
+      "model": "pod",
+      "stage": "calibration",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492903",
+      "dataset": "jhtdb",
+      "model": "rbf",
+      "stage": "calibration",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492902",
+      "dataset": "jhtdb",
+      "model": "pod",
+      "stage": "calibration",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492901",
+      "dataset": "jhtdb",
+      "model": "unet_diffusion",
+      "stage": "train",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492900",
+      "dataset": "jhtdb",
+      "model": "fno",
+      "stage": "train",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492899",
+      "dataset": "jhtdb",
+      "model": "unet",
+      "stage": "train",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3487249",
+      "dataset": "fs_sph",
+      "model": "rbf",
+      "stage": "calibration",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    }
+  ]
+}

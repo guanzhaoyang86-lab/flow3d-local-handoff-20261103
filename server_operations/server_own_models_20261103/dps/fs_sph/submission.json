@@ -1,0 +1,47 @@
+{
+  "frozen_sha256": "389917e1f939c0a6e0e0e339ebfa87d8d650a6310669c431607c32ae1d1fdd00",
+  "jobs": [
+    {
+      "stage": "train",
+      "job_id": "3523728",
+      "dependency": "afterany:3523561",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--no-requeue",
+        "--dependency=afterany:3523561",
+        "--kill-on-invalid-dep=yes",
+        "--export=ALL,FLOW3D_DPS_FS_FROZEN_SHA256=389917e1f939c0a6e0e0e339ebfa87d8d650a6310669c431607c32ae1d1fdd00",
+        "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/train.slurm"
+      ]
+    },
+    {
+      "stage": "calibrate",
+      "job_id": "3523729",
+      "dependency": "afterok:3523728",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--no-requeue",
+        "--dependency=afterok:3523728",
+        "--kill-on-invalid-dep=yes",
+        "--export=ALL,FLOW3D_DPS_FS_FROZEN_SHA256=389917e1f939c0a6e0e0e339ebfa87d8d650a6310669c431607c32ae1d1fdd00",
+        "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/calibrate.slurm"
+      ]
+    },
+    {
+      "stage": "test",
+      "job_id": "3523730",
+      "dependency": "afterok:3523729",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--no-requeue",
+        "--dependency=afterok:3523729",
+        "--kill-on-invalid-dep=yes",
+        "--export=ALL,FLOW3D_DPS_FS_FROZEN_SHA256=389917e1f939c0a6e0e0e339ebfa87d8d650a6310669c431607c32ae1d1fdd00",
+        "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/test.slurm"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+--- /u/zguan2/projects/flow3d_runs/experiments/baselines_n12_jhtdb_recovery_20261030/source/src/flow_baselines/common.py
++++ source/src/flow_baselines/common.py
+@@ -6,6 +6,7 @@
+ from flow_observation.sparse_dataset import SparseFlowDataset, _stable_seed, _particle_count
+ from flow_observation.models.trajectory_encoder import TrackSetEncoder
+ from flow_observation.models.unet3d import ConditionalUNet3D
++from flow_observation.models.dit import ConditionalDiT3D
+ 
+ 
+ def check_rectangular_geometry(solid_mask):
+@@ -84,7 +85,9 @@
+         motion_scales=motion_scales, condition_flow_grid=config['condition_flow_grid'])
+     with torch.random.fork_rng(devices=[]):
+         torch.set_rng_state(torch.Generator(device='cpu').manual_seed(config['seed']+104729).get_state())
+-        if kind == 'unet_diffusion':
++        if kind == 'dit3d':
++            decoder = ConditionalDiT3D(spatial_shape=shape, condition_dim=config['condition_dim'], **config[kind])
++        elif kind == 'unet_diffusion':
+             decoder = ConditionalUNet3D(condition_dim=config['condition_dim'], **config[kind])
+         else:
+             decoder = build_decoder(kind, shape, condition_dim=config['condition_dim'], **config[kind])
+--- /u/zguan2/projects/flow3d_runs/experiments/baselines_n12_jhtdb_recovery_20261030/source/src/flow_baselines/config.py
++++ source/src/flow_baselines/config.py
+@@ -4,8 +4,8 @@
+ import math
+ from pathlib import Path
+ 
+-MODELS = ('mean', 'pod', 'unet', 'fno', 'cnn', 'deeponet', 'unet_diffusion', 'pinn', 'rbf')
+-SUPERVISED = ('unet', 'fno', 'cnn', 'deeponet', 'unet_diffusion')
++MODELS = ('mean', 'pod', 'unet', 'fno', 'cnn', 'deeponet', 'unet_diffusion', 'dit3d', 'pinn', 'rbf')
++SUPERVISED = ('unet', 'fno', 'cnn', 'deeponet', 'unet_diffusion', 'dit3d')
+ DEFAULTS = {
+     'seed': 31, 'num_particles': 2, 'views': None, 'boundary_projection': 'none',
+     'epochs': 100, 'batch_size': 1, 'learning_rate': 2e-4, 'weight_decay': 1e-4,
+@@ -22,6 +22,7 @@
+     'deeponet': {'latent': 128, 'hidden': 128, 'layers': 3},
+     'unet_diffusion': {'base_channels': 16, 'channel_multipliers': [1, 2, 4],
+                        'time_embedding_dim': 64, 'dropout': 0.},
++    'dit3d': {'hidden_dim': 192, 'depth': 4, 'num_heads': 6, 'patch_size': 4, 'dropout': 0.},
+     'pod': {'rank': 32},
+     'rbf': {'centers_per_axis': 4, 'length_scale': .35, 'ridge': 1e-4},
+     'pinn': {'hidden': 128, 'layers': 5, 'viscosity': None, 'collocation_points': 1024,
+--- /u/zguan2/projects/flow3d_runs/experiments/baselines_n12_jhtdb_recovery_20261030/source/src/flow_baselines/inference.py
++++ source/src/flow_baselines/inference.py
+@@ -82,7 +82,7 @@
+         with torch.no_grad():
+             condition = encode(system['encoder'], batch)
+         diffusion = GaussianDiffusion(cfg['diffusion_steps'], schedule='cosine', clip_x0=cfg['clip_x0'],
+-            prediction_type=cfg['prediction_type']).to(device) if kind=='unet_diffusion' else None
++            prediction_type=cfg['prediction_type']).to(device) if kind in ('unet_diffusion', 'dit3d') else None
+         for index in range(cfg['num_samples'] if diffusion is not None else 1):
+             with torch.no_grad():
+                 if diffusion is not None:
+@@ -149,8 +149,8 @@
+         'particle_indices':inputs['particle_indices'].tolist(),
+         'probe_particle_indices':inputs['probe_particle_indices'].tolist(),
+         'num_observed_particles':cfg['num_particles'], 'actual_predictions':len(fields),
+-        'prediction_type':'conditional_diffusion_samples' if kind=='unet_diffusion' else 'point_estimate',
+-        'uncertainty_available':kind=='unet_diffusion',
++        'prediction_type':'conditional_diffusion_samples' if kind in ('unet_diffusion', 'dit3d') else 'point_estimate',
++        'uncertainty_available':kind in ('unet_diffusion', 'dit3d'),
+         'deterministic_variance_is_uncertainty':False,
+         'depth_diagnostics':'joint_fit' if fitting else 'post_prediction_fit_observations_only',
+         'fixed_field_depth_fit':{'max_steps':100, 'learning_rate':cfg['depth_learning_rate'],
+@@ -168,7 +168,7 @@
+         'observed_tracks':inputs['tracks'].numpy(), 'observation_mask':inputs['mask'].numpy(),
+         'projection_matrix':inputs['projection'].numpy(), 'observation_times':inputs['times'].numpy(),
+         'domain_bounds':inputs['bounds'].numpy()}
+-    if kind=='unet_diffusion':
++    if kind in ('unet_diffusion', 'dit3d'):
+         payload['sample_variance'] = samples.var(0,unbiased=False).numpy()
+     if evaluate:
+         args = SimpleNamespace(split=split,num_particles=cfg['num_particles'],observation_seed=cfg['observation_seed'],
+--- /u/zguan2/projects/flow3d_runs/experiments/baselines_n12_jhtdb_recovery_20261030/source/src/flow_baselines/training.py
++++ source/src/flow_baselines/training.py
+@@ -18,7 +18,7 @@
+ 
+ def _loss(system, batch, kind, config, diffusion=None, generator=None, training=False):
+     condition = encode(system['encoder'], batch)
+-    if kind == 'unet_diffusion':
++    if kind in ('unet_diffusion', 'dit3d'):
+         used = condition
+         if training and config['condition_dropout']:
+             dropped = torch.rand((len(condition), 1), device=condition.device) < config['condition_dropout']
+@@ -128,7 +128,7 @@
+         system = build_system(kind, shape, config, motion).to(device)
+         ema = copy.deepcopy(system).eval().requires_grad_(False)
+         diffusion = GaussianDiffusion(config['diffusion_steps'], schedule='cosine',
+-            prediction_type=config['prediction_type'], clip_x0=config['clip_x0']).to(device) if kind == 'unet_diffusion' else None
++            prediction_type=config['prediction_type'], clip_x0=config['clip_x0']).to(device) if kind in ('unet_diffusion', 'dit3d') else None
+         optimizer = torch.optim.AdamW(system.parameters(), lr=config['learning_rate'], weight_decay=config['weight_decay'])
+         amp = bool(config['amp']) and device.type == 'cuda'
+         scaler = torch.amp.GradScaler('cuda', enabled=amp)
+--- /u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027/launch/fs_baseline.py
++++ launch/fs_dit3d.py
+@@ -42,13 +42,14 @@
+ from flow_baselines.models import build_decoder
+ from flow_observation.models.trajectory_encoder import TrackSetEncoder
+ from flow_observation.models.unet3d import ConditionalUNet3D
++from flow_observation.models.dit import ConditionalDiT3D
+ from flow_observation.diffusion import GaussianDiffusion
+ from flow_observation.dps.observations import ProjectedTrajectoryLikelihood
+ from flow_observation.advection import advect_particles
+ from flow_observation.interpolation import sample_velocity
+ from flow_baselines.linear import RBFField
+ 
+-LEARNED = ("unet", "fno", "cnn", "deeponet", "unet_diffusion")
++LEARNED = ("unet", "fno", "cnn", "deeponet", "unet_diffusion", "dit3d")
+ MODELS = ("mean", "pod", *LEARNED, "rbf")
+ FORMAT = "fs-transient-baseline-v1"
+ SCOPE = "one_physical_material_case_chronological_holdout"
+@@ -235,7 +236,9 @@
+         with torch.random.fork_rng(devices=[]):
+             torch.manual_seed(config["seed"] + 104729)
+             self.time_adapter = nn.Sequential(nn.Linear(7, config["condition_dim"]), nn.SiLU(), nn.Linear(config["condition_dim"], config["condition_dim"]))
+-            if kind == "unet_diffusion":
++            if kind == "dit3d":
++                self.decoder = ConditionalDiT3D(spatial_shape=stats["shape"], condition_dim=config["condition_dim"], **config[kind])
++            elif kind == "unet_diffusion":
+                 self.decoder = ConditionalUNet3D(condition_dim=config["condition_dim"], **config[kind])
+             else:
+                 self.decoder = build_decoder(kind, stats["shape"], condition_dim=config["condition_dim"], **config[kind])
+@@ -400,7 +403,7 @@
+     optimizer = torch.optim.AdamW(system.parameters(), lr=config["learning_rate"], weight_decay=config["weight_decay"])
+     use_amp = config["amp"] and device.type == "cuda"
+     scaler = torch.amp.GradScaler("cuda", enabled=use_amp)
+-    diffusion = make_diffusion(config, device) if args.model == "unet_diffusion" else None
++    diffusion = make_diffusion(config, device) if args.model in ("unet_diffusion", "dit3d") else None
+     shuffle = torch.Generator().manual_seed(config["seed"])
+     start, updates, skipped, best = 1, 0, 0, math.inf
+     history = []
+@@ -565,7 +568,7 @@
+         return field, {"depth": depth, "fitting": info}
+     system = TemporalSystem(kind, saved["config"], saved["statistics"]).to(device)
+     system.load_state_dict(saved["ema_system"]); system.eval().requires_grad_(False)
+-    diffusion = make_diffusion(config, device) if kind == "unet_diffusion" else None
++    diffusion = make_diffusion(config, device) if kind in ("unet_diffusion", "dit3d") else None
+     draws = []
+     with torch.no_grad():
+         conditions = [system.condition(observation, torch.tensor([j], device=device)) for j in range(t)]
+@@ -697,11 +700,11 @@
+                   "flow_group_id": row["flow_group_id"], "source_case_sha256": digest(row["path"]), "output_sha256": digest(npz),
+                   "metrics": metrics, "diagnostics": diagnostics, "fitting": extra.get("fitting") if extra else None,
+                   "reference_used_during_inference": False, "reference_masks_used_during_inference": False,
+-                  "elapsed_seconds": time.monotonic() - began, "model_adaptation": "physical_time_conditioned_spatial_baseline",
++                  "elapsed_seconds": time.monotonic() - began, "model_adaptation": "physical_time_conditioned_full_volume_DiT3D" if kind == "dit3d" else "physical_time_conditioned_spatial_baseline",
+                   "training_seed": saved["config"]["seed"] if kind in LEARNED else None,
+                   "fit_seed": config["seed"] if kind in ("pod", "rbf") else None,
+                   "checkpoint_epoch": saved["epoch"] if saved else None,
+-                  "diffusion_temporal_law": "independent_per_frame_conditional_marginals" if kind == "unet_diffusion" else None}
++                  "diffusion_temporal_law": "independent_per_frame_conditional_marginals" if kind in ("unet_diffusion", "dit3d") else None}
+         write_json(target, record); rows.append(record)
+         write_json(progress_path, {"status": "running", "request": request, "completed_cases": len(rows), "total_cases": len(indices)})
+     names = ("physical_velocity_relative_l2", "physical_velocity_vector_rmse", "independent_probe_velocity_vector_rmse_m_s")

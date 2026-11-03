@@ -1,0 +1,20 @@
+{
+  "jhtdb": {
+    "root": "/work/hdd/biup/zguan2/datasets/experiment_adapters_20261027/jhtdb_frozen32",
+    "manifest_sha256": "9b2faf3c0f28c6322fe7e071f1ca2fa914a191c052df674cdc0c8d8f9accdfb6",
+    "split_counts": {
+      "train": 2500,
+      "validation": 312,
+      "test": 313
+    }
+  },
+  "fs_sph": {
+    "root": "/work/nvme/biup/zguan2/fs_sph_gpu/datasets/fs_sph_3429811_flow32_windows_20261027",
+    "manifest_sha256": "385cfb033b7a3f8084704f4e4dfa0bdd182a81a3456ec2969a166fbd75d9abf0",
+    "split_counts": {
+      "test": 18,
+      "train": 126,
+      "validation": 18
+    }
+  }
+}

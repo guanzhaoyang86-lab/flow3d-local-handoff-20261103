@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "scope": "CPU interface/gate validation only; no training or Tucker computation",
+  "cpu_tests": 8,
+  "cpu_test_seconds": 0.338,
+  "checks": [
+    "Single seed31 static config",
+    "Observation/probe disjointness and deterministic N12 seed47",
+    "Forbidden reference keys blocked; changed lid metadata leaves condition unchanged",
+    "Real exterior solid retained in reference support and masked metrics",
+    "Native lattice velocity units",
+    "Posthoc probes work without observation_mask_3d",
+    "Full completion and source hash gates accept valid fixture",
+    "Incomplete count/status/adapter/hash fixtures rejected",
+    "Bash and Python syntax",
+    "58 copied mathematical source files byte-identical"
+  ],
+  "frozen_manifest_sha256": "1a87b4be748ccd385ccf2d8d10567dd600aba7a11317add7969a125b5166d01d",
+  "frozen_files": 67,
+  "submitted_inputs_unchanged": {
+    "/u/zguan2/projects/flow3d_runs/experiments/tensor_dit_n12_20261027/frozen_manifest.json": {
+      "sha256": "7166fcba132f8444fe358471c4b5bf78c7bd76f7906078b47771ff0b4070ae17",
+      "verified_files": 81
+    },
+    "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/operation_manifest.json": {
+      "sha256": "c50df90cec484e49a274806fc9dd0e38a2135d25cb4ffb11f363a2fefcbd4fa6",
+      "verified_files": 7
+    },
+    "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_adapter/operation_manifest.json": {
+      "sha256": "e233989861f8927f2680c6455f5c738e68ac79f286ed65cea16db3f0a4823d79",
+      "verified_files": 3
+    }
+  },
+  "gpu_validation": "Deferred to real 8-train/2-validation pilot after Tucker rank gate",
+  "formal_test": "Not included; train and validation only",
+  "runtime_frozen_verification": "passed",
+  "live_incomplete_release_rejected": true,
+  "slurm_test_only": {
+    "exit_code": 0,
+    "dependency": "afterok:3523604,afterany:3523886",
+    "estimated_start_server_local": "2026-11-08T21:52:14",
+    "note": "Test-only scheduler estimate; no job submission and no guaranteed start time."
+  }
+}

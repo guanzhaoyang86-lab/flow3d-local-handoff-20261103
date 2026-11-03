@@ -1,0 +1,35 @@
+{
+  "captured_at_utc": "2026-11-03T20:44:44.750956+00:00",
+  "operation_sha256": "c50df90cec484e49a274806fc9dd0e38a2135d25cb4ffb11f363a2fefcbd4fa6",
+  "cpu_tests": {
+    "passed": true,
+    "count": 5,
+    "scope": "mocked orchestration gates; no training"
+  },
+  "shell_syntax": {
+    "passed": true,
+    "files": [
+      "jhtdb.slurm",
+      "fs_sph.slurm"
+    ]
+  },
+  "slurm_test_only": {
+    "passed": true,
+    "requests": [
+      "jhtdb.slurm",
+      "fs_sph.slurm"
+    ],
+    "creates_real_jobs": false,
+    "observed_estimated_start": "2026-11-08T20:35:23 America/Chicago; dynamic estimate only"
+  },
+  "partition_max_time": "2-00:00:00",
+  "requested_times": {
+    "jhtdb": "21:00:00",
+    "fs_sph": "13:00:00"
+  },
+  "gpu_validation": "Deferred to submitted allocation; no GPU/Tucker/training executed on login node",
+  "restart_limitations": [
+    "Last fully saved epoch resumes with optimizer/EMA/scaler/RNG.",
+    "First epoch interruption before checkpoint, or final checkpoint saved before run.json completion, requires explicit output inspection rather than unsafe automatic overwrite."
+  ]
+}

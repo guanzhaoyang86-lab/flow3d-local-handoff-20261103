@@ -1,12 +1,13 @@
 # Flow3D 本地接续包 · 2026-11-03
 
-这是服务器实验的代码与结果快照，适用于把后续工作交给本地 Codex。服务器已提交的任务继续按原计划执行。本次导出没有提交、取消或重启任何计算任务。
+这是服务器实验的代码与结果快照，适用于把后续工作交给本地 Codex。分工已按用户新指令更新：服务器负责 DiT3D、Tensor-DiT、Flow3D-DPS，JHTDB 和 FS-SPH 都跑，LBM 完成后追加。原 8 个 baseline 作业已取消转本地，已有结果保留；LBM 生成作业保留。最新分工见 [work_assignment.json](results/work_assignment.json)。
 
 ## 从这里开始
 
 ```powershell
 git -c core.autocrlf=false clone https://github.com/guanzhaoyang86-lab/flow3d-local-handoff-20261103.git
 cd flow3d-local-handoff-20261103
+git config core.autocrlf false
 python local_support/local_baselines.py list
 ```
 
@@ -21,6 +22,7 @@ python local_support/local_baselines.py list
 | [models/flow3d-dps](models/flow3d-dps) | Flow3D-DPS：无条件流场 prior 训练、轨迹约束后验采样 |
 | [experiments](experiments) | 本轮 baseline/JHTDB 修复版/Tensor-DiT 的冻结源码、参数、适配代码和协议 |
 | [data_generation](data_generation) | LBM 数据生成与连续作业相关代码、配置 |
+| [server_operations](server_operations) | 本轮服务器 DiT3D、Tensor-DiT、DPS 的冻结适配源码、配置、检查与提交记录 |
 
 本轮 FS-SPH/JHTDB baseline 应使用对应冻结实验版本，不能把三个目录里的同名 Python 包混装。后续训练只用种子 **31**；历史 32/33 的完成结果保留。源文件清单与校验值见 [source_inventory.json](source_inventory.json)。
 
@@ -33,13 +35,15 @@ python local_support/local_baselines.py list
 | FS-SPH Mean/POD 拟合 | 完成 |
 | FS-SPH CNN、DeepONet、UNet、FNO、UNet diffusion，seed31 | 100 epochs 完成 |
 | JHTDB Mean/POD 拟合与 CNN seed31 | 完成；CNN 为 100 epochs |
-| JHTDB 其余四个神经 baseline | 继续由服务器排队执行 |
-| 两个数据集的 POD/RBF 校准 | 继续由服务器排队执行 |
+| JHTDB 其余四个神经 baseline | 已取消服务器作业，交本地继续 |
+| 两个数据集的 POD/RBF 校准 | 已取消服务器作业，交本地继续 |
 | LBM 50 万轨迹 | 已完成 1,000/3,125 案例、160,000/500,000 轨迹；连续生成任务仍由服务器负责 |
-| 本轮 Tensor-DiT | 原提交已取消，尚无本轮正式结果；可由本地 Codex 准备独立入口 |
-| 本轮 DiT3D / Flow3D-DPS | 已提供代码；尚无本轮正式完成记录 |
+| 本轮 Tensor-DiT | 服务器负责；本地不重复运行 |
+| 本轮 DiT3D / Flow3D-DPS | 服务器负责；本地不重复运行 |
 
-导出时共 **9 个 PENDING 作业**，详见带时间戳的 [server_queue.json](results/server_queue.json)。这是快照；启动本地正式任务前必须更新状态并检查服务器结果，不能把“已不在队列”直接理解成“尚未运行”。旧 LBM 条件扩散结果单独归档；旧提交计划不等于所有实验完成。
+实际作业见带时间戳的 [server_queue.json](results/server_queue.json)。已明确分配本地的任务允许旧快照，但仍阻止已完成或服务器活跃的重复任务。experiments/ 中的旧队列和三种子计划是历史证据。
+
+本轮服务器顺序和评估范围见 [execution_policy.json](server_operations/server_own_models_20261103/execution_policy.json)。DPS 分为训练、validation 校准和 held-out test 三个作业；DiT3D、Tensor-DiT 本轮安排训练与 validation，held-out 预测评估留待后续。因此作业数量包含数据准备和评估阶段，不等于模型数量。
 
 ## 权重和数据如何取回
 
@@ -58,9 +62,9 @@ python results/transfer_assets.py --list
 
 > 阅读仓库根目录 AGENTS.md 和 local_support/README.txt，核对已完成结果与服务器分工。
 > 先配置本机 CUDA、按需取回适配数据和 checkpoint，完成独立的单案例 validation smoke。
-> 保留服务器排队任务，后续只用 seed31。优先准备尚未提交的模型实验；所有本地输出写入 local_runs/。
-> Tensor-DiT 需要在 WSL2 中增加独立准备入口，保持冻结源码、Tucker rank gate 和来源校验；
-> DiT3D/DPS 不能直接把 FS 的时变 window manifest 当作静态流场 manifest。
+> 本地接手 JHTDB 的 DeepONet、UNet、FNO、UNet diffusion，以及两个数据集的 POD/RBF 校准，只用 seed31。已完成训练不重跑。
+> 正式校准入口 local_support/local_calibration.py 保留3个sigma、前8个validation案例、1000步；显式 --execute 才运行，--resume 需相同 --run-name。
+> DiT3D、Tensor-DiT、DPS 留服务器，不重复启动。所有本地新输出写入 local_runs/。
 > 没有实际跑过的步骤应明确记录，不能用训练 loss 代替最终测试集指标。
 
 这次上传是时间点快照，服务器后续产生的新结果不会自动同步到 GitHub。

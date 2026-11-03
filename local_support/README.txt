@@ -5,7 +5,7 @@ Windows 5090 / 64 GB 本地接续说明（2026-11-03 快照）
   experiments/ 保留三个实验的冻结源、配置与协议；models/ 是其他模型代码快照。
   results/ 是上传时已有结果；大 checkpoint / 数据是否已下载，以 results/asset_manifest.json 清单为准。
   local_runs/ 是本地新输出，不能覆盖 results/ 或修改 experiments/ 的冻结文件。
-  results/server_queue.json 是时间点快照，不是实时队列。服务器原任务仍继续运行。
+  results/server_queue.json 是时间点快照。最新分工见 results/work_assignment.json：服务器跑DiT3D/Tensor-DiT/DPS并保留LBM生成；8个baseline任务已取消转本地。
 
 先保护原始字节
   克隆仓库时关闭 Git 自动换行转换：git -c core.autocrlf=false clone https://github.com/guanzhaoyang86-lab/flow3d-local-handoff-20261103.git
@@ -62,10 +62,10 @@ Windows 5090 / 64 GB 本地接续说明（2026-11-03 快照）
   即使服务器在跑该模型的训练或全量校准，这种本地小预检也是独立任务。
 
 正式 baseline 训练
-    & $py local_support/local_baselines.py train --dataset jhtdb --model cnn --data-root D:\flow_data\jhtdb_frozen32
+    & $py local_support/local_baselines.py train --dataset jhtdb --model deeponet --data-root D:\flow_data\jhtdb_frozen32
   默认只打印命令；--execute 才运行。正式训练固定单种子 31、N=12、100 epochs。
   服务器已分配 PENDING/RUNNING 等状态的同一训练任务会被拒绝；已有 completed 结果也不重训。
-  快照缺失、格式不可解析或超过 24 小时时，不启动正式训练。让能访问服务器的 Codex 更新快照。
+  快照缺失或不可解析时不启动；已明确分配本地的任务允许旧快照，仍阻止已完成或服务器活跃的重复任务。
   本地预检不需要更新快照。不要取消服务器任务，也不要为了绕过检查手工伪造队列状态。
   Windows OpenSSH 配好能只读访问服务器的别名（例如 deltaai）后，可更新队列：
     & $py local_support/local_baselines.py refresh-queue --host deltaai
@@ -74,8 +74,10 @@ Windows 5090 / 64 GB 本地接续说明（2026-11-03 快照）
   刷新会保留以前分配过的训练任务；任务从 squeue 消失后仍需核查 accounting/完成结果，不能据此重训。
   如果有真正未完成且服务器不再负责的任务，可用 --resume <checkpoint> 在新的 local_runs/ 继续。
   --epochs 表示总轮数；当前工具保持总计 100 轮。模型自己继续核对 config/manifest 和 checkpoint。
-  当前工具没有实现全套 POD/RBF sigma 校准循环，也不会自动发起 held-out test。
-  正式校准仍按 3 sigma × 8 validation 案例 × 1000 步；需本地 Codex 先与服务器分工，再另建运行计划。
+  正式校准入口已支持原生Windows，保留3 sigma × 前8个validation案例 × 1000步，不自动运行test：
+    & $py local_support/local_calibration.py --dataset jhtdb --model rbf --data-root D:\flow_data\jhtdb_frozen32 --run-name sigma_s31 --execute
+  POD用 --model pod 并先下载已有checkpoint；FS用 --dataset fs_sph 及相应数据目录。
+  中断后加 --resume 并使用同一 --run-name。先验证请求及产物哈希，再复用预测，拒绝覆盖不匹配结果。
 
 已有任务如何选择
   Mean/POD 已有结果通常直接使用。JHTDB POD 实现在 CPU 做 float64 snapshot eigensystem；64 GB RAM 足够容纳当前矩阵。
@@ -83,10 +85,12 @@ Windows 5090 / 64 GB 本地接续说明（2026-11-03 快照）
   CNN、DeepONet、UNet、FNO、UNet diffusion 的具体服务器状态以 queue/results 快照为准。
   POD/RBF 每案例逆问题优化参数少，但 FS 每步涉及全部原生时间帧和 RK4，所以可能耗时。
 
-其他模型接续入口（尚未由此 launcher 自动化）
+其他模型代码入口（本轮服务器负责，本地不重复启动）
+  本轮正式入口、数据适配与观测协议以 server_operations/server_own_models_20261103/ 的冻结快照为准。
+  以下 models/ 命令用于查看原始开发接口；正式观测选择、时间适配和模型标签需使用本轮冻结实现。
   1. DiT3D 条件扩散：
        & $py models/flow3d-current/scripts/train_sparse_track_diffusion.py --help
-     新的 JHTDB 本地实验可使用 --architecture dit3d --num-particles 12 --seed 31 --epochs 100 --batch-size 1。
+     本轮 DiT3D 使用 server_operations/ 中的 full-volume DiT 协议适配，观测种子47、训练种子31。
      必须显式提供 --manifest 和新的 --output-dir；先跑 1 epoch 检查显存和损失，再按该实验的 --resume 到 100。
      使用 N=12 不等于自动复现所有冻结 baseline 观察协议，正式比较前需核对 views/observation seeds/配置。
   2. DPS：先训练不以轨迹为条件的 flow prior，再进行 trajectory-guided posterior sampling：
@@ -110,5 +114,5 @@ Windows 5090 / 64 GB 本地接续说明（2026-11-03 快照）
 
 给本地 Codex 的开场任务
   “阅读根目录 AGENTS.md、local_support/AGENTS.md 和 local_support/README.txt。先核验文件/下载清单及 CUDA，读取 server_queue 快照；
-   不取消也不重复服务器任务。完成一次独立 RBF/CNN validation smoke，再根据尚未分配的任务准备
-   单种子31本地实验。需要时为 WSL2 增加独立 Tensor preparation wrapper，保留冻结源与已有结果。”
+   完成一次独立 RBF/CNN validation smoke，然后本地接手 JHTDB 的 DeepONet/UNet/FNO/UNet diffusion，
+   以及两数据集POD/RBF校准。只用seed31，已完成训练不重跑；三个自有模型留服务器。保留冻结源与已有结果。”

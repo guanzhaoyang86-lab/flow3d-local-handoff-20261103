@@ -1,0 +1,155 @@
+{
+  "updated_at_utc": "2026-11-03T21:51:02.540507+00:00",
+  "training_seed": 31,
+  "N": 12,
+  "epochs": 100,
+  "authorization": "User reassigned remaining baselines to local; server DiT3D/Tensor-DiT/DPS on both JHTDB+FS-SPH and LBM after verified completion.",
+  "server": {
+    "models": [
+      "dit3d",
+      "tensor_dit",
+      "dps"
+    ],
+    "datasets": [
+      "jhtdb",
+      "fs_sph"
+    ],
+    "later_datasets": [
+      "lbm"
+    ],
+    "protected_generation_job_id": "3515292"
+  },
+  "local": {
+    "datasets": [
+      "jhtdb",
+      "fs_sph"
+    ],
+    "models": [
+      "mean",
+      "pod",
+      "cnn",
+      "deeponet",
+      "unet",
+      "fno",
+      "unet_diffusion",
+      "rbf"
+    ],
+    "stages": [
+      "train",
+      "calibration",
+      "evaluation"
+    ],
+    "remaining_training": [
+      {
+        "dataset": "jhtdb",
+        "model": "deeponet"
+      },
+      {
+        "dataset": "jhtdb",
+        "model": "unet"
+      },
+      {
+        "dataset": "jhtdb",
+        "model": "fno"
+      },
+      {
+        "dataset": "jhtdb",
+        "model": "unet_diffusion"
+      }
+    ],
+    "remaining_calibration": [
+      {
+        "dataset": "jhtdb",
+        "model": "pod"
+      },
+      {
+        "dataset": "jhtdb",
+        "model": "rbf"
+      },
+      {
+        "dataset": "fs_sph",
+        "model": "pod"
+      },
+      {
+        "dataset": "fs_sph",
+        "model": "rbf"
+      }
+    ]
+  },
+  "released_server_jobs": [
+    {
+      "job_id": "3492898",
+      "dataset": "jhtdb",
+      "model": "deeponet",
+      "stage": "train",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3487248",
+      "dataset": "fs_sph",
+      "model": "pod",
+      "stage": "calibration",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492903",
+      "dataset": "jhtdb",
+      "model": "rbf",
+      "stage": "calibration",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492902",
+      "dataset": "jhtdb",
+      "model": "pod",
+      "stage": "calibration",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492901",
+      "dataset": "jhtdb",
+      "model": "unet_diffusion",
+      "stage": "train",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492900",
+      "dataset": "jhtdb",
+      "model": "fno",
+      "stage": "train",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492899",
+      "dataset": "jhtdb",
+      "model": "unet",
+      "stage": "train",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3487249",
+      "dataset": "fs_sph",
+      "model": "rbf",
+      "stage": "calibration",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    }
+  ],
+  "completed_results": "Preserve; do not retrain completed models.",
+  "lbm_local": "Wait for verified adapter and portable baseline support."
+}

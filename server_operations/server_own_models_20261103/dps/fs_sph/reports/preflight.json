@@ -1,0 +1,51 @@
+{
+  "status": "passed_cpu_data_preflight",
+  "split_counts": {
+    "train": 126,
+    "validation": 18,
+    "test": 18
+  },
+  "native_times": [
+    0.0,
+    4.111438872404242e-06,
+    0.002055719436202121,
+    0.004111438872404242,
+    0.0061671583086063625,
+    0.008222877744808484,
+    0.010278597181010605,
+    0.012334316617212725,
+    0.014390036053414847,
+    0.016445755489616968,
+    0.01850147492581909,
+    0.02055719436202121,
+    0.022612913798223326,
+    0.02466863323442545,
+    0.026724352670627574,
+    0.028780072106829695,
+    0.030835791543031812,
+    0.032891510979233936,
+    0.034947230415436056,
+    0.03700294985163818
+  ],
+  "native_time_step_range": [
+    4.111438872404242e-06,
+    0.002055719436202124
+  ],
+  "prior_shape": [
+    20,
+    3,
+    32,
+    32,
+    32
+  ],
+  "observation_shape": [
+    1,
+    12,
+    20,
+    2
+  ],
+  "train_reference_support_fraction": 0.01795501634478569,
+  "prior_semantics": "Shared unconditional 3D frame prior; the 20-frame joint prior factorizes. The native-time trajectory likelihood couples frames. No learned temporal joint prior is claimed.",
+  "production_gpu_validation": "pending_slurm",
+  "production_training_performed": false
+}

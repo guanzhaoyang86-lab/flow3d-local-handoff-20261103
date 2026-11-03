@@ -1,0 +1,37 @@
+{
+  "schema": "own_model_fs_transient_dps_v1",
+  "dataset": "fs_sph_3429811",
+  "manifest": "/work/nvme/biup/zguan2/fs_sph_gpu/datasets/fs_sph_3429811_flow32_windows_20261027/manifest.json",
+  "manifest_sha256": "385cfb033b7a3f8084704f4e4dfa0bdd182a81a3456ec2969a166fbd75d9abf0",
+  "result_root": "/work/hdd/biup/zguan2/results/server_own_models_20261103/dps/fs_sph",
+  "expected_split_counts": {"train": 126, "validation": 18, "test": 18},
+  "training": {
+    "epochs": 100, "seed": 31, "batch_size": 1,
+    "learning_rate": 0.0002, "weight_decay": 0.0001, "ema_decay": 0.999,
+    "gradient_clip": 1.0, "save_every": 10, "amp": true,
+    "diffusion_steps": 1000, "prediction_type": "v",
+    "dit_hidden_dim": 192, "dit_depth": 4, "dit_heads": 6, "patch_size": 4
+  },
+  "sampling": {
+    "num_particles": 12, "views": [0], "observation_seed": 47,
+    "seed": 47, "num_probes": 32, "num_samples": 2,
+    "sampler": "ddim", "sampling_steps": 50, "eta": 1.0,
+    "guidance_step": 0.0001, "gradient_objective": "nll", "max_update_rms": 0.1,
+    "depth_step": 0.0001, "depth_mode": "langevin",
+    "likelihood": "transition", "integrator": "rk4", "trajectory_substeps": 4,
+    "boundary_projection": "none"
+  },
+  "calibration": {
+    "split": "validation", "case_indices": [0,1,2,3,4,5,6,7],
+    "sigma_candidates": [0.02,0.05,0.1],
+    "selection_metric": "posterior_mean_physical_velocity_relative_l2",
+    "tie_break": "smallest_sigma", "test_used": false
+  },
+  "test_evaluation": {"split": "test", "case_indices": "all", "requires_frozen_selection": true},
+  "resource_caps_hours": {"train": 8, "calibrate": 8, "test": 16},
+  "scope": "one_physical_material_case_chronological_holdout",
+  "prior_semantics": "Shared unconditional 3D frame prior; the 20-frame joint prior factorizes. The native-time trajectory likelihood couples frames. No learned temporal joint prior is claimed.",
+  "missing_support": "Training-only supported-cell loss plus independent Gaussian nuisance latent score, fixed nuisance weight 1; support is never a model or posterior input.",
+  "time_measure": "One trapezoid-weighted random native frame per train window per epoch; validation evaluates all native frames with trapezoid weights.",
+  "notes": ["No trajectory encoder or observations in prior training.", "DDIM-DPS50 is an explicitly accelerated approximate sampler.", "Reference fields, support, true 3D tracks and probes are unavailable to posterior reconstruction.", "Resource caps are allocation limits, not duration forecasts."]
+}

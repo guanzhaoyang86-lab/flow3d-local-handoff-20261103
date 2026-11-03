@@ -1,0 +1,41 @@
+{
+  "schema": "tensor_dit_lbm_seed31_v1",
+  "training_seeds": [31],
+  "epochs": 100,
+  "N": 12,
+  "observation_seed": 47,
+  "rank_candidates": [4, 8, 12, 16],
+  "hooi_iterations": 2,
+  "result_root": "/work/hdd/biup/zguan2/results/server_own_models_20261103/tensor_dit",
+  "baseline_root": "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027",
+  "baseline_frozen_sha256": "871e123be831864b673adc07c637124435c4f3a8ad26891f893f0e37029cb39e",
+  "datasets": {
+    "lbm": {
+      "derived_root": "/work/hdd/biup/zguan2/datasets/experiment_adapters_20261103/lbm_frozen32",
+      "raw_root": "/work/hdd/biup/zguan2/datasets/lbm32_xz_500k_deltaai_arm_20261023",
+      "dataset_id": "lbm32_xz_500k_20261103",
+      "adapter_sha256": "34819a1e3de2c3704d2e091a2d0eafac6266c23b2ff524d7872b3559e1d1d7af"
+    }
+  },
+  "jobs": [
+    {"key": "lbm_tensor_prepare", "dataset": "lbm", "stage": "tensor_prepare"},
+    {"key": "lbm_pilot", "dataset": "lbm", "stage": "pilot"},
+    {"key": "lbm_tensor_dit", "dataset": "lbm", "stage": "train", "tasks": [
+      {"model": "tensor_dit", "dataset": "lbm", "seed": 31, "epochs": 100,
+       "output_dir": "/work/hdd/biup/zguan2/results/server_own_models_20261103/tensor_dit/lbm/tensor_dit_s31"}
+    ]}
+  ],
+  "dependency": "afterok:3523604",
+  "resources": {"gpus": 1, "cpus": 8, "memory": "64G", "walltime": "21:00:00"},
+  "scientific_scope": "Frozen lid-driven cavity snapshots; not validated turbulence.",
+  "velocity_units": "lattice cells per LBM step",
+  "time_units": "LBM steps",
+  "boundary_projection": "none",
+  "per_case_lid_velocity_condition": false,
+  "formal_evaluation": "Training and validation only; held-out test evaluation requires a later explicit task.",
+  "source_provenance": {
+    "parent": "/u/zguan2/projects/flow3d_runs/experiments/tensor_dit_n12_20261027",
+    "parent_frozen_sha256": "7166fcba132f8444fe358471c4b5bf78c7bd76f7906078b47771ff0b4070ae17",
+    "mathematical_library_changed": false
+  }
+}

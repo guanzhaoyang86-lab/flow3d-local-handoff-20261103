@@ -1,0 +1,240 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-20T19:29:47.082357+00:00",
+  "training_invoked": false,
+  "model_inference_invoked": false,
+  "manifest_sha256": "c7ae7e79a1106176d6d75107f6ac353707332d31b91ccc3c2bc36bb1dab1f32b",
+  "split_counts": {
+    "train": 798,
+    "validation": 101,
+    "test": 101
+  },
+  "prior_field_shape": [
+    3,
+    32,
+    32,
+    32
+  ],
+  "case_id": "case_00018",
+  "baseline_source_hashes_verified": 20,
+  "full3d_observations_checked": true,
+  "existing_conditional_inputs_match": "exact_tracks_mask_bounds_times",
+  "observation_geometry": [
+    {
+      "N": 2,
+      "views": [
+        0,
+        1,
+        2
+      ],
+      "track_shape": [
+        3,
+        2,
+        20,
+        2
+      ],
+      "unknown_depth_count": 0
+    },
+    {
+      "N": 2,
+      "views": [
+        0
+      ],
+      "track_shape": [
+        1,
+        2,
+        20,
+        2
+      ],
+      "unknown_depth_count": 2
+    },
+    {
+      "N": 4,
+      "views": [
+        0,
+        1,
+        2
+      ],
+      "track_shape": [
+        3,
+        4,
+        20,
+        2
+      ],
+      "unknown_depth_count": 0
+    },
+    {
+      "N": 4,
+      "views": [
+        0
+      ],
+      "track_shape": [
+        1,
+        4,
+        20,
+        2
+      ],
+      "unknown_depth_count": 4
+    },
+    {
+      "N": 6,
+      "views": [
+        0,
+        1,
+        2
+      ],
+      "track_shape": [
+        3,
+        6,
+        20,
+        2
+      ],
+      "unknown_depth_count": 0
+    },
+    {
+      "N": 6,
+      "views": [
+        0
+      ],
+      "track_shape": [
+        1,
+        6,
+        20,
+        2
+      ],
+      "unknown_depth_count": 6
+    },
+    {
+      "N": 12,
+      "views": [
+        0,
+        1,
+        2
+      ],
+      "track_shape": [
+        3,
+        12,
+        20,
+        2
+      ],
+      "unknown_depth_count": 0
+    },
+    {
+      "N": 12,
+      "views": [
+        0
+      ],
+      "track_shape": [
+        1,
+        12,
+        20,
+        2
+      ],
+      "unknown_depth_count": 12
+    },
+    {
+      "N": 24,
+      "views": [
+        0,
+        1,
+        2
+      ],
+      "track_shape": [
+        3,
+        24,
+        20,
+        2
+      ],
+      "unknown_depth_count": 0
+    },
+    {
+      "N": 24,
+      "views": [
+        0
+      ],
+      "track_shape": [
+        1,
+        24,
+        20,
+        2
+      ],
+      "unknown_depth_count": 24
+    },
+    {
+      "N": 48,
+      "views": [
+        0,
+        1,
+        2
+      ],
+      "track_shape": [
+        3,
+        48,
+        20,
+        2
+      ],
+      "unknown_depth_count": 0
+    },
+    {
+      "N": 48,
+      "views": [
+        0
+      ],
+      "track_shape": [
+        1,
+        48,
+        20,
+        2
+      ],
+      "unknown_depth_count": 48
+    },
+    {
+      "N": 96,
+      "views": [
+        0,
+        1,
+        2
+      ],
+      "track_shape": [
+        3,
+        96,
+        20,
+        2
+      ],
+      "unknown_depth_count": 0
+    },
+    {
+      "N": 96,
+      "views": [
+        0
+      ],
+      "track_shape": [
+        1,
+        96,
+        20,
+        2
+      ],
+      "unknown_depth_count": 96
+    },
+    {
+      "N": 2,
+      "observation_type": "full3d",
+      "track_shape": [
+        2,
+        20,
+        3
+      ],
+      "unknown_depth_count": 0
+    },
+    {
+      "N": 96,
+      "observation_type": "full3d",
+      "track_shape": [
+        96,
+        20,
+        3
+      ],
+      "unknown_depth_count": 0
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+DiT3D preparation, 2026-11-03
+
+Method identity: dit3d, full-volume ConditionalDiT3D without Tucker compression. Denoiser bytes match flow3d-current/src/flow_observation/models/dit.py. Its isolated trainer reuses the frozen baseline observation protocol; the older static CLI does not implement the current observation/probe policy.
+N12, XZ/view0, observation/sampling seed47, trainseed31, batch1, 100 total epochs. DiT width192/depth4/heads6/patch4; v prediction/cosine1000; motion-residual-v2 encoder and coarse-condition supervision0.1.
+JHTDB: unchanged2500/312/313 split; train-only normalization/motion scales; fixed32-probe tail, epoch-varying observation pool; no known velocity boundaries.
+FS: chronological126/18/18 windows of ONE physical case; fixed published N12/seed47 tracks, native absolute times and unit scales, time adapter. One trapezoid-weighted frame/window in training, all frames in validation. Frame marginals are not a joint temporal prior. Supported cells train physical targets; unsupported cells use independent N01 clean latents and the original separately normalized analytic nuisance score loss. Support/reference/probe truth never enters inference.
+Each allocation runs one complete formal epoch as its GPU pilot, then resumes that checkpoint from epoch2 to100 without another queue wait. Interrupted allocations resume atomic latest.pt with unchanged source/data binding; no automatic requeue.
+Scripts launch/{jhtdb,fs_sph}.slurm request1GPU/8CPU/64G, caps24h/8h respectively; caps are not measured durations. job names own3_{dataset}_dit3d. Parent submits after review with the exact DIT_FROZEN_SHA256 in submission_plan.json. This preparation did not submit/cancel jobs.
+Outputs: /work/hdd/biup/zguan2/results/server_own_models_20261103/dit3d/{jhtdb,fs_sph}_s31.
+CPU synthetic tests cover real DiT forward/backward, exact resume, reserved probes and FS missing-target/hidden-truth invariance. CUDA architecture/finite-gradient checks and production training are deferred to Slurm, never run on the login node.
+LBM requires its own completion-gated adapter/manifest and explicit dataset identity. The static source accepts real external solid masks and lattice units. Do not relabel LBM as JHTDB or alter these frozen dataset bindings.

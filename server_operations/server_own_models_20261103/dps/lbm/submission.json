@@ -1,0 +1,98 @@
+{
+  "schema": "slurm_submission_v1",
+  "dataset": "lbm",
+  "model": "dps",
+  "frozen_manifest_sha256": "896cf21d6ce62c60fc313c586a87a3d2bde6c2471af075af6f2c97d6e3e684be",
+  "source_files_verified": 42,
+  "cpu_tests": 27,
+  "slurm_test_only": {
+    "train": {
+      "status": "passed",
+      "command": [
+        "sbatch",
+        "--test-only",
+        "--parsable",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=896cf21d6ce62c60fc313c586a87a3d2bde6c2471af075af6f2c97d6e3e684be",
+        "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/train.sbatch"
+      ],
+      "stdout": "",
+      "stderr": "sbatch: Job 3523881 to start at 2026-11-08T21:35:42 a using 8 processors on nodes gh080 in partition ghx4\n"
+    },
+    "calibrate": {
+      "status": "passed",
+      "command": [
+        "sbatch",
+        "--test-only",
+        "--parsable",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=896cf21d6ce62c60fc313c586a87a3d2bde6c2471af075af6f2c97d6e3e684be",
+        "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/calibrate.sbatch"
+      ],
+      "stdout": "",
+      "stderr": "sbatch: Job 3523882 to start at 2026-11-08T21:35:42 a using 8 processors on nodes gh080 in partition ghx4\n"
+    },
+    "test": {
+      "status": "passed",
+      "command": [
+        "sbatch",
+        "--test-only",
+        "--parsable",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=896cf21d6ce62c60fc313c586a87a3d2bde6c2471af075af6f2c97d6e3e684be",
+        "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/test.sbatch"
+      ],
+      "stdout": "",
+      "stderr": "sbatch: Job 3523883 to start at 2026-11-08T21:35:42 a using 8 processors on nodes gh080 in partition ghx4\n"
+    }
+  },
+  "required_adapter_job": "3523604",
+  "preceding_model_job": "3523879",
+  "data_preflight": "waiting_for_complete_lbm_adapter",
+  "deferred_dataset_adoption": true,
+  "gpu_validation": "deferred_to_allocation",
+  "jobs": {
+    "train": {
+      "job_id": "3523884",
+      "dependency": "afterok:3523604,afterany:3523879",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:3523604,afterany:3523879",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=896cf21d6ce62c60fc313c586a87a3d2bde6c2471af075af6f2c97d6e3e684be",
+        "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/train.sbatch"
+      ],
+      "frozen_manifest_sha256": "896cf21d6ce62c60fc313c586a87a3d2bde6c2471af075af6f2c97d6e3e684be",
+      "submitted_at_utc": "2026-11-03T22:59:42.808654+00:00",
+      "scheduler_stdout": "3523884\n",
+      "scheduler_stderr": ""
+    },
+    "calibrate": {
+      "job_id": "3523885",
+      "dependency": "afterok:3523884",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:3523884",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=896cf21d6ce62c60fc313c586a87a3d2bde6c2471af075af6f2c97d6e3e684be",
+        "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/calibrate.sbatch"
+      ],
+      "frozen_manifest_sha256": "896cf21d6ce62c60fc313c586a87a3d2bde6c2471af075af6f2c97d6e3e684be",
+      "submitted_at_utc": "2026-11-03T22:59:42.831940+00:00",
+      "scheduler_stdout": "3523885\n",
+      "scheduler_stderr": ""
+    },
+    "test": {
+      "job_id": "3523886",
+      "dependency": "afterok:3523885",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:3523885",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=896cf21d6ce62c60fc313c586a87a3d2bde6c2471af075af6f2c97d6e3e684be",
+        "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/test.sbatch"
+      ],
+      "frozen_manifest_sha256": "896cf21d6ce62c60fc313c586a87a3d2bde6c2471af075af6f2c97d6e3e684be",
+      "submitted_at_utc": "2026-11-03T22:59:42.853959+00:00",
+      "scheduler_stdout": "3523886\n",
+      "scheduler_stderr": ""
+    }
+  }
+}

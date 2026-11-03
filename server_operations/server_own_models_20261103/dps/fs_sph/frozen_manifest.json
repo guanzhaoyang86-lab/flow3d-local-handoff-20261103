@@ -1,0 +1,203 @@
+{
+  "schema": "fs_dps_source_lock_v1",
+  "dataset": "fs_sph",
+  "manifest_sha256": "385cfb033b7a3f8084704f4e4dfa0bdd182a81a3456ec2969a166fbd75d9abf0",
+  "files": [
+    {
+      "path": "fs_source/scripts/preflight.py",
+      "sha256": "e20621d6ff26db55e97f71809d6658c0a5ecdf289c79bf1c39b20dec620b9556"
+    },
+    {
+      "path": "fs_source/scripts/sample_flow_dps.py",
+      "sha256": "0503992482dbf758ff11f84e01a9533b2cbab1adfd942884c031f87c884c04b6"
+    },
+    {
+      "path": "fs_source/scripts/train_flow_prior.py",
+      "sha256": "d9a40198e6e4ba4d519e66bb2ec8662f5c1faeeb52e919a92dc5d6663a723886"
+    },
+    {
+      "path": "fs_source/scripts/verify_artifact.py",
+      "sha256": "660dc3fe1c4353327e0355cf6ff789c0214f06f1769b6fa3a52bd34c9384e95e"
+    },
+    {
+      "path": "fs_source/src/flow_observation/__init__.py",
+      "sha256": "a5c4b5fe032610a9f782e988bdf3721573a463d6a2bb4abb00ba0a03f3263cd7"
+    },
+    {
+      "path": "fs_source/src/flow_observation/advection.py",
+      "sha256": "17933a724d290cbdd0f2d4979f9520e044181f025df357e75498e07e81c063d8"
+    },
+    {
+      "path": "fs_source/src/flow_observation/cfd.py",
+      "sha256": "28d40bbc52437a12adc50fe51f5468e59863f69bb92429b71e0e523d19e8297f"
+    },
+    {
+      "path": "fs_source/src/flow_observation/checkpoint_io.py",
+      "sha256": "9bdf4bf1b5c7ad886700a02fa1beef6aeee741e7a8e1ac7cc401d4aee5e1b884"
+    },
+    {
+      "path": "fs_source/src/flow_observation/conditioning.py",
+      "sha256": "6344287f68c9836088fafc5606aa526ec911962e333c6be961eab81858418aad"
+    },
+    {
+      "path": "fs_source/src/flow_observation/diffusion.py",
+      "sha256": "a0511973140b1fb23adfd39c733848505851ace20cd519d0aa998d32b2a46ffe"
+    },
+    {
+      "path": "fs_source/src/flow_observation/dps/__init__.py",
+      "sha256": "a14af6126c72ff38fcd880569bc767221481124fd5d8e8e5de7e8c386d1567f5"
+    },
+    {
+      "path": "fs_source/src/flow_observation/dps/audit.py",
+      "sha256": "dff0c4102131109034183221ea881878958de4d5fb47668778914163fe1abe10"
+    },
+    {
+      "path": "fs_source/src/flow_observation/dps/data.py",
+      "sha256": "eba9d8f610cdca9bb05c0754b9d8dfef0ecc9b2ecd0a29dc12ea5221805ee050"
+    },
+    {
+      "path": "fs_source/src/flow_observation/dps/inference.py",
+      "sha256": "6392cf07093e4b038ab9924c4cfce09f5ba45eb5ce58b5d0e91bf8395d1a9b3b"
+    },
+    {
+      "path": "fs_source/src/flow_observation/dps/observations.py",
+      "sha256": "b48f2c59cc1de5b390f15077bdacfb8c99bd28b266de85f98d1d9cda98e3c9ca"
+    },
+    {
+      "path": "fs_source/src/flow_observation/dps/sampler.py",
+      "sha256": "af3b3cb4f52c740921443d09d733c21c61db32a9db5fc6b8184e46b1cda460a7"
+    },
+    {
+      "path": "fs_source/src/flow_observation/dps/training.py",
+      "sha256": "34622f539caa50090daac260119a3253b91e3c68d15935402c1e2570a802eaae"
+    },
+    {
+      "path": "fs_source/src/flow_observation/interpolation.py",
+      "sha256": "2448b1321a6b5936694f302ebb770cf35e51fac55a5c9930e35c023c56f07afa"
+    },
+    {
+      "path": "fs_source/src/flow_observation/likelihood.py",
+      "sha256": "61633fd1b4a5b2cfad1cd18ff9b4d7cf93ea3cc297e7996424b094e318c11f87"
+    },
+    {
+      "path": "fs_source/src/flow_observation/models/__init__.py",
+      "sha256": "2debf394ebae79ca736ed45a580084d5fbdbc8c8c318463726af1d8cfff74910"
+    },
+    {
+      "path": "fs_source/src/flow_observation/models/dit.py",
+      "sha256": "a1fd77ce6e19685fb76e66d16e23d53830b16af44f6d26b56a62c049674b78d8"
+    },
+    {
+      "path": "fs_source/src/flow_observation/models/factory.py",
+      "sha256": "f585727912f610003f8f34ac3b16a7b92c4ab85e92a990917e9b43f1527e012b"
+    },
+    {
+      "path": "fs_source/src/flow_observation/models/trajectory_encoder.py",
+      "sha256": "f29aa563419639c3dd6dde367d7df3f5dcef770c7ba547f82976b46096600d12"
+    },
+    {
+      "path": "fs_source/src/flow_observation/models/unet3d.py",
+      "sha256": "120619da44ce9ad2722746fc07f5131c200b8b5c3cc9278356f56df697255240"
+    },
+    {
+      "path": "fs_source/src/flow_observation/multiview.py",
+      "sha256": "d7868cbedd928ee8bf5d31b460dbc6c0eaff834053172a1574785ecb5f485efe"
+    },
+    {
+      "path": "fs_source/src/flow_observation/projection.py",
+      "sha256": "09b9cb53ebd53d0da47fad68878ad4017ab0203188515b9ede464d4e025f5988"
+    },
+    {
+      "path": "fs_source/src/flow_observation/recovery.py",
+      "sha256": "fb433887fcd107da3b2f98ba116d408d4dd4c0fb8eb93b678cffc67c4ce09a74"
+    },
+    {
+      "path": "fs_source/src/flow_observation/sparse_dataset.py",
+      "sha256": "0b4154709f17798d4028bfc81b5156682acc13b6bdb90c3bae91cc11abebd281"
+    },
+    {
+      "path": "fs_source/src/flow_observation/sparse_physics.py",
+      "sha256": "c2e5275e004fef58eca1ee842e9cbe32bfd2c41e9d1b80549eaa59c6fe477c57"
+    },
+    {
+      "path": "fs_source/src/flow_observation/taichi_lbm3d.py",
+      "sha256": "1c8e649655a775d26164c9691029a4df3053b1e66e86dfb1750da9d30e06f310"
+    },
+    {
+      "path": "fs_source/src/flow_observation/tensor_space.py",
+      "sha256": "35320450af0af73587035b1d5cec57f2b78baa81d0a5dad1fabcc1072592593d"
+    },
+    {
+      "path": "fs_source/tests/conftest.py",
+      "sha256": "1a20955d1bd55bdd3510795b79bd59d1fe5f06770b2cc13c18655b7cbea8cd0a"
+    },
+    {
+      "path": "fs_source/tests/test_amp_training.py",
+      "sha256": "c6d39ebdac403bb061709f32372c9dcafb78b133921f65cf67963268d91550b1"
+    },
+    {
+      "path": "fs_source/tests/test_dps.py",
+      "sha256": "2aec4219c222933bbb11f4c231e26ee8f9e6e125d70dc361650bce298dfedfea"
+    },
+    {
+      "path": "fs_source/tests/test_inference_audit.py",
+      "sha256": "050b8f45deaa42279d65af4a70140028989ddd0241c4695519f79deddea637e3"
+    },
+    {
+      "path": "fs_source/tests/test_observation_audit.py",
+      "sha256": "2c3845f54d47bd90a412855f97c0b6e153e09108071cc66e337dc3de090400ce"
+    },
+    {
+      "path": "fs_sph/README.md",
+      "sha256": "a437a133240593ab13b9601244e55fca77a0eb2b709b28627ef77a9f12303a21"
+    },
+    {
+      "path": "fs_sph/calibrate.slurm",
+      "sha256": "f04656556058408a2a94f35c58be0dce2128fdb5f30bf2d433f9c59568d3f437"
+    },
+    {
+      "path": "fs_sph/config.json",
+      "sha256": "a2df72554d7a128258390beb44a88699f539eb3cdaef78a947e043c73c852217"
+    },
+    {
+      "path": "fs_sph/freeze.py",
+      "sha256": "a9c4820dbd75c4b1b10f9016771e074e4a57600e76258bfef39304e173b0ab6a"
+    },
+    {
+      "path": "fs_sph/physics.py",
+      "sha256": "9e8e01987a00637983006beaf4a7b5b831f0c09026c96b5505c3664167abd675"
+    },
+    {
+      "path": "fs_sph/prepare_jobs.py",
+      "sha256": "1eb2d6ea098f2b72ade8fe5e4849e04bbeaf6e49f42b37667b84d8fb2e1e3f7b"
+    },
+    {
+      "path": "fs_sph/prepare_physics.py",
+      "sha256": "6e3308a3dde3e71d6393bd0b542330f0668bbfc9c61fedd307e58e841b6cf143"
+    },
+    {
+      "path": "fs_sph/runtime.py",
+      "sha256": "dc0828dcb728c7ca9cf6548c0c60a90eba748ce44663132149c901029a96ef68"
+    },
+    {
+      "path": "fs_sph/test.slurm",
+      "sha256": "c48ddeec30351c68e624cedd3f8cc919b993355d8b346c91d8c51eeef2ae2a02"
+    },
+    {
+      "path": "fs_sph/test_calibration.py",
+      "sha256": "6435e582df0b7385d536ab9dfea280320d3cec218d8064801c68f62feb83229a"
+    },
+    {
+      "path": "fs_sph/test_likelihood.py",
+      "sha256": "fd2d68d7306f8df72f4fc6914820043d873fdca33b83d183d391b50a72ebb2b4"
+    },
+    {
+      "path": "fs_sph/test_prior.py",
+      "sha256": "521e18adfe1c7f56e5836aa8763005a9f24b7383434e0e42026e6c4c7f779415"
+    },
+    {
+      "path": "fs_sph/train.slurm",
+      "sha256": "4e795654e0a1eb62d0c0003307878f1398edb2634f333d37378abe9fc89574c7"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "slurm_submission_v1",
+  "dataset": "lbm",
+  "model": "dit3d",
+  "job_id": "3523879",
+  "job_name": "own3_lbm_dit3d",
+  "submitted_at_utc": "2026-11-03T22:59:02.573638+00:00",
+  "dependency": "afterok:3523604",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--dependency=afterok:3523604",
+    "--export=ALL,DIT_LBM_FROZEN_SHA256=b0b8e89564b39a405c1531eaeeb2740ed1ab693bcc9c58fa52dbd9c8fc6399bd",
+    "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d_lbm/lbm.slurm"
+  ],
+  "frozen_manifest_sha256": "b0b8e89564b39a405c1531eaeeb2740ed1ab693bcc9c58fa52dbd9c8fc6399bd",
+  "source_verification": {
+    "wrapper_manifest_sha256": "b0b8e89564b39a405c1531eaeeb2740ed1ab693bcc9c58fa52dbd9c8fc6399bd",
+    "wrapper_files": 3,
+    "model_manifest_sha256": "400e72abd126bbd48555e3fbad55967191795a036c3ac9bf19c615dabe101084",
+    "model_files": 52
+  },
+  "slurm_test_only": {
+    "status": "passed",
+    "stdout": "",
+    "stderr": "sbatch: Job 3523878 to start at 2026-11-08T21:25:02 a using 8 processors on nodes gh080 in partition ghx4\n"
+  },
+  "scheduler_stdout": "3523879\n",
+  "scheduler_stderr": "",
+  "data_preflight": "waiting_for_complete_lbm_adapter",
+  "gpu_validation": "deferred_to_allocation"
+}

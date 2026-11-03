@@ -1,0 +1,12 @@
+{
+  "submitted": true,
+  "job_id": "3523903",
+  "dataset": "lbm",
+  "model": "tensor_dit",
+  "stage": "train",
+  "training_seed": 31,
+  "frozen_sha256": "1a87b4be748ccd385ccf2d8d10567dd600aba7a11317add7969a125b5166d01d",
+  "dependency": "afterok:3523604,afterany:3523886",
+  "submission_exit_code": 0,
+  "gpu_execution_verified": false
+}

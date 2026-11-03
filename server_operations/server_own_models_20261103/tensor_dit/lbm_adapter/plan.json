@@ -1,0 +1,11 @@
+{
+  "source": "/work/hdd/biup/zguan2/datasets/lbm32_xz_500k_deltaai_arm_20261023",
+  "output": "/work/hdd/biup/zguan2/datasets/experiment_adapters_20261103/lbm_frozen32",
+  "source_generation_sha256": "63140021b08c47cc9759a6bb28bae778506ccb73b6808571ad8527fd70f130fc",
+  "dependency": "afterok:3515292",
+  "gpus": 1,
+  "cpus": 8,
+  "memory": "16G",
+  "walltime": "02:00:00",
+  "resource_note": "DeltaAI rejects jobs requesting zero GPUs. This checksum/copy program computes on CPU while reserving one GPU allocation."
+}

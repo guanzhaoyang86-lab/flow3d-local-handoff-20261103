@@ -1,0 +1,24 @@
+{
+  "frozen_manifest_sha256": "400e72abd126bbd48555e3fbad55967191795a036c3ac9bf19c615dabe101084",
+  "status": "prepared_not_submitted",
+  "jobs": {
+    "jhtdb": {
+      "script": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/launch/jhtdb.slurm",
+      "submit_argv": [
+        "sbatch",
+        "--parsable",
+        "--export=ALL,DIT_FROZEN_SHA256=400e72abd126bbd48555e3fbad55967191795a036c3ac9bf19c615dabe101084",
+        "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/launch/jhtdb.slurm"
+      ]
+    },
+    "fs_sph": {
+      "script": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/launch/fs_sph.slurm",
+      "submit_argv": [
+        "sbatch",
+        "--parsable",
+        "--export=ALL,DIT_FROZEN_SHA256=400e72abd126bbd48555e3fbad55967191795a036c3ac9bf19c615dabe101084",
+        "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/launch/fs_sph.slurm"
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "training_seed": 31,
+  "operation_manifest_sha256": "c50df90cec484e49a274806fc9dd0e38a2135d25cb4ffb11f363a2fefcbd4fa6",
+  "jobs": [
+    {
+      "job_id": "3523416",
+      "dataset": "jhtdb",
+      "model": "tensor_dit",
+      "submission_exit_code": 0
+    },
+    {
+      "job_id": "3523417",
+      "dataset": "fs_sph",
+      "model": "tensor_dit",
+      "submission_exit_code": 0
+    }
+  ]
+}

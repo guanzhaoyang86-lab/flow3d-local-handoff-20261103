@@ -1,0 +1,96 @@
+{
+  "schema": "own_model_dps_static_v1",
+  "dataset": "lbm",
+  "scientific_scope": "Spatial macroblock holdout from one frozen DNS snapshot; not time-dependent DNS prediction.",
+  "manifest": "/work/hdd/biup/zguan2/datasets/experiment_adapters_20261103/lbm_frozen32/manifest.json",
+  "completion_marker": "/work/hdd/biup/zguan2/datasets/experiment_adapters_20261103/lbm_frozen32/COMPLETE.json",
+  "result_root": "/work/hdd/biup/zguan2/results/server_own_models_20261103/dps/lbm",
+  "expected_split_counts": {
+    "train": 2500,
+    "validation": 312,
+    "test": 313
+  },
+  "training": {
+    "architecture": "dit3d",
+    "epochs": 100,
+    "seed": 31,
+    "batch_size": 1,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "ema_decay": 0.999,
+    "gradient_clip": 1.0,
+    "save_every": 10,
+    "diffusion_steps": 1000,
+    "prediction_type": "v",
+    "dit_hidden_dim": 192,
+    "dit_depth": 4,
+    "dit_heads": 6,
+    "patch_size": 4,
+    "amp": true
+  },
+  "sampling": {
+    "num_particles": 12,
+    "views": "0",
+    "observation_seed": 47,
+    "seed": 47,
+    "num_probes": 32,
+    "num_samples": 2,
+    "observation_type": "projected",
+    "boundary_projection": "none",
+    "sampler": "ddim",
+    "sampling_steps": 50,
+    "eta": 1.0,
+    "guidance_step": 0.0001,
+    "gradient_objective": "nll",
+    "max_update_rms": 0.1,
+    "depth_step": 0.0001,
+    "depth_mode": "langevin",
+    "likelihood": "transition",
+    "integrator": "rk4",
+    "trajectory_substeps": 4
+  },
+  "calibration": {
+    "split": "validation",
+    "case_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "sigma_candidates": [
+      0.02,
+      0.05,
+      0.1
+    ],
+    "selection_metric": "posterior_mean_field_relative_l2_unknown_interior",
+    "tie_break": "smallest sigma",
+    "test_used": false
+  },
+  "test_evaluation": {
+    "split": "test",
+    "case_indices": "all",
+    "requires_frozen_validation_selection": true
+  },
+  "resource_caps": {
+    "train_hours": 8,
+    "calibration_hours": 8,
+    "test_hours": 16
+  },
+  "notes": [
+    "Unconditional LBM prior with train-only fluid statistics and real public solid masks.",
+    "No per-case lid velocity, Reynolds value, or reference field is an inference condition.",
+    "Lattice cell/step units preserved; boundary_projection=none retains original decode behavior, with solid used only by training/evaluation masks.",
+    "Source and config freeze precede adapter; runtime adopts only the completed verified adapter manifest."
+  ],
+  "completion_requirements": {
+    "verified_fields": 3125,
+    "physical_trajectories": 500000,
+    "arrays_modified": false
+  },
+  "deferred_dataset_adoption": true,
+  "expected_adapter_sha256": "34819a1e3de2c3704d2e091a2d0eafac6266c23b2ff524d7872b3559e1d1d7af"
+}

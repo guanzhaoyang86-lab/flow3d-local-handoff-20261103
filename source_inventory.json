@@ -1,8 +1,8 @@
 {
   "schema": "flow3d_source_handoff_v1",
   "captured_at_utc": "2026-11-03T20:01:55.987111+00:00",
-  "file_count": 685,
-  "total_bytes": 5437733,
+  "file_count": 1042,
+  "total_bytes": 7973291,
   "files": [
     {
       "source_path": "/u/zguan2/projects/flow3d_runs/flow3d-current/.gitignore",
@@ -5483,6 +5483,2862 @@
       "bytes": 17349,
       "executable": false,
       "frozen_manifest_exception": true
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/baseline_cancellation_accounting.json",
+      "path": "server_operations/server_own_models_20261103/baseline_cancellation_accounting.json",
+      "sha256": "304cf50b04d85eec83dbd41a478870a8630d2b3160cf1d1a6dfac96c3dcc9531",
+      "bytes": 2339,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/baseline_reassignment.json",
+      "path": "server_operations/server_own_models_20261103/baseline_reassignment.json",
+      "sha256": "501c5506db8f2cc6da0c22679adff615e5d1207ec03950bed26d391eba167b7e",
+      "bytes": 1902,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/README.txt",
+      "path": "server_operations/server_own_models_20261103/dit3d/README.txt",
+      "sha256": "979d369a3e64bcb372ad392acd7a2ec305294ce91f1d1feb57114a0922d0ce70",
+      "bytes": 2269,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/adaptation.patch",
+      "path": "server_operations/server_own_models_20261103/dit3d/adaptation.patch",
+      "sha256": "2078ca576498b598d3bbf31ebdaefed90cc93ab1a4e8308a2d7bc12c177ef922",
+      "bytes": 10428,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/configs/fs_sph_s31.json",
+      "path": "server_operations/server_own_models_20261103/dit3d/configs/fs_sph_s31.json",
+      "sha256": "6b1c121fa2eea4a492f6fe0fec036b949aa79bcbcbc94aec89d98ef3db606bce",
+      "bytes": 1660,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/configs/jhtdb_s31.json",
+      "path": "server_operations/server_own_models_20261103/dit3d/configs/jhtdb_s31.json",
+      "sha256": "6b1c121fa2eea4a492f6fe0fec036b949aa79bcbcbc94aec89d98ef3db606bce",
+      "bytes": 1660,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/cpu_dit_checks.xml",
+      "path": "server_operations/server_own_models_20261103/dit3d/cpu_dit_checks.xml",
+      "sha256": "3824d376cbefb570a870cfd7a1502f5c58b11d3147a1aee683004e31d84ca4d4",
+      "bytes": 967,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/data_bindings.json",
+      "path": "server_operations/server_own_models_20261103/dit3d/data_bindings.json",
+      "sha256": "89d47769d4c842be99c0061509ce0be8a1768a2b486a6975efc54ac18f57d55f",
+      "bytes": 590,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/frozen_manifest.json",
+      "path": "server_operations/server_own_models_20261103/dit3d/frozen_manifest.json",
+      "sha256": "400e72abd126bbd48555e3fbad55967191795a036c3ac9bf19c615dabe101084",
+      "bytes": 5878,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/launch/fs_dit3d.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/launch/fs_dit3d.py",
+      "sha256": "8753b4fc94f253dfe0252d1cfb73bb9a903831e6f56f299574f87a9a0239d931",
+      "bytes": 46897,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/launch/fs_sph.slurm",
+      "path": "server_operations/server_own_models_20261103/dit3d/launch/fs_sph.slurm",
+      "sha256": "82ea389d93d863edafe34f8ef7c870affd248a4fe29c5455bb47cb29e4595825",
+      "bytes": 1018,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/launch/jhtdb.slurm",
+      "path": "server_operations/server_own_models_20261103/dit3d/launch/jhtdb.slurm",
+      "sha256": "bb6d1a45b120b2080de05e173355c9cbce7c2687ae38711d5000a8e37e2781e2",
+      "bytes": 1017,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/launch/run_dataset.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/launch/run_dataset.py",
+      "sha256": "e2fd83b229353877b569b425c23167d33b6a9309092e60c68cd874a5e1dd7aaf",
+      "bytes": 9517,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/PROVENANCE.json",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/PROVENANCE.json",
+      "sha256": "333e1598e5af0255585d7e15614c32a12cb5f925a9d41e21523b4964d2421f95",
+      "bytes": 3217,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/README.md",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/README.md",
+      "sha256": "767578f659f29035fa327530e5ac35e9133d4216e5faaf7655efd806790e5ff1",
+      "bytes": 10397,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/pyproject.toml",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/pyproject.toml",
+      "sha256": "8bb0166cccd87d943ec210a9834a666c1dd1b254d54115b6f8e257a7a46ee777",
+      "bytes": 467,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/scripts/evaluate_baseline.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/scripts/evaluate_baseline.py",
+      "sha256": "01144b6659a486653988fbf3ea1d3a3a77f7ce7b8ba047607dc7e819ef641b17",
+      "bytes": 10449,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/scripts/predict.slurm",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/scripts/predict.slurm",
+      "sha256": "6ebed7cf0308b0ab3e377c6b957eb041699cf338753ecf1bdc6be051f6cb3d22",
+      "bytes": 1789,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/scripts/preflight.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/scripts/preflight.py",
+      "sha256": "76388fd0ccf599e751c686537f7699d7895ba061c209c1110579dffae92e0699",
+      "bytes": 2251,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/scripts/run_baseline.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/scripts/run_baseline.py",
+      "sha256": "cfefa06bd40670f877b3f110e8b9ffc146f0a5253620157eeaf3b6d6d446fb28",
+      "bytes": 257,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/scripts/train.slurm",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/scripts/train.slurm",
+      "sha256": "3516ca0903c76aad78c5a8de6ff01c93e84c11806df134f71fb81c3b8b0ed4b1",
+      "bytes": 1312,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_baselines/__init__.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_baselines/__init__.py",
+      "sha256": "0c91a737a31c039b470abe14cb7cbbb0ba450b76fb3ad22e550ae7241adf0bb0",
+      "bytes": 71,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_baselines/case_fit.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_baselines/case_fit.py",
+      "sha256": "6061c1296619865f2c2fdb1d5c68715fb01f55d039ae8083b293dfc1d90bfbb3",
+      "bytes": 5846,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_baselines/cli.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_baselines/cli.py",
+      "sha256": "990b3686544507d8079c39c5229aca55a94e48f161121a59b80fed4a3cce5740",
+      "bytes": 3933,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_baselines/common.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_baselines/common.py",
+      "sha256": "e5ca089eae4fd31cad56cc21a281a0ce545cdd6245aafc6afcc0bd10ae6976c6",
+      "bytes": 5750,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_baselines/config.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_baselines/config.py",
+      "sha256": "0cfc6e89ccc6f98b67f932a9f7cb5a98ae7fa9e9a18a194d66dcd3271e16d26e",
+      "bytes": 5586,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_baselines/inference.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_baselines/inference.py",
+      "sha256": "29c3fc2e64314807344b1f679d3a267415648e5c98ce25042d7963aa57567e33",
+      "bytes": 12224,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_baselines/linear.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_baselines/linear.py",
+      "sha256": "1d712f5381dca2ce4993e5384e8164a06eab79c7c423156049184b681ce84d25",
+      "bytes": 10251,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_baselines/models.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_baselines/models.py",
+      "sha256": "5058baef114c9cb87cec8ea4c6833063f81fef4e27e70ec48621466fbcb517cf",
+      "bytes": 15474,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_baselines/pinn.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_baselines/pinn.py",
+      "sha256": "9fb5e6492640aab3668b97e0f4942e88a0a14a7c7e82c8ba14719b2032d2ad19",
+      "bytes": 7792,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_baselines/reporting.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_baselines/reporting.py",
+      "sha256": "eb60847d3fed7277dc77e5dc42df69e7fde184f4c50322d88d8d5872652ca38c",
+      "bytes": 20867,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_baselines/training.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_baselines/training.py",
+      "sha256": "8a746437db8c97a8d994b68fb131fe681073ebfaead6416596f99b31c496de3e",
+      "bytes": 12348,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/__init__.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/__init__.py",
+      "sha256": "a5c4b5fe032610a9f782e988bdf3721573a463d6a2bb4abb00ba0a03f3263cd7",
+      "bytes": 1784,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/advection.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/advection.py",
+      "sha256": "17933a724d290cbdd0f2d4979f9520e044181f025df357e75498e07e81c063d8",
+      "bytes": 9106,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/cfd.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/cfd.py",
+      "sha256": "28d40bbc52437a12adc50fe51f5468e59863f69bb92429b71e0e523d19e8297f",
+      "bytes": 13294,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/checkpoint_io.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/checkpoint_io.py",
+      "sha256": "9bdf4bf1b5c7ad886700a02fa1beef6aeee741e7a8e1ac7cc401d4aee5e1b884",
+      "bytes": 1817,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/conditioning.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/conditioning.py",
+      "sha256": "6344287f68c9836088fafc5606aa526ec911962e333c6be961eab81858418aad",
+      "bytes": 3001,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/diffusion.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/diffusion.py",
+      "sha256": "a0511973140b1fb23adfd39c733848505851ace20cd519d0aa998d32b2a46ffe",
+      "bytes": 19262,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/dps/__init__.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/dps/__init__.py",
+      "sha256": "a14af6126c72ff38fcd880569bc767221481124fd5d8e8e5de7e8c386d1567f5",
+      "bytes": 277,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/dps/audit.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/dps/audit.py",
+      "sha256": "dff0c4102131109034183221ea881878958de4d5fb47668778914163fe1abe10",
+      "bytes": 3108,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/dps/data.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/dps/data.py",
+      "sha256": "eba9d8f610cdca9bb05c0754b9d8dfef0ecc9b2ecd0a29dc12ea5221805ee050",
+      "bytes": 9584,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/dps/inference.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/dps/inference.py",
+      "sha256": "6392cf07093e4b038ab9924c4cfce09f5ba45eb5ce58b5d0e91bf8395d1a9b3b",
+      "bytes": 15501,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/dps/observations.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/dps/observations.py",
+      "sha256": "b48f2c59cc1de5b390f15077bdacfb8c99bd28b266de85f98d1d9cda98e3c9ca",
+      "bytes": 13465,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/dps/sampler.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/dps/sampler.py",
+      "sha256": "58aba5949fc291694cc1753b0fd41485ba717738f3e57fc3102f51e556ee9f5e",
+      "bytes": 8885,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/dps/training.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/dps/training.py",
+      "sha256": "34622f539caa50090daac260119a3253b91e3c68d15935402c1e2570a802eaae",
+      "bytes": 12736,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/interpolation.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/interpolation.py",
+      "sha256": "2448b1321a6b5936694f302ebb770cf35e51fac55a5c9930e35c023c56f07afa",
+      "bytes": 12577,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/likelihood.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/likelihood.py",
+      "sha256": "61633fd1b4a5b2cfad1cd18ff9b4d7cf93ea3cc297e7996424b094e318c11f87",
+      "bytes": 7899,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/models/__init__.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/models/__init__.py",
+      "sha256": "2debf394ebae79ca736ed45a580084d5fbdbc8c8c318463726af1d8cfff74910",
+      "bytes": 204,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/models/dit.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/models/dit.py",
+      "sha256": "a1fd77ce6e19685fb76e66d16e23d53830b16af44f6d26b56a62c049674b78d8",
+      "bytes": 15933,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/models/factory.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/models/factory.py",
+      "sha256": "f585727912f610003f8f34ac3b16a7b92c4ab85e92a990917e9b43f1527e012b",
+      "bytes": 2331,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/models/trajectory_encoder.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/models/trajectory_encoder.py",
+      "sha256": "f29aa563419639c3dd6dde367d7df3f5dcef770c7ba547f82976b46096600d12",
+      "bytes": 21906,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/models/unet3d.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/models/unet3d.py",
+      "sha256": "120619da44ce9ad2722746fc07f5131c200b8b5c3cc9278356f56df697255240",
+      "bytes": 11911,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/multiview.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/multiview.py",
+      "sha256": "d7868cbedd928ee8bf5d31b460dbc6c0eaff834053172a1574785ecb5f485efe",
+      "bytes": 3674,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/projection.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/projection.py",
+      "sha256": "09b9cb53ebd53d0da47fad68878ad4017ab0203188515b9ede464d4e025f5988",
+      "bytes": 7613,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/recovery.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/recovery.py",
+      "sha256": "fb433887fcd107da3b2f98ba116d408d4dd4c0fb8eb93b678cffc67c4ce09a74",
+      "bytes": 10694,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/sparse_dataset.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/sparse_dataset.py",
+      "sha256": "0b4154709f17798d4028bfc81b5156682acc13b6bdb90c3bae91cc11abebd281",
+      "bytes": 34006,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/sparse_physics.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/sparse_physics.py",
+      "sha256": "c2e5275e004fef58eca1ee842e9cbe32bfd2c41e9d1b80549eaa59c6fe477c57",
+      "bytes": 18393,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/taichi_lbm3d.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/taichi_lbm3d.py",
+      "sha256": "1c8e649655a775d26164c9691029a4df3053b1e66e86dfb1750da9d30e06f310",
+      "bytes": 4331,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/src/flow_observation/tensor_space.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/src/flow_observation/tensor_space.py",
+      "sha256": "35320450af0af73587035b1d5cec57f2b78baa81d0a5dad1fabcc1072592593d",
+      "bytes": 24921,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/tests/conftest.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/tests/conftest.py",
+      "sha256": "6bbb06a56de0455c6f62d7bdaa330eb04cd3cdc8cd14a90b41083bb5abbd2c12",
+      "bytes": 1604,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/tests/test_batch.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/tests/test_batch.py",
+      "sha256": "1bcd7c599ba125ae9cd5bd7f29891cdc023100f80903808d18a37c695a0708a7",
+      "bytes": 8121,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/tests/test_config_review.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/tests/test_config_review.py",
+      "sha256": "53591e28a6fe1e4e11fe7d3656bccc8a61aceb069a3c780bea40a6c8051809da",
+      "bytes": 2220,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/tests/test_inference_review.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/tests/test_inference_review.py",
+      "sha256": "d0ef98e795c512ee38825e7c8df028393137d0ebffcd30000f3bb946022b1239",
+      "bytes": 3717,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/tests/test_linear.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/tests/test_linear.py",
+      "sha256": "d2bfa66c3bc0d761b207dd83cb701b972e0422cf6281e29c54639768b693c17b",
+      "bytes": 5564,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/tests/test_math_review.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/tests/test_math_review.py",
+      "sha256": "7962cb50297e4d8b97e7cbcb42adc625ce4c2774adeefaaed15bca62af473e31",
+      "bytes": 4465,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/tests/test_models.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/tests/test_models.py",
+      "sha256": "3a2ea81b6d9c399f700a4588c226ae852e7b358cae4669c4c9a8dc53b7db92f7",
+      "bytes": 4307,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/tests/test_pinn.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/tests/test_pinn.py",
+      "sha256": "2036480026c32119b0532ab7f6f36fd4304058f860730bb31ba49250333b3c4e",
+      "bytes": 4475,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/tests/test_pipeline.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/tests/test_pipeline.py",
+      "sha256": "297ba56b6da43f3bc9002df02d9a6999a4ea111505425491989d70f6a11c5a75",
+      "bytes": 7505,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/tests/test_reporting.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/tests/test_reporting.py",
+      "sha256": "21a0b3f2f4f49030fdc02f84d6426e69a295eacce042192af4fb344a7e328b04",
+      "bytes": 7983,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/tests/test_reporting_review.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/tests/test_reporting_review.py",
+      "sha256": "5474da67dd65513c065ae2b386b5321974ef58fc45014709bd0b74d235389268",
+      "bytes": 5678,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source/tests/test_training_review.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/source/tests/test_training_review.py",
+      "sha256": "630ef2f738c5ba737889c94a0575e55f114600a1563028dfa0996385c3c89d7b",
+      "bytes": 3440,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/source_provenance.json",
+      "path": "server_operations/server_own_models_20261103/dit3d/source_provenance.json",
+      "sha256": "dab7a42b3edb1231524a0b0367861c17b5fe4b62e31c6af90b69518c699438ae",
+      "bytes": 1756,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/submission_plan.json",
+      "path": "server_operations/server_own_models_20261103/dit3d/submission_plan.json",
+      "sha256": "ed27a06887ffe805e6e1d2b03f3f7e828baffbf8d880460301451f0954484d99",
+      "bytes": 990,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/tests/test_dit3d.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/tests/test_dit3d.py",
+      "sha256": "94bb53161e4852f6944e91e3b4e6f8c5ae5e43cd8ee0d7e644a01a619a4d42fa",
+      "bytes": 6360,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d/tests/test_fs_protocol.py",
+      "path": "server_operations/server_own_models_20261103/dit3d/tests/test_fs_protocol.py",
+      "sha256": "f15b8e0ff7318c8b847a76892258a80f00cb7b00e4209340bffa2e713c487c8d",
+      "bytes": 11948,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d_lbm/README.txt",
+      "path": "server_operations/server_own_models_20261103/dit3d_lbm/README.txt",
+      "sha256": "d267c4527fce719278d46477a37b099ed8ac7f901b7b7ed08a4928c13ac94cc3",
+      "bytes": 2275,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d_lbm/configs/lbm_s31.json",
+      "path": "server_operations/server_own_models_20261103/dit3d_lbm/configs/lbm_s31.json",
+      "sha256": "6b1c121fa2eea4a492f6fe0fec036b949aa79bcbcbc94aec89d98ef3db606bce",
+      "bytes": 1660,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d_lbm/cpu_binding_checks.xml",
+      "path": "server_operations/server_own_models_20261103/dit3d_lbm/cpu_binding_checks.xml",
+      "sha256": "0dba5d2a587cd7ac7edd3d44222f48ef647db1c19ecc5ccaebff1b6355082f47",
+      "bytes": 2102,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d_lbm/frozen_manifest.json",
+      "path": "server_operations/server_own_models_20261103/dit3d_lbm/frozen_manifest.json",
+      "sha256": "b0b8e89564b39a405c1531eaeeb2740ed1ab693bcc9c58fa52dbd9c8fc6399bd",
+      "bytes": 433,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d_lbm/lbm.slurm",
+      "path": "server_operations/server_own_models_20261103/dit3d_lbm/lbm.slurm",
+      "sha256": "7a590a7a9589036b4d4ee6c5faae0c1fb1c96d1e59e737e0aa90d350f59d8905",
+      "bytes": 1008,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d_lbm/run_lbm.py",
+      "path": "server_operations/server_own_models_20261103/dit3d_lbm/run_lbm.py",
+      "sha256": "14bee78190c74223449f3ea8274381749c4960e06130ecbc97f09149052b1887",
+      "bytes": 8297,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d_lbm/submission.json",
+      "path": "server_operations/server_own_models_20261103/dit3d_lbm/submission.json",
+      "sha256": "7fc62e2a2f1f8d9e4ad535f878f3ed916054402d137eb2e204a9d81551344acb",
+      "bytes": 1243,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d_lbm/tests/test_lbm_binding.py",
+      "path": "server_operations/server_own_models_20261103/dit3d_lbm/tests/test_lbm_binding.py",
+      "sha256": "bcb8d3d10af8521166178e71d9aa24fbc751c56a36f142ed12cd66bfff55b01c",
+      "bytes": 1871,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d_lbm/tests/test_release_gate.py",
+      "path": "server_operations/server_own_models_20261103/dit3d_lbm/tests/test_release_gate.py",
+      "sha256": "697ecc8b4b3e36e9c3c5ae6f51b8a77d5b5334b2c3cfcc00881b737ed549a3d8",
+      "bytes": 2533,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d_lbm/validation.json",
+      "path": "server_operations/server_own_models_20261103/dit3d_lbm/validation.json",
+      "sha256": "8a3ed7457bfe3fb69a8985c5e66fdc9dab8c73ca000c2b2233edb58b88743f61",
+      "bytes": 416,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/.gitignore",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/.gitignore",
+      "sha256": "29154faddecd19fae849ed689c8ab2b259f2ae9fdf71f8492443b2bcd6ffbdae",
+      "bytes": 67,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/BASELINE_PROVENANCE.json",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/BASELINE_PROVENANCE.json",
+      "sha256": "747afcbc21d94e8516d0e5090c081eefe71f96a5a6f351d6fc1d35932d41e191",
+      "bytes": 2588,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/FILES_MANIFEST.json",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/FILES_MANIFEST.json",
+      "sha256": "bf4493a80b6aa264266a4d12a4c7cf5602e007fc07a1e9f90ae5510369b2f9d3",
+      "bytes": 6794,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/README.md",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/README.md",
+      "sha256": "6df60a345783f50454d8c01fe0bcd16d1b309f639bd1fbfff552b753e663b508",
+      "bytes": 9637,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/pyproject.toml",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/pyproject.toml",
+      "sha256": "8bd53af47f9b87783ee46c254801bf9b3c50d22faa6447bea4fff02871dc1fe1",
+      "bytes": 500,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/scripts/preflight.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/scripts/preflight.py",
+      "sha256": "e20621d6ff26db55e97f71809d6658c0a5ecdf289c79bf1c39b20dec620b9556",
+      "bytes": 3809,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/scripts/sample_dps.slurm",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/scripts/sample_dps.slurm",
+      "sha256": "ec2dc799e38112b3c1fb45e2349606422fed2113c171904ffc148421ef899bdf",
+      "bytes": 2277,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/scripts/sample_flow_dps.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/scripts/sample_flow_dps.py",
+      "sha256": "0503992482dbf758ff11f84e01a9533b2cbab1adfd942884c031f87c884c04b6",
+      "bytes": 332,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/scripts/train_flow_prior.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/scripts/train_flow_prior.py",
+      "sha256": "d9a40198e6e4ba4d519e66bb2ec8662f5c1faeeb52e919a92dc5d6663a723886",
+      "bytes": 301,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/scripts/train_prior.slurm",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/scripts/train_prior.slurm",
+      "sha256": "cf282ab7dccacf8d68b6026366b873b62e0faa05ee2de6fbae5eb881eca3bc7f",
+      "bytes": 1468,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/scripts/verify_artifact.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/scripts/verify_artifact.py",
+      "sha256": "660dc3fe1c4353327e0355cf6ff789c0214f06f1769b6fa3a52bd34c9384e95e",
+      "bytes": 923,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/__init__.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/__init__.py",
+      "sha256": "a5c4b5fe032610a9f782e988bdf3721573a463d6a2bb4abb00ba0a03f3263cd7",
+      "bytes": 1784,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/advection.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/advection.py",
+      "sha256": "17933a724d290cbdd0f2d4979f9520e044181f025df357e75498e07e81c063d8",
+      "bytes": 9106,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/cfd.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/cfd.py",
+      "sha256": "28d40bbc52437a12adc50fe51f5468e59863f69bb92429b71e0e523d19e8297f",
+      "bytes": 13294,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/checkpoint_io.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/checkpoint_io.py",
+      "sha256": "9bdf4bf1b5c7ad886700a02fa1beef6aeee741e7a8e1ac7cc401d4aee5e1b884",
+      "bytes": 1817,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/conditioning.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/conditioning.py",
+      "sha256": "6344287f68c9836088fafc5606aa526ec911962e333c6be961eab81858418aad",
+      "bytes": 3001,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/diffusion.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/diffusion.py",
+      "sha256": "a0511973140b1fb23adfd39c733848505851ace20cd519d0aa998d32b2a46ffe",
+      "bytes": 19262,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/dps/__init__.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/dps/__init__.py",
+      "sha256": "a14af6126c72ff38fcd880569bc767221481124fd5d8e8e5de7e8c386d1567f5",
+      "bytes": 277,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/dps/audit.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/dps/audit.py",
+      "sha256": "dff0c4102131109034183221ea881878958de4d5fb47668778914163fe1abe10",
+      "bytes": 3108,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/dps/data.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/dps/data.py",
+      "sha256": "eba9d8f610cdca9bb05c0754b9d8dfef0ecc9b2ecd0a29dc12ea5221805ee050",
+      "bytes": 9584,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/dps/inference.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/dps/inference.py",
+      "sha256": "6392cf07093e4b038ab9924c4cfce09f5ba45eb5ce58b5d0e91bf8395d1a9b3b",
+      "bytes": 15501,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/dps/observations.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/dps/observations.py",
+      "sha256": "b48f2c59cc1de5b390f15077bdacfb8c99bd28b266de85f98d1d9cda98e3c9ca",
+      "bytes": 13465,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/dps/sampler.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/dps/sampler.py",
+      "sha256": "af3b3cb4f52c740921443d09d733c21c61db32a9db5fc6b8184e46b1cda460a7",
+      "bytes": 8895,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/dps/training.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/dps/training.py",
+      "sha256": "34622f539caa50090daac260119a3253b91e3c68d15935402c1e2570a802eaae",
+      "bytes": 12736,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/interpolation.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/interpolation.py",
+      "sha256": "2448b1321a6b5936694f302ebb770cf35e51fac55a5c9930e35c023c56f07afa",
+      "bytes": 12577,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/likelihood.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/likelihood.py",
+      "sha256": "61633fd1b4a5b2cfad1cd18ff9b4d7cf93ea3cc297e7996424b094e318c11f87",
+      "bytes": 7899,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/models/__init__.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/models/__init__.py",
+      "sha256": "2debf394ebae79ca736ed45a580084d5fbdbc8c8c318463726af1d8cfff74910",
+      "bytes": 204,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/models/dit.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/models/dit.py",
+      "sha256": "a1fd77ce6e19685fb76e66d16e23d53830b16af44f6d26b56a62c049674b78d8",
+      "bytes": 15933,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/models/factory.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/models/factory.py",
+      "sha256": "f585727912f610003f8f34ac3b16a7b92c4ab85e92a990917e9b43f1527e012b",
+      "bytes": 2331,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/models/trajectory_encoder.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/models/trajectory_encoder.py",
+      "sha256": "f29aa563419639c3dd6dde367d7df3f5dcef770c7ba547f82976b46096600d12",
+      "bytes": 21906,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/models/unet3d.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/models/unet3d.py",
+      "sha256": "120619da44ce9ad2722746fc07f5131c200b8b5c3cc9278356f56df697255240",
+      "bytes": 11911,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/multiview.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/multiview.py",
+      "sha256": "d7868cbedd928ee8bf5d31b460dbc6c0eaff834053172a1574785ecb5f485efe",
+      "bytes": 3674,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/projection.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/projection.py",
+      "sha256": "09b9cb53ebd53d0da47fad68878ad4017ab0203188515b9ede464d4e025f5988",
+      "bytes": 7613,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/recovery.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/recovery.py",
+      "sha256": "fb433887fcd107da3b2f98ba116d408d4dd4c0fb8eb93b678cffc67c4ce09a74",
+      "bytes": 10694,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/sparse_dataset.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/sparse_dataset.py",
+      "sha256": "0b4154709f17798d4028bfc81b5156682acc13b6bdb90c3bae91cc11abebd281",
+      "bytes": 34006,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/sparse_physics.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/sparse_physics.py",
+      "sha256": "c2e5275e004fef58eca1ee842e9cbe32bfd2c41e9d1b80549eaa59c6fe477c57",
+      "bytes": 18393,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/taichi_lbm3d.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/taichi_lbm3d.py",
+      "sha256": "1c8e649655a775d26164c9691029a4df3053b1e66e86dfb1750da9d30e06f310",
+      "bytes": 4331,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/src/flow_observation/tensor_space.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/src/flow_observation/tensor_space.py",
+      "sha256": "35320450af0af73587035b1d5cec57f2b78baa81d0a5dad1fabcc1072592593d",
+      "bytes": 24921,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/tests/conftest.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/tests/conftest.py",
+      "sha256": "1a20955d1bd55bdd3510795b79bd59d1fe5f06770b2cc13c18655b7cbea8cd0a",
+      "bytes": 1868,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/tests/test_amp_training.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/tests/test_amp_training.py",
+      "sha256": "c6d39ebdac403bb061709f32372c9dcafb78b133921f65cf67963268d91550b1",
+      "bytes": 3348,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/tests/test_dps.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/tests/test_dps.py",
+      "sha256": "2aec4219c222933bbb11f4c231e26ee8f9e6e125d70dc361650bce298dfedfea",
+      "bytes": 15445,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/tests/test_inference_audit.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/tests/test_inference_audit.py",
+      "sha256": "050b8f45deaa42279d65af4a70140028989ddd0241c4695519f79deddea637e3",
+      "bytes": 5866,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/tests/test_observation_audit.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/tests/test_observation_audit.py",
+      "sha256": "2c3845f54d47bd90a412855f97c0b6e153e09108071cc66e337dc3de090400ce",
+      "bytes": 6423,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/validation/audit_cpu_tests.xml",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/validation/audit_cpu_tests.xml",
+      "sha256": "bb9522ab8950bf85deb266334b277e521567fa2a1b6689488c28b8620dd6f8be",
+      "bytes": 5470,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/validation/method_conformance_review_20261020.json",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/validation/method_conformance_review_20261020.json",
+      "sha256": "d6f04ee8b697a85017755f2a8312a2c2fa0154ad0a5238f7011a5ea96cf8c20b",
+      "bytes": 2325,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/validation/method_conformance_review_20261020.txt",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/validation/method_conformance_review_20261020.txt",
+      "sha256": "0933840bf7efecc2cb21f4f64b8beec54563b3360a6a40bb9c17f65d572da26f",
+      "bytes": 8158,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/validation/real_data_preflight.json",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/validation/real_data_preflight.json",
+      "sha256": "0282d9565788256c9be3416319cf59a8744e15ae78de54fe122b2c7aed98e632",
+      "bytes": 3463,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_source/validation/summary.json",
+      "path": "server_operations/server_own_models_20261103/dps/fs_source/validation/summary.json",
+      "sha256": "cd68f3145d52d3a4e9f268f94eb515a3446b0dcdafcf774ee2bd80f97f30482b",
+      "bytes": 1601,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/README.md",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/README.md",
+      "sha256": "a437a133240593ab13b9601244e55fca77a0eb2b709b28627ef77a9f12303a21",
+      "bytes": 2642,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/calibrate.slurm",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/calibrate.slurm",
+      "sha256": "f04656556058408a2a94f35c58be0dce2128fdb5f30bf2d433f9c59568d3f437",
+      "bytes": 626,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/config.json",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/config.json",
+      "sha256": "a2df72554d7a128258390beb44a88699f539eb3cdaef78a947e043c73c852217",
+      "bytes": 2519,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/freeze.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/freeze.py",
+      "sha256": "a9c4820dbd75c4b1b10f9016771e074e4a57600e76258bfef39304e173b0ab6a",
+      "bytes": 1039,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/frozen_manifest.json",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/frozen_manifest.json",
+      "sha256": "389917e1f939c0a6e0e0e339ebfa87d8d650a6310669c431607c32ae1d1fdd00",
+      "bytes": 7555,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/physics.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/physics.py",
+      "sha256": "9e8e01987a00637983006beaf4a7b5b831f0c09026c96b5505c3664167abd675",
+      "bytes": 12198,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/prepare_jobs.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/prepare_jobs.py",
+      "sha256": "1eb2d6ea098f2b72ade8fe5e4849e04bbeaf6e49f42b37667b84d8fb2e1e3f7b",
+      "bytes": 904,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/prepare_physics.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/prepare_physics.py",
+      "sha256": "6e3308a3dde3e71d6393bd0b542330f0668bbfc9c61fedd307e58e841b6cf143",
+      "bytes": 1645,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/reports/cpu_tests.xml",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/reports/cpu_tests.xml",
+      "sha256": "41f85243595cce07880828254ca07c4aa628f4e74a15116313432e410e9eb108",
+      "bytes": 906,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/reports/data_preflight.json",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/reports/data_preflight.json",
+      "sha256": "1a6c04d6c385817f2ac3936f81441f9aa3a08720eab38b52f20060e155ff797e",
+      "bytes": 1202,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/reports/preflight.json",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/reports/preflight.json",
+      "sha256": "1a6c04d6c385817f2ac3936f81441f9aa3a08720eab38b52f20060e155ff797e",
+      "bytes": 1202,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/runtime.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/runtime.py",
+      "sha256": "dc0828dcb728c7ca9cf6548c0c60a90eba748ce44663132149c901029a96ef68",
+      "bytes": 27910,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/submission.json",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/submission.json",
+      "sha256": "a2e7587673fdd3d05ce2aa21c5f26811076ad70a9bd89c297e60f282984e9f4a",
+      "bytes": 1584,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/test.slurm",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/test.slurm",
+      "sha256": "c48ddeec30351c68e624cedd3f8cc919b993355d8b346c91d8c51eeef2ae2a02",
+      "bytes": 613,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/test_calibration.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/test_calibration.py",
+      "sha256": "6435e582df0b7385d536ab9dfea280320d3cec218d8064801c68f62feb83229a",
+      "bytes": 1619,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/test_likelihood.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/test_likelihood.py",
+      "sha256": "fd2d68d7306f8df72f4fc6914820043d873fdca33b83d183d391b50a72ebb2b4",
+      "bytes": 5372,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/test_prior.py",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/test_prior.py",
+      "sha256": "521e18adfe1c7f56e5836aa8763005a9f24b7383434e0e42026e6c4c7f779415",
+      "bytes": 2000,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/fs_sph/train.slurm",
+      "path": "server_operations/server_own_models_20261103/dps/fs_sph/train.slurm",
+      "sha256": "4e795654e0a1eb62d0c0003307878f1398edb2634f333d37378abe9fc89574c7",
+      "bytes": 606,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/jhtdb/README.txt",
+      "path": "server_operations/server_own_models_20261103/dps/jhtdb/README.txt",
+      "sha256": "733d2eb502c072701370144438c9cdb7ab33367c1afbd2cd75ffbce02b0a5c49",
+      "bytes": 2165,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/jhtdb/calibrate.sbatch",
+      "path": "server_operations/server_own_models_20261103/dps/jhtdb/calibrate.sbatch",
+      "sha256": "6cf643d39549f85699ae2ed5759be517d66b782f4441da68f6e9f03e1ae3c005",
+      "bytes": 733,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/jhtdb/config.json",
+      "path": "server_operations/server_own_models_20261103/dps/jhtdb/config.json",
+      "sha256": "5a067d9494b62024f4a83908c693a6f03edc6e8dbb71518c4df6e09c52c7c0c5",
+      "bytes": 2197,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/jhtdb/freeze.py",
+      "path": "server_operations/server_own_models_20261103/dps/jhtdb/freeze.py",
+      "sha256": "bf7f428153fecdfe771c1524860d6fac67aa96557baf1f86dbb03b90b1875276",
+      "bytes": 739,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/jhtdb/frozen_manifest.json",
+      "path": "server_operations/server_own_models_20261103/dps/jhtdb/frozen_manifest.json",
+      "sha256": "71311e9c98e764c5ea4c323b50c56589203f12429d55e4b8175ccb4bd5d89d62",
+      "bytes": 5147,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/jhtdb/reports/cpu_checks.xml",
+      "path": "server_operations/server_own_models_20261103/dps/jhtdb/reports/cpu_checks.xml",
+      "sha256": "0072a737b48ed27d1e8d419e899737ed588d8e40fde5a5fa23aa2bd7d6e999d2",
+      "bytes": 3059,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/jhtdb/runtime.py",
+      "path": "server_operations/server_own_models_20261103/dps/jhtdb/runtime.py",
+      "sha256": "707fd219d4a2bd3cb533b5c73352f9a71254fbfc285047488a3e47c52d70ec50",
+      "bytes": 13660,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/jhtdb/submission.json",
+      "path": "server_operations/server_own_models_20261103/dps/jhtdb/submission.json",
+      "sha256": "0ffdb3734ac01f9248aa1d44d7d2d4849bc83dd31158a9232b33b64c4a9ccc7c",
+      "bytes": 1503,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/jhtdb/test.sbatch",
+      "path": "server_operations/server_own_models_20261103/dps/jhtdb/test.sbatch",
+      "sha256": "2282017cb4eb8921a4993ec92b3f6cd47caae830866363ead370fe3b7ccd1f13",
+      "bytes": 715,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/jhtdb/test_runtime.py",
+      "path": "server_operations/server_own_models_20261103/dps/jhtdb/test_runtime.py",
+      "sha256": "ded83db1f440a2918591ff05da592d0ebb38217ca233dc8fcbaa9500bf296473",
+      "bytes": 3963,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/jhtdb/train.sbatch",
+      "path": "server_operations/server_own_models_20261103/dps/jhtdb/train.sbatch",
+      "sha256": "9d6ba44b5073408aca61284b5ee0d44a8c2ae018d0e279e2d57214c043c42dfb",
+      "bytes": 709,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/README.txt",
+      "path": "server_operations/server_own_models_20261103/dps/lbm/README.txt",
+      "sha256": "9e81ff19fa2a2cd07b3406b172b69fd4aa91ffb5b33d3cc5acd8e17f0be23bb6",
+      "bytes": 1566,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/calibrate.sbatch",
+      "path": "server_operations/server_own_models_20261103/dps/lbm/calibrate.sbatch",
+      "sha256": "1b82f3454b0a26f53b7e97ee9981099fdf1259add8e2820dac4477f6cc1d9693",
+      "bytes": 725,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/config.json",
+      "path": "server_operations/server_own_models_20261103/dps/lbm/config.json",
+      "sha256": "fad38f35b75a1342dad588dcff5eb4394fd1bc77cc5b7b0b3938f8f4e5e3be8f",
+      "bytes": 2796,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/freeze.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm/freeze.py",
+      "sha256": "f7b46d0e76deab5d59eb7b73435762031442c33a727466ef963a3665b744e034",
+      "bytes": 817,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/frozen_manifest.json",
+      "path": "server_operations/server_own_models_20261103/dps/lbm/frozen_manifest.json",
+      "sha256": "896cf21d6ce62c60fc313c586a87a3d2bde6c2471af075af6f2c97d6e3e684be",
+      "bytes": 4963,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/reports/cpu_checks.xml",
+      "path": "server_operations/server_own_models_20261103/dps/lbm/reports/cpu_checks.xml",
+      "sha256": "97ae9879942282855eeee8b7b3df01f9376131bad8e3ef9c38a840ec1a284a44",
+      "bytes": 3378,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/runtime.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm/runtime.py",
+      "sha256": "d9fc58b5f21df9b4667de0bbf120897d4969930d58a5fddb93478c688fb6dd0d",
+      "bytes": 14338,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/submission.json",
+      "path": "server_operations/server_own_models_20261103/dps/lbm/submission.json",
+      "sha256": "97daa9657c245e15caaeeac204608ba35b7c85f8ce54adfd6289626bf760514b",
+      "bytes": 3940,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/test.sbatch",
+      "path": "server_operations/server_own_models_20261103/dps/lbm/test.sbatch",
+      "sha256": "3ec82788adfa4191166146bc6aa0e08321a6dcc296a128ee715b0bff98881740",
+      "bytes": 707,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/test_runtime.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm/test_runtime.py",
+      "sha256": "1b5e661f448894729f2297e8ad9cb729030af4d8fbedf7d9e224136e8f444395",
+      "bytes": 7073,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm/train.sbatch",
+      "path": "server_operations/server_own_models_20261103/dps/lbm/train.sbatch",
+      "sha256": "be8761092cd686390e08a5e67dd616e2fe6d86ccf5bac98a426713538f64c4bc",
+      "bytes": 701,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/.gitignore",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/.gitignore",
+      "sha256": "29154faddecd19fae849ed689c8ab2b259f2ae9fdf71f8492443b2bcd6ffbdae",
+      "bytes": 67,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/BASELINE_PROVENANCE.json",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/BASELINE_PROVENANCE.json",
+      "sha256": "747afcbc21d94e8516d0e5090c081eefe71f96a5a6f351d6fc1d35932d41e191",
+      "bytes": 2588,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/FILES_MANIFEST.json",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/FILES_MANIFEST.json",
+      "sha256": "bf4493a80b6aa264266a4d12a4c7cf5602e007fc07a1e9f90ae5510369b2f9d3",
+      "bytes": 6794,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/README.md",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/README.md",
+      "sha256": "6df60a345783f50454d8c01fe0bcd16d1b309f639bd1fbfff552b753e663b508",
+      "bytes": 9637,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/pyproject.toml",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/pyproject.toml",
+      "sha256": "8bd53af47f9b87783ee46c254801bf9b3c50d22faa6447bea4fff02871dc1fe1",
+      "bytes": 500,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/scripts/preflight.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/scripts/preflight.py",
+      "sha256": "e20621d6ff26db55e97f71809d6658c0a5ecdf289c79bf1c39b20dec620b9556",
+      "bytes": 3809,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/scripts/sample_dps.slurm",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/scripts/sample_dps.slurm",
+      "sha256": "ec2dc799e38112b3c1fb45e2349606422fed2113c171904ffc148421ef899bdf",
+      "bytes": 2277,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/scripts/sample_flow_dps.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/scripts/sample_flow_dps.py",
+      "sha256": "0503992482dbf758ff11f84e01a9533b2cbab1adfd942884c031f87c884c04b6",
+      "bytes": 332,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/scripts/train_flow_prior.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/scripts/train_flow_prior.py",
+      "sha256": "d9a40198e6e4ba4d519e66bb2ec8662f5c1faeeb52e919a92dc5d6663a723886",
+      "bytes": 301,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/scripts/train_prior.slurm",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/scripts/train_prior.slurm",
+      "sha256": "cf282ab7dccacf8d68b6026366b873b62e0faa05ee2de6fbae5eb881eca3bc7f",
+      "bytes": 1468,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/scripts/verify_artifact.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/scripts/verify_artifact.py",
+      "sha256": "660dc3fe1c4353327e0355cf6ff789c0214f06f1769b6fa3a52bd34c9384e95e",
+      "bytes": 923,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/__init__.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/__init__.py",
+      "sha256": "a5c4b5fe032610a9f782e988bdf3721573a463d6a2bb4abb00ba0a03f3263cd7",
+      "bytes": 1784,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/advection.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/advection.py",
+      "sha256": "17933a724d290cbdd0f2d4979f9520e044181f025df357e75498e07e81c063d8",
+      "bytes": 9106,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/cfd.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/cfd.py",
+      "sha256": "28d40bbc52437a12adc50fe51f5468e59863f69bb92429b71e0e523d19e8297f",
+      "bytes": 13294,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/checkpoint_io.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/checkpoint_io.py",
+      "sha256": "9bdf4bf1b5c7ad886700a02fa1beef6aeee741e7a8e1ac7cc401d4aee5e1b884",
+      "bytes": 1817,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/conditioning.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/conditioning.py",
+      "sha256": "6344287f68c9836088fafc5606aa526ec911962e333c6be961eab81858418aad",
+      "bytes": 3001,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/diffusion.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/diffusion.py",
+      "sha256": "a0511973140b1fb23adfd39c733848505851ace20cd519d0aa998d32b2a46ffe",
+      "bytes": 19262,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/dps/__init__.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/dps/__init__.py",
+      "sha256": "a14af6126c72ff38fcd880569bc767221481124fd5d8e8e5de7e8c386d1567f5",
+      "bytes": 277,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/dps/audit.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/dps/audit.py",
+      "sha256": "dff0c4102131109034183221ea881878958de4d5fb47668778914163fe1abe10",
+      "bytes": 3108,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/dps/data.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/dps/data.py",
+      "sha256": "eba9d8f610cdca9bb05c0754b9d8dfef0ecc9b2ecd0a29dc12ea5221805ee050",
+      "bytes": 9584,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/dps/inference.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/dps/inference.py",
+      "sha256": "6392cf07093e4b038ab9924c4cfce09f5ba45eb5ce58b5d0e91bf8395d1a9b3b",
+      "bytes": 15501,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/dps/observations.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/dps/observations.py",
+      "sha256": "b48f2c59cc1de5b390f15077bdacfb8c99bd28b266de85f98d1d9cda98e3c9ca",
+      "bytes": 13465,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/dps/sampler.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/dps/sampler.py",
+      "sha256": "58aba5949fc291694cc1753b0fd41485ba717738f3e57fc3102f51e556ee9f5e",
+      "bytes": 8885,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/dps/training.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/dps/training.py",
+      "sha256": "34622f539caa50090daac260119a3253b91e3c68d15935402c1e2570a802eaae",
+      "bytes": 12736,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/interpolation.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/interpolation.py",
+      "sha256": "2448b1321a6b5936694f302ebb770cf35e51fac55a5c9930e35c023c56f07afa",
+      "bytes": 12577,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/likelihood.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/likelihood.py",
+      "sha256": "61633fd1b4a5b2cfad1cd18ff9b4d7cf93ea3cc297e7996424b094e318c11f87",
+      "bytes": 7899,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/models/__init__.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/models/__init__.py",
+      "sha256": "2debf394ebae79ca736ed45a580084d5fbdbc8c8c318463726af1d8cfff74910",
+      "bytes": 204,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/models/dit.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/models/dit.py",
+      "sha256": "a1fd77ce6e19685fb76e66d16e23d53830b16af44f6d26b56a62c049674b78d8",
+      "bytes": 15933,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/models/factory.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/models/factory.py",
+      "sha256": "f585727912f610003f8f34ac3b16a7b92c4ab85e92a990917e9b43f1527e012b",
+      "bytes": 2331,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/models/trajectory_encoder.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/models/trajectory_encoder.py",
+      "sha256": "f29aa563419639c3dd6dde367d7df3f5dcef770c7ba547f82976b46096600d12",
+      "bytes": 21906,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/models/unet3d.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/models/unet3d.py",
+      "sha256": "120619da44ce9ad2722746fc07f5131c200b8b5c3cc9278356f56df697255240",
+      "bytes": 11911,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/multiview.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/multiview.py",
+      "sha256": "d7868cbedd928ee8bf5d31b460dbc6c0eaff834053172a1574785ecb5f485efe",
+      "bytes": 3674,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/projection.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/projection.py",
+      "sha256": "09b9cb53ebd53d0da47fad68878ad4017ab0203188515b9ede464d4e025f5988",
+      "bytes": 7613,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/recovery.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/recovery.py",
+      "sha256": "fb433887fcd107da3b2f98ba116d408d4dd4c0fb8eb93b678cffc67c4ce09a74",
+      "bytes": 10694,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/sparse_dataset.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/sparse_dataset.py",
+      "sha256": "0b4154709f17798d4028bfc81b5156682acc13b6bdb90c3bae91cc11abebd281",
+      "bytes": 34006,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/sparse_physics.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/sparse_physics.py",
+      "sha256": "c2e5275e004fef58eca1ee842e9cbe32bfd2c41e9d1b80549eaa59c6fe477c57",
+      "bytes": 18393,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/taichi_lbm3d.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/taichi_lbm3d.py",
+      "sha256": "1c8e649655a775d26164c9691029a4df3053b1e66e86dfb1750da9d30e06f310",
+      "bytes": 4331,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/tensor_space.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/src/flow_observation/tensor_space.py",
+      "sha256": "35320450af0af73587035b1d5cec57f2b78baa81d0a5dad1fabcc1072592593d",
+      "bytes": 24921,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/tests/conftest.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/tests/conftest.py",
+      "sha256": "1a20955d1bd55bdd3510795b79bd59d1fe5f06770b2cc13c18655b7cbea8cd0a",
+      "bytes": 1868,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/tests/test_amp_training.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/tests/test_amp_training.py",
+      "sha256": "c6d39ebdac403bb061709f32372c9dcafb78b133921f65cf67963268d91550b1",
+      "bytes": 3348,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/tests/test_dps.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/tests/test_dps.py",
+      "sha256": "2aec4219c222933bbb11f4c231e26ee8f9e6e125d70dc361650bce298dfedfea",
+      "bytes": 15445,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/tests/test_inference_audit.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/tests/test_inference_audit.py",
+      "sha256": "050b8f45deaa42279d65af4a70140028989ddd0241c4695519f79deddea637e3",
+      "bytes": 5866,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/tests/test_observation_audit.py",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/tests/test_observation_audit.py",
+      "sha256": "2c3845f54d47bd90a412855f97c0b6e153e09108071cc66e337dc3de090400ce",
+      "bytes": 6423,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/validation/audit_cpu_tests.xml",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/validation/audit_cpu_tests.xml",
+      "sha256": "bb9522ab8950bf85deb266334b277e521567fa2a1b6689488c28b8620dd6f8be",
+      "bytes": 5470,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/validation/method_conformance_review_20261020.json",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/validation/method_conformance_review_20261020.json",
+      "sha256": "d6f04ee8b697a85017755f2a8312a2c2fa0154ad0a5238f7011a5ea96cf8c20b",
+      "bytes": 2325,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/validation/method_conformance_review_20261020.txt",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/validation/method_conformance_review_20261020.txt",
+      "sha256": "0933840bf7efecc2cb21f4f64b8beec54563b3360a6a40bb9c17f65d572da26f",
+      "bytes": 8158,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/validation/real_data_preflight.json",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/validation/real_data_preflight.json",
+      "sha256": "0282d9565788256c9be3416319cf59a8744e15ae78de54fe122b2c7aed98e632",
+      "bytes": 3463,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source/validation/summary.json",
+      "path": "server_operations/server_own_models_20261103/dps/lbm_source/validation/summary.json",
+      "sha256": "cd68f3145d52d3a4e9f268f94eb515a3446b0dcdafcf774ee2bd80f97f30482b",
+      "bytes": 1601,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/.gitignore",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/.gitignore",
+      "sha256": "29154faddecd19fae849ed689c8ab2b259f2ae9fdf71f8492443b2bcd6ffbdae",
+      "bytes": 67,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/BASELINE_PROVENANCE.json",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/BASELINE_PROVENANCE.json",
+      "sha256": "747afcbc21d94e8516d0e5090c081eefe71f96a5a6f351d6fc1d35932d41e191",
+      "bytes": 2588,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/FILES_MANIFEST.json",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/FILES_MANIFEST.json",
+      "sha256": "bf4493a80b6aa264266a4d12a4c7cf5602e007fc07a1e9f90ae5510369b2f9d3",
+      "bytes": 6794,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/README.md",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/README.md",
+      "sha256": "6df60a345783f50454d8c01fe0bcd16d1b309f639bd1fbfff552b753e663b508",
+      "bytes": 9637,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/pyproject.toml",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/pyproject.toml",
+      "sha256": "8bd53af47f9b87783ee46c254801bf9b3c50d22faa6447bea4fff02871dc1fe1",
+      "bytes": 500,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/scripts/preflight.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/scripts/preflight.py",
+      "sha256": "e20621d6ff26db55e97f71809d6658c0a5ecdf289c79bf1c39b20dec620b9556",
+      "bytes": 3809,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/scripts/sample_dps.slurm",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/scripts/sample_dps.slurm",
+      "sha256": "ec2dc799e38112b3c1fb45e2349606422fed2113c171904ffc148421ef899bdf",
+      "bytes": 2277,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/scripts/sample_flow_dps.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/scripts/sample_flow_dps.py",
+      "sha256": "0503992482dbf758ff11f84e01a9533b2cbab1adfd942884c031f87c884c04b6",
+      "bytes": 332,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/scripts/train_flow_prior.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/scripts/train_flow_prior.py",
+      "sha256": "d9a40198e6e4ba4d519e66bb2ec8662f5c1faeeb52e919a92dc5d6663a723886",
+      "bytes": 301,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/scripts/train_prior.slurm",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/scripts/train_prior.slurm",
+      "sha256": "cf282ab7dccacf8d68b6026366b873b62e0faa05ee2de6fbae5eb881eca3bc7f",
+      "bytes": 1468,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/scripts/verify_artifact.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/scripts/verify_artifact.py",
+      "sha256": "660dc3fe1c4353327e0355cf6ff789c0214f06f1769b6fa3a52bd34c9384e95e",
+      "bytes": 923,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/__init__.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/__init__.py",
+      "sha256": "a5c4b5fe032610a9f782e988bdf3721573a463d6a2bb4abb00ba0a03f3263cd7",
+      "bytes": 1784,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/advection.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/advection.py",
+      "sha256": "17933a724d290cbdd0f2d4979f9520e044181f025df357e75498e07e81c063d8",
+      "bytes": 9106,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/cfd.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/cfd.py",
+      "sha256": "28d40bbc52437a12adc50fe51f5468e59863f69bb92429b71e0e523d19e8297f",
+      "bytes": 13294,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/checkpoint_io.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/checkpoint_io.py",
+      "sha256": "9bdf4bf1b5c7ad886700a02fa1beef6aeee741e7a8e1ac7cc401d4aee5e1b884",
+      "bytes": 1817,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/conditioning.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/conditioning.py",
+      "sha256": "6344287f68c9836088fafc5606aa526ec911962e333c6be961eab81858418aad",
+      "bytes": 3001,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/diffusion.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/diffusion.py",
+      "sha256": "a0511973140b1fb23adfd39c733848505851ace20cd519d0aa998d32b2a46ffe",
+      "bytes": 19262,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/dps/__init__.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/dps/__init__.py",
+      "sha256": "a14af6126c72ff38fcd880569bc767221481124fd5d8e8e5de7e8c386d1567f5",
+      "bytes": 277,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/dps/audit.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/dps/audit.py",
+      "sha256": "dff0c4102131109034183221ea881878958de4d5fb47668778914163fe1abe10",
+      "bytes": 3108,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/dps/data.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/dps/data.py",
+      "sha256": "eba9d8f610cdca9bb05c0754b9d8dfef0ecc9b2ecd0a29dc12ea5221805ee050",
+      "bytes": 9584,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/dps/inference.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/dps/inference.py",
+      "sha256": "6392cf07093e4b038ab9924c4cfce09f5ba45eb5ce58b5d0e91bf8395d1a9b3b",
+      "bytes": 15501,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/dps/observations.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/dps/observations.py",
+      "sha256": "b48f2c59cc1de5b390f15077bdacfb8c99bd28b266de85f98d1d9cda98e3c9ca",
+      "bytes": 13465,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/dps/sampler.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/dps/sampler.py",
+      "sha256": "58aba5949fc291694cc1753b0fd41485ba717738f3e57fc3102f51e556ee9f5e",
+      "bytes": 8885,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/dps/training.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/dps/training.py",
+      "sha256": "34622f539caa50090daac260119a3253b91e3c68d15935402c1e2570a802eaae",
+      "bytes": 12736,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/interpolation.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/interpolation.py",
+      "sha256": "2448b1321a6b5936694f302ebb770cf35e51fac55a5c9930e35c023c56f07afa",
+      "bytes": 12577,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/likelihood.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/likelihood.py",
+      "sha256": "61633fd1b4a5b2cfad1cd18ff9b4d7cf93ea3cc297e7996424b094e318c11f87",
+      "bytes": 7899,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/models/__init__.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/models/__init__.py",
+      "sha256": "2debf394ebae79ca736ed45a580084d5fbdbc8c8c318463726af1d8cfff74910",
+      "bytes": 204,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/models/dit.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/models/dit.py",
+      "sha256": "a1fd77ce6e19685fb76e66d16e23d53830b16af44f6d26b56a62c049674b78d8",
+      "bytes": 15933,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/models/factory.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/models/factory.py",
+      "sha256": "f585727912f610003f8f34ac3b16a7b92c4ab85e92a990917e9b43f1527e012b",
+      "bytes": 2331,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/models/trajectory_encoder.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/models/trajectory_encoder.py",
+      "sha256": "f29aa563419639c3dd6dde367d7df3f5dcef770c7ba547f82976b46096600d12",
+      "bytes": 21906,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/models/unet3d.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/models/unet3d.py",
+      "sha256": "120619da44ce9ad2722746fc07f5131c200b8b5c3cc9278356f56df697255240",
+      "bytes": 11911,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/multiview.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/multiview.py",
+      "sha256": "d7868cbedd928ee8bf5d31b460dbc6c0eaff834053172a1574785ecb5f485efe",
+      "bytes": 3674,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/projection.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/projection.py",
+      "sha256": "09b9cb53ebd53d0da47fad68878ad4017ab0203188515b9ede464d4e025f5988",
+      "bytes": 7613,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/recovery.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/recovery.py",
+      "sha256": "fb433887fcd107da3b2f98ba116d408d4dd4c0fb8eb93b678cffc67c4ce09a74",
+      "bytes": 10694,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/sparse_dataset.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/sparse_dataset.py",
+      "sha256": "0b4154709f17798d4028bfc81b5156682acc13b6bdb90c3bae91cc11abebd281",
+      "bytes": 34006,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/sparse_physics.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/sparse_physics.py",
+      "sha256": "c2e5275e004fef58eca1ee842e9cbe32bfd2c41e9d1b80549eaa59c6fe477c57",
+      "bytes": 18393,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/taichi_lbm3d.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/taichi_lbm3d.py",
+      "sha256": "1c8e649655a775d26164c9691029a4df3053b1e66e86dfb1750da9d30e06f310",
+      "bytes": 4331,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/src/flow_observation/tensor_space.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/src/flow_observation/tensor_space.py",
+      "sha256": "35320450af0af73587035b1d5cec57f2b78baa81d0a5dad1fabcc1072592593d",
+      "bytes": 24921,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/tests/conftest.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/tests/conftest.py",
+      "sha256": "1a20955d1bd55bdd3510795b79bd59d1fe5f06770b2cc13c18655b7cbea8cd0a",
+      "bytes": 1868,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/tests/test_amp_training.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/tests/test_amp_training.py",
+      "sha256": "c6d39ebdac403bb061709f32372c9dcafb78b133921f65cf67963268d91550b1",
+      "bytes": 3348,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/tests/test_dps.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/tests/test_dps.py",
+      "sha256": "2aec4219c222933bbb11f4c231e26ee8f9e6e125d70dc361650bce298dfedfea",
+      "bytes": 15445,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/tests/test_inference_audit.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/tests/test_inference_audit.py",
+      "sha256": "050b8f45deaa42279d65af4a70140028989ddd0241c4695519f79deddea637e3",
+      "bytes": 5866,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/tests/test_observation_audit.py",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/tests/test_observation_audit.py",
+      "sha256": "2c3845f54d47bd90a412855f97c0b6e153e09108071cc66e337dc3de090400ce",
+      "bytes": 6423,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/validation/audit_cpu_tests.xml",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/validation/audit_cpu_tests.xml",
+      "sha256": "bb9522ab8950bf85deb266334b277e521567fa2a1b6689488c28b8620dd6f8be",
+      "bytes": 5470,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/validation/method_conformance_review_20261020.json",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/validation/method_conformance_review_20261020.json",
+      "sha256": "d6f04ee8b697a85017755f2a8312a2c2fa0154ad0a5238f7011a5ea96cf8c20b",
+      "bytes": 2325,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/validation/method_conformance_review_20261020.txt",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/validation/method_conformance_review_20261020.txt",
+      "sha256": "0933840bf7efecc2cb21f4f64b8beec54563b3360a6a40bb9c17f65d572da26f",
+      "bytes": 8158,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/validation/real_data_preflight.json",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/validation/real_data_preflight.json",
+      "sha256": "0282d9565788256c9be3416319cf59a8744e15ae78de54fe122b2c7aed98e632",
+      "bytes": 3463,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/static_source/validation/summary.json",
+      "path": "server_operations/server_own_models_20261103/dps/static_source/validation/summary.json",
+      "sha256": "cd68f3145d52d3a4e9f268f94eb515a3446b0dcdafcf774ee2bd80f97f30482b",
+      "bytes": 1601,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/execution_policy.json",
+      "path": "server_operations/server_own_models_20261103/execution_policy.json",
+      "sha256": "b75695c1481026f8ab0da70d9c819d38f686f903126fc4c2f93b7d0272627c8c",
+      "bytes": 1885,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/server_queue.json",
+      "path": "server_operations/server_own_models_20261103/server_queue.json",
+      "sha256": "78a52e57d42cbf37c0b7d8663608d64dae5ddf57674a1ee5a7ba31dd781e4dfc",
+      "bytes": 6312,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/submissions.json",
+      "path": "server_operations/server_own_models_20261103/submissions.json",
+      "sha256": "561ed3b29322aead78583938c5044ffd6d2bee11d15bd40ca49961c77ddb714a",
+      "bytes": 2309,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/configs/fs_sph_s31.json",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/configs/fs_sph_s31.json",
+      "sha256": "4c8b1adb0968850c34072292948828b6783b4f00a85c910b0c62d79c172b01b1",
+      "bytes": 947,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/configs/jhtdb_s31.json",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/configs/jhtdb_s31.json",
+      "sha256": "23ac3fa576b8e797a70da05498c3a6a20240122e53a5904f4ea54b2879ccaeb0",
+      "bytes": 947,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/continuous.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/continuous.py",
+      "sha256": "618e32ee0208bbab3705d32d7d0b8f6c327906ef15b8c2d91d22738a4b8dd815",
+      "bytes": 10107,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/fs_sph.slurm",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/fs_sph.slurm",
+      "sha256": "ef4265baf6357e668801df6b05e7c5de2a0c301fde6f1b8ca72b2bec4a5e0ac9",
+      "bytes": 1160,
+      "executable": true,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/jhtdb.slurm",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/jhtdb.slurm",
+      "sha256": "01eb5b3df6d8967ea9952672fdc6319daf3396049059b8ea55dd0a4f8abc4468",
+      "bytes": 1158,
+      "executable": true,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_adapter/operation_manifest.json",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_adapter/operation_manifest.json",
+      "sha256": "e233989861f8927f2680c6455f5c738e68ac79f286ed65cea16db3f0a4823d79",
+      "bytes": 280,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_adapter/plan.json",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_adapter/plan.json",
+      "sha256": "c499b7c50e19f72a477c2f93af8d9cdd08194c74baa42f9a163b48ea36c3b345",
+      "bytes": 520,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_adapter/prepare.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_adapter/prepare.py",
+      "sha256": "34819a1e3de2c3704d2e091a2d0eafac6266c23b2ff524d7872b3559e1d1d7af",
+      "bytes": 12051,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_adapter/prepare.slurm",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_adapter/prepare.slurm",
+      "sha256": "ea2aecc19d66fbaabedcd6fb2a6706a4e6384a294e7e6d7f1508523f0845cbee",
+      "bytes": 1134,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_adapter/reports/gate_checks.json",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_adapter/reports/gate_checks.json",
+      "sha256": "6d46de7ff752834e6da0867df73ce679192f6b4cfbe4ec453a88c73c90f6e286",
+      "bytes": 298,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/README.txt",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/README.txt",
+      "sha256": "108c9025298ca056e6a5e490a352e5abb01d2799359b7e7e08854ae217ab1d7d",
+      "bytes": 1811,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/configs/lbm_s31.json",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/configs/lbm_s31.json",
+      "sha256": "20c2417a6e2db992e95917126efbf99fb67adc37e732e75e1f18370b7daf26d1",
+      "bytes": 945,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/continuous.slurm",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/continuous.slurm",
+      "sha256": "3cf69d1820de4b6308a76983ac1dfd527f1896b3e33309682bc21b536f8020ee",
+      "bytes": 1386,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/frozen_manifest.json",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/frozen_manifest.json",
+      "sha256": "1a87b4be748ccd385ccf2d8d10567dd600aba7a11317add7969a125b5166d01d",
+      "bytes": 7411,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/launch/fs_baseline.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/launch/fs_baseline.py",
+      "sha256": "35ec6469ee1c5556f4465298659857350096331fa0603c3879f654cdf624d9e2",
+      "bytes": 46561,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/launch/runtime.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/launch/runtime.py",
+      "sha256": "e6837dae1a4a3c68709912ef21b23867166c87ae687a887ea627ac64f71eed44",
+      "bytes": 13364,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/launch/tensor_data.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/launch/tensor_data.py",
+      "sha256": "f9bbf3227d53502e6ed74115bb82e4043ea0b24326cf3932e1640b87d5b36fa9",
+      "bytes": 29163,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/launch/tensor_model.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/launch/tensor_model.py",
+      "sha256": "aaa7ecdbb41fcf14fc1a76ae3340e33de48eace158660cdcd6ccea7131c7ed66",
+      "bytes": 32480,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/plan.json",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/plan.json",
+      "sha256": "e82873f6a9011fa94b6c72f81440c5ad1b22ae17af19505d4a48334d9fb8ab29",
+      "bytes": 1970,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/reports/preflight.json",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/reports/preflight.json",
+      "sha256": "1683d816c8e1439cbd3d8a532fb3ba400965a2d0a8e26bff85b9731c5977c275",
+      "bytes": 2082,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/PROVENANCE.json",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/PROVENANCE.json",
+      "sha256": "333e1598e5af0255585d7e15614c32a12cb5f925a9d41e21523b4964d2421f95",
+      "bytes": 3217,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/README.md",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/README.md",
+      "sha256": "767578f659f29035fa327530e5ac35e9133d4216e5faaf7655efd806790e5ff1",
+      "bytes": 10397,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/pyproject.toml",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/pyproject.toml",
+      "sha256": "8bb0166cccd87d943ec210a9834a666c1dd1b254d54115b6f8e257a7a46ee777",
+      "bytes": 467,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/scripts/evaluate_baseline.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/scripts/evaluate_baseline.py",
+      "sha256": "01144b6659a486653988fbf3ea1d3a3a77f7ce7b8ba047607dc7e819ef641b17",
+      "bytes": 10449,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/scripts/predict.slurm",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/scripts/predict.slurm",
+      "sha256": "6ebed7cf0308b0ab3e377c6b957eb041699cf338753ecf1bdc6be051f6cb3d22",
+      "bytes": 1789,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/scripts/preflight.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/scripts/preflight.py",
+      "sha256": "76388fd0ccf599e751c686537f7699d7895ba061c209c1110579dffae92e0699",
+      "bytes": 2251,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/scripts/run_baseline.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/scripts/run_baseline.py",
+      "sha256": "cfefa06bd40670f877b3f110e8b9ffc146f0a5253620157eeaf3b6d6d446fb28",
+      "bytes": 257,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/scripts/train.slurm",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/scripts/train.slurm",
+      "sha256": "3516ca0903c76aad78c5a8de6ff01c93e84c11806df134f71fb81c3b8b0ed4b1",
+      "bytes": 1312,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/__init__.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/__init__.py",
+      "sha256": "0c91a737a31c039b470abe14cb7cbbb0ba450b76fb3ad22e550ae7241adf0bb0",
+      "bytes": 71,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/case_fit.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/case_fit.py",
+      "sha256": "6061c1296619865f2c2fdb1d5c68715fb01f55d039ae8083b293dfc1d90bfbb3",
+      "bytes": 5846,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/cli.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/cli.py",
+      "sha256": "990b3686544507d8079c39c5229aca55a94e48f161121a59b80fed4a3cce5740",
+      "bytes": 3933,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/common.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/common.py",
+      "sha256": "ad41162320012b1204f9c6ac5d46d302f87469fd1aae12bbbccc78c1bdbb8dfb",
+      "bytes": 5548,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/config.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/config.py",
+      "sha256": "d45ef902de8e3d8bc9abbf3f6e4785d5ab4da409db68931f249376d3e58ee578",
+      "bytes": 5474,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/inference.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/inference.py",
+      "sha256": "2240076d42703e7bd511e73c10fb7b233a7d07c189085b69f63823d1b3dcde3a",
+      "bytes": 12172,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/linear.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/linear.py",
+      "sha256": "1d712f5381dca2ce4993e5384e8164a06eab79c7c423156049184b681ce84d25",
+      "bytes": 10251,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/models.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/models.py",
+      "sha256": "5058baef114c9cb87cec8ea4c6833063f81fef4e27e70ec48621466fbcb517cf",
+      "bytes": 15474,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/pinn.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/pinn.py",
+      "sha256": "9fb5e6492640aab3668b97e0f4942e88a0a14a7c7e82c8ba14719b2032d2ad19",
+      "bytes": 7792,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/reporting.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/reporting.py",
+      "sha256": "eb60847d3fed7277dc77e5dc42df69e7fde184f4c50322d88d8d5872652ca38c",
+      "bytes": 20867,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/training.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_baselines/training.py",
+      "sha256": "5c2bceb62e1e041d2230332a8534661d59bc86a111e2e5d115d700a5cb56911e",
+      "bytes": 12326,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/__init__.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/__init__.py",
+      "sha256": "a5c4b5fe032610a9f782e988bdf3721573a463d6a2bb4abb00ba0a03f3263cd7",
+      "bytes": 1784,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/advection.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/advection.py",
+      "sha256": "17933a724d290cbdd0f2d4979f9520e044181f025df357e75498e07e81c063d8",
+      "bytes": 9106,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/cfd.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/cfd.py",
+      "sha256": "28d40bbc52437a12adc50fe51f5468e59863f69bb92429b71e0e523d19e8297f",
+      "bytes": 13294,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/checkpoint_io.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/checkpoint_io.py",
+      "sha256": "9bdf4bf1b5c7ad886700a02fa1beef6aeee741e7a8e1ac7cc401d4aee5e1b884",
+      "bytes": 1817,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/conditioning.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/conditioning.py",
+      "sha256": "6344287f68c9836088fafc5606aa526ec911962e333c6be961eab81858418aad",
+      "bytes": 3001,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/diffusion.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/diffusion.py",
+      "sha256": "a0511973140b1fb23adfd39c733848505851ace20cd519d0aa998d32b2a46ffe",
+      "bytes": 19262,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/dps/__init__.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/dps/__init__.py",
+      "sha256": "a14af6126c72ff38fcd880569bc767221481124fd5d8e8e5de7e8c386d1567f5",
+      "bytes": 277,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/dps/audit.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/dps/audit.py",
+      "sha256": "dff0c4102131109034183221ea881878958de4d5fb47668778914163fe1abe10",
+      "bytes": 3108,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/dps/data.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/dps/data.py",
+      "sha256": "eba9d8f610cdca9bb05c0754b9d8dfef0ecc9b2ecd0a29dc12ea5221805ee050",
+      "bytes": 9584,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/dps/inference.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/dps/inference.py",
+      "sha256": "6392cf07093e4b038ab9924c4cfce09f5ba45eb5ce58b5d0e91bf8395d1a9b3b",
+      "bytes": 15501,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/dps/observations.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/dps/observations.py",
+      "sha256": "b48f2c59cc1de5b390f15077bdacfb8c99bd28b266de85f98d1d9cda98e3c9ca",
+      "bytes": 13465,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/dps/sampler.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/dps/sampler.py",
+      "sha256": "58aba5949fc291694cc1753b0fd41485ba717738f3e57fc3102f51e556ee9f5e",
+      "bytes": 8885,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/dps/training.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/dps/training.py",
+      "sha256": "34622f539caa50090daac260119a3253b91e3c68d15935402c1e2570a802eaae",
+      "bytes": 12736,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/interpolation.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/interpolation.py",
+      "sha256": "2448b1321a6b5936694f302ebb770cf35e51fac55a5c9930e35c023c56f07afa",
+      "bytes": 12577,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/likelihood.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/likelihood.py",
+      "sha256": "61633fd1b4a5b2cfad1cd18ff9b4d7cf93ea3cc297e7996424b094e318c11f87",
+      "bytes": 7899,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/models/__init__.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/models/__init__.py",
+      "sha256": "2debf394ebae79ca736ed45a580084d5fbdbc8c8c318463726af1d8cfff74910",
+      "bytes": 204,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/models/dit.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/models/dit.py",
+      "sha256": "a1fd77ce6e19685fb76e66d16e23d53830b16af44f6d26b56a62c049674b78d8",
+      "bytes": 15933,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/models/factory.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/models/factory.py",
+      "sha256": "f585727912f610003f8f34ac3b16a7b92c4ab85e92a990917e9b43f1527e012b",
+      "bytes": 2331,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/models/trajectory_encoder.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/models/trajectory_encoder.py",
+      "sha256": "f29aa563419639c3dd6dde367d7df3f5dcef770c7ba547f82976b46096600d12",
+      "bytes": 21906,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/models/unet3d.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/models/unet3d.py",
+      "sha256": "120619da44ce9ad2722746fc07f5131c200b8b5c3cc9278356f56df697255240",
+      "bytes": 11911,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/multiview.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/multiview.py",
+      "sha256": "d7868cbedd928ee8bf5d31b460dbc6c0eaff834053172a1574785ecb5f485efe",
+      "bytes": 3674,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/projection.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/projection.py",
+      "sha256": "09b9cb53ebd53d0da47fad68878ad4017ab0203188515b9ede464d4e025f5988",
+      "bytes": 7613,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/recovery.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/recovery.py",
+      "sha256": "fb433887fcd107da3b2f98ba116d408d4dd4c0fb8eb93b678cffc67c4ce09a74",
+      "bytes": 10694,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/sparse_dataset.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/sparse_dataset.py",
+      "sha256": "0b4154709f17798d4028bfc81b5156682acc13b6bdb90c3bae91cc11abebd281",
+      "bytes": 34006,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/sparse_physics.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/sparse_physics.py",
+      "sha256": "c2e5275e004fef58eca1ee842e9cbe32bfd2c41e9d1b80549eaa59c6fe477c57",
+      "bytes": 18393,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/taichi_lbm3d.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/taichi_lbm3d.py",
+      "sha256": "1c8e649655a775d26164c9691029a4df3053b1e66e86dfb1750da9d30e06f310",
+      "bytes": 4331,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/tensor_space.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/src/flow_observation/tensor_space.py",
+      "sha256": "35320450af0af73587035b1d5cec57f2b78baa81d0a5dad1fabcc1072592593d",
+      "bytes": 24921,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/conftest.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/conftest.py",
+      "sha256": "6bbb06a56de0455c6f62d7bdaa330eb04cd3cdc8cd14a90b41083bb5abbd2c12",
+      "bytes": 1604,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_batch.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_batch.py",
+      "sha256": "1bcd7c599ba125ae9cd5bd7f29891cdc023100f80903808d18a37c695a0708a7",
+      "bytes": 8121,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_config_review.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_config_review.py",
+      "sha256": "53591e28a6fe1e4e11fe7d3656bccc8a61aceb069a3c780bea40a6c8051809da",
+      "bytes": 2220,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_inference_review.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_inference_review.py",
+      "sha256": "d0ef98e795c512ee38825e7c8df028393137d0ebffcd30000f3bb946022b1239",
+      "bytes": 3717,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_linear.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_linear.py",
+      "sha256": "d2bfa66c3bc0d761b207dd83cb701b972e0422cf6281e29c54639768b693c17b",
+      "bytes": 5564,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_math_review.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_math_review.py",
+      "sha256": "7962cb50297e4d8b97e7cbcb42adc625ce4c2774adeefaaed15bca62af473e31",
+      "bytes": 4465,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_models.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_models.py",
+      "sha256": "3a2ea81b6d9c399f700a4588c226ae852e7b358cae4669c4c9a8dc53b7db92f7",
+      "bytes": 4307,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_pinn.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_pinn.py",
+      "sha256": "2036480026c32119b0532ab7f6f36fd4304058f860730bb31ba49250333b3c4e",
+      "bytes": 4475,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_pipeline.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_pipeline.py",
+      "sha256": "297ba56b6da43f3bc9002df02d9a6999a4ea111505425491989d70f6a11c5a75",
+      "bytes": 7505,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_reporting.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_reporting.py",
+      "sha256": "21a0b3f2f4f49030fdc02f84d6426e69a295eacce042192af4fb344a7e328b04",
+      "bytes": 7983,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_reporting_review.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_reporting_review.py",
+      "sha256": "5474da67dd65513c065ae2b386b5321974ef58fc45014709bd0b74d235389268",
+      "bytes": 5678,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_training_review.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/source/tests/test_training_review.py",
+      "sha256": "630ef2f738c5ba737889c94a0575e55f114600a1563028dfa0996385c3c89d7b",
+      "bytes": 3440,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/submission.json",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/submission.json",
+      "sha256": "501106e4fa4f5d505d1b4db9a4a72457d4d7a7063928afe8b715495646715e50",
+      "bytes": 338,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/lbm_tensor/test_lbm.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/lbm_tensor/test_lbm.py",
+      "sha256": "07380e8a15c4a458d16d47a7264b09076dceeeee2f1e975b62e34cebff0f93b9",
+      "bytes": 7190,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/operation_manifest.json",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/operation_manifest.json",
+      "sha256": "c50df90cec484e49a274806fc9dd0e38a2135d25cb4ffb11f363a2fefcbd4fa6",
+      "bytes": 716,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/plan.json",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/plan.json",
+      "sha256": "39e78c4014ae5c53cfb325eb06c6c26f14348076cd8db19c65ae8c13cbd40c0a",
+      "bytes": 2291,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/reports/preflight_checks.json",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/reports/preflight_checks.json",
+      "sha256": "854c491c3ae27be098c8af1cc6fb5f8cbe85098f1433fc1b4c2b9d8d55201e08",
+      "bytes": 1111,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_dit/test_continuous.py",
+      "path": "server_operations/server_own_models_20261103/tensor_dit/test_continuous.py",
+      "sha256": "c3bc1344af5975df0b23fd266d5cfa550d001f62a985abe9d5e7591634a57ee5",
+      "bytes": 3069,
+      "executable": false,
+      "frozen_manifest_exception": false
+    },
+    {
+      "source_path": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/tensor_submissions.json",
+      "path": "server_operations/server_own_models_20261103/tensor_submissions.json",
+      "sha256": "1369901c5486d4fdc4b0eb3664444a9eecc7dc01052e0bccf12351c9ff0462f2",
+      "bytes": 396,
+      "executable": false,
+      "frozen_manifest_exception": false
     }
   ],
   "excluded_files": [
@@ -5581,5 +8437,6 @@
       "bytes": 71,
       "purpose": "Keep exact frozen source bytes on Windows and Linux checkouts."
     }
-  ]
+  ],
+  "last_updated_at_utc": "2026-11-03T23:04:27.282056+00:00"
 }

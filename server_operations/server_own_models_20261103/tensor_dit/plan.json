@@ -1,0 +1,66 @@
+{
+  "schema": "tensor_dit_continuous_seed31_v1",
+  "frozen_root": "/u/zguan2/projects/flow3d_runs/experiments/tensor_dit_n12_20261027",
+  "frozen_sha256": "7166fcba132f8444fe358471c4b5bf78c7bd76f7906078b47771ff0b4070ae17",
+  "python": "/sw/user/python/miniforge3-pytorch-2.10.0/bin/python",
+  "training_seeds": [
+    31
+  ],
+  "epochs": 100,
+  "N": 12,
+  "observation_seed": 47,
+  "rank_candidates": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "hooi_iterations": 2,
+  "rank_gate": {
+    "validation_mean_relative_l2_max": 0.05,
+    "validation_worst_relative_l2_max": 0.2
+  },
+  "stages": [
+    "tensor_prepare",
+    "gpu_pilot",
+    "train_seed31"
+  ],
+  "datasets": {
+    "jhtdb": {
+      "manifest": "/work/hdd/biup/zguan2/datasets/experiment_adapters_20261027/jhtdb_frozen32/manifest.json",
+      "manifest_sha256": "9b2faf3c0f28c6322fe7e071f1ca2fa914a191c052df674cdc0c8d8f9accdfb6",
+      "complete_sha256": "f251107bf0bea58e23372e51c5c16eb8319eaa8822cb1e14051c8f0d550d056f",
+      "split_counts": {
+        "train": 2500,
+        "validation": 312,
+        "test": 313
+      },
+      "config": "configs/jhtdb_s31.json",
+      "output_dir": "/work/hdd/biup/zguan2/results/server_own_models_20261103/tensor_dit/jhtdb",
+      "walltime": "21:00:00"
+    },
+    "fs_sph": {
+      "manifest": "/work/nvme/biup/zguan2/fs_sph_gpu/datasets/fs_sph_3429811_flow32_windows_20261027/manifest.json",
+      "manifest_sha256": "385cfb033b7a3f8084704f4e4dfa0bdd182a81a3456ec2969a166fbd75d9abf0",
+      "complete_sha256": "b9e364b758b45d5a30d989cc5023b1c7bce89b026579e80278928c5eee1522bd",
+      "split_counts": {
+        "test": 18,
+        "train": 126,
+        "validation": 18
+      },
+      "config": "configs/fs_sph_s31.json",
+      "output_dir": "/work/hdd/biup/zguan2/results/server_own_models_20261103/tensor_dit/fs_sph",
+      "walltime": "13:00:00"
+    }
+  },
+  "resources": {
+    "account": "biup-dtai-gh",
+    "partition": "ghx4",
+    "gpus": 1,
+    "cpus": 8,
+    "memory": "64G"
+  },
+  "external_dependencies": [],
+  "evaluation_phase": "train_and_validation_only",
+  "resume": "Reuse validated Tucker cache, pilot and last complete training epoch; no automatic Slurm requeue. An interruption before first checkpoint or between final checkpoint and run completion needs explicit inspection."
+}

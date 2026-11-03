@@ -1,0 +1,251 @@
+{
+  "captured_at_utc": "2026-11-03T23:04:27.282056+00:00",
+  "server_timezone": "America/Chicago",
+  "source": "live squeue after reassignment",
+  "jobs": [
+    {
+      "job_id": "3515292",
+      "name": "lbm500k-arm-continuous",
+      "dataset": "lbm",
+      "model": null,
+      "stage": "generation",
+      "state": "PENDING",
+      "reason": "Priority",
+      "estimated_start_server_local": "2026-11-04T17:13:51"
+    },
+    {
+      "job_id": "3523417",
+      "name": "own3_fs_sph_tensor_dit",
+      "dataset": "fs_sph",
+      "model": "tensor_dit",
+      "stage": "train",
+      "state": "PENDING",
+      "reason": "Priority",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523416",
+      "name": "own3_jhtdb_tensor_dit",
+      "dataset": "jhtdb",
+      "model": "tensor_dit",
+      "stage": "train",
+      "state": "PENDING",
+      "reason": "Priority",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523903",
+      "name": "own3_lbm_tensor_dit",
+      "dataset": "lbm",
+      "model": "tensor_dit",
+      "stage": "train",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523886",
+      "name": "own3_lbm_dps_evaluate",
+      "dataset": "lbm",
+      "model": "dps",
+      "stage": "evaluate",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523885",
+      "name": "own3_lbm_dps_calibration",
+      "dataset": "lbm",
+      "model": "dps",
+      "stage": "calibration",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523884",
+      "name": "own3_lbm_dps",
+      "dataset": "lbm",
+      "model": "dps",
+      "stage": "train",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523879",
+      "name": "own3_lbm_dit3d",
+      "dataset": "lbm",
+      "model": "dit3d",
+      "stage": "train",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523730",
+      "name": "own3_fs_sph_dps_evaluate",
+      "dataset": "fs_sph",
+      "model": "dps",
+      "stage": "evaluate",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523729",
+      "name": "own3_fs_sph_dps_calibration",
+      "dataset": "fs_sph",
+      "model": "dps",
+      "stage": "calibration",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523728",
+      "name": "own3_fs_sph_dps",
+      "dataset": "fs_sph",
+      "model": "dps",
+      "stage": "train",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523604",
+      "name": "own3_lbm_adapter",
+      "dataset": "lbm",
+      "model": null,
+      "stage": "prepare",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523603",
+      "name": "own3_jhtdb_dps_evaluate",
+      "dataset": "jhtdb",
+      "model": "dps",
+      "stage": "evaluate",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523602",
+      "name": "own3_jhtdb_dps_calibration",
+      "dataset": "jhtdb",
+      "model": "dps",
+      "stage": "calibration",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523601",
+      "name": "own3_jhtdb_dps",
+      "dataset": "jhtdb",
+      "model": "dps",
+      "stage": "train",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523561",
+      "name": "own3_fs_sph_dit3d",
+      "dataset": "fs_sph",
+      "model": "dit3d",
+      "stage": "train",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3523537",
+      "name": "own3_jhtdb_dit3d",
+      "dataset": "jhtdb",
+      "model": "dit3d",
+      "stage": "train",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    }
+  ],
+  "previously_assigned_jobs": [
+    {
+      "job_id": "3492898",
+      "dataset": "jhtdb",
+      "model": "deeponet",
+      "stage": "train",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3487248",
+      "dataset": "fs_sph",
+      "model": "pod",
+      "stage": "calibration",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492903",
+      "dataset": "jhtdb",
+      "model": "rbf",
+      "stage": "calibration",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492902",
+      "dataset": "jhtdb",
+      "model": "pod",
+      "stage": "calibration",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492901",
+      "dataset": "jhtdb",
+      "model": "unet_diffusion",
+      "stage": "train",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492900",
+      "dataset": "jhtdb",
+      "model": "fno",
+      "stage": "train",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3492899",
+      "dataset": "jhtdb",
+      "model": "unet",
+      "stage": "train",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    },
+    {
+      "job_id": "3487249",
+      "dataset": "fs_sph",
+      "model": "rbf",
+      "stage": "calibration",
+      "state": "CANCELLED",
+      "final_state": "CANCELLED",
+      "accounting_state": "CANCELLED by 98230"
+    }
+  ]
+}

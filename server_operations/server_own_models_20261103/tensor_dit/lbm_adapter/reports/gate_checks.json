@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": [
+    "missing_COMPLETE",
+    "partial_collection",
+    "checksum_path_escape",
+    "duplicate_checksums",
+    "real_existing_case_contract"
+  ],
+  "scope": "CPU gate checks and one read-only existing LBM archive; no incomplete collection training or publication"
+}

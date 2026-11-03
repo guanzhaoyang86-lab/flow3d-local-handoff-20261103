@@ -70,16 +70,33 @@ def matching_jobs(value, dataset, model):
     return [job for job in value['jobs'] if job['dataset'] == dataset and job['model'] == model]
 
 
-def assert_training_unassigned(dataset, model, path=None):
+def local_assignment(dataset, model, stage):
+    path = ROOT / 'results/work_assignment.json'
+    if not path.exists():
+        return False, set()
+    value = read(path)
+    local = value.get('local', {})
+    assigned = (dataset in local.get('datasets', []) and model in local.get('models', [])
+                and stage in local.get('stages', []))
+    released = {str(job['job_id']) for job in value.get('released_server_jobs', [])
+                if job.get('final_state') == 'CANCELLED'}
+    return assigned, released
+
+
+def assert_training_unassigned(dataset, model, path=None, stage='train'):
     value = snapshot(path)
+    stages = ('train', 'fit') if stage == 'train' else (stage,)
+    assigned_local, released = local_assignment(dataset, model, stage)
     assigned = [job for job in matching_jobs(value, dataset, model)
-                if job['stage'] in ('train', 'fit') and str(job['state']).split()[0].rstrip('+') in ACTIVE]
+                if job['stage'] in stages and str(job['state']).split()[0].rstrip('+') in ACTIVE]
     if assigned:
         raise ValueError('Formal training is assigned to the server: ' + json.dumps(assigned) +
                          '. Keep that job running; choose an isolated smoke or a different task.')
     history = value.get('previously_assigned_jobs', [])
     unresolved = [job for job in history if job.get('dataset') == dataset and job.get('model') == model
-                  and job.get('stage') in ('train', 'fit')
+                  and job.get('stage') in stages
+                  and str(job.get('state') or 'UNKNOWN').split()[0].rstrip('+') in ACTIVE
+                  and str(job.get('job_id')) not in released
                   and not any(str(current.get('job_id')) == str(job.get('job_id'))
                               and str(current['state']).split()[0].rstrip('+') in TERMINAL
                               for current in value['jobs'])]
@@ -93,9 +110,9 @@ def assert_training_unassigned(dataset, model, path=None):
     if captured.tzinfo is None:
         raise ValueError('Server snapshot time must include a timezone.')
     age = (datetime.now(timezone.utc) - captured).total_seconds()
-    if age < -300 or age > 86400:
+    if age < -300 or (age > 86400 and not assigned_local):
         raise ValueError('Server snapshot is older than 24 hours or has an invalid future time. Refresh it before formal training.')
-    if read_completed_run(dataset, model):
+    if stage == 'train' and read_completed_run(dataset, model):
         raise ValueError('This model already has a completed imported run. Use smoke/evaluation with its checkpoint.')
     return value
 
@@ -179,7 +196,7 @@ def checkpoint_path(args):
         return None
     path = Path(args.checkpoint).expanduser().resolve() if args.checkpoint else result_dir(args.dataset, args.model) / 'latest.pt'
     if not path.is_file():
-        raise ValueError('Checkpoint not downloaded: ' + str(path) + '. Download release artifacts or pass --checkpoint.')
+        raise ValueError('Checkpoint not downloaded: ' + str(path) + '. Use results/transfer_assets.py or pass --checkpoint.')
     with path.open('rb') as stream:
         if stream.read(100).startswith(b'version https://git-lfs.github.com/spec/v1'):
             raise ValueError('Checkpoint is only a Git LFS pointer; fetch the binary artifact first.')
@@ -224,6 +241,14 @@ def parse_queue_output(output):
                 raise ValueError('Unrecognized baseline job name; previous snapshot was preserved: ' + name)
             if model is not None and model not in MODELS:
                 raise ValueError('Unrecognized baseline model: ' + str(model))
+        elif name == 'own3_lbm_adapter':
+            dataset, model, stage = 'lbm', None, 'prepare'
+        elif name.startswith('own3_'):
+            match = re.fullmatch(r'own3_(jhtdb|fs_sph|lbm)_(dit3d|tensor_dit|dps)(?:_(prepare|calibration|evaluate))?', name)
+            if not match:
+                raise ValueError('Unrecognized own-model job name: ' + name)
+            dataset, model, stage = match.groups()
+            stage = stage or 'train'
         elif name.startswith('lbm'):
             dataset, stage = 'lbm', 'generation'
         jobs.append({'job_id': job_id, 'name': name, 'dataset': dataset, 'model': model,
@@ -248,7 +273,7 @@ def refresh_queue(args):
         previous = snapshot(target)
         history = {str(job.get('job_id')): job for job in previous.get('previously_assigned_jobs', [])}
         for job in previous['jobs']:
-            if job.get('dataset') in EXPERIMENTS and job.get('stage') in ('train', 'fit'):
+            if job.get('dataset') in EXPERIMENTS and job.get('stage') in ('train', 'fit', 'calibration', 'evaluation', 'evaluate'):
                 history[str(job.get('job_id'))] = job
         value['previously_assigned_jobs'] = list(history.values())
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -278,7 +303,9 @@ def list_tasks(args):
                          'formal_train': 'per_case_fit_only' if model == 'rbf' else
                              ('blocked_unknown_snapshot' if error else
                               'server_assigned' if any(str(j['state']).split()[0].rstrip('+') in ACTIVE and j['stage'] in ('train', 'fit') for j in jobs) else
-                              'already_completed' if read_completed_run(dataset, model) else 'check_before_start'),
+                              'already_completed' if read_completed_run(dataset, model) else
+                              'assigned_local' if local_assignment(dataset, model, 'train')[0] else 'check_before_start'),
+                         'calibration_assignment': ('local' if model in ('pod', 'rbf') and local_assignment(dataset, model, 'calibration')[0] else None),
                          'checkpoint_present': (result_dir(dataset, model)/'latest.pt').is_file(),
                          'server_jobs': jobs, 'isolated_validation_smoke': 'available_with_data_and_checkpoint' if model != 'rbf' else 'available_with_data'})
     print(json.dumps({'snapshot_error': error, 'baselines': rows,

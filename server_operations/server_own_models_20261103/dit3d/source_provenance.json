@@ -1,0 +1,34 @@
+{
+  "model": "dit3d",
+  "architecture": "ConditionalDiT3D full-volume spatial diffusion, no Tucker codec",
+  "original_static_cli_review": "Original flow3d-current trainer uses training seed as observation seed, lacks explicit view/probe policy and older conditioning; isolated adaptation reuses frozen baseline protocol instead.",
+  "source_original": "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_jhtdb_recovery_20261030/source",
+  "fs_original": "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027/launch/fs_baseline.py",
+  "fs_original_sha256": "35ec6469ee1c5556f4465298659857350096331fa0603c3879f654cdf624d9e2",
+  "changed_source_files": [
+    "source/src/flow_baselines/common.py",
+    "source/src/flow_baselines/config.py",
+    "source/src/flow_baselines/inference.py",
+    "source/src/flow_baselines/training.py"
+  ],
+  "denoiser_sha256": "a1fd77ce6e19685fb76e66d16e23d53830b16af44f6d26b56a62c049674b78d8",
+  "flow3d_current_denoiser_sha256": "a1fd77ce6e19685fb76e66d16e23d53830b16af44f6d26b56a62c049674b78d8",
+  "protocol": {
+    "training_seed": 31,
+    "observation_seed": 47,
+    "sampling_seed": 47,
+    "num_particles": 12,
+    "views": [
+      0
+    ],
+    "num_probes": 32,
+    "boundary_projection": "none",
+    "epochs": 100,
+    "batch_size": 1,
+    "condition_encoder": "motion-residual-v2",
+    "condition_flow_weight": 0.1,
+    "prediction_type": "v",
+    "jhtdb": "fixed probe tail, epoch-varying observed pool; split-specific seed47; train-only normalization and motion scales",
+    "fs_sph": "published fixed N12 seed47 tracks; one physical case, chronological holdouts; native-time weighted frame marginals; missing targets use independent N01 latent+nuisance score; no support mask at inference"
+  }
+}

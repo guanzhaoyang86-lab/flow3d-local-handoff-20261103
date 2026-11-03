@@ -1,0 +1,24 @@
+{
+  "checked_at_utc": "2026-11-03T23:04:27.282056+00:00",
+  "local_contract_tests": 21,
+  "local_contract_test_status": "passed",
+  "actual_frozen_calibration_config_checks": 4,
+  "remaining_local_tasks_unblocked": 8,
+  "source_files_verified": 1042,
+  "queue_jobs": 17,
+  "laptop_cuda_test": "not_run",
+  "gpu_training": "not_run_by_this_handoff",
+  "note": "Initial verification.json is historical; this report covers the reassignment update.",
+  "frozen_manifests_verified": 8,
+  "frozen_file_entries_verified": 265,
+  "submission_queue_ids_match": true,
+  "actual_queue_jobs": 17,
+  "model_training_jobs": 9,
+  "dps_calibration_test_jobs": 6,
+  "generation_adapter_jobs": 2,
+  "queue_states_at_capture": [
+    "PENDING"
+  ],
+  "unlisted_server_snapshot_files": 0,
+  "staged_whitespace_check": "Passed for code/docs; frozen dit3d/adaptation.patch preserves five required blank-context prefix spaces in the unified-diff artifact."
+}

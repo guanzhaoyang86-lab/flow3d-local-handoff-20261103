@@ -1,0 +1,77 @@
+{
+  "started_at_utc": "2026-11-03T20:35:51.287240+00:00",
+  "authorization": "User explicitly requested cancelling all other current tasks, retaining LBM generation, server-only DiT3D/Tensor-DiT/DPS and moving remaining baselines local. Both JHTDB and FS-SPH; LBM after full completion. Training seed31 only.",
+  "before": [
+    {
+      "job_id": "3492898",
+      "name": "b12_jhtdb_deeponet",
+      "state": "PENDING",
+      "user": "zguan2"
+    },
+    {
+      "job_id": "3515292",
+      "name": "lbm500k-arm-continuous",
+      "state": "PENDING",
+      "user": "zguan2"
+    },
+    {
+      "job_id": "3487248",
+      "name": "b12_fs_sph_pod_calibration",
+      "state": "PENDING",
+      "user": "zguan2"
+    },
+    {
+      "job_id": "3492903",
+      "name": "b12_jhtdb_rbf_calibration",
+      "state": "PENDING",
+      "user": "zguan2"
+    },
+    {
+      "job_id": "3492902",
+      "name": "b12_jhtdb_pod_calibration",
+      "state": "PENDING",
+      "user": "zguan2"
+    },
+    {
+      "job_id": "3492901",
+      "name": "b12_jhtdb_unet_diffusion",
+      "state": "PENDING",
+      "user": "zguan2"
+    },
+    {
+      "job_id": "3492900",
+      "name": "b12_jhtdb_fno",
+      "state": "PENDING",
+      "user": "zguan2"
+    },
+    {
+      "job_id": "3492899",
+      "name": "b12_jhtdb_unet",
+      "state": "PENDING",
+      "user": "zguan2"
+    },
+    {
+      "job_id": "3487249",
+      "name": "b12_fs_sph_rbf_calibration",
+      "state": "PENDING",
+      "user": "zguan2"
+    }
+  ],
+  "protected_job_id": "3515292",
+  "cancel_job_ids": [
+    "3492898",
+    "3487248",
+    "3492903",
+    "3492902",
+    "3492901",
+    "3492900",
+    "3492899",
+    "3487249"
+  ],
+  "completed_results_deleted": false,
+  "scancel_exit_code": 0,
+  "scancel_stdout": "",
+  "scancel_stderr": "",
+  "after_raw": "3515292|lbm500k-arm-continuous|PENDING|Priority\n",
+  "recorded_at_utc": "2026-11-03T20:35:51.310026+00:00"
+}

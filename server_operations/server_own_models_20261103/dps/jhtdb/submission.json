@@ -1,0 +1,44 @@
+{
+  "frozen_sha256": "71311e9c98e764c5ea4c323b50c56589203f12429d55e4b8175ccb4bd5d89d62",
+  "jobs": [
+    {
+      "stage": "train",
+      "job_id": "3523601",
+      "dependency": "afterany:3523537",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterany:3523537",
+        "--kill-on-invalid-dep=yes",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=71311e9c98e764c5ea4c323b50c56589203f12429d55e4b8175ccb4bd5d89d62",
+        "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/jhtdb/train.sbatch"
+      ]
+    },
+    {
+      "stage": "calibrate",
+      "job_id": "3523602",
+      "dependency": "afterok:3523601",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:3523601",
+        "--kill-on-invalid-dep=yes",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=71311e9c98e764c5ea4c323b50c56589203f12429d55e4b8175ccb4bd5d89d62",
+        "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/jhtdb/calibrate.sbatch"
+      ]
+    },
+    {
+      "stage": "test",
+      "job_id": "3523603",
+      "dependency": "afterok:3523602",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--dependency=afterok:3523602",
+        "--kill-on-invalid-dep=yes",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=71311e9c98e764c5ea4c323b50c56589203f12429d55e4b8175ccb4bd5d89d62",
+        "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/jhtdb/test.sbatch"
+      ]
+    }
+  ]
+}

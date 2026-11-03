@@ -1,0 +1,12 @@
+{
+  "schema": "tensor_dit_continuous_operation_files_v1",
+  "files": {
+    "continuous.py": "618e32ee0208bbab3705d32d7d0b8f6c327906ef15b8c2d91d22738a4b8dd815",
+    "test_continuous.py": "c3bc1344af5975df0b23fd266d5cfa550d001f62a985abe9d5e7591634a57ee5",
+    "plan.json": "39e78c4014ae5c53cfb325eb06c6c26f14348076cd8db19c65ae8c13cbd40c0a",
+    "jhtdb.slurm": "01eb5b3df6d8967ea9952672fdc6319daf3396049059b8ea55dd0a4f8abc4468",
+    "fs_sph.slurm": "ef4265baf6357e668801df6b05e7c5de2a0c301fde6f1b8ca72b2bec4a5e0ac9",
+    "configs/jhtdb_s31.json": "23ac3fa576b8e797a70da05498c3a6a20240122e53a5904f4ea54b2879ccaeb0",
+    "configs/fs_sph_s31.json": "4c8b1adb0968850c34072292948828b6783b4f00a85c910b0c62d79c172b01b1"
+  }
+}
