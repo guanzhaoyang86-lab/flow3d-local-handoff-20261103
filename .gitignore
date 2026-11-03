@@ -1,0 +1,14 @@
+# Downloaded assets and local outputs are deliberately outside Git.
+data/
+local_runs/
+.venv/
+.venv-*/
+**/__pycache__/
+**/*.pyc
+**/*.pt
+**/*.pth
+**/*.ckpt
+**/*.npz
+**/*.npy
+!experiments/**/protocol/*.npy
+

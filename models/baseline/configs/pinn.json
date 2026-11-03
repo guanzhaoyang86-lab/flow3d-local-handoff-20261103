@@ -1,0 +1,12 @@
+{
+  "pinn": {
+    "hidden": 128,
+    "layers": 5,
+    "viscosity": null,
+    "collocation_points": 1024,
+    "fit_steps": 2000,
+    "learning_rate": 0.001,
+    "divergence_weight": 1.0,
+    "momentum_weight": 1.0
+  }
+}

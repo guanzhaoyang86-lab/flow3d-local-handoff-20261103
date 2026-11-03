@@ -1,0 +1,8 @@
+{
+  "fno": {
+    "width": 32,
+    "depth": 4,
+    "modes": 8,
+    "padding": 4
+  }
+}

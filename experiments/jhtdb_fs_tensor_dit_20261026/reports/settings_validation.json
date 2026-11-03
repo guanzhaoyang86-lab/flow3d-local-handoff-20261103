@@ -1,0 +1,67 @@
+{
+  "settings_valid": true,
+  "data_training_ready": false,
+  "gpu_runtime_verified": false,
+  "verification_scope": "Read-only settings, locked sources, raw completion/manifest metadata, array headers and protocols; not a fresh full-array checksum or GPU check.",
+  "readiness_gates": {
+    "jhtdb": {
+      "jhtdb_frozen_track_adapter": false,
+      "jhtdb_terminate_mask_and_unit_transform": false,
+      "jhtdb_spatial_manifest_adapter": false,
+      "conditioning_only_xz_no_truth_leakage": false,
+      "single_xz_evaluator_with_latent_depth": false,
+      "jhtdb_train_only_tucker_rank_selected": false,
+      "real_gpu_pilot": false,
+      "adapted_source_locked_and_reviewed": false
+    },
+    "fs_sph": {
+      "fs_v2_native_transport_velocity_grid_adapter": false,
+      "fs_same_reference_donors_all_N": false,
+      "fs_material_support_loss_and_metrics": false,
+      "fs_temporal_block_loader_without_fake_groups": false,
+      "fs_transient_model_and_baseline_outputs": false,
+      "conditioning_only_xz_no_truth_leakage": false,
+      "single_xz_evaluator_with_latent_depth": false,
+      "fs_train_only_tucker_rank_selected": false,
+      "real_gpu_pilot": false,
+      "adapted_source_locked_and_reviewed": false
+    }
+  },
+  "sources": {
+    "locked_files": 88,
+    "baseline_configs": 9,
+    "diffusion_configs": 2
+  },
+  "datasets": {
+    "jhtdb": {
+      "raw_release_verified": true,
+      "split_counts": {
+        "train": 2500,
+        "validation": 312,
+        "test": 313
+      },
+      "horizon_from_train": 0.005216254525311773
+    },
+    "fs_sph": {
+      "raw_release_verified": true,
+      "window_counts": {
+        "train": 126,
+        "validation": 18,
+        "test": 18,
+        "embargo": 18
+      },
+      "physical_groups": 1,
+      "nested_conditioning_ids_verified": true,
+      "disjoint_probes": 32
+    }
+  },
+  "matrix": {
+    "rows": 402,
+    "pilot": 6,
+    "train": 168,
+    "fit_train_statistics": 4,
+    "evaluate": 224
+  },
+  "submission_enabled": false,
+  "unmet_gate_count": 18
+}

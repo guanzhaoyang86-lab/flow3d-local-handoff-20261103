@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027/source/scripts/run_baseline.py", line 9, in <module>
+    main()
+  File "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027/source/src/flow_baselines/cli.py", line 77, in main
+    result=predict(args.manifest,args.output,kind=args.model,checkpoint=args.checkpoint,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027/source/src/flow_baselines/inference.py", line 22, in predict
+    no_output_collision(output)
+  File "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027/source/src/flow_baselines/common.py", line 104, in no_output_collision
+    raise ValueError('Output or completion record exists; choose a fresh path')
+ValueError: Output or completion record exists; choose a fresh path
+Traceback (most recent call last):
+  File "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027/launch/batch_runtime.py", line 311, in <module>
+    main()
+  File "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027/launch/batch_runtime.py", line 301, in main
+    execute(plan, job, index)
+  File "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027/launch/batch_runtime.py", line 255, in execute
+    run_pilot(plan, dataset, manifest, output / 'pilot')
+  File "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027/launch/batch_runtime.py", line 196, in run_pilot
+    run(predict_command(dataset, model, config, output / f'{model}_fit_smoke', manifest, 31, 0, checkpoint))
+  File "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027/launch/batch_runtime.py", line 43, in run
+    subprocess.run([str(v) for v in command], check=True)
+  File "/sw/user/python/miniforge3-pytorch-2.10.0/lib/python3.12/subprocess.py", line 573, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/sw/user/python/miniforge3-pytorch-2.10.0/bin/python', '-B', '/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027/source/scripts/run_baseline.py', 'predict', '--case-index', '0', '--output', '/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/pilot/pod_fit_smoke.npz', '--evaluate', '--manifest', '/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/pilot/pilot_manifest.json', '--model', 'pod', '--config', '/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/pilot/pod_fit_smoke.json', '--num-particles', '12', '--seed', '31', '--split', 'validation', '--device', 'cuda', '--checkpoint', '/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/pilot/pod/latest.pt']' returned non-zero exit status 1.
+srun: error: gh040: task 0: Exited with exit code 1

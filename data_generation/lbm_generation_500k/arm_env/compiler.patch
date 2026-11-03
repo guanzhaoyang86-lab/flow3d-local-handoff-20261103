@@ -1,0 +1,77 @@
+diff --git a/taichi/inc/internal_ops.inc.h b/taichi/inc/internal_ops.inc.h
+index 676b0c0..9bbd574 100644
+--- a/taichi/inc/internal_ops.inc.h
++++ b/taichi/inc/internal_ops.inc.h
+@@ -62,6 +62,7 @@ PER_INTERNAL_OP(cuda_shfl_down_sync_i32)
+ PER_INTERNAL_OP(cuda_shfl_down_sync_f32)
+ PER_INTERNAL_OP(cuda_shfl_xor_sync_i32)
+ PER_INTERNAL_OP(cuda_match_any_sync_i32)
++PER_INTERNAL_OP(cuda_match_any_sync_i64)
+ PER_INTERNAL_OP(cuda_match_all_sync_i32)
+ PER_INTERNAL_OP(cuda_active_mask)
+ PER_INTERNAL_OP(warp_barrier)
+diff --git a/taichi/ir/type_system.cpp b/taichi/ir/type_system.cpp
+index 192e41a..25cce10 100644
+--- a/taichi/ir/type_system.cpp
++++ b/taichi/ir/type_system.cpp
+@@ -345,6 +345,7 @@ void Operations::init_internals() {
+   CUDA_SHFL_SYNC(shfl_up, f32);
+   CUDA_SHFL_SYNC(shfl_down, f32);
+   CUDA_MATCH_SYNC(any, i32);
++  CUDA_MATCH_SYNC(any, i64);
+   CUDA_MATCH_SYNC(all, i32);
+   PLAIN_OP(cuda_active_mask, u32, false);
+   PLAIN_OP(warp_barrier, i32_void, false, u32);
+diff --git a/taichi/runtime/llvm/llvm_context.cpp b/taichi/runtime/llvm/llvm_context.cpp
+index 580e8e2..ed6758d 100644
+--- a/taichi/runtime/llvm/llvm_context.cpp
++++ b/taichi/runtime/llvm/llvm_context.cpp
+@@ -474,11 +474,10 @@ std::unique_ptr<llvm::Module> TaichiLLVMContext::module_from_file(
+                       Intrinsic::nvvm_math_all_sync_i32);
+       */
+ 
+-      // LLVM 10.0.0 seems to have a bug on this intrinsic function
+-      /*
++      // This build uses LLVM 20. Use its native intrinsic so runtime bitcode
++      // can be generated on ARM without host-invalid PTX asm constraints.
+       patch_intrinsic("cuda_match_any_sync_i64",
+                       Intrinsic::nvvm_match_any_sync_i64);
+-                      */
+ 
+       patch_intrinsic("ctlz_i32", Intrinsic::ctlz, true,
+                       {llvm::Type::getInt32Ty(*ctx)}, {get_constant(false)});
+diff --git a/taichi/runtime/llvm/runtime_module/CMakeLists.txt b/taichi/runtime/llvm/runtime_module/CMakeLists.txt
+index ce33d52..d65fb70 100644
+--- a/taichi/runtime/llvm/runtime_module/CMakeLists.txt
++++ b/taichi/runtime/llvm/runtime_module/CMakeLists.txt
+@@ -6,7 +6,7 @@ function(COMPILE_LLVM_RUNTIME rtm_arch)
+     # Keep this for now, as .bc need to be generated.
+     add_custom_target(
+             "generate_llvm_runtime_${rtm_arch}"
+-            COMMAND ${CLANG_EXECUTABLE} ${CLANG_OSX_FLAGS} -c runtime.cpp -o "runtime_${rtm_arch}.bc" -fno-exceptions -emit-llvm -std=c++17 -D "ARCH_${rtm_arch}" -I ${PROJECT_SOURCE_DIR} -stdlib=libc++;
++            COMMAND ${CLANG_EXECUTABLE} ${CLANG_OSX_FLAGS} -c runtime.cpp -o "runtime_${rtm_arch}.bc" -fno-exceptions -emit-llvm -std=c++17 -D "ARCH_${rtm_arch}" -I ${PROJECT_SOURCE_DIR};
+             # TODO, it's better to avoid polluting the source dir, keep in build
+             WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+     )
+diff --git a/taichi/runtime/llvm/runtime_module/runtime.cpp b/taichi/runtime/llvm/runtime_module/runtime.cpp
+index 50cffcf..c3b6426 100644
+--- a/taichi/runtime/llvm/runtime_module/runtime.cpp
++++ b/taichi/runtime/llvm/runtime_module/runtime.cpp
+@@ -1153,15 +1153,9 @@ u32 cuda_match_all_sync_i32(u32 mask, i32 value) {
+ }
+ 
+ uint32 cuda_match_any_sync_i64(u32 mask, i64 value) {
+-#if ARCH_cuda
+-  u32 ret;
+-  asm volatile("match.any.sync.b64  %0, %1, %2;"
+-               : "=r"(ret)
+-               : "l"(value), "r"(mask));
+-  return ret;
+-#else
++  // Replaced with the LLVM NVVM intrinsic by LlvmContext, as for the i32
++  // variant. PTX's 64-bit "l" constraint is invalid to an ARM host frontend.
+   return 0;
+-#endif
+ }
+ 
+ #if ARCH_cuda

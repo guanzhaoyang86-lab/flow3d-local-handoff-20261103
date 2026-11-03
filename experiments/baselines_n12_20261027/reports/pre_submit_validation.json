@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "cpu_tests": 206,
+  "failures": 0,
+  "cpu_tests_xml_sha256": "96d68a7e44f91c8f7cf95250feeb486b4615ccd43064fbf6d236ce37e8d2103b",
+  "frozen_sha256": "871e123be831864b673adc07c637124435c4f3a8ad26891f893f0e37029cb39e",
+  "real_cuda_test": "scheduled as dependency-gated pilot; not yet executed",
+  "raw_data_production_processing": "scheduled; no full processing on login",
+  "shell_syntax_passed": true,
+  "independent_reviews": [
+    "dataset/schema/physical-units/no-ground-truth-inference",
+    "baseline CLI/source/checkpoint contracts",
+    "Slurm dependencies/concurrency/failure cases"
+  ]
+}

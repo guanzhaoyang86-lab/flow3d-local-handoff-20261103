@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "verified_fields": 3125,
+  "split_counts": {
+    "train": 2500,
+    "validation": 312,
+    "test": 313
+  },
+  "configuration_sha256": "ede1082ca5edb256226691cdf0f89190ee4ea73a2b9ee2611ffd51f62640346a",
+  "manifest_sha256": "9b2faf3c0f28c6322fe7e071f1ca2fa914a191c052df674cdc0c8d8f9accdfb6",
+  "checksum_list_sha256": "4d46f24b081ff83758a3529059c28a0585f4ccb145f77563848a856a6dd8e2f0",
+  "slurm_job_id": "3477662",
+  "device": "cuda",
+  "gpu": "NVIDIA GH200 120GB",
+  "source_data_mutated": false
+}

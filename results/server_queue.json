@@ -1,0 +1,97 @@
+{
+  "captured_at_utc": "2026-11-03T20:00:33.819Z",
+  "server_timezone": "America/Chicago",
+  "source": "squeue -h -u zguan2; read-only; estimates may change",
+  "jobs": [
+    {
+      "job_id": "3492898",
+      "name": "b12_jhtdb_deeponet",
+      "dataset": "jhtdb",
+      "model": "deeponet",
+      "stage": "train",
+      "state": "PENDING",
+      "reason": "Priority",
+      "estimated_start_server_local": "2026-11-04T12:19:00"
+    },
+    {
+      "job_id": "3515292",
+      "name": "lbm500k-arm-continuous",
+      "dataset": "lbm",
+      "model": null,
+      "stage": "generation",
+      "state": "PENDING",
+      "reason": "Priority",
+      "estimated_start_server_local": "2026-11-04T14:03:34"
+    },
+    {
+      "job_id": "3487248",
+      "name": "b12_fs_sph_pod_calibration",
+      "dataset": "fs_sph",
+      "model": "pod",
+      "stage": "calibration",
+      "state": "PENDING",
+      "reason": "Priority",
+      "estimated_start_server_local": "2026-11-04T14:03:34"
+    },
+    {
+      "job_id": "3492903",
+      "name": "b12_jhtdb_rbf_calibration",
+      "dataset": "jhtdb",
+      "model": "rbf",
+      "stage": "calibration",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3492902",
+      "name": "b12_jhtdb_pod_calibration",
+      "dataset": "jhtdb",
+      "model": "pod",
+      "stage": "calibration",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3492901",
+      "name": "b12_jhtdb_unet_diffusion",
+      "dataset": "jhtdb",
+      "model": "unet_diffusion",
+      "stage": "train",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3492900",
+      "name": "b12_jhtdb_fno",
+      "dataset": "jhtdb",
+      "model": "fno",
+      "stage": "train",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3492899",
+      "name": "b12_jhtdb_unet",
+      "dataset": "jhtdb",
+      "model": "unet",
+      "stage": "train",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3487249",
+      "name": "b12_fs_sph_rbf_calibration",
+      "dataset": "fs_sph",
+      "model": "rbf",
+      "stage": "calibration",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    }
+  ]
+}

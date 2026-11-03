@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "cpu_tests": 8,
+  "failures": 0,
+  "frozen_sha256": "93f9c8c20722a60405cf8a0e2f0778a7df2ab431b3875a2f7ddf47b1081b4d7c",
+  "reports": {
+    "runtime_checks.xml": "eed4e4c8161c440c9c21e5612dab7cd831ae3835bce120c921b4baa8ca504514",
+    "pilot_recovery_checks.xml": "98441cab37c06510352a1590cd81aa0f22065a74fa978b36cf25f899819ea0e8"
+  },
+  "shell_syntax_passed": true,
+  "pilot_checkpoints_verified": 7,
+  "original_frozen_inputs_unchanged": true,
+  "real_cuda_test": "New dependency-gated recovery pilot; not yet submitted."
+}

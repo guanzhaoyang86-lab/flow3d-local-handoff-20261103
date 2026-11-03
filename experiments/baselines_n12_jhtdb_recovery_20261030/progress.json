@@ -1,0 +1,80 @@
+{
+  "snapshot_at_utc": "2026-10-31T04:47:15.990949+00:00",
+  "training_seeds": [
+    31
+  ],
+  "epochs": 100,
+  "jobs": [
+    {
+      "key": "jhtdb_pilot",
+      "job_id": "3492894",
+      "state": "PENDING",
+      "reason": "Priority",
+      "dependency": "(null)"
+    },
+    {
+      "key": "jhtdb_mean",
+      "job_id": "3492895",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "dependency": "afterok:3492894(unfulfilled)"
+    },
+    {
+      "key": "jhtdb_pod",
+      "job_id": "3492896",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "dependency": "afterok:3492894(unfulfilled),afterany:3492895(unfulfilled)"
+    },
+    {
+      "key": "jhtdb_cnn",
+      "job_id": "3492897",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "dependency": "afterok:3492894(unfulfilled),afterany:3492896(unfulfilled)"
+    },
+    {
+      "key": "jhtdb_deeponet",
+      "job_id": "3492898",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "dependency": "afterok:3492894(unfulfilled),afterany:3492897(unfulfilled)"
+    },
+    {
+      "key": "jhtdb_unet",
+      "job_id": "3492899",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "dependency": "afterok:3492894(unfulfilled),afterany:3492898(unfulfilled)"
+    },
+    {
+      "key": "jhtdb_fno",
+      "job_id": "3492900",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "dependency": "afterok:3492894(unfulfilled),afterany:3492899(unfulfilled)"
+    },
+    {
+      "key": "jhtdb_unet_diffusion",
+      "job_id": "3492901",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "dependency": "afterok:3492894(unfulfilled),afterany:3492900(unfulfilled)"
+    },
+    {
+      "key": "jhtdb_pod_calibration",
+      "job_id": "3492902",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "dependency": "afterok:3492894(unfulfilled),afterany:3492901(unfulfilled),afterok:3492896(unfulfilled)"
+    },
+    {
+      "key": "jhtdb_rbf_calibration",
+      "job_id": "3492903",
+      "state": "PENDING",
+      "reason": "Dependency",
+      "dependency": "afterok:3492894(unfulfilled),afterany:3492902(unfulfilled),afterany:3492901(unfulfilled)"
+    }
+  ],
+  "operation_record": "/u/zguan2/projects/flow3d_runs/operations/jhtdb_pilot_fix_20261031T044638Z/operation.json"
+}

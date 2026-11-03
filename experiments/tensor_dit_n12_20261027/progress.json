@@ -1,0 +1,66 @@
+{
+  "schema": "tensor_dit_n12_submission_snapshot_v1",
+  "snapshot_at_utc": "2026-10-27T06:20:38.667471+00:00",
+  "note": "Submission-time snapshot; query Slurm for live state. Not automatically updated.",
+  "status": "submitted",
+  "N": 12,
+  "model": "Tensor-DiT conditional diffusion",
+  "epochs": 100,
+  "training_seeds": [
+    31,
+    32,
+    33
+  ],
+  "sbatch_submissions": 6,
+  "logical_allocations": 10,
+  "cpu_tests_passed": 62,
+  "cpu_tests_skipped": 1,
+  "slurm_preflight_passed": 6,
+  "verification_passed": true,
+  "real_gpu_pilot_completed": false,
+  "max_concurrent_allocations_including_baseline": 2,
+  "requested_gpu_hour_upper_bound": 66,
+  "combined_gpu_hour_upper_bound": 340,
+  "order": "Existing data preparation -> existing baseline -> Tucker fitting/validation rank gate -> actual GPU pilot -> own model training array",
+  "jobs": [
+    {
+      "key": "jhtdb_tensor_prepare",
+      "job_id": "3468076",
+      "state": "PENDING",
+      "reason": "Dependency"
+    },
+    {
+      "key": "jhtdb_pilot",
+      "job_id": "3468077",
+      "state": "PENDING",
+      "reason": "Dependency"
+    },
+    {
+      "key": "jhtdb_tensor_dit",
+      "job_id": "3468078",
+      "state": "PENDING",
+      "reason": "Dependency"
+    },
+    {
+      "key": "fs_sph_tensor_prepare",
+      "job_id": "3468079",
+      "state": "PENDING",
+      "reason": "Dependency"
+    },
+    {
+      "key": "fs_sph_pilot",
+      "job_id": "3468080",
+      "state": "PENDING",
+      "reason": "Dependency"
+    },
+    {
+      "key": "fs_sph_tensor_dit",
+      "job_id": "3468081",
+      "state": "PENDING",
+      "reason": "Dependency"
+    }
+  ],
+  "result_root": "/work/hdd/biup/zguan2/results/tensor_dit_n12_20261027",
+  "submission_record": "submission/submission.json",
+  "verification_report": "reports/submission_verification.json"
+}

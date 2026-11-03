@@ -1,0 +1,93 @@
+{
+  "status": "completed",
+  "model": "pod",
+  "config": {
+    "seed": 31,
+    "num_particles": 12,
+    "views": [
+      0
+    ],
+    "boundary_projection": "none",
+    "epochs": 100,
+    "batch_size": 1,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "ema_decay": 0.999,
+    "amp": true,
+    "condition_dim": 128,
+    "condition_flow_grid": 4,
+    "condition_flow_weight": 0.1,
+    "condition_dropout": 0.1,
+    "diffusion_steps": 1000,
+    "prediction_type": "v",
+    "sampling_steps": 50,
+    "sampling_eta": 1.0,
+    "cfg_scale": 1.0,
+    "clip_x0": 8.0,
+    "observation_seed": 47,
+    "sampling_seed": 47,
+    "num_probes": 32,
+    "num_samples": 2,
+    "fit_steps": 1000,
+    "fit_learning_rate": 0.01,
+    "sigma": 0.05,
+    "coefficient_weight": 0.0001,
+    "depth_learning_rate": 0.01,
+    "unet": {
+      "base_channels": 32,
+      "channel_multipliers": [
+        1,
+        2,
+        4
+      ],
+      "dropout": 0.0
+    },
+    "cnn": {
+      "width": 32,
+      "depth": 4
+    },
+    "fno": {
+      "width": 32,
+      "depth": 4,
+      "modes": 8,
+      "padding": 4
+    },
+    "deeponet": {
+      "latent": 128,
+      "hidden": 128,
+      "layers": 3
+    },
+    "unet_diffusion": {
+      "base_channels": 16,
+      "channel_multipliers": [
+        1,
+        2,
+        4
+      ],
+      "time_embedding_dim": 64,
+      "dropout": 0.0
+    },
+    "pod": {
+      "rank": 32
+    },
+    "rbf": {
+      "centers_per_axis": 4,
+      "length_scale": 0.35,
+      "ridge": 0.0001
+    },
+    "pinn": {
+      "hidden": 128,
+      "layers": 5,
+      "viscosity": null,
+      "collocation_points": 1024,
+      "fit_steps": 2000,
+      "learning_rate": 0.001,
+      "divergence_weight": 1.0,
+      "momentum_weight": 1.0
+    }
+  },
+  "epoch": 0,
+  "normalization_fit_split": "train",
+  "checkpoint_sha256": "bc6c885ec16cf2a4a4aba86fe11e77d200484c7915a51aad0a75b398697ba586"
+}

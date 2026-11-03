@@ -1,0 +1,183 @@
+{
+  "schema": "flow3d_completed_results_summary_v1",
+  "exported_at_utc": "2026-11-03T19:55:03.451650+00:00",
+  "current_policy": "Training seed31; previously completed seed32/33 results retained as historical extras.",
+  "completed_primary_runs": [
+    {
+      "dataset": "fs_sph",
+      "model": "cnn",
+      "seed": 31,
+      "epoch": 100,
+      "status": "completed"
+    },
+    {
+      "dataset": "fs_sph",
+      "model": "deeponet",
+      "seed": 31,
+      "epoch": 100,
+      "status": "completed"
+    },
+    {
+      "dataset": "fs_sph",
+      "model": "fno",
+      "seed": 31,
+      "epoch": 100,
+      "status": "completed"
+    },
+    {
+      "dataset": "fs_sph",
+      "model": "mean",
+      "seed": null,
+      "epoch": 0,
+      "status": "completed"
+    },
+    {
+      "dataset": "fs_sph",
+      "model": "pod",
+      "seed": null,
+      "epoch": 0,
+      "status": "completed"
+    },
+    {
+      "dataset": "fs_sph",
+      "model": "unet_diffusion",
+      "seed": 31,
+      "epoch": 100,
+      "status": "completed"
+    },
+    {
+      "dataset": "fs_sph",
+      "model": "unet",
+      "seed": 31,
+      "epoch": 100,
+      "status": "completed"
+    },
+    {
+      "dataset": "jhtdb",
+      "model": "cnn",
+      "seed": 31,
+      "epoch": 100,
+      "status": "completed"
+    },
+    {
+      "dataset": "jhtdb",
+      "model": "mean",
+      "seed": null,
+      "epoch": 0,
+      "status": "completed"
+    },
+    {
+      "dataset": "jhtdb",
+      "model": "pod",
+      "seed": null,
+      "epoch": 0,
+      "status": "completed"
+    }
+  ],
+  "completed_extra_seed_runs": [
+    {
+      "dataset": "fs_sph",
+      "model": "cnn",
+      "seed": 32,
+      "epoch": 100
+    },
+    {
+      "dataset": "fs_sph",
+      "model": "cnn",
+      "seed": 33,
+      "epoch": 100
+    },
+    {
+      "dataset": "fs_sph",
+      "model": "deeponet",
+      "seed": 32,
+      "epoch": 100
+    },
+    {
+      "dataset": "fs_sph",
+      "model": "deeponet",
+      "seed": 33,
+      "epoch": 100
+    }
+  ],
+  "not_completed_primary_models": {
+    "fs_sph": [],
+    "jhtdb": [
+      "deeponet",
+      "unet",
+      "fno",
+      "unet_diffusion"
+    ]
+  },
+  "calibrations": [
+    {
+      "dataset": "fs_sph",
+      "model": "pod",
+      "record": "/work/hdd/biup/zguan2/results/baselines_n12_20261027/fs_sph/calibration/pod/CALIBRATION_COMPLETE.json",
+      "status": "not_completed",
+      "split": "validation",
+      "scope": "Hyperparameter calibration, not final test evaluation."
+    },
+    {
+      "dataset": "fs_sph",
+      "model": "rbf",
+      "record": "/work/hdd/biup/zguan2/results/baselines_n12_20261027/fs_sph/calibration/rbf/CALIBRATION_COMPLETE.json",
+      "status": "not_completed",
+      "split": "validation",
+      "scope": "Hyperparameter calibration, not final test evaluation."
+    },
+    {
+      "dataset": "jhtdb",
+      "model": "pod",
+      "record": "/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/calibration/pod/CALIBRATION_COMPLETE.json",
+      "status": "not_completed",
+      "split": "validation",
+      "scope": "Hyperparameter calibration, not final test evaluation."
+    },
+    {
+      "dataset": "jhtdb",
+      "model": "rbf",
+      "record": "/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/calibration/rbf/CALIBRATION_COMPLETE.json",
+      "status": "not_completed",
+      "split": "validation",
+      "scope": "Hyperparameter calibration, not final test evaluation."
+    }
+  ],
+  "final_test_metrics_for_current_datasets_available": false,
+  "metric_warning": "Copied train_loss/validation_loss are objectives, not final test velocity/replay metrics; losses across model objectives are not directly comparable.",
+  "legacy_training_status_counts": {
+    "completed_verified": 4,
+    "failed": 1,
+    "no_completion_record": 31,
+    "completed_reused_verified_summary": 6
+  },
+  "legacy_warning": "This is an older dataset and protocol; never merge with new FS-SPH/JHTDB metrics.",
+  "checkpoint_policy": "Inventory only: no checkpoint, optimizer state, NPZ dataset or prediction array was copied.",
+  "checkpoint_file_count": 244,
+  "checkpoint_total_bytes_all_versions": 11016700886,
+  "checkpoint_larger_than_100_mib": 12,
+  "copied_metadata_files": 102,
+  "copied_metadata_bytes": 11268898,
+  "queue_snapshot_file": "server_queue.json",
+  "server_jobs_policy": "Export reads existing artifacts only. It never cancels, submits or duplicates server jobs.",
+  "methods_requiring_future_work": [
+    {
+      "method": "Tensor-DiT",
+      "scope": "New JHTDB/FS-SPH dataset batch",
+      "status": "Historical frozen plan exists; no current pending Tensor task is asserted by this exporter.",
+      "next_step": "Use current live queue snapshot and explicit single-seed policy before any future submission."
+    },
+    {
+      "method": "DiT3D",
+      "scope": "New JHTDB/FS-SPH dataset comparisons",
+      "status": "Code and older-data results exist; no completed new-data run found in this baseline result root."
+    },
+    {
+      "method": "Flow3D-DPS",
+      "scope": "Steady JHTDB/LBM data",
+      "status": "Separate unconditional-prior route; no matched new-data completed result found here.",
+      "limitation": "Current DPS implementation rejects time-dependent FS-SPH sequences."
+    }
+  ],
+  "queue_snapshot_attached_at_utc": "2026-11-03T20:05:36.538170+00:00"
+}

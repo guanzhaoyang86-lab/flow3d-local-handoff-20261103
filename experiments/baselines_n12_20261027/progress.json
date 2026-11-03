@@ -1,0 +1,132 @@
+{
+  "schema": "baseline_n12_progress_snapshot_v2",
+  "snapshot_at_utc": "2026-10-31T04:47:15.990949+00:00",
+  "note": "Read-only scheduler snapshot after user requested one seed; not updated automatically.",
+  "N": 12,
+  "epochs": 100,
+  "training_seeds": [
+    31
+  ],
+  "execution_policy": "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027/execution_policy.json",
+  "historical_submission_snapshot": "/u/zguan2/projects/flow3d_runs/operations/single_seed_31_20261031T044041Z/before_progress.json",
+  "jobs": [
+    {
+      "job_id": "3487245_0",
+      "key": "fs_sph_unet",
+      "state": "PENDING",
+      "reason": "(Priority)"
+    },
+    {
+      "job_id": "3492903",
+      "key": "jhtdb_rbf_calibration",
+      "state": "PENDING",
+      "reason": "(Dependency)"
+    },
+    {
+      "job_id": "3492902",
+      "key": "jhtdb_pod_calibration",
+      "state": "PENDING",
+      "reason": "(Dependency)"
+    },
+    {
+      "job_id": "3492901",
+      "key": "jhtdb_unet_diffusion",
+      "state": "PENDING",
+      "reason": "(Dependency)"
+    },
+    {
+      "job_id": "3492900",
+      "key": "jhtdb_fno",
+      "state": "PENDING",
+      "reason": "(Dependency)"
+    },
+    {
+      "job_id": "3492899",
+      "key": "jhtdb_unet",
+      "state": "PENDING",
+      "reason": "(Dependency)"
+    },
+    {
+      "job_id": "3492898",
+      "key": "jhtdb_deeponet",
+      "state": "PENDING",
+      "reason": "(Dependency)"
+    },
+    {
+      "job_id": "3492897",
+      "key": "jhtdb_cnn",
+      "state": "PENDING",
+      "reason": "(Dependency)"
+    },
+    {
+      "job_id": "3492896",
+      "key": "jhtdb_pod",
+      "state": "PENDING",
+      "reason": "(Dependency)"
+    },
+    {
+      "job_id": "3492895",
+      "key": "jhtdb_mean",
+      "state": "PENDING",
+      "reason": "(Dependency)"
+    },
+    {
+      "job_id": "3492894",
+      "key": "jhtdb_pilot",
+      "state": "PENDING",
+      "reason": "(Priority)"
+    },
+    {
+      "job_id": "3487249",
+      "key": "fs_sph_rbf_calibration",
+      "state": "PENDING",
+      "reason": "(Dependency)"
+    },
+    {
+      "job_id": "3487248",
+      "key": "fs_sph_pod_calibration",
+      "state": "PENDING",
+      "reason": "(Dependency)"
+    },
+    {
+      "job_id": "3487247_0",
+      "key": "fs_sph_unet_diffusion",
+      "state": "PENDING",
+      "reason": "(Dependency)"
+    },
+    {
+      "job_id": "3487246_0",
+      "key": "fs_sph_fno",
+      "state": "PENDING",
+      "reason": "(Dependency)"
+    }
+  ],
+  "cancelled_job_ids": [
+    "3487245_1",
+    "3487245_2",
+    "3487246_1",
+    "3487246_2",
+    "3487247_1",
+    "3487247_2"
+  ],
+  "completed_seed_31_training": [
+    "fs_sph_cnn",
+    "fs_sph_deeponet"
+  ],
+  "jhtdb_pilot": {
+    "key": "jhtdb_pilot",
+    "job_id": "3492894",
+    "state": "PENDING",
+    "reason": "Priority",
+    "dependency": "(null)"
+  },
+  "result_root": "/work/hdd/biup/zguan2/results/baselines_n12_20261027",
+  "operation_record": "/u/zguan2/projects/flow3d_runs/operations/single_seed_31_20261031T044041Z/operation.json",
+  "jhtdb_recovery_revision": "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_jhtdb_recovery_20261030",
+  "jhtdb_recovery_operation": "/u/zguan2/projects/flow3d_runs/operations/jhtdb_pilot_fix_20261031T044638Z/operation.json",
+  "previous_jhtdb_pilot": {
+    "job_id": "3487230",
+    "state": "FAILED",
+    "reason": "POD smoke config/result JSON filename collision; repaired in isolated recovery revision."
+  }
+}

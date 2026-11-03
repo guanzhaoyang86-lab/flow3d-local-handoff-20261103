@@ -1,0 +1,11 @@
+{
+  "unet": {
+    "base_channels": 32,
+    "channel_multipliers": [
+      1,
+      2,
+      4
+    ],
+    "dropout": 0.0
+  }
+}

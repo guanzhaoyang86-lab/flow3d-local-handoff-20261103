@@ -1,0 +1,21 @@
+{
+  "schema": "copied_tensor_math_tests_v1",
+  "repaired_commit": "5aa8b270df3440cc039146ea7da01a24a4de49ee",
+  "files": [
+    {
+      "source": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/tests/test_dit.py",
+      "source_sha256": "c3ae68d58c3c9b428d075d2fe093b93874eb09d2a768db023ca0ed50198d680d",
+      "copied_file": "test_dit.py",
+      "copied_sha256": "c3ae68d58c3c9b428d075d2fe093b93874eb09d2a768db023ca0ed50198d680d"
+    },
+    {
+      "source": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/tests/test_tensor_space.py",
+      "source_sha256": "640b9c360ab555e62d9b49fae24bb9243a30acc781684ca55f69026da179e889",
+      "copied_file": "test_tensor_space.py",
+      "copied_sha256": "9f058c4f7479191d2d65cad0efb6926d988b242065722b3729ce13a6738f7f0d"
+    }
+  ],
+  "excluded_test": "test_preparation_cli_writes_report_and_refuses_overwrite",
+  "reason": "Only this historical CLI-path test is skipped; mathematical tests run against the new batch copied source via PYTHONPATH. The batch-specific preparation runtime is tested separately.",
+  "prior_cpu_result": "33 passed, 1 deselected against copied source before copying tests"
+}

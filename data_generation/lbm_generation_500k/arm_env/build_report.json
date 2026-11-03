@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "compiled_and_installed",
+  "compiled_at_utc": "2026-10-25T02:27:24.663469+00:00",
+  "taichi_source_commit": "93c190f603b676ec1f8871e4f46cf5d5be89548e",
+  "compiler_patch_sha256": "040fff6c55cee97a80334e9d77ae8e4a79548661889ec5049cb79f3153e2a13d",
+  "source_diff_sha256": "040fff6c55cee97a80334e9d77ae8e4a79548661889ec5049cb79f3153e2a13d",
+  "profile": "deltaai-arm-llvm20",
+  "system": "Linux",
+  "machine": "aarch64",
+  "python_executable": "/u/zguan2/projects/flow3d_runs/lbm_generation_500k/arm_env/venv/bin/python",
+  "python_version": "3.12.9",
+  "taichi_version": "1.8.0",
+  "taichi_commit": "93c190f603b676ec1f8871e4f46cf5d5be89548e",
+  "llvm_version": "20.1.8",
+  "torch_version": "2.10.0+cu129",
+  "cuda_runtime": "12.9",
+  "wheel": "/u/zguan2/projects/flow3d_runs/lbm_generation_500k/arm_env/wheels/taichi-1.8.0-cp312-cp312-linux_aarch64.whl",
+  "wheel_sha256": "4729221cfad7161ca4f7fe90d7d34bfb677f5d6707db94f04222912b5328a1db",
+  "build_slurm_job_id": "3450731",
+  "cuda_kernel_validated": false,
+  "lbm32_pilot_validated": false
+}

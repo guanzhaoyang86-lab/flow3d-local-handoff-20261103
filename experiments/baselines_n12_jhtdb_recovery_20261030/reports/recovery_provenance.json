@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "parent_manifest_sha256": "9b2faf3c0f28c6322fe7e071f1ca2fa914a191c052df674cdc0c8d8f9accdfb6",
+  "pilot_manifest_sha256": "3b0a021ee5cb0078ad66d9d621c21047d974565a1569470813a70726dd3f2cbb",
+  "checkpoints": [
+    {
+      "model": "cnn",
+      "epoch": 1,
+      "manifest_sha256": "3b0a021ee5cb0078ad66d9d621c21047d974565a1569470813a70726dd3f2cbb",
+      "reusable": true
+    },
+    {
+      "model": "deeponet",
+      "epoch": 1,
+      "manifest_sha256": "3b0a021ee5cb0078ad66d9d621c21047d974565a1569470813a70726dd3f2cbb",
+      "reusable": true
+    },
+    {
+      "model": "unet",
+      "epoch": 1,
+      "manifest_sha256": "3b0a021ee5cb0078ad66d9d621c21047d974565a1569470813a70726dd3f2cbb",
+      "reusable": true
+    },
+    {
+      "model": "fno",
+      "epoch": 1,
+      "manifest_sha256": "3b0a021ee5cb0078ad66d9d621c21047d974565a1569470813a70726dd3f2cbb",
+      "reusable": true
+    },
+    {
+      "model": "unet_diffusion",
+      "epoch": 1,
+      "manifest_sha256": "3b0a021ee5cb0078ad66d9d621c21047d974565a1569470813a70726dd3f2cbb",
+      "reusable": true
+    },
+    {
+      "model": "mean",
+      "epoch": 0,
+      "manifest_sha256": "3b0a021ee5cb0078ad66d9d621c21047d974565a1569470813a70726dd3f2cbb",
+      "reusable": true
+    },
+    {
+      "model": "pod",
+      "epoch": 0,
+      "manifest_sha256": "3b0a021ee5cb0078ad66d9d621c21047d974565a1569470813a70726dd3f2cbb",
+      "reusable": true
+    }
+  ],
+  "legacy_config_sha256": "7c8f3fce7cfebd27cf63834df8ae7e55069c83f3a9255827af95525210d2cee8",
+  "test_data_used": false
+}

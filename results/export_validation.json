@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "validated_at_utc": "2026-11-03T20:05:36.564456+00:00",
+  "copied_metadata_sha256_verified": 102,
+  "unexpected_binary_payloads": [],
+  "transfer_mock_tests_passed": 8,
+  "production_data_modified": false,
+  "jobs_submitted_or_cancelled": false,
+  "note": "Transfer tests mocked subprocess calls; no real rsync or SSH connection was made."
+}

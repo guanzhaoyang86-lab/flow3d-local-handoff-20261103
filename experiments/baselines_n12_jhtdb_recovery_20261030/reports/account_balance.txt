@@ -1,0 +1,5 @@
+Project Summary for User 'zguan2':
+
+Account                        Balance(Hours)   Deposited(Hours)  Project
+----------------------------  ----------------  ----------------  ----------------------
+biup-dtai-gh                               802              1000  generative reconstr...

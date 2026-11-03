@@ -1,0 +1,32 @@
+{
+  "jhtdb_complete": {
+    "status": "completed",
+    "completed_at_utc": "2026-10-25T05:53:02.918391+00:00",
+    "verified_fields": 3125,
+    "split_counts": {
+      "test": 313,
+      "train": 2500,
+      "val": 312
+    },
+    "grid_shape_zyx": [
+      32,
+      32,
+      32
+    ],
+    "velocity_time": 1.0,
+    "velocity_bytes_uncompressed": 1228800000,
+    "archive_bytes": 1094725934,
+    "checksum_list_sha256": "9d5589c12612abf8fb27dc7e5cc98a2432edcc7069503168961dc7aa47cfe34c",
+    "plan_sha256": "f09fdecc6a376c91b37e5e630adba2721247826cd8d7e02cf915f4a1960808dc",
+    "trajectories_generated": false,
+    "scientific_scope": "3125 disjoint contiguous native 32^3 crops at t=1.0 from one DNS snapshot; these are not independent DNS realizations. The split measures spatial blocked holdout, not temporal generalization. Guards reduce direct spatial leakage but do not guarantee removal of all spatial correlations. Local crop faces must not be wrapped periodically; full-domain turbulence statistics are not established by these crops."
+  },
+  "fs_manifest_status": "validated",
+  "fs_build_status": {
+    "status": "validated",
+    "independent_validation_passed": true
+  },
+  "all_readiness_gates_passed": false,
+  "GPU_experiment_jobs_submitted": false,
+  "settings_files_created_only": true
+}

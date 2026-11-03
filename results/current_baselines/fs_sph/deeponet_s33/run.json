@@ -1,0 +1,16 @@
+{
+  "format": "fs-transient-baseline-v1",
+  "model": "deeponet",
+  "manifest_sha256": "385cfb033b7a3f8084704f4e4dfa0bdd182a81a3456ec2969a166fbd75d9abf0",
+  "runtime_sha256": "35ec6469ee1c5556f4465298659857350096331fa0603c3879f654cdf624d9e2",
+  "scope": "one_physical_material_case_chronological_holdout",
+  "observation_ids": "published_N12_seed47_fixed_all_epochs",
+  "frame_objective": "one_frame_per_window_drawn_by_native_trapezoid_weights",
+  "diffusion_missing_target_policy": "independent_N01_clean_latents_with_separately_normalized_analytic_nuisance_score_loss_weight1",
+  "diffusion_nuisance_target": "v=0_or_epsilon=sqrt(1-alpha_bar)*x_t; artificial_latent_prior_not_zero_physical_velocity",
+  "reference_support_input_at_inference": false,
+  "status": "completed",
+  "epoch": 100,
+  "optimizer_steps": 12595,
+  "checkpoint_sha256": "b971e8a1c555c650050313ec4e587998d0848d867df4dcae7159b7ba200a6cc9"
+}

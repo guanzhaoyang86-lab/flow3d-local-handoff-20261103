@@ -1,0 +1,7 @@
+{
+  "rbf": {
+    "centers_per_axis": 4,
+    "length_scale": 0.35,
+    "ridge": 0.0001
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "checked_at_utc": "2026-11-03T20:06:01.893450+00:00",
+  "source_files_verified": 685,
+  "frozen_experiments": [
+    {
+      "experiment": "baselines_n12_20261027",
+      "verified_files": 99
+    },
+    {
+      "experiment": "baselines_n12_jhtdb_recovery_20261030",
+      "verified_files": 104
+    },
+    {
+      "experiment": "tensor_dit_n12_20261027",
+      "verified_files": 81
+    }
+  ],
+  "credential_pattern_scan": "passed",
+  "queue_snapshot_count": 9,
+  "queue_snapshot_states": [
+    "PENDING"
+  ],
+  "primary_completed_runs": 10,
+  "exported_handoff_file_count_before_report": 810,
+  "bytes_before_report": 17469936,
+  "server_jobs_changed": false,
+  "gpu_training_performed": false,
+  "local_launcher_verification": {
+    "cpu_contract_tests": {
+      "count": 14,
+      "status": "passed",
+      "command": "python -B -m unittest discover -s local_support -p test_local_baselines.py -v"
+    },
+    "real_cpu_integration": {
+      "status": "stopped_before_model_execution",
+      "reason": "Production shared filesystem preflight waited in cl_sync_io_wait; no real model subprocess had started at last inspection.",
+      "temporary_directory": "/tmp/handoff-local-smoke-c8t4jcas",
+      "terminated_test_processes": [
+        3406795,
+        3406770
+      ]
+    },
+    "laptop_cuda_test": "not_run",
+    "real_training": "not_run",
+    "production_source_or_jobs_modified": false
+  },
+  "publication": "This is a prepared snapshot; actual GitHub publication is recorded outside this package.",
+  "final_assembled_checks": {
+    "local_launcher_contract_tests": 14,
+    "asset_transfer_mock_tests": 8,
+    "all_passed": true,
+    "real_result_and_queue_listing": "passed",
+    "real_cuda_training": "not_run"
+  }
+}

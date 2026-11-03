@@ -1,0 +1,105 @@
+{
+  "schema": "flow3d_dataset_experiment_setting_v1",
+  "dataset_id": "fs_sph",
+  "root": "/work/nvme/biup/zguan2/fs_sph_gpu/datasets/fs_sph_3429811_rods_full_v2",
+  "source_manifest": "/work/nvme/biup/zguan2/fs_sph_gpu/datasets/fs_sph_3429811_rods_full_v2/dataset_manifest.json",
+  "source_manifest_sha256": "154521f224ee834851737e336b63882f93ea09d8b732677bca3c8d29e8f578cd",
+  "release_state": "validated",
+  "raw_data_available": true,
+  "training_ready": false,
+  "task": "time-dependent material transport-velocity field reconstruction from projected tracks within one physical case",
+  "scientific_scope": "Single-case chronological heldout windows; not cross-case generalization and not a validated turbulent-fluid benchmark.",
+  "raw_track_shape": [
+    3613,
+    25990,
+    3
+  ],
+  "raw_track_layout": "time,particle,xyz",
+  "physical_time_range_s": [
+    0.0,
+    7.421447299727342
+  ],
+  "flow_group_id": "fs_sph_3429811",
+  "independent_cases": 1,
+  "split": {
+    "mode": "within_case_temporal_block",
+    "protocol": "protocol/fs_temporal_split.json",
+    "window_counts": {
+      "train": 126,
+      "validation": 18,
+      "test": 18,
+      "embargo": 18
+    },
+    "preserve_single_physical_group": true,
+    "never_use_smoke_overlap_to_claim_scientific": true
+  },
+  "observations": {
+    "fixed_id_source": "/work/nvme/biup/zguan2/fs_sph_gpu/datasets/fs_sph_3429811_rods_full_v2/protocol",
+    "counts": [
+      12,
+      24,
+      48,
+      96
+    ],
+    "seed": 47,
+    "input_views": [
+      "xz"
+    ],
+    "frames_per_window": 20,
+    "preserve_native_absolute_times": true,
+    "resample_full_process_to_20_times": false,
+    "probe_ids": "protocol/fs_probe_ids_32_seed47.npy",
+    "training_particle_selection": "Fixed published nested N12/N24/N48/N96 seed47 IDs in every epoch; no resampling outside N96.",
+    "epoch_resampling": false,
+    "reference_exclusion_consistency": "The fixed N96 union fixed32probes is excluded from donors before building the single reference shared across all N; changing observation IDs requires a new declared reference and protocol."
+  },
+  "target": {
+    "velocity_kind": "native transport_velocity",
+    "units": "m/s already; do not divide by 10 again",
+    "raw_snapshot_root": "/work/nvme/biup/zguan2/fs_sph_gpu/runs/3429811/work/particle_snapshots",
+    "original_reader": "/u/zguan2/projects/FS-SPH-GPU/scripts/fs_particle_io.py",
+    "reuse_builder": "/u/zguan2/projects/FS-SPH-GPU/scripts/build_fs_flow3d.py",
+    "reuse_grid": "/u/zguan2/projects/FS-SPH-GPU/scripts/fs_grid.py",
+    "grid_shape_zyx": [
+      32,
+      32,
+      32
+    ],
+    "frames_per_window": 20,
+    "field_layout": "T,C,Z,Y,X; do not flatten time into independent physical cases",
+    "donor_cohort": "Initial deformable rod IDs, identity preserved after adhesion; do not filter on later Jointed labels or mix substrate donors across material interfaces.",
+    "donor_exclusions": "Union of published N96 conditioning IDs and fixed 32 probe IDs, identical for every N and method. Do NOT exclude the full 25990-trajectory pool.",
+    "reference_shared_across_N": true,
+    "interpolator": "Existing k32 weighted local affine fit; material radius0.9h and support7h from native geometry; validate coverage.",
+    "valid_supervision_mask": "material & interpolation_support & ~prescribed; keep ghost, empty, moving/fixed boundaries distinct. Unknown is not solid/no-slip.",
+    "primary_independent_velocity_metric": "Velocity RMSE on heldout native material probes, not only error against the interpolated reference.",
+    "masked_statistics": true,
+    "missing_grid_value_policy": "Zero is storage padding only; excluded from loss/statistics and never a physical zero target.",
+    "transport_validity_policy": "Require transport_velocity_valid and finite native transport vectors; unsupported cells remain unknown. No fallback to momentum velocity while labeling the target transport."
+  },
+  "temporal_model": {
+    "required": "Explicit time-dependent model and baseline outputs with absolute-time/physical-scale conditioning",
+    "current_steady_trainer_supported": false,
+    "quasi_steady_fallback_enabled": false,
+    "steady_fallback_policy": "Only a separately declared ablation after temporal-variation and independent-replay gates; never silently replace the main transient task."
+  },
+  "derived_root": "/work/nvme/biup/zguan2/fs_sph_gpu/datasets/fs_sph_3429811_flow32_windows_20261026",
+  "readiness_gates": [
+    "fs_v2_native_transport_velocity_grid_adapter",
+    "fs_same_reference_donors_all_N",
+    "fs_material_support_loss_and_metrics",
+    "fs_temporal_block_loader_without_fake_groups",
+    "fs_transient_model_and_baseline_outputs",
+    "conditioning_only_xz_no_truth_leakage",
+    "single_xz_evaluator_with_latent_depth",
+    "fs_train_only_tucker_rank_selected",
+    "real_gpu_pilot",
+    "adapted_source_locked_and_reviewed"
+  ],
+  "model_boundary_information": {
+    "known_boundary_mask": "all false for reconstruction inputs",
+    "boundary_values": "zero placeholder; never load true prescribed velocities into model conditions",
+    "prescribed_mask": "supervision/evaluation exclusion only, distinct from model boundary tensors",
+    "current_final_projection": "no-op on empty known-boundary mask"
+  }
+}

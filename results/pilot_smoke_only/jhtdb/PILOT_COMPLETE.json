@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "dataset": "jhtdb",
+  "N": 12,
+  "test_used": false,
+  "input_view": "xz",
+  "benchmark": [
+    {
+      "model": "cnn",
+      "elapsed_seconds": 0.7107639650348574,
+      "checkpoint_reused": true,
+      "elapsed_scope": "checkpoint_verification"
+    },
+    {
+      "model": "deeponet",
+      "elapsed_seconds": 0.28387839207425714,
+      "checkpoint_reused": true,
+      "elapsed_scope": "checkpoint_verification"
+    },
+    {
+      "model": "unet",
+      "elapsed_seconds": 1.7981208490673453,
+      "checkpoint_reused": true,
+      "elapsed_scope": "checkpoint_verification"
+    },
+    {
+      "model": "fno",
+      "elapsed_seconds": 3.9226481998339295,
+      "checkpoint_reused": true,
+      "elapsed_scope": "checkpoint_verification"
+    },
+    {
+      "model": "unet_diffusion",
+      "elapsed_seconds": 1.8332948368042707,
+      "checkpoint_reused": true,
+      "elapsed_scope": "checkpoint_verification"
+    }
+  ],
+  "scope": "Five learned forward/backward and two fit paths; no scientific results."
+}

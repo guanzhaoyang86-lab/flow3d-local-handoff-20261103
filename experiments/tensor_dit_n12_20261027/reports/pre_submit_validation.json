@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-10-27T06:20:16.564910+00:00",
+  "cpu_tests_passed": 62,
+  "cpu_tests_skipped": 1,
+  "skip_reason": "Historical original CLI path test; new production CLI paths exercised by real-adapter integration tests.",
+  "failures": 0,
+  "errors": 0,
+  "cpu_tests_xml_sha256": "8068c25415d00978088ac221a62d0375e7ecff58cecf10b7f0e05f171bdaa844",
+  "frozen_sha256": "7166fcba132f8444fe358471c4b5bf78c7bd76f7906078b47771ff0b4070ae17",
+  "frozen_files_verified": 81,
+  "shell_syntax_passed": true,
+  "baseline_frozen_files_unchanged": 99,
+  "real_cuda_test": "Not run yet; scheduled pilot must succeed before formal training.",
+  "full_data_processing": "Not run on login; reuse submitted preparation and run Tucker fitting in Slurm.",
+  "integration": "Both actual adapters: prepare selected artifact -> pilot train -> validation sampling/evaluation -> resumed evaluation.",
+  "independent_reviews": [
+    "dataset units, masks, equal-window native-time weighting, no test fields, baseline identical observations",
+    "repaired Tensor source, resume and inference without truth",
+    "Slurm dependencies, total concurrency2, checkpoint gates, duplicate-submission guard"
+  ]
+}

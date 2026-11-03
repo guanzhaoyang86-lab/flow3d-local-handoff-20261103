@@ -1,0 +1,63 @@
+Taichi-LBM3D 32³ 单视角 50 万条轨迹：提交说明
+
+正式目标：3125 个独立方腔流案例 × 每例 160 条物理粒子轨迹 × 一个 xz 投影。
+对应 500000 条三维粒子轨迹及 500000 条二维 xz 轨迹，每条有 20 个观测时刻。
+这是一组冻结的三分量方腔流快照，不称为已经验证的湍流。
+上游 LBM 求解器固定提交：fe49e3f609b2038cbf93c8bd453ffc5c2bf98e4c。
+
+主路径：当前 DeltaAI / GH200 环境原地构建 ARM Taichi
+
+在当前 DeltaAI 的 gh-login 登录终端执行：
+  bash /u/zguan2/projects/flow3d_runs/lbm_generation_500k/arm_env/submit_arm.sh
+
+账户：biup-dtai-gh；主机架构：aarch64；GPU：GH200。
+构建验证分区：ghx4-interactive；正式生成和最终检查分区：ghx4。
+Taichi 使用实验性 LLVM20 + ARM 分支，固定提交：
+  93c190f603b676ec1f8871e4f46cf5d5be89548e
+分支来源：https://github.com/taichi-dev/taichi/pull/8735
+配套 LLVM 20.1.8、独立 arm_env/venv 和站点 PyTorch 2.10.0。
+这不是官方 Taichi 1.7.4 的现成 Linux ARM 包；仍需实际构建和 GPU 验证。
+
+入口先做 CPU 生成计划检查及两个分区的资源请求检查，再建立四阶段成功依赖链：
+1. build.slurm：ghx4-interactive，1 GH200 GPU、8 CPU、48G、2 小时。
+   构建并安装固定 ARM Taichi，随后在同一作业内实测 CUDA 内核和一个原始 32³ LBM pilot，
+   通过后写 validated_env.json；此阶段不生成正式第 0 块。
+2. validate_gpu.slurm：ghx4，1 GH200 GPU、8 CPU、32G、2 小时。
+   复核已验证环境，再生成正式集合第 0 块的 125 个案例。
+3. generate_arm.slurm：ghx4，数组 1–24%1；每任务 1 GPU、8 CPU、32G、2 小时。
+   每块 125 例，最多一个数组任务运行。
+4. finalize_arm.slurm：ghx4，1 GPU、8 CPU、32G、30 分钟。
+   核对 3125 例、500000 条物理轨迹及 xz 轨迹，构建 manifest、SHA256 和 COMPLETE.json。
+前一阶段失败，依赖的后续阶段不会启动。时限是申请上限，不代表实测耗时。
+站点拒绝 0 GPU 构建请求，因此编译阶段也申请 1 GPU，随后直接使用它验证 CUDA/LBM。
+ghx4-interactive 每用户最多提交和运行一个作业；本链在该分区只申请一个构建验证作业。
+环境 pilot 不额外计入正式 3125 × 160 的轨迹总数。
+
+默认数据目录：
+  /work/hdd/biup/zguan2/datasets/lbm32_xz_500k_deltaai_arm_20261023
+提交记录：lbm_generation_500k/arm_env/submission/submission.json。
+Slurm 日志：lbm_generation_500k/arm_env/logs/。
+正式数据的块进度在 chunks/，逐例日志在 attempts/。
+构建成功、CPU 检查或资源检查均不等于 CUDA/LBM 验证成功或全量生成完成。
+实际作业记录和状态另见 progress.json 及 Slurm accounting。
+
+ARM 失败恢复：
+  bash /u/zguan2/projects/flow3d_runs/lbm_generation_500k/arm_env/submit_arm.sh --resume-failed
+仅在完整旧流水线的四类作业均已终止且不在队列中时，才会保存历史记录并建立新依赖链。
+生成器严格核对同一源码、环境、validated_env.json 和参数，再跳过有效的已完成案例。
+存在运行中作业、不完整提交或进行中标记时拒绝自动重投；须先核对 squeue/sacct。
+恢复时保留原 wheel、环境和验证清单；清单哈希变化会使核心严格恢复校验拒绝续跑。
+
+备用路径：Delta / A100
+
+把完整 lbm_generation_500k 包放到 Delta 可读目录，在 Delta x86_64 登录终端执行：
+  bash /path/to/lbm_generation_500k/submit_delta.sh
+失败恢复入口：
+  bash /path/to/lbm_generation_500k/submit_delta.sh --resume-failed
+
+账户：biup-delta-gpu；分区：gpuA100x4；1 A100、8 CPU、32G、每块 2 小时。
+既有环境：$HOME/envs/flow3d-lbm3d，可通过 LBM500K_ENV_PREFIX 指定一致的已验证前缀。
+备用路径直接运行第 0 块 → 数组 1–24%1 → 最终校验，不执行 ARM 环境构建。
+默认数据目录：/work/hdd/biup/zguan2/datasets/lbm32_xz_500k_20261023。
+提交记录和日志分别在包根目录的 submission/ 与 logs/。
+ARM 与 x86 使用各自环境、提交记录及数据目录，不能混用环境恢复同一集合。

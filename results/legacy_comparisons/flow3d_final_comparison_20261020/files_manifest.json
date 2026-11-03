@@ -1,0 +1,78 @@
+{
+  "Flow3D_最终对比_12组完成版_20261020.pdf": {
+    "bytes": 68671,
+    "sha256": "a96f59dc18a574c3158e3be2627d7a7cc83b838e240d3ae7be6539152f16e2cd"
+  },
+  "Flow3D_最终对比_12组完成版_20261020.pptx": {
+    "bytes": 45781,
+    "sha256": "5b438bff44aca5315fe44d2611e59764c387da53fb8d8732ac4aecb0239df6ca"
+  },
+  "Flow3D_最终对比_12组完成版_20261020.xlsx": {
+    "bytes": 11865,
+    "sha256": "8b7755f0851d1510c8a2e75122e84be3378f8796ebd9cbf99756135133f8dfd4"
+  },
+  "confirmation_summary_final.json": {
+    "bytes": 8894285,
+    "sha256": "30c2de1e79507f65958627ccd0b7e137e02fbc8c436c2cc74abf12a80d119d52"
+  },
+  "export_final_results.py": {
+    "bytes": 13961,
+    "sha256": "96d33437fe6141c5cb76c4b074d51f245a5846ddacd9654e9760b135ce69d716"
+  },
+  "final_comparison.json": {
+    "bytes": 14030,
+    "sha256": "6a076b0530f0ae7bc5a487610e1941497024d008bc970248b51da84ff5b494e5"
+  },
+  "layout_checks.json": {
+    "bytes": 115,
+    "sha256": "637abe26bb17baae3e1997d687b27aa88d4b0a0029a1d829f0ae44b8624be0b4"
+  },
+  "slide_manifest.json": {
+    "bytes": 1681,
+    "sha256": "7c3297eaba41447ad4b1da254cd898f734365ad07b5ad1306b6e72158b4962e0"
+  },
+  "verification.json": {
+    "bytes": 376,
+    "sha256": "9c3b209e59c5aa1a0654a0000c8752d07b0a90200296146d1b9330026d61b0e7"
+  },
+  "使用说明.txt": {
+    "bytes": 670,
+    "sha256": "62faba6ef93a95304250d48d68dfd23fb64f1a5ae679ca3e347680612803b4eb"
+  },
+  "全部配对区间.csv": {
+    "bytes": 2542,
+    "sha256": "c33560817a4e3c8b66b1410ff77d6b0d9f875f1d7130094646270faf029f7ec4"
+  },
+  "幻灯片总览.png": {
+    "bytes": 105173,
+    "sha256": "e505c273a31e6a52e1c16ffd20a211dad99fd681e4ecf296e08a2ca795e312b4"
+  },
+  "总对比.csv": {
+    "bytes": 1132,
+    "sha256": "5ad06fa79a190e61d9cccf49e5d515ba16e7e82bb28d9a57c65d395f4bdea9c3"
+  },
+  "条件消融.csv": {
+    "bytes": 561,
+    "sha256": "8404fcbb92c676b4f1b826d08c97c1d24df9bfe27eed871091fd207fd85a5038"
+  },
+  "汇报讲稿.txt": {
+    "bytes": 1611,
+    "sha256": "066f68248aea2c887aa11dc7ae9e4b25c6d2bbb1b3b09a0fe98b784b8d6bdb9d"
+  },
+  "逐训练种子.csv": {
+    "bytes": 1037,
+    "sha256": "e86d73691d2023c7ef07d4a7f084203fbeeba36888f792c8072ac6a74c20c363"
+  },
+  "preview/slide_01.png": {
+    "bytes": 49813,
+    "sha256": "aa10dc09fb8ccdd5df46dd70ec9ec08b5024a30df1de8131608b6c8f2a824cf7"
+  },
+  "preview/slide_02.png": {
+    "bytes": 44376,
+    "sha256": "2e1c7d5f3b726e4c5976c7cb9318c75fcaaec3ceb4cdce1d28e13ef929aacfb3"
+  },
+  "preview/slide_03.png": {
+    "bytes": 39562,
+    "sha256": "62ad09ad68de2a6f2817976735a03adab6918ba68d2036c6f49409147aea07c5"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "baseline_execution_policy_v1",
+  "updated_at_utc": "2026-10-31T04:47:15.990949+00:00",
+  "training_seeds": [
+    31
+  ],
+  "epochs": 100,
+  "datasets": [
+    "jhtdb",
+    "fs_sph"
+  ],
+  "excluded_training_seeds": [
+    32,
+    33
+  ],
+  "original_array_index_by_seed": {
+    "31": 0,
+    "32": 1,
+    "33": 2
+  },
+  "operation_record": "/u/zguan2/projects/flow3d_runs/operations/single_seed_31_20261031T044041Z/operation.json",
+  "completed_outputs": "Preserve existing results; use seed 31 only for the active experiment.",
+  "enforcement": "All queued seed-32/33 tasks cancelled. Only original array index 0 remains queued; no automatic requeue.",
+  "future_submission_requirement": "Submit only training seed 31. Preserve original array index 0 when using the frozen plan. Do not resubmit the historical three-seed plan.",
+  "jhtdb_status": "Repaired isolated revision submitted; pilot 3492894 gates all nine downstream jobs.",
+  "frozen_inputs": "Historical three-seed plan and frozen source are preserved to keep existing queued jobs verifiable.",
+  "active_revision_by_dataset": {
+    "jhtdb": "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_jhtdb_recovery_20261030",
+    "fs_sph": "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027"
+  },
+  "jhtdb_recovery_operation": "/u/zguan2/projects/flow3d_runs/operations/jhtdb_pilot_fix_20261031T044638Z/operation.json"
+}

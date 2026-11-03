@@ -1,0 +1,36 @@
+{
+  "submitted_at_utc": "2026-10-24T23:22:08.569960+00:00",
+  "cluster": "DeltaAI",
+  "account": "biup-dtai-gh",
+  "partitions_per_stage": {
+    "build_environment": "ghx4-interactive",
+    "validate_first_chunk": "ghx4",
+    "remaining_chunks": "ghx4",
+    "finalize": "ghx4"
+  },
+  "gpus_per_stage": {
+    "build_environment": 1,
+    "validate_first_chunk": 1,
+    "remaining_chunks": 1,
+    "finalize": 1
+  },
+  "array_concurrency": 1,
+  "output_dir": "/work/hdd/biup/zguan2/datasets/lbm32_xz_500k_deltaai_arm_20261023",
+  "arm_dir": "/u/zguan2/projects/flow3d_runs/lbm_generation_500k/arm_env",
+  "runtime_profile": "deltaai-arm-llvm20",
+  "phase": "submitted",
+  "previous_record": "/u/zguan2/projects/flow3d_runs/lbm_generation_500k/arm_env/submission/attempts/20261024T232208_925d293b.json",
+  "physical_trajectories": 500000,
+  "projection": "xz",
+  "grid_shape": [
+    32,
+    32,
+    32
+  ],
+  "jobs": {
+    "build_environment": "3450731",
+    "validate_first_chunk": "3450732",
+    "remaining_chunks": "3450733",
+    "finalize": "3450734"
+  }
+}

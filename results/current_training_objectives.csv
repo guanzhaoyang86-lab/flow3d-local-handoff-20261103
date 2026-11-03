@@ -1,0 +1,15 @@
+dataset,model,seed,epoch,current_single_seed_policy,last_train_loss,last_validation_loss,minimum_recorded_validation_loss,sum_recorded_epoch_seconds,metric_scope
+fs_sph,cnn,31,100,True,0.3649114524679525,0.3778556254174974,0.37727543546093834,776.575116305612,"Training/validation objective values, not final held-out test reconstruction metrics."
+fs_sph,cnn,32,100,False,0.34772745300720015,0.37718260619375443,0.3769197091460228,810.2117591416463,"Training/validation objective values, not final held-out test reconstruction metrics."
+fs_sph,cnn,33,100,False,0.37942956596435534,0.3785790254672368,0.3772498485114839,829.6143768741749,"Training/validation objective values, not final held-out test reconstruction metrics."
+fs_sph,deeponet,31,100,True,0.36738488628041177,0.3827546735604604,0.3826523712939686,702.0243152006296,"Training/validation objective values, not final held-out test reconstruction metrics."
+fs_sph,deeponet,32,100,False,0.3536581053206372,0.3818713923295339,0.3818713923295339,689.9240202079527,"Training/validation objective values, not final held-out test reconstruction metrics."
+fs_sph,deeponet,33,100,False,0.38823738635059385,0.3904801822370953,0.3904801822370953,654.9660896151327,"Training/validation objective values, not final held-out test reconstruction metrics."
+fs_sph,fno,31,100,True,0.35601386333268786,0.3782406995693843,0.37706781592633987,1091.6833332253154,"Training/validation objective values, not final held-out test reconstruction metrics."
+fs_sph,mean,,0,True,,,,,
+fs_sph,pod,,0,True,,,,,
+fs_sph,unet_diffusion,31,100,True,0.24652753427388177,0.2799357920885086,0.2799357920885086,1144.3117256176192,"Training/validation objective values, not final held-out test reconstruction metrics."
+fs_sph,unet,31,100,True,0.36166259097970194,0.3778432624207603,0.37692171418004566,948.117471124744,"Training/validation objective values, not final held-out test reconstruction metrics."
+jhtdb,cnn,31,100,True,15.598162778360397,0.5059469856608373,0.46719230984886867,17046.56590321753,"Training/validation objective values, not final held-out test reconstruction metrics."
+jhtdb,mean,,0,True,,,,,
+jhtdb,pod,,0,True,,,,,

@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "key": "jhtdb_pilot",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3492883 to start at 2026-11-03T06:56:38 a using 8 processors on nodes gh141 in partition ghx4\n"
+    },
+    {
+      "key": "jhtdb_mean",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3492884 to start at 2026-11-03T06:56:38 a using 8 processors on nodes gh141 in partition ghx4\n"
+    },
+    {
+      "key": "jhtdb_pod",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3492882 to start at 2026-11-03T06:56:38 a using 8 processors on nodes gh141 in partition ghx4\n"
+    },
+    {
+      "key": "jhtdb_cnn",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3492881 to start at 2026-11-03T06:56:38 a using 8 processors on nodes gh141 in partition ghx4\n"
+    },
+    {
+      "key": "jhtdb_deeponet",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3492885 to start at 2026-11-03T06:56:38 a using 8 processors on nodes gh141 in partition ghx4\n"
+    },
+    {
+      "key": "jhtdb_unet",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3492886 to start at 2026-11-03T06:56:38 a using 8 processors on nodes gh141 in partition ghx4\n"
+    },
+    {
+      "key": "jhtdb_fno",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3492887 to start at 2026-11-03T06:56:38 a using 8 processors on nodes gh141 in partition ghx4\n"
+    },
+    {
+      "key": "jhtdb_unet_diffusion",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3492888 to start at 2026-11-03T06:56:38 a using 8 processors on nodes gh141 in partition ghx4\n"
+    },
+    {
+      "key": "jhtdb_pod_calibration",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3492890 to start at 2026-11-03T06:56:38 a using 8 processors on nodes gh141 in partition ghx4\n"
+    },
+    {
+      "key": "jhtdb_rbf_calibration",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3492889 to start at 2026-11-03T06:56:38 a using 8 processors on nodes gh141 in partition ghx4\n"
+    }
+  ],
+  "plan_sha256": "029c1abf264524d1393e1e6f35f1bba30961ba0c543c4312af1acea6a13583a5",
+  "frozen_sha256": "93f9c8c20722a60405cf8a0e2f0778a7df2ab431b3875a2f7ddf47b1081b4d7c"
+}

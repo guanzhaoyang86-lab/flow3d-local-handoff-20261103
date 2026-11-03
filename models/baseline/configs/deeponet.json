@@ -1,0 +1,7 @@
+{
+  "deeponet": {
+    "latent": 128,
+    "hidden": 128,
+    "layers": 3
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-10-20T14:34:15.884888+00:00",
+  "unet_job_ids": [
+    "3422207",
+    "3422217",
+    "3422225"
+  ],
+  "unet_completed_generations": 792,
+  "unet_invalid_trajectory_draws": 0,
+  "raw_source_means_recomputed": "passed",
+  "pptx_numbers_match": "passed",
+  "pptx_pages": 3,
+  "pdf_pages": 3,
+  "csv_row_counts": {
+    "同口径三模型总对比": 3,
+    "逐种子结果": 9,
+    "相对UNet配对区间": 24,
+    "全部逐案例误差": 396
+  },
+  "paired_95CI_all_below_zero": true
+}

@@ -1,0 +1,1369 @@
+{
+  "config_sha256": "905d04bb76f975e4cc8b7093c48b4a1de80b8568a76d905f9441b364534ccf8c",
+  "coordinate_units": "cells",
+  "embargo_window_ids": [
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161
+  ],
+  "flow_group_id": "fs_sph_3429811",
+  "frames_per_window": 20,
+  "grid_shape_zyx": [
+    32,
+    32,
+    32
+  ],
+  "independent_cases": 1,
+  "input_views": [
+    "xz"
+  ],
+  "known_boundary_information": "none; prescribed masks and velocities are reference-only",
+  "mode": "within_case_temporal",
+  "num_particles": 12,
+  "schema": "fs_transient_baseline_manifest_v1",
+  "scientific_scope": "single-case chronological conditional reconstruction; not cross-case generalization",
+  "source_config": "BUILD_CONFIG.json",
+  "source_release": "/work/nvme/biup/zguan2/fs_sph_gpu/datasets/fs_sph_3429811_rods_full_v2",
+  "splits": {
+    "test": [
+      {
+        "case_id": "fs_window_0162",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3240,
+        "frame_stop_exclusive": 3260,
+        "path": "windows/window_0162.npz",
+        "window_id": 162
+      },
+      {
+        "case_id": "fs_window_0163",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3260,
+        "frame_stop_exclusive": 3280,
+        "path": "windows/window_0163.npz",
+        "window_id": 163
+      },
+      {
+        "case_id": "fs_window_0164",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3280,
+        "frame_stop_exclusive": 3300,
+        "path": "windows/window_0164.npz",
+        "window_id": 164
+      },
+      {
+        "case_id": "fs_window_0165",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3300,
+        "frame_stop_exclusive": 3320,
+        "path": "windows/window_0165.npz",
+        "window_id": 165
+      },
+      {
+        "case_id": "fs_window_0166",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3320,
+        "frame_stop_exclusive": 3340,
+        "path": "windows/window_0166.npz",
+        "window_id": 166
+      },
+      {
+        "case_id": "fs_window_0167",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3340,
+        "frame_stop_exclusive": 3360,
+        "path": "windows/window_0167.npz",
+        "window_id": 167
+      },
+      {
+        "case_id": "fs_window_0168",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3360,
+        "frame_stop_exclusive": 3380,
+        "path": "windows/window_0168.npz",
+        "window_id": 168
+      },
+      {
+        "case_id": "fs_window_0169",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3380,
+        "frame_stop_exclusive": 3400,
+        "path": "windows/window_0169.npz",
+        "window_id": 169
+      },
+      {
+        "case_id": "fs_window_0170",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3400,
+        "frame_stop_exclusive": 3420,
+        "path": "windows/window_0170.npz",
+        "window_id": 170
+      },
+      {
+        "case_id": "fs_window_0171",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3420,
+        "frame_stop_exclusive": 3440,
+        "path": "windows/window_0171.npz",
+        "window_id": 171
+      },
+      {
+        "case_id": "fs_window_0172",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3440,
+        "frame_stop_exclusive": 3460,
+        "path": "windows/window_0172.npz",
+        "window_id": 172
+      },
+      {
+        "case_id": "fs_window_0173",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3460,
+        "frame_stop_exclusive": 3480,
+        "path": "windows/window_0173.npz",
+        "window_id": 173
+      },
+      {
+        "case_id": "fs_window_0174",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3480,
+        "frame_stop_exclusive": 3500,
+        "path": "windows/window_0174.npz",
+        "window_id": 174
+      },
+      {
+        "case_id": "fs_window_0175",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3500,
+        "frame_stop_exclusive": 3520,
+        "path": "windows/window_0175.npz",
+        "window_id": 175
+      },
+      {
+        "case_id": "fs_window_0176",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3520,
+        "frame_stop_exclusive": 3540,
+        "path": "windows/window_0176.npz",
+        "window_id": 176
+      },
+      {
+        "case_id": "fs_window_0177",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3540,
+        "frame_stop_exclusive": 3560,
+        "path": "windows/window_0177.npz",
+        "window_id": 177
+      },
+      {
+        "case_id": "fs_window_0178",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3560,
+        "frame_stop_exclusive": 3580,
+        "path": "windows/window_0178.npz",
+        "window_id": 178
+      },
+      {
+        "case_id": "fs_window_0179",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3580,
+        "frame_stop_exclusive": 3600,
+        "path": "windows/window_0179.npz",
+        "window_id": 179
+      }
+    ],
+    "train": [
+      {
+        "case_id": "fs_window_0000",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 0,
+        "frame_stop_exclusive": 20,
+        "path": "windows/window_0000.npz",
+        "window_id": 0
+      },
+      {
+        "case_id": "fs_window_0001",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 20,
+        "frame_stop_exclusive": 40,
+        "path": "windows/window_0001.npz",
+        "window_id": 1
+      },
+      {
+        "case_id": "fs_window_0002",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 40,
+        "frame_stop_exclusive": 60,
+        "path": "windows/window_0002.npz",
+        "window_id": 2
+      },
+      {
+        "case_id": "fs_window_0003",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 60,
+        "frame_stop_exclusive": 80,
+        "path": "windows/window_0003.npz",
+        "window_id": 3
+      },
+      {
+        "case_id": "fs_window_0004",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 80,
+        "frame_stop_exclusive": 100,
+        "path": "windows/window_0004.npz",
+        "window_id": 4
+      },
+      {
+        "case_id": "fs_window_0005",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 100,
+        "frame_stop_exclusive": 120,
+        "path": "windows/window_0005.npz",
+        "window_id": 5
+      },
+      {
+        "case_id": "fs_window_0006",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 120,
+        "frame_stop_exclusive": 140,
+        "path": "windows/window_0006.npz",
+        "window_id": 6
+      },
+      {
+        "case_id": "fs_window_0007",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 140,
+        "frame_stop_exclusive": 160,
+        "path": "windows/window_0007.npz",
+        "window_id": 7
+      },
+      {
+        "case_id": "fs_window_0008",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 160,
+        "frame_stop_exclusive": 180,
+        "path": "windows/window_0008.npz",
+        "window_id": 8
+      },
+      {
+        "case_id": "fs_window_0009",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 180,
+        "frame_stop_exclusive": 200,
+        "path": "windows/window_0009.npz",
+        "window_id": 9
+      },
+      {
+        "case_id": "fs_window_0010",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 200,
+        "frame_stop_exclusive": 220,
+        "path": "windows/window_0010.npz",
+        "window_id": 10
+      },
+      {
+        "case_id": "fs_window_0011",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 220,
+        "frame_stop_exclusive": 240,
+        "path": "windows/window_0011.npz",
+        "window_id": 11
+      },
+      {
+        "case_id": "fs_window_0012",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 240,
+        "frame_stop_exclusive": 260,
+        "path": "windows/window_0012.npz",
+        "window_id": 12
+      },
+      {
+        "case_id": "fs_window_0013",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 260,
+        "frame_stop_exclusive": 280,
+        "path": "windows/window_0013.npz",
+        "window_id": 13
+      },
+      {
+        "case_id": "fs_window_0014",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 280,
+        "frame_stop_exclusive": 300,
+        "path": "windows/window_0014.npz",
+        "window_id": 14
+      },
+      {
+        "case_id": "fs_window_0015",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 300,
+        "frame_stop_exclusive": 320,
+        "path": "windows/window_0015.npz",
+        "window_id": 15
+      },
+      {
+        "case_id": "fs_window_0016",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 320,
+        "frame_stop_exclusive": 340,
+        "path": "windows/window_0016.npz",
+        "window_id": 16
+      },
+      {
+        "case_id": "fs_window_0017",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 340,
+        "frame_stop_exclusive": 360,
+        "path": "windows/window_0017.npz",
+        "window_id": 17
+      },
+      {
+        "case_id": "fs_window_0018",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 360,
+        "frame_stop_exclusive": 380,
+        "path": "windows/window_0018.npz",
+        "window_id": 18
+      },
+      {
+        "case_id": "fs_window_0019",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 380,
+        "frame_stop_exclusive": 400,
+        "path": "windows/window_0019.npz",
+        "window_id": 19
+      },
+      {
+        "case_id": "fs_window_0020",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 400,
+        "frame_stop_exclusive": 420,
+        "path": "windows/window_0020.npz",
+        "window_id": 20
+      },
+      {
+        "case_id": "fs_window_0021",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 420,
+        "frame_stop_exclusive": 440,
+        "path": "windows/window_0021.npz",
+        "window_id": 21
+      },
+      {
+        "case_id": "fs_window_0022",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 440,
+        "frame_stop_exclusive": 460,
+        "path": "windows/window_0022.npz",
+        "window_id": 22
+      },
+      {
+        "case_id": "fs_window_0023",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 460,
+        "frame_stop_exclusive": 480,
+        "path": "windows/window_0023.npz",
+        "window_id": 23
+      },
+      {
+        "case_id": "fs_window_0024",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 480,
+        "frame_stop_exclusive": 500,
+        "path": "windows/window_0024.npz",
+        "window_id": 24
+      },
+      {
+        "case_id": "fs_window_0025",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 500,
+        "frame_stop_exclusive": 520,
+        "path": "windows/window_0025.npz",
+        "window_id": 25
+      },
+      {
+        "case_id": "fs_window_0026",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 520,
+        "frame_stop_exclusive": 540,
+        "path": "windows/window_0026.npz",
+        "window_id": 26
+      },
+      {
+        "case_id": "fs_window_0027",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 540,
+        "frame_stop_exclusive": 560,
+        "path": "windows/window_0027.npz",
+        "window_id": 27
+      },
+      {
+        "case_id": "fs_window_0028",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 560,
+        "frame_stop_exclusive": 580,
+        "path": "windows/window_0028.npz",
+        "window_id": 28
+      },
+      {
+        "case_id": "fs_window_0029",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 580,
+        "frame_stop_exclusive": 600,
+        "path": "windows/window_0029.npz",
+        "window_id": 29
+      },
+      {
+        "case_id": "fs_window_0030",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 600,
+        "frame_stop_exclusive": 620,
+        "path": "windows/window_0030.npz",
+        "window_id": 30
+      },
+      {
+        "case_id": "fs_window_0031",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 620,
+        "frame_stop_exclusive": 640,
+        "path": "windows/window_0031.npz",
+        "window_id": 31
+      },
+      {
+        "case_id": "fs_window_0032",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 640,
+        "frame_stop_exclusive": 660,
+        "path": "windows/window_0032.npz",
+        "window_id": 32
+      },
+      {
+        "case_id": "fs_window_0033",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 660,
+        "frame_stop_exclusive": 680,
+        "path": "windows/window_0033.npz",
+        "window_id": 33
+      },
+      {
+        "case_id": "fs_window_0034",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 680,
+        "frame_stop_exclusive": 700,
+        "path": "windows/window_0034.npz",
+        "window_id": 34
+      },
+      {
+        "case_id": "fs_window_0035",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 700,
+        "frame_stop_exclusive": 720,
+        "path": "windows/window_0035.npz",
+        "window_id": 35
+      },
+      {
+        "case_id": "fs_window_0036",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 720,
+        "frame_stop_exclusive": 740,
+        "path": "windows/window_0036.npz",
+        "window_id": 36
+      },
+      {
+        "case_id": "fs_window_0037",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 740,
+        "frame_stop_exclusive": 760,
+        "path": "windows/window_0037.npz",
+        "window_id": 37
+      },
+      {
+        "case_id": "fs_window_0038",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 760,
+        "frame_stop_exclusive": 780,
+        "path": "windows/window_0038.npz",
+        "window_id": 38
+      },
+      {
+        "case_id": "fs_window_0039",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 780,
+        "frame_stop_exclusive": 800,
+        "path": "windows/window_0039.npz",
+        "window_id": 39
+      },
+      {
+        "case_id": "fs_window_0040",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 800,
+        "frame_stop_exclusive": 820,
+        "path": "windows/window_0040.npz",
+        "window_id": 40
+      },
+      {
+        "case_id": "fs_window_0041",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 820,
+        "frame_stop_exclusive": 840,
+        "path": "windows/window_0041.npz",
+        "window_id": 41
+      },
+      {
+        "case_id": "fs_window_0042",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 840,
+        "frame_stop_exclusive": 860,
+        "path": "windows/window_0042.npz",
+        "window_id": 42
+      },
+      {
+        "case_id": "fs_window_0043",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 860,
+        "frame_stop_exclusive": 880,
+        "path": "windows/window_0043.npz",
+        "window_id": 43
+      },
+      {
+        "case_id": "fs_window_0044",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 880,
+        "frame_stop_exclusive": 900,
+        "path": "windows/window_0044.npz",
+        "window_id": 44
+      },
+      {
+        "case_id": "fs_window_0045",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 900,
+        "frame_stop_exclusive": 920,
+        "path": "windows/window_0045.npz",
+        "window_id": 45
+      },
+      {
+        "case_id": "fs_window_0046",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 920,
+        "frame_stop_exclusive": 940,
+        "path": "windows/window_0046.npz",
+        "window_id": 46
+      },
+      {
+        "case_id": "fs_window_0047",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 940,
+        "frame_stop_exclusive": 960,
+        "path": "windows/window_0047.npz",
+        "window_id": 47
+      },
+      {
+        "case_id": "fs_window_0048",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 960,
+        "frame_stop_exclusive": 980,
+        "path": "windows/window_0048.npz",
+        "window_id": 48
+      },
+      {
+        "case_id": "fs_window_0049",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 980,
+        "frame_stop_exclusive": 1000,
+        "path": "windows/window_0049.npz",
+        "window_id": 49
+      },
+      {
+        "case_id": "fs_window_0050",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1000,
+        "frame_stop_exclusive": 1020,
+        "path": "windows/window_0050.npz",
+        "window_id": 50
+      },
+      {
+        "case_id": "fs_window_0051",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1020,
+        "frame_stop_exclusive": 1040,
+        "path": "windows/window_0051.npz",
+        "window_id": 51
+      },
+      {
+        "case_id": "fs_window_0052",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1040,
+        "frame_stop_exclusive": 1060,
+        "path": "windows/window_0052.npz",
+        "window_id": 52
+      },
+      {
+        "case_id": "fs_window_0053",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1060,
+        "frame_stop_exclusive": 1080,
+        "path": "windows/window_0053.npz",
+        "window_id": 53
+      },
+      {
+        "case_id": "fs_window_0054",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1080,
+        "frame_stop_exclusive": 1100,
+        "path": "windows/window_0054.npz",
+        "window_id": 54
+      },
+      {
+        "case_id": "fs_window_0055",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1100,
+        "frame_stop_exclusive": 1120,
+        "path": "windows/window_0055.npz",
+        "window_id": 55
+      },
+      {
+        "case_id": "fs_window_0056",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1120,
+        "frame_stop_exclusive": 1140,
+        "path": "windows/window_0056.npz",
+        "window_id": 56
+      },
+      {
+        "case_id": "fs_window_0057",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1140,
+        "frame_stop_exclusive": 1160,
+        "path": "windows/window_0057.npz",
+        "window_id": 57
+      },
+      {
+        "case_id": "fs_window_0058",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1160,
+        "frame_stop_exclusive": 1180,
+        "path": "windows/window_0058.npz",
+        "window_id": 58
+      },
+      {
+        "case_id": "fs_window_0059",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1180,
+        "frame_stop_exclusive": 1200,
+        "path": "windows/window_0059.npz",
+        "window_id": 59
+      },
+      {
+        "case_id": "fs_window_0060",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1200,
+        "frame_stop_exclusive": 1220,
+        "path": "windows/window_0060.npz",
+        "window_id": 60
+      },
+      {
+        "case_id": "fs_window_0061",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1220,
+        "frame_stop_exclusive": 1240,
+        "path": "windows/window_0061.npz",
+        "window_id": 61
+      },
+      {
+        "case_id": "fs_window_0062",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1240,
+        "frame_stop_exclusive": 1260,
+        "path": "windows/window_0062.npz",
+        "window_id": 62
+      },
+      {
+        "case_id": "fs_window_0063",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1260,
+        "frame_stop_exclusive": 1280,
+        "path": "windows/window_0063.npz",
+        "window_id": 63
+      },
+      {
+        "case_id": "fs_window_0064",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1280,
+        "frame_stop_exclusive": 1300,
+        "path": "windows/window_0064.npz",
+        "window_id": 64
+      },
+      {
+        "case_id": "fs_window_0065",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1300,
+        "frame_stop_exclusive": 1320,
+        "path": "windows/window_0065.npz",
+        "window_id": 65
+      },
+      {
+        "case_id": "fs_window_0066",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1320,
+        "frame_stop_exclusive": 1340,
+        "path": "windows/window_0066.npz",
+        "window_id": 66
+      },
+      {
+        "case_id": "fs_window_0067",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1340,
+        "frame_stop_exclusive": 1360,
+        "path": "windows/window_0067.npz",
+        "window_id": 67
+      },
+      {
+        "case_id": "fs_window_0068",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1360,
+        "frame_stop_exclusive": 1380,
+        "path": "windows/window_0068.npz",
+        "window_id": 68
+      },
+      {
+        "case_id": "fs_window_0069",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1380,
+        "frame_stop_exclusive": 1400,
+        "path": "windows/window_0069.npz",
+        "window_id": 69
+      },
+      {
+        "case_id": "fs_window_0070",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1400,
+        "frame_stop_exclusive": 1420,
+        "path": "windows/window_0070.npz",
+        "window_id": 70
+      },
+      {
+        "case_id": "fs_window_0071",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1420,
+        "frame_stop_exclusive": 1440,
+        "path": "windows/window_0071.npz",
+        "window_id": 71
+      },
+      {
+        "case_id": "fs_window_0072",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1440,
+        "frame_stop_exclusive": 1460,
+        "path": "windows/window_0072.npz",
+        "window_id": 72
+      },
+      {
+        "case_id": "fs_window_0073",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1460,
+        "frame_stop_exclusive": 1480,
+        "path": "windows/window_0073.npz",
+        "window_id": 73
+      },
+      {
+        "case_id": "fs_window_0074",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1480,
+        "frame_stop_exclusive": 1500,
+        "path": "windows/window_0074.npz",
+        "window_id": 74
+      },
+      {
+        "case_id": "fs_window_0075",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1500,
+        "frame_stop_exclusive": 1520,
+        "path": "windows/window_0075.npz",
+        "window_id": 75
+      },
+      {
+        "case_id": "fs_window_0076",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1520,
+        "frame_stop_exclusive": 1540,
+        "path": "windows/window_0076.npz",
+        "window_id": 76
+      },
+      {
+        "case_id": "fs_window_0077",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1540,
+        "frame_stop_exclusive": 1560,
+        "path": "windows/window_0077.npz",
+        "window_id": 77
+      },
+      {
+        "case_id": "fs_window_0078",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1560,
+        "frame_stop_exclusive": 1580,
+        "path": "windows/window_0078.npz",
+        "window_id": 78
+      },
+      {
+        "case_id": "fs_window_0079",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1580,
+        "frame_stop_exclusive": 1600,
+        "path": "windows/window_0079.npz",
+        "window_id": 79
+      },
+      {
+        "case_id": "fs_window_0080",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1600,
+        "frame_stop_exclusive": 1620,
+        "path": "windows/window_0080.npz",
+        "window_id": 80
+      },
+      {
+        "case_id": "fs_window_0081",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1620,
+        "frame_stop_exclusive": 1640,
+        "path": "windows/window_0081.npz",
+        "window_id": 81
+      },
+      {
+        "case_id": "fs_window_0082",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1640,
+        "frame_stop_exclusive": 1660,
+        "path": "windows/window_0082.npz",
+        "window_id": 82
+      },
+      {
+        "case_id": "fs_window_0083",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1660,
+        "frame_stop_exclusive": 1680,
+        "path": "windows/window_0083.npz",
+        "window_id": 83
+      },
+      {
+        "case_id": "fs_window_0084",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1680,
+        "frame_stop_exclusive": 1700,
+        "path": "windows/window_0084.npz",
+        "window_id": 84
+      },
+      {
+        "case_id": "fs_window_0085",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1700,
+        "frame_stop_exclusive": 1720,
+        "path": "windows/window_0085.npz",
+        "window_id": 85
+      },
+      {
+        "case_id": "fs_window_0086",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1720,
+        "frame_stop_exclusive": 1740,
+        "path": "windows/window_0086.npz",
+        "window_id": 86
+      },
+      {
+        "case_id": "fs_window_0087",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1740,
+        "frame_stop_exclusive": 1760,
+        "path": "windows/window_0087.npz",
+        "window_id": 87
+      },
+      {
+        "case_id": "fs_window_0088",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1760,
+        "frame_stop_exclusive": 1780,
+        "path": "windows/window_0088.npz",
+        "window_id": 88
+      },
+      {
+        "case_id": "fs_window_0089",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1780,
+        "frame_stop_exclusive": 1800,
+        "path": "windows/window_0089.npz",
+        "window_id": 89
+      },
+      {
+        "case_id": "fs_window_0090",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1800,
+        "frame_stop_exclusive": 1820,
+        "path": "windows/window_0090.npz",
+        "window_id": 90
+      },
+      {
+        "case_id": "fs_window_0091",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1820,
+        "frame_stop_exclusive": 1840,
+        "path": "windows/window_0091.npz",
+        "window_id": 91
+      },
+      {
+        "case_id": "fs_window_0092",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1840,
+        "frame_stop_exclusive": 1860,
+        "path": "windows/window_0092.npz",
+        "window_id": 92
+      },
+      {
+        "case_id": "fs_window_0093",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1860,
+        "frame_stop_exclusive": 1880,
+        "path": "windows/window_0093.npz",
+        "window_id": 93
+      },
+      {
+        "case_id": "fs_window_0094",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1880,
+        "frame_stop_exclusive": 1900,
+        "path": "windows/window_0094.npz",
+        "window_id": 94
+      },
+      {
+        "case_id": "fs_window_0095",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1900,
+        "frame_stop_exclusive": 1920,
+        "path": "windows/window_0095.npz",
+        "window_id": 95
+      },
+      {
+        "case_id": "fs_window_0096",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1920,
+        "frame_stop_exclusive": 1940,
+        "path": "windows/window_0096.npz",
+        "window_id": 96
+      },
+      {
+        "case_id": "fs_window_0097",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1940,
+        "frame_stop_exclusive": 1960,
+        "path": "windows/window_0097.npz",
+        "window_id": 97
+      },
+      {
+        "case_id": "fs_window_0098",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1960,
+        "frame_stop_exclusive": 1980,
+        "path": "windows/window_0098.npz",
+        "window_id": 98
+      },
+      {
+        "case_id": "fs_window_0099",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 1980,
+        "frame_stop_exclusive": 2000,
+        "path": "windows/window_0099.npz",
+        "window_id": 99
+      },
+      {
+        "case_id": "fs_window_0100",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2000,
+        "frame_stop_exclusive": 2020,
+        "path": "windows/window_0100.npz",
+        "window_id": 100
+      },
+      {
+        "case_id": "fs_window_0101",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2020,
+        "frame_stop_exclusive": 2040,
+        "path": "windows/window_0101.npz",
+        "window_id": 101
+      },
+      {
+        "case_id": "fs_window_0102",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2040,
+        "frame_stop_exclusive": 2060,
+        "path": "windows/window_0102.npz",
+        "window_id": 102
+      },
+      {
+        "case_id": "fs_window_0103",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2060,
+        "frame_stop_exclusive": 2080,
+        "path": "windows/window_0103.npz",
+        "window_id": 103
+      },
+      {
+        "case_id": "fs_window_0104",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2080,
+        "frame_stop_exclusive": 2100,
+        "path": "windows/window_0104.npz",
+        "window_id": 104
+      },
+      {
+        "case_id": "fs_window_0105",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2100,
+        "frame_stop_exclusive": 2120,
+        "path": "windows/window_0105.npz",
+        "window_id": 105
+      },
+      {
+        "case_id": "fs_window_0106",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2120,
+        "frame_stop_exclusive": 2140,
+        "path": "windows/window_0106.npz",
+        "window_id": 106
+      },
+      {
+        "case_id": "fs_window_0107",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2140,
+        "frame_stop_exclusive": 2160,
+        "path": "windows/window_0107.npz",
+        "window_id": 107
+      },
+      {
+        "case_id": "fs_window_0108",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2160,
+        "frame_stop_exclusive": 2180,
+        "path": "windows/window_0108.npz",
+        "window_id": 108
+      },
+      {
+        "case_id": "fs_window_0109",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2180,
+        "frame_stop_exclusive": 2200,
+        "path": "windows/window_0109.npz",
+        "window_id": 109
+      },
+      {
+        "case_id": "fs_window_0110",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2200,
+        "frame_stop_exclusive": 2220,
+        "path": "windows/window_0110.npz",
+        "window_id": 110
+      },
+      {
+        "case_id": "fs_window_0111",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2220,
+        "frame_stop_exclusive": 2240,
+        "path": "windows/window_0111.npz",
+        "window_id": 111
+      },
+      {
+        "case_id": "fs_window_0112",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2240,
+        "frame_stop_exclusive": 2260,
+        "path": "windows/window_0112.npz",
+        "window_id": 112
+      },
+      {
+        "case_id": "fs_window_0113",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2260,
+        "frame_stop_exclusive": 2280,
+        "path": "windows/window_0113.npz",
+        "window_id": 113
+      },
+      {
+        "case_id": "fs_window_0114",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2280,
+        "frame_stop_exclusive": 2300,
+        "path": "windows/window_0114.npz",
+        "window_id": 114
+      },
+      {
+        "case_id": "fs_window_0115",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2300,
+        "frame_stop_exclusive": 2320,
+        "path": "windows/window_0115.npz",
+        "window_id": 115
+      },
+      {
+        "case_id": "fs_window_0116",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2320,
+        "frame_stop_exclusive": 2340,
+        "path": "windows/window_0116.npz",
+        "window_id": 116
+      },
+      {
+        "case_id": "fs_window_0117",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2340,
+        "frame_stop_exclusive": 2360,
+        "path": "windows/window_0117.npz",
+        "window_id": 117
+      },
+      {
+        "case_id": "fs_window_0118",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2360,
+        "frame_stop_exclusive": 2380,
+        "path": "windows/window_0118.npz",
+        "window_id": 118
+      },
+      {
+        "case_id": "fs_window_0119",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2380,
+        "frame_stop_exclusive": 2400,
+        "path": "windows/window_0119.npz",
+        "window_id": 119
+      },
+      {
+        "case_id": "fs_window_0120",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2400,
+        "frame_stop_exclusive": 2420,
+        "path": "windows/window_0120.npz",
+        "window_id": 120
+      },
+      {
+        "case_id": "fs_window_0121",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2420,
+        "frame_stop_exclusive": 2440,
+        "path": "windows/window_0121.npz",
+        "window_id": 121
+      },
+      {
+        "case_id": "fs_window_0122",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2440,
+        "frame_stop_exclusive": 2460,
+        "path": "windows/window_0122.npz",
+        "window_id": 122
+      },
+      {
+        "case_id": "fs_window_0123",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2460,
+        "frame_stop_exclusive": 2480,
+        "path": "windows/window_0123.npz",
+        "window_id": 123
+      },
+      {
+        "case_id": "fs_window_0124",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2480,
+        "frame_stop_exclusive": 2500,
+        "path": "windows/window_0124.npz",
+        "window_id": 124
+      },
+      {
+        "case_id": "fs_window_0125",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2500,
+        "frame_stop_exclusive": 2520,
+        "path": "windows/window_0125.npz",
+        "window_id": 125
+      }
+    ],
+    "validation": [
+      {
+        "case_id": "fs_window_0135",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2700,
+        "frame_stop_exclusive": 2720,
+        "path": "windows/window_0135.npz",
+        "window_id": 135
+      },
+      {
+        "case_id": "fs_window_0136",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2720,
+        "frame_stop_exclusive": 2740,
+        "path": "windows/window_0136.npz",
+        "window_id": 136
+      },
+      {
+        "case_id": "fs_window_0137",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2740,
+        "frame_stop_exclusive": 2760,
+        "path": "windows/window_0137.npz",
+        "window_id": 137
+      },
+      {
+        "case_id": "fs_window_0138",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2760,
+        "frame_stop_exclusive": 2780,
+        "path": "windows/window_0138.npz",
+        "window_id": 138
+      },
+      {
+        "case_id": "fs_window_0139",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2780,
+        "frame_stop_exclusive": 2800,
+        "path": "windows/window_0139.npz",
+        "window_id": 139
+      },
+      {
+        "case_id": "fs_window_0140",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2800,
+        "frame_stop_exclusive": 2820,
+        "path": "windows/window_0140.npz",
+        "window_id": 140
+      },
+      {
+        "case_id": "fs_window_0141",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2820,
+        "frame_stop_exclusive": 2840,
+        "path": "windows/window_0141.npz",
+        "window_id": 141
+      },
+      {
+        "case_id": "fs_window_0142",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2840,
+        "frame_stop_exclusive": 2860,
+        "path": "windows/window_0142.npz",
+        "window_id": 142
+      },
+      {
+        "case_id": "fs_window_0143",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2860,
+        "frame_stop_exclusive": 2880,
+        "path": "windows/window_0143.npz",
+        "window_id": 143
+      },
+      {
+        "case_id": "fs_window_0144",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2880,
+        "frame_stop_exclusive": 2900,
+        "path": "windows/window_0144.npz",
+        "window_id": 144
+      },
+      {
+        "case_id": "fs_window_0145",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2900,
+        "frame_stop_exclusive": 2920,
+        "path": "windows/window_0145.npz",
+        "window_id": 145
+      },
+      {
+        "case_id": "fs_window_0146",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2920,
+        "frame_stop_exclusive": 2940,
+        "path": "windows/window_0146.npz",
+        "window_id": 146
+      },
+      {
+        "case_id": "fs_window_0147",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2940,
+        "frame_stop_exclusive": 2960,
+        "path": "windows/window_0147.npz",
+        "window_id": 147
+      },
+      {
+        "case_id": "fs_window_0148",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2960,
+        "frame_stop_exclusive": 2980,
+        "path": "windows/window_0148.npz",
+        "window_id": 148
+      },
+      {
+        "case_id": "fs_window_0149",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 2980,
+        "frame_stop_exclusive": 3000,
+        "path": "windows/window_0149.npz",
+        "window_id": 149
+      },
+      {
+        "case_id": "fs_window_0150",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3000,
+        "frame_stop_exclusive": 3020,
+        "path": "windows/window_0150.npz",
+        "window_id": 150
+      },
+      {
+        "case_id": "fs_window_0151",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3020,
+        "frame_stop_exclusive": 3040,
+        "path": "windows/window_0151.npz",
+        "window_id": 151
+      },
+      {
+        "case_id": "fs_window_0152",
+        "flow_group_id": "fs_sph_3429811",
+        "frame_start": 3040,
+        "frame_stop_exclusive": 3060,
+        "path": "windows/window_0152.npz",
+        "window_id": 152
+      }
+    ]
+  },
+  "status": "validated",
+  "time_units": "seconds",
+  "unit_scale": [
+    266.6666817066926,
+    386.2928410596165,
+    464.3672983602752
+  ],
+  "unused_tail_frame_indices": [
+    3600,
+    3601,
+    3602,
+    3603,
+    3604,
+    3605,
+    3606,
+    3607,
+    3608,
+    3609,
+    3610,
+    3611,
+    3612
+  ],
+  "velocity_units": "cells/second"
+}

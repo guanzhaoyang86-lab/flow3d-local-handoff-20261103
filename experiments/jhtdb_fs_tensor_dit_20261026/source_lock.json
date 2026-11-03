@@ -1,0 +1,450 @@
+{
+  "schema": "experiment_source_lock_v1",
+  "repaired_commit": "5aa8b270df3440cc039146ea7da01a24a4de49ee",
+  "files": [
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_baselines/__init__.py",
+      "sha256": "0c91a737a31c039b470abe14cb7cbbb0ba450b76fb3ad22e550ae7241adf0bb0"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_baselines/case_fit.py",
+      "sha256": "6061c1296619865f2c2fdb1d5c68715fb01f55d039ae8083b293dfc1d90bfbb3"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_baselines/cli.py",
+      "sha256": "990b3686544507d8079c39c5229aca55a94e48f161121a59b80fed4a3cce5740"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_baselines/common.py",
+      "sha256": "3f8a15ca66f3c7d5941ca51e68e4982737e550b53dfd290b173e3ba6e3a026d9"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_baselines/config.py",
+      "sha256": "d45ef902de8e3d8bc9abbf3f6e4785d5ab4da409db68931f249376d3e58ee578"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_baselines/inference.py",
+      "sha256": "2240076d42703e7bd511e73c10fb7b233a7d07c189085b69f63823d1b3dcde3a"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_baselines/linear.py",
+      "sha256": "1d712f5381dca2ce4993e5384e8164a06eab79c7c423156049184b681ce84d25"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_baselines/models.py",
+      "sha256": "5058baef114c9cb87cec8ea4c6833063f81fef4e27e70ec48621466fbcb517cf"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_baselines/pinn.py",
+      "sha256": "9fb5e6492640aab3668b97e0f4942e88a0a14a7c7e82c8ba14719b2032d2ad19"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_baselines/reporting.py",
+      "sha256": "eb60847d3fed7277dc77e5dc42df69e7fde184f4c50322d88d8d5872652ca38c"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_baselines/training.py",
+      "sha256": "5c2bceb62e1e041d2230332a8534661d59bc86a111e2e5d115d700a5cb56911e"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/__init__.py",
+      "sha256": "a5c4b5fe032610a9f782e988bdf3721573a463d6a2bb4abb00ba0a03f3263cd7"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/advection.py",
+      "sha256": "17933a724d290cbdd0f2d4979f9520e044181f025df357e75498e07e81c063d8"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/cfd.py",
+      "sha256": "28d40bbc52437a12adc50fe51f5468e59863f69bb92429b71e0e523d19e8297f"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/checkpoint_io.py",
+      "sha256": "9bdf4bf1b5c7ad886700a02fa1beef6aeee741e7a8e1ac7cc401d4aee5e1b884"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/conditioning.py",
+      "sha256": "6344287f68c9836088fafc5606aa526ec911962e333c6be961eab81858418aad"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/diffusion.py",
+      "sha256": "a0511973140b1fb23adfd39c733848505851ace20cd519d0aa998d32b2a46ffe"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/dps/__init__.py",
+      "sha256": "a14af6126c72ff38fcd880569bc767221481124fd5d8e8e5de7e8c386d1567f5"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/dps/audit.py",
+      "sha256": "dff0c4102131109034183221ea881878958de4d5fb47668778914163fe1abe10"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/dps/data.py",
+      "sha256": "eba9d8f610cdca9bb05c0754b9d8dfef0ecc9b2ecd0a29dc12ea5221805ee050"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/dps/inference.py",
+      "sha256": "6392cf07093e4b038ab9924c4cfce09f5ba45eb5ce58b5d0e91bf8395d1a9b3b"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/dps/observations.py",
+      "sha256": "b48f2c59cc1de5b390f15077bdacfb8c99bd28b266de85f98d1d9cda98e3c9ca"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/dps/sampler.py",
+      "sha256": "58aba5949fc291694cc1753b0fd41485ba717738f3e57fc3102f51e556ee9f5e"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/dps/training.py",
+      "sha256": "34622f539caa50090daac260119a3253b91e3c68d15935402c1e2570a802eaae"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/interpolation.py",
+      "sha256": "2448b1321a6b5936694f302ebb770cf35e51fac55a5c9930e35c023c56f07afa"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/likelihood.py",
+      "sha256": "61633fd1b4a5b2cfad1cd18ff9b4d7cf93ea3cc297e7996424b094e318c11f87"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/models/__init__.py",
+      "sha256": "2debf394ebae79ca736ed45a580084d5fbdbc8c8c318463726af1d8cfff74910"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/models/dit.py",
+      "sha256": "a1fd77ce6e19685fb76e66d16e23d53830b16af44f6d26b56a62c049674b78d8"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/models/factory.py",
+      "sha256": "f585727912f610003f8f34ac3b16a7b92c4ab85e92a990917e9b43f1527e012b"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/models/trajectory_encoder.py",
+      "sha256": "f29aa563419639c3dd6dde367d7df3f5dcef770c7ba547f82976b46096600d12"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/models/unet3d.py",
+      "sha256": "120619da44ce9ad2722746fc07f5131c200b8b5c3cc9278356f56df697255240"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/multiview.py",
+      "sha256": "d7868cbedd928ee8bf5d31b460dbc6c0eaff834053172a1574785ecb5f485efe"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/projection.py",
+      "sha256": "09b9cb53ebd53d0da47fad68878ad4017ab0203188515b9ede464d4e025f5988"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/recovery.py",
+      "sha256": "fb433887fcd107da3b2f98ba116d408d4dd4c0fb8eb93b678cffc67c4ce09a74"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/sparse_dataset.py",
+      "sha256": "0b4154709f17798d4028bfc81b5156682acc13b6bdb90c3bae91cc11abebd281"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/sparse_physics.py",
+      "sha256": "c2e5275e004fef58eca1ee842e9cbe32bfd2c41e9d1b80549eaa59c6fe477c57"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/taichi_lbm3d.py",
+      "sha256": "1c8e649655a775d26164c9691029a4df3053b1e66e86dfb1750da9d30e06f310"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/src/flow_observation/tensor_space.py",
+      "sha256": "35320450af0af73587035b1d5cec57f2b78baa81d0a5dad1fabcc1072592593d"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/scripts/evaluate_baseline.py",
+      "sha256": "01144b6659a486653988fbf3ea1d3a3a77f7ce7b8ba047607dc7e819ef641b17"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/scripts/preflight.py",
+      "sha256": "76388fd0ccf599e751c686537f7699d7895ba061c209c1110579dffae92e0699"
+    },
+    {
+      "component": "baseline",
+      "path": "/u/zguan2/projects/flow3d_runs/baseline/scripts/run_baseline.py",
+      "sha256": "cfefa06bd40670f877b3f110e8b9ffc146f0a5253620157eeaf3b6d6d446fb28"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/__init__.py",
+      "sha256": "a5c4b5fe032610a9f782e988bdf3721573a463d6a2bb4abb00ba0a03f3263cd7"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/advection.py",
+      "sha256": "17933a724d290cbdd0f2d4979f9520e044181f025df357e75498e07e81c063d8"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/cfd.py",
+      "sha256": "28d40bbc52437a12adc50fe51f5468e59863f69bb92429b71e0e523d19e8297f"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/checkpoint_io.py",
+      "sha256": "9bdf4bf1b5c7ad886700a02fa1beef6aeee741e7a8e1ac7cc401d4aee5e1b884"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/conditioning.py",
+      "sha256": "6344287f68c9836088fafc5606aa526ec911962e333c6be961eab81858418aad"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/diffusion.py",
+      "sha256": "a0511973140b1fb23adfd39c733848505851ace20cd519d0aa998d32b2a46ffe"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/interpolation.py",
+      "sha256": "2448b1321a6b5936694f302ebb770cf35e51fac55a5c9930e35c023c56f07afa"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/likelihood.py",
+      "sha256": "61633fd1b4a5b2cfad1cd18ff9b4d7cf93ea3cc297e7996424b094e318c11f87"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/models/__init__.py",
+      "sha256": "2debf394ebae79ca736ed45a580084d5fbdbc8c8c318463726af1d8cfff74910"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/models/dit.py",
+      "sha256": "a1fd77ce6e19685fb76e66d16e23d53830b16af44f6d26b56a62c049674b78d8"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/models/factory.py",
+      "sha256": "f585727912f610003f8f34ac3b16a7b92c4ab85e92a990917e9b43f1527e012b"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/models/trajectory_encoder.py",
+      "sha256": "f29aa563419639c3dd6dde367d7df3f5dcef770c7ba547f82976b46096600d12"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/models/unet3d.py",
+      "sha256": "120619da44ce9ad2722746fc07f5131c200b8b5c3cc9278356f56df697255240"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/multiview.py",
+      "sha256": "d7868cbedd928ee8bf5d31b460dbc6c0eaff834053172a1574785ecb5f485efe"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/projection.py",
+      "sha256": "09b9cb53ebd53d0da47fad68878ad4017ab0203188515b9ede464d4e025f5988"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/recovery.py",
+      "sha256": "fb433887fcd107da3b2f98ba116d408d4dd4c0fb8eb93b678cffc67c4ce09a74"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/sparse_dataset.py",
+      "sha256": "0b4154709f17798d4028bfc81b5156682acc13b6bdb90c3bae91cc11abebd281"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/sparse_physics.py",
+      "sha256": "c2e5275e004fef58eca1ee842e9cbe32bfd2c41e9d1b80549eaa59c6fe477c57"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/taichi_lbm3d.py",
+      "sha256": "1c8e649655a775d26164c9691029a4df3053b1e66e86dfb1750da9d30e06f310"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/src/flow_observation/tensor_space.py",
+      "sha256": "35320450af0af73587035b1d5cec57f2b78baa81d0a5dad1fabcc1072592593d"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/build_sparse_flow_manifest.py",
+      "sha256": "c186b9883a7bd8d6f4dc0c948ff2697e4aff5c152abdd4f4b2b14f0eb2c88f99"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/diagnose_condition_transfer.py",
+      "sha256": "45e1410152e6507b98ded35caaa560b9335db843385a204baea13623497a6cfc"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/diagnose_diffusion_sampling.py",
+      "sha256": "8970a0083f8323835ad4e6ddd41458eccb877a880dfc6cbb3c9d85c71ba5df9f"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/evaluate_condition_repair.py",
+      "sha256": "797afd3b412b578ec8d6dac8177bbdd98db4c497af5c75c112587bb8c719c994"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/export_clean_presentation_figures.py",
+      "sha256": "df51c08a0824ea8cdf365027756ae692bce69f5a6f41026be94f6f78a4a4aaf9"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/generate_taichi_lbm3d_cavity_dataset.py",
+      "sha256": "cdc81ed722ed48ee63a5a9afde47e7c5b3fbbe0519dd67f7d3766b3fe5d4701c"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/generate_taichi_lbm3d_flow_collection.py",
+      "sha256": "c8562ef35a26b168848bdf3f1f16b1e9b86d50abee1553a57371491cdace82bc"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/prepare_tensor_space.py",
+      "sha256": "a07321ec576a319dcbdfa057718b74ddf6f3dcc6eb6e6352d79d52bc23bcfc4d"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/recover_taichi_lbm3d_coarse_grid.py",
+      "sha256": "7d2a1aeb2248e0aa0c430c83685b4d3cc7f57e170fb1c3c0c7f94aea4f54797b"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/run_condition_repair_pilot.py",
+      "sha256": "fe6add7580988660017241e7ada63b3e0e80f06fda5e61064a1ee688c82d9451"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/run_hpc_diffusion.py",
+      "sha256": "1c394da0d9bc4d0393112e105841f6d0d9e224489b4d5ca301c23aa8cd1ee849"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/run_hpc_generation.py",
+      "sha256": "cb901ecb010eb6259108906924654ccd688e3edfe92955c14a432e954d68a82e"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/run_hpc_matrix.py",
+      "sha256": "fbdfa03a12e4604248b676eb3b6597b39b58b021bde32d130c4589c74d319e4c"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/run_particle_count_3seed_experiment.py",
+      "sha256": "737db8b98107b6d81f2a40a8eea9df7c40878bb7a4cf9c09caf2b1c4c427c7a4"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/run_sparse_particle_sweep.py",
+      "sha256": "2841c22828fc4a25fa0b64d10ff383c7ac91fb08505443a270c5228238f2d075"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/sample_sparse_track_diffusion.py",
+      "sha256": "be657152df46a2998a7deeee5781ec47cdc763c855666262f0acc133ac1e5353"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/select_tensor_rank.py",
+      "sha256": "570841312cccceee0837f12a2b7d0e6b8f8be74813c0761513409ca21afae176"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/submit_condition_confirmation.py",
+      "sha256": "9eed90c7ae1ed1a7695463fff2921330e34c0fc1a5397c6126517ed1e3baf4ac"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/summarize_condition_repair.py",
+      "sha256": "030cd060ae23f4a9fa48f97b9ace502b585ba0767472008dbc006cbffc2587b8"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/summarize_prediction_followup.py",
+      "sha256": "4fd131cd0e9508c52df2884285ca6e417f4d9030044f2755ef95cd8ff903410e"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/train_sparse_track_diffusion.py",
+      "sha256": "b0a102dff41575fc1656c29889771c89e5a12a89f33271077f84faa4844926c5"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/visualize_matrix_evaluation.py",
+      "sha256": "4e979e312a2d94668135c04e90a7d0a75a0b0f8d7c144c5d5b80bff79555016f"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/visualize_particle_count_results.py",
+      "sha256": "ffee9a66e025d635b1b335e3a482e08ef1cf9962a3a5c4f400856cbe9e1a1450"
+    },
+    {
+      "component": "repaired_tensor",
+      "path": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source/scripts/visualize_projected_trajectories.py",
+      "sha256": "9669b45573f57a7268c7d1f2ad5fe8cc1d5912457a9a339f07bc70b0b5099334"
+    },
+    {
+      "component": "fs_adapter_reference",
+      "path": "/u/zguan2/projects/FS-SPH-GPU/scripts/build_fs_flow3d.py",
+      "sha256": "5617c1bda2527e739837a23bc2816452812230be6c2b898c53bf78ee1033d971"
+    },
+    {
+      "component": "fs_adapter_reference",
+      "path": "/u/zguan2/projects/FS-SPH-GPU/scripts/fs_grid.py",
+      "sha256": "24c616013014941a5ecb4d6b625cb3b516c99388b2fb27cd0e8787e8bc423c34"
+    },
+    {
+      "component": "fs_adapter_reference",
+      "path": "/u/zguan2/projects/FS-SPH-GPU/scripts/fs_particle_io.py",
+      "sha256": "20515bd40c478dfa7483902a400b4921aea7c6130fbaae610e2845bf083f60a9"
+    }
+  ],
+  "do_not_use_older_checkout": "/u/zguan2/projects/flow3d_runs/flow3d-current; missing repaired arguments.",
+  "old_LBM_tensor_artifacts_allowed": false,
+  "scope": "All baseline and repaired Tensor runtime Python under src/ and scripts/, plus referenced FS gridding modules. Historical source only; new adapters require a separate reviewed source snapshot.",
+  "adapter_source_relock_required": true
+}

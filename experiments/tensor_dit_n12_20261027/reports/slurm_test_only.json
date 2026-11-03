@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "key": "jhtdb_tensor_prepare",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3468072 to start at 2026-11-02T13:48:50 a using 8 processors on nodes gh058 in partition ghx4\n"
+    },
+    {
+      "key": "jhtdb_pilot",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3468070 to start at 2026-11-02T13:48:50 a using 8 processors on nodes gh058 in partition ghx4\n"
+    },
+    {
+      "key": "jhtdb_tensor_dit",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3468071 to start at 2026-11-02T13:48:50 a using 8 processors on nodes gh058 in partition ghx4\n"
+    },
+    {
+      "key": "fs_sph_tensor_prepare",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3468069 to start at 2026-11-02T13:48:50 a using 8 processors on nodes gh058 in partition ghx4\n"
+    },
+    {
+      "key": "fs_sph_pilot",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3468074 to start at 2026-11-02T13:48:50 a using 8 processors on nodes gh058 in partition ghx4\n"
+    },
+    {
+      "key": "fs_sph_tensor_dit",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "sbatch: Job 3468073 to start at 2026-11-02T13:48:50 a using 8 processors on nodes gh058 in partition ghx4\n"
+    }
+  ],
+  "plan_sha256": "06c88434f1a87aa4725ab0f8f841d8022d74da17909f83da700e98ccdcb0aeb6",
+  "frozen_sha256": "7166fcba132f8444fe358471c4b5bf78c7bd76f7906078b47771ff0b4070ae17"
+}

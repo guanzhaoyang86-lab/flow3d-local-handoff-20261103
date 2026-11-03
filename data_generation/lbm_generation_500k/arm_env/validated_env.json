@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "profile": "deltaai-arm-llvm20",
+  "system": "Linux",
+  "machine": "aarch64",
+  "python_executable": "/u/zguan2/projects/flow3d_runs/lbm_generation_500k/arm_env/venv/bin/python",
+  "python_version": "3.12.9",
+  "taichi_version": "1.8.0",
+  "taichi_commit": "93c190f603b676ec1f8871e4f46cf5d5be89548e",
+  "taichi_source_commit": "93c190f603b676ec1f8871e4f46cf5d5be89548e",
+  "torch_version": "2.10.0+cu129",
+  "cuda_runtime": "12.9",
+  "gpu_name": "NVIDIA GH200 120GB",
+  "llvm_version": "20.1.8",
+  "compiler_patch_sha256": "040fff6c55cee97a80334e9d77ae8e4a79548661889ec5049cb79f3153e2a13d",
+  "cuda_kernel_validated": true,
+  "cuda_match_any_i64_validated": true,
+  "lbm32_pilot_validated": true,
+  "pilot_archive": "/u/zguan2/projects/flow3d_runs/lbm_generation_500k/arm_env/pilot/case_00000.npz",
+  "pilot_sha256": "2b963b2c5437eb3cc9627cb90e224965bc30357d0cd5c3b6ee8c40a8ff820299",
+  "pilot_record": {
+    "physical_trajectories": 160,
+    "single_view_trajectories": 160,
+    "flow_group_id": "flow_a2c2c89b9374"
+  },
+  "pilot_max_speed": 0.04512574151158333,
+  "build_report_sha256": "f9e4a9ae830d98b636f227f3f913d1fb34cc15c8c08df43ed40ed1840f3558b0",
+  "validated_at_utc": "2026-10-25T02:28:20.850663+00:00",
+  "validation_slurm_job_id": "3450731"
+}

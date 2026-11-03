@@ -1,0 +1,26 @@
+Flow3D baseline代码审查与修复记录（2026-10-23）
+
+范围与证据
+审查九类稳态三维速度场重建baseline的数学实现、训练恢复、输入信息隔离、推断、统计和交付一致性。所有模型测试仅使用微型合成CPU数据；真实数据只读观测与几何检查，不执行真实模型forward、正式训练、GPU任务或Slurm提交。实际整套测试数、耗时和文件检查结果分别见summary.json、cpu_tests.xml和code_checks.json。
+
+已确认的问题与修复
+1. 辅助监督权重为0时仍计算辅助流场目标，可能因本来已禁用的目标无有效区域而报错，或出现0乘非有限值。现在显式跳过该分支；回归测试覆盖禁用目标和真实主损失梯度。
+2. 历史日志追加先于checkpoint原子写入，抢占可能留下超前epoch或半行。恢复时以checkpoint epoch为准裁剪、规范历史，并恢复模型、EMA、优化器和随机状态；与连续训练逐张量相同。新训练拒绝混入已有run.json/history.jsonl/latest.pt的目录。
+3. 结果统计曾可能把sampling_seed变化当作独立训练重复，或混合训练边界、checkpoint选择方式与epoch。现在保留采样种子协议并明确分组；best_validation可跨seed选择不同最优epoch，final/explicit epoch仍区分。预测记录实际checkpoint_epoch、checkpoint_selection和training_boundary_projection。
+4. 汇总不能只相信sidecar JSON。现在先核验NPZ校验和、数值有限性及嵌入metadata与JSON一致性；同一训练seed跨case要求同checkpoint hash，同case跨seed要求同源数据hash。旧产物缺少溯源hash时标记provenance_complete=False，不能冒充完整溯源。
+5. 部分样本、案例或seed的null指标曾可能被静默丢弃，造成不公平平均。现在部分缺失明确拒绝；所有对象都无某可选指标时保留null和seed_count=0。NPZ路径可直接汇总，JSON glob中的非prediction批次进度被明确计数忽略。
+6. 配置曾会静默接受amp字符串、浮点或布尔相机索引、重复或负索引、非整数seed、无效clip_x0等。现在验证amp必须为布尔值，views为非负且不重复的整数，三类seed为[0,2**63)的整数，clip_x0为正有限数或JSON null，JSON根节点必须是object。合法tuple views规范为list。新增38个回归案例。
+7. 固定预测场的后置深度拟合未传递depth_learning_rate，覆盖配置未生效。现在显式传递配置值，最多100步，按sampling_seed初始化，并记录max_steps、learning_rate和seed；已生成场保持固定。
+8. 内部solid障碍物没有对应的轨迹几何处理，PINN配点也未排除此区域。现在统一限定没有内部障碍物的矩形cavity，允许外表面壁面；公共helper验证三维布尔、非空、有流体，并明确拒绝内部solid。训练Dataset、首次shape读取、mean/POD每个训练case、推断、case fit及只读preflight均调用该检查。
+
+数学审查结果
+未发现需要修改models.py、linear.py、pinn.py的确定性公式错误，未强行改写数学实现。独立检查覆盖奇偶网格FNO谱卷积层的周期平移等变性，四个频率区间复权重实部/虚部梯度与有限差分一致性，POD截断重建误差与独立SVD最优误差一致，以及PINN在各向异性物理域内的解析Poiseuille残差。这里的平移等变性结论仅针对谱卷积层，不针对含绝对坐标与非周期padding的完整FNO解码器。原有解析导数、谱映射、反传和九模型端到端检查也纳入完整CPU测试。
+
+比较口径与限制
+默认boundary_projection=none，与历史DiT的known设置不同；必须先对齐边界信息，才可仅按骨干作比较。matched_repaired.json提供known协议，但PINN拒绝硬后投影，以免连续NS残差描述的场与最终场不同。PINN必须显式提供已知且单位一致的运动黏度。POD、RBF、PINN是案例点估计，不宣称后验样本。参数量尚未预算对齐；当前比较完整重建方案。
+
+真实数据与交付核验
+重新对真实validation[13]的N=2/4/6/12/24/48/96、单视角与全部视角共14组输入执行只读检查，所有solid mask均32³且通过新增矩形几何检查，结果保存在real_data_preflight.json。PROVENANCE.json所列27个公共源文件SHA256全部一致。默认配置、参数报告JSON和实际构造器参数计数一致；CSV/TXT重新生成内容一致，默认数值和参数量未改变。Python AST、两个Slurm脚本bash语法、三个CLI help入口均通过。FILES_MANIFEST.json覆盖交付文件，排除缓存和manifest自身；最终ZIP按CRC及每文件SHA256核验。
+
+未验证事项
+未提交正式训练，不提供正式baseline权重；未验证GPU训练/推断、真实数据重建性能、正式训练收敛、最优超参数、PINN黏度校准或一般时变/障碍物几何。CPU和输入检查通过不能替代这些科研证据。

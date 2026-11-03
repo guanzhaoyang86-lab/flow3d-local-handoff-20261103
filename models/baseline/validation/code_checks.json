@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-23T19:53:41.986463+00:00",
+  "python_files_ast_checked": 53,
+  "slurm_syntax_files": 2,
+  "cli_help_scripts": 3,
+  "config_files_resolved": 10,
+  "defaults_match_export_and_parameter_report": true,
+  "parameter_report_remeasured_without_forward": true,
+  "parameter_report_json_csv_txt_unchanged": true,
+  "vendored_files_unchanged": 27,
+  "gpu_invoked": false,
+  "formal_training_invoked": false
+}

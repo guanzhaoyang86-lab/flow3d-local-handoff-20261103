@@ -1,0 +1,60 @@
+[
+  {
+    "path": "/u/zguan2/projects/flow3d_runs/deliverables/flow3d_unet_comparison_20261020/unet_matched_comparison_final.json",
+    "sha256": "160a42f738edbe8cfd04e62811326461e93a1a4a76e12455c6fd7f5f9fa89f37"
+  },
+  {
+    "architecture": "unet3d",
+    "path": "/work/hdd/biup/zguan2/results/unet-matched-evaluation/20261020_141503_N2_best_3seeds/unet3d_N002_s31/evaluation/summary.json",
+    "seed": 31,
+    "sha256": "7ab06cce1b6c6a7322ed38b65e6a4373131d5469b5b52041cf0ddf271d1a3e5b"
+  },
+  {
+    "architecture": "dit3d",
+    "path": "/work/hdd/biup/zguan2/results/condition-confirmation/20261018_190316_N2-e100-v_8a3a3688/dit3d_repair_s31/pilot/paired-evaluation/summary.json",
+    "seed": 31,
+    "sha256": "8ce17937ab240a40b4ec2827f957811bafbdc3324a9175951562034739357209"
+  },
+  {
+    "architecture": "tensor-dit",
+    "path": "/work/hdd/biup/zguan2/results/condition-confirmation/20261018_190316_N2-e100-v_8a3a3688/tensor-dit_repair_s31/pilot/paired-evaluation/summary.json",
+    "seed": 31,
+    "sha256": "0ab626fd35bcc2128bd06867bfe43855a92936b4f4e80abdf7ac680b7b51fd82"
+  },
+  {
+    "architecture": "unet3d",
+    "path": "/work/hdd/biup/zguan2/results/unet-matched-evaluation/20261020_141503_N2_best_3seeds/unet3d_N002_s32/evaluation/summary.json",
+    "seed": 32,
+    "sha256": "ff94f8d5a4f7ced12a0aefca52ccabbd8106fa7703d1f9440e710f420c637600"
+  },
+  {
+    "architecture": "dit3d",
+    "path": "/work/hdd/biup/zguan2/results/condition-confirmation/20261018_190316_N2-e100-v_8a3a3688/dit3d_repair_s32_retry1/pilot/paired-evaluation/summary.json",
+    "seed": 32,
+    "sha256": "385023930e36960c7b8a54372c1359a32efa8ab727f3711b038b3104ca0e6777"
+  },
+  {
+    "architecture": "tensor-dit",
+    "path": "/work/hdd/biup/zguan2/results/condition-confirmation/20261018_190316_N2-e100-v_8a3a3688/tensor-dit_repair_s32/pilot/paired-evaluation/summary.json",
+    "seed": 32,
+    "sha256": "6d7b9f7e5e83ca121cf1301d67747868b2eb41856ca5e21c4078ae6feab79d6c"
+  },
+  {
+    "architecture": "unet3d",
+    "path": "/work/hdd/biup/zguan2/results/unet-matched-evaluation/20261020_141503_N2_best_3seeds/unet3d_N002_s33/evaluation/summary.json",
+    "seed": 33,
+    "sha256": "c32578a5be0837bef30b12213478b205389517fe4cc2972299b18f95ffa18ce2"
+  },
+  {
+    "architecture": "dit3d",
+    "path": "/work/hdd/biup/zguan2/results/condition-confirmation/20261018_190316_N2-e100-v_8a3a3688/dit3d_repair_s33/pilot/paired-evaluation/summary.json",
+    "seed": 33,
+    "sha256": "39318eb4a2295dea203ad158e6a536e8451abd089ccb4f06b684da3d4ff43a70"
+  },
+  {
+    "architecture": "tensor-dit",
+    "path": "/work/hdd/biup/zguan2/results/condition-confirmation/20261018_190316_N2-e100-v_8a3a3688/tensor-dit_repair_s33/pilot/paired-evaluation/summary.json",
+    "seed": 33,
+    "sha256": "067899426a1a96ce74d471eb5bf98a18025788a1b710045a87be67018bd2de49"
+  }
+]

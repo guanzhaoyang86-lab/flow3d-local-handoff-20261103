@@ -1,0 +1,227 @@
+{
+  "schema": "tensor_dit_n12_submission_v1",
+  "created_at_utc": "2026-10-27T06:19:42.352793+00:00",
+  "N": 12,
+  "architecture": "tensor_dit",
+  "epochs": 100,
+  "training_seeds": [
+    31,
+    32,
+    33
+  ],
+  "observation_seed": 47,
+  "input_views": [
+    "xz"
+  ],
+  "num_probes": 32,
+  "datasets": {
+    "jhtdb": {
+      "raw_root": "/work/hdd/biup/zguan2/datasets/jhtdb_iso1024_native32_3125_t1_20261024",
+      "derived_root": "/work/hdd/biup/zguan2/datasets/experiment_adapters_20261027/jhtdb_frozen32"
+    },
+    "fs_sph": {
+      "raw_root": "/work/nvme/biup/zguan2/fs_sph_gpu/datasets/fs_sph_3429811_rods_full_v2",
+      "raw_run": "/work/nvme/biup/zguan2/fs_sph_gpu/runs/3429811",
+      "derived_root": "/work/nvme/biup/zguan2/fs_sph_gpu/datasets/fs_sph_3429811_flow32_windows_20261027"
+    }
+  },
+  "result_root": "/work/hdd/biup/zguan2/results/tensor_dit_n12_20261027",
+  "account": "biup-dtai-gh",
+  "partition": "ghx4",
+  "gpus_per_task": 1,
+  "python": "/sw/user/python/miniforge3-pytorch-2.10.0/bin/python",
+  "jobs": [
+    {
+      "key": "jhtdb_tensor_prepare",
+      "dataset": "jhtdb",
+      "stage": "tensor_prepare",
+      "time": "08:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "baseline_jhtdb_prepare"
+        ],
+        [
+          "afterany",
+          "baseline_jhtdb_unet_diffusion"
+        ],
+        [
+          "afterany",
+          "baseline_jhtdb_rbf_calibration"
+        ]
+      ]
+    },
+    {
+      "key": "jhtdb_pilot",
+      "dataset": "jhtdb",
+      "stage": "pilot",
+      "time": "01:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "jhtdb_tensor_prepare"
+        ]
+      ]
+    },
+    {
+      "key": "jhtdb_tensor_dit",
+      "dataset": "jhtdb",
+      "stage": "train",
+      "time": "12:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "jhtdb_tensor_prepare"
+        ],
+        [
+          "afterok",
+          "jhtdb_pilot"
+        ]
+      ],
+      "tasks": [
+        {
+          "model": "tensor_dit",
+          "dataset": "jhtdb",
+          "N": 12,
+          "epochs": 100,
+          "seed": 31,
+          "output_dir": "/work/hdd/biup/zguan2/results/tensor_dit_n12_20261027/jhtdb/tensor_dit_s31"
+        },
+        {
+          "model": "tensor_dit",
+          "dataset": "jhtdb",
+          "N": 12,
+          "epochs": 100,
+          "seed": 32,
+          "output_dir": "/work/hdd/biup/zguan2/results/tensor_dit_n12_20261027/jhtdb/tensor_dit_s32"
+        },
+        {
+          "model": "tensor_dit",
+          "dataset": "jhtdb",
+          "N": 12,
+          "epochs": 100,
+          "seed": 33,
+          "output_dir": "/work/hdd/biup/zguan2/results/tensor_dit_n12_20261027/jhtdb/tensor_dit_s33"
+        }
+      ],
+      "array_concurrency": 1
+    },
+    {
+      "key": "fs_sph_tensor_prepare",
+      "dataset": "fs_sph",
+      "stage": "tensor_prepare",
+      "time": "08:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "baseline_fs_sph_prepare"
+        ],
+        [
+          "afterany",
+          "baseline_fs_sph_unet_diffusion"
+        ],
+        [
+          "afterany",
+          "baseline_fs_sph_rbf_calibration"
+        ]
+      ]
+    },
+    {
+      "key": "fs_sph_pilot",
+      "dataset": "fs_sph",
+      "stage": "pilot",
+      "time": "01:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "fs_sph_tensor_prepare"
+        ]
+      ]
+    },
+    {
+      "key": "fs_sph_tensor_dit",
+      "dataset": "fs_sph",
+      "stage": "train",
+      "time": "04:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "fs_sph_tensor_prepare"
+        ],
+        [
+          "afterok",
+          "fs_sph_pilot"
+        ]
+      ],
+      "tasks": [
+        {
+          "model": "tensor_dit",
+          "dataset": "fs_sph",
+          "N": 12,
+          "epochs": 100,
+          "seed": 31,
+          "output_dir": "/work/hdd/biup/zguan2/results/tensor_dit_n12_20261027/fs_sph/tensor_dit_s31"
+        },
+        {
+          "model": "tensor_dit",
+          "dataset": "fs_sph",
+          "N": 12,
+          "epochs": 100,
+          "seed": 32,
+          "output_dir": "/work/hdd/biup/zguan2/results/tensor_dit_n12_20261027/fs_sph/tensor_dit_s32"
+        },
+        {
+          "model": "tensor_dit",
+          "dataset": "fs_sph",
+          "N": 12,
+          "epochs": 100,
+          "seed": 33,
+          "output_dir": "/work/hdd/biup/zguan2/results/tensor_dit_n12_20261027/fs_sph/tensor_dit_s33"
+        }
+      ],
+      "array_concurrency": 1
+    }
+  ],
+  "external_dependencies": {
+    "baseline_jhtdb_prepare": "3467857",
+    "baseline_jhtdb_unet_diffusion": "3467865",
+    "baseline_jhtdb_rbf_calibration": "3467867",
+    "baseline_fs_sph_prepare": "3467868",
+    "baseline_fs_sph_unet_diffusion": "3467876",
+    "baseline_fs_sph_rbf_calibration": "3467878"
+  },
+  "baseline_root": "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027",
+  "baseline_frozen_sha256": "871e123be831864b673adc07c637124435c4f3a8ad26891f893f0e37029cb39e",
+  "rank_candidates": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "hooi_iterations": 2,
+  "rank_validation_mean_max": 0.05,
+  "rank_validation_worst_max": 0.2,
+  "rank_failure_policy": "Stop without training if every candidate fails validation; never inspect test.",
+  "max_concurrent_allocations_including_baseline": 2,
+  "concurrency_policy": "Append one serial Tensor chain per dataset after its existing baseline chain; seed arrays throttle1.",
+  "requested_gpu_hour_upper_bound": 66,
+  "baseline_gpu_hour_upper_bound": 274.0,
+  "combined_gpu_hour_upper_bound": 340.0,
+  "verified_account_balance_gpu_hours": 805,
+  "sbatch_submission_count": 6,
+  "logical_allocations": 10,
+  "evaluation_phase": "Training and validation only. No test evaluation is scheduled.",
+  "resource_note": "Walltime caps, not measured durations. Real CUDA pilot runs before all formal training."
+}

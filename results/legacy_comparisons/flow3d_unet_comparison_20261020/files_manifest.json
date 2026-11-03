@@ -1,0 +1,90 @@
+{
+  "Flow3D_UNet同口径对比_20261020.pdf": {
+    "bytes": 69335,
+    "sha256": "59814828f89d937ec73d98902cf41d5790acb5684864dcd58921d77094178808"
+  },
+  "Flow3D_UNet同口径对比_20261020.pptx": {
+    "bytes": 45628,
+    "sha256": "6d06d88553a15105f707c7715df1a792df06f90d1f9de4fe4a25c79c7ee6a4ab"
+  },
+  "Flow3D_UNet同口径对比_20261020.xlsx": {
+    "bytes": 33646,
+    "sha256": "0a9c40b5848d283eb0bee2270df0f73283240c565757db3058bc5dcc29e45c4a"
+  },
+  "batch.json": {
+    "bytes": 55233,
+    "sha256": "7ea7c5b6f8f009b2611897eee6ff1d7ca4f85750e76428155b151a7fe9a659ea"
+  },
+  "export_comparison_slides.py": {
+    "bytes": 6672,
+    "sha256": "f40bdf17d713689ca33867cd6970517ec7bc93fd60e9c8cec9cf9f8a6ba6deb9"
+  },
+  "layout_checks.json": {
+    "bytes": 115,
+    "sha256": "637abe26bb17baae3e1997d687b27aa88d4b0a0029a1d829f0ae44b8624be0b4"
+  },
+  "serial_unet_evaluation.py": {
+    "bytes": 14098,
+    "sha256": "ae1417b12777520990b7c440c0c4509b71470ded1a045a517113a13b72f153f9"
+  },
+  "slide_manifest.json": {
+    "bytes": 1634,
+    "sha256": "a0ca30b07b3b16592f1ce4dd23e11b3abe9349326f67c7b7540d30f5afdef233"
+  },
+  "summarize_unet_comparison.py": {
+    "bytes": 7856,
+    "sha256": "dd755b7021e4c09df10cc025476e22c9d6ae08a0ea47d497464cfc17cf7aebb3"
+  },
+  "unet_evaluation_guarded.slurm": {
+    "bytes": 575,
+    "sha256": "2a4e4f2c5fd4449d38c79883d74ecada7d6282f59c6f0ff29fbf7d8c6dc93970"
+  },
+  "unet_matched_comparison_final.json": {
+    "bytes": 133369,
+    "sha256": "160a42f738edbe8cfd04e62811326461e93a1a4a76e12455c6fd7f5f9fa89f37"
+  },
+  "verification.json": {
+    "bytes": 536,
+    "sha256": "c1aaa0bacfc4cc50cc11e148b9b6bed45acf50472c4e7029355e83d803fc3b1d"
+  },
+  "使用说明.txt": {
+    "bytes": 1340,
+    "sha256": "63b8a8ec3483fa1e4a5c54d1dc459ce43020e2c7fab2e0d81914d5d89de6215a"
+  },
+  "全部逐案例误差.csv": {
+    "bytes": 29527,
+    "sha256": "5a879763dce7ca3c613521cf5eaac122f1c77982003d3cd07ae429e95517de22"
+  },
+  "同口径三模型总对比.csv": {
+    "bytes": 599,
+    "sha256": "b11702aa3ec88ba7bfd61fb1c2a7d396353057ce2f479f5eda6064690b14bc98"
+  },
+  "幻灯片总览.png": {
+    "bytes": 104005,
+    "sha256": "5cd2f93a3c16171f1bacd1ca7a1ab0f154506f18df17085ffa0633769501c892"
+  },
+  "汇报讲稿.txt": {
+    "bytes": 1352,
+    "sha256": "78ecf0833ed4e25e951ea549ca60e7caa574494eb5ba9a9b846aea60675f956a"
+  },
+  "相对UNet配对区间.csv": {
+    "bytes": 2842,
+    "sha256": "6961890ddeda5d895cbde3abfdc89f6d96a9f42e58a2fa647bd32389d6dbce69"
+  },
+  "逐种子结果.csv": {
+    "bytes": 851,
+    "sha256": "2fe65303cd1d77f58f2d53efc9bb8b2c1bf04a6ace63f36b48575c08f98333fa"
+  },
+  "preview/slide_01.png": {
+    "bytes": 39893,
+    "sha256": "7de6f7e743b513f72ba5929a96a463103ccf2921b30f92324dcc28a6b3d66b60"
+  },
+  "preview/slide_02.png": {
+    "bytes": 45446,
+    "sha256": "0ef6d33e33464c1b811aa7727066b7b99851abc24b650f7ef6475b082850daab"
+  },
+  "preview/slide_03.png": {
+    "bytes": 47889,
+    "sha256": "284563f2a835ea7672d6d3764b8bdced8b617ccbfc3a106227505103bd0483c9"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "cpu_contract_tests": {
+    "count": 14,
+    "status": "passed",
+    "command": "python -B -m unittest discover -s local_support -p test_local_baselines.py -v"
+  },
+  "real_cpu_integration": {
+    "status": "stopped_before_model_execution",
+    "reason": "Production shared filesystem preflight waited in cl_sync_io_wait; no real model subprocess had started at last inspection.",
+    "temporary_directory": "/tmp/handoff-local-smoke-c8t4jcas",
+    "terminated_test_processes": [
+      3406795,
+      3406770
+    ]
+  },
+  "laptop_cuda_test": "not_run",
+  "real_training": "not_run",
+  "production_source_or_jobs_modified": false
+}

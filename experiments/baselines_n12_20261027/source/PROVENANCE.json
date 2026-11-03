@@ -1,0 +1,33 @@
+{
+  "conditional_source": "/work/hdd/biup/zguan2/results/full-repaired-training/20261020_N4-96_e100_v2v_36runs/source",
+  "dps_source": "../flow3d-dps/src/flow_observation/dps",
+  "copied_files": {
+    "src/flow_observation/__init__.py": "a5c4b5fe032610a9f782e988bdf3721573a463d6a2bb4abb00ba0a03f3263cd7",
+    "src/flow_observation/advection.py": "17933a724d290cbdd0f2d4979f9520e044181f025df357e75498e07e81c063d8",
+    "src/flow_observation/cfd.py": "28d40bbc52437a12adc50fe51f5468e59863f69bb92429b71e0e523d19e8297f",
+    "src/flow_observation/checkpoint_io.py": "9bdf4bf1b5c7ad886700a02fa1beef6aeee741e7a8e1ac7cc401d4aee5e1b884",
+    "src/flow_observation/conditioning.py": "6344287f68c9836088fafc5606aa526ec911962e333c6be961eab81858418aad",
+    "src/flow_observation/diffusion.py": "a0511973140b1fb23adfd39c733848505851ace20cd519d0aa998d32b2a46ffe",
+    "src/flow_observation/dps/__init__.py": "a14af6126c72ff38fcd880569bc767221481124fd5d8e8e5de7e8c386d1567f5",
+    "src/flow_observation/dps/audit.py": "dff0c4102131109034183221ea881878958de4d5fb47668778914163fe1abe10",
+    "src/flow_observation/dps/data.py": "eba9d8f610cdca9bb05c0754b9d8dfef0ecc9b2ecd0a29dc12ea5221805ee050",
+    "src/flow_observation/dps/inference.py": "6392cf07093e4b038ab9924c4cfce09f5ba45eb5ce58b5d0e91bf8395d1a9b3b",
+    "src/flow_observation/dps/observations.py": "b48f2c59cc1de5b390f15077bdacfb8c99bd28b266de85f98d1d9cda98e3c9ca",
+    "src/flow_observation/dps/sampler.py": "58aba5949fc291694cc1753b0fd41485ba717738f3e57fc3102f51e556ee9f5e",
+    "src/flow_observation/dps/training.py": "34622f539caa50090daac260119a3253b91e3c68d15935402c1e2570a802eaae",
+    "src/flow_observation/interpolation.py": "2448b1321a6b5936694f302ebb770cf35e51fac55a5c9930e35c023c56f07afa",
+    "src/flow_observation/likelihood.py": "61633fd1b4a5b2cfad1cd18ff9b4d7cf93ea3cc297e7996424b094e318c11f87",
+    "src/flow_observation/models/__init__.py": "2debf394ebae79ca736ed45a580084d5fbdbc8c8c318463726af1d8cfff74910",
+    "src/flow_observation/models/dit.py": "a1fd77ce6e19685fb76e66d16e23d53830b16af44f6d26b56a62c049674b78d8",
+    "src/flow_observation/models/factory.py": "f585727912f610003f8f34ac3b16a7b92c4ab85e92a990917e9b43f1527e012b",
+    "src/flow_observation/models/trajectory_encoder.py": "f29aa563419639c3dd6dde367d7df3f5dcef770c7ba547f82976b46096600d12",
+    "src/flow_observation/models/unet3d.py": "120619da44ce9ad2722746fc07f5131c200b8b5c3cc9278356f56df697255240",
+    "src/flow_observation/multiview.py": "d7868cbedd928ee8bf5d31b460dbc6c0eaff834053172a1574785ecb5f485efe",
+    "src/flow_observation/projection.py": "09b9cb53ebd53d0da47fad68878ad4017ab0203188515b9ede464d4e025f5988",
+    "src/flow_observation/recovery.py": "fb433887fcd107da3b2f98ba116d408d4dd4c0fb8eb93b678cffc67c4ce09a74",
+    "src/flow_observation/sparse_dataset.py": "0b4154709f17798d4028bfc81b5156682acc13b6bdb90c3bae91cc11abebd281",
+    "src/flow_observation/sparse_physics.py": "c2e5275e004fef58eca1ee842e9cbe32bfd2c41e9d1b80549eaa59c6fe477c57",
+    "src/flow_observation/taichi_lbm3d.py": "1c8e649655a775d26164c9691029a4df3053b1e66e86dfb1750da9d30e06f310",
+    "src/flow_observation/tensor_space.py": "35320450af0af73587035b1d5cec57f2b78baa81d0a5dad1fabcc1072592593d"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "dataset": "fs_sph",
+  "N": 12,
+  "test_used": false,
+  "input_view": "xz",
+  "benchmark": [
+    {
+      "model": "cnn",
+      "elapsed_seconds": 75.56893278200005
+    },
+    {
+      "model": "deeponet",
+      "elapsed_seconds": 19.48451588000171
+    },
+    {
+      "model": "unet",
+      "elapsed_seconds": 8.852844886998355
+    },
+    {
+      "model": "fno",
+      "elapsed_seconds": 9.015981646
+    },
+    {
+      "model": "unet_diffusion",
+      "elapsed_seconds": 9.130336714002624
+    }
+  ],
+  "scope": "Five learned forward/backward and two fit paths; no scientific results."
+}

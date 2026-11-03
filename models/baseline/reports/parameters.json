@@ -1,0 +1,251 @@
+{
+  "format": "flow3d-baseline-parameters-v1",
+  "spatial_shape": [
+    32,
+    32,
+    32
+  ],
+  "hyperparameters_validation_tuned": false,
+  "counts_are_real_scalar_parameters": true,
+  "parameter_count_motion_scales_are_placeholders": true,
+  "defaults": {
+    "seed": 31,
+    "num_particles": 2,
+    "views": null,
+    "boundary_projection": "none",
+    "epochs": 100,
+    "batch_size": 1,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "ema_decay": 0.999,
+    "amp": true,
+    "condition_dim": 128,
+    "condition_flow_grid": 4,
+    "condition_flow_weight": 0.1,
+    "condition_dropout": 0.1,
+    "diffusion_steps": 1000,
+    "prediction_type": "v",
+    "sampling_steps": 50,
+    "sampling_eta": 1.0,
+    "cfg_scale": 1.0,
+    "clip_x0": 8.0,
+    "observation_seed": 47,
+    "sampling_seed": 47,
+    "num_probes": 16,
+    "num_samples": 2,
+    "fit_steps": 1000,
+    "fit_learning_rate": 0.01,
+    "sigma": 0.05,
+    "coefficient_weight": 0.0001,
+    "depth_learning_rate": 0.01,
+    "unet": {
+      "base_channels": 32,
+      "channel_multipliers": [
+        1,
+        2,
+        4
+      ],
+      "dropout": 0.0
+    },
+    "cnn": {
+      "width": 32,
+      "depth": 4
+    },
+    "fno": {
+      "width": 32,
+      "depth": 4,
+      "modes": 8,
+      "padding": 4
+    },
+    "deeponet": {
+      "latent": 128,
+      "hidden": 128,
+      "layers": 3
+    },
+    "unet_diffusion": {
+      "base_channels": 16,
+      "channel_multipliers": [
+        1,
+        2,
+        4
+      ],
+      "time_embedding_dim": 64,
+      "dropout": 0.0
+    },
+    "pod": {
+      "rank": 32
+    },
+    "rbf": {
+      "centers_per_axis": 4,
+      "length_scale": 0.35,
+      "ridge": 0.0001
+    },
+    "pinn": {
+      "hidden": 128,
+      "layers": 5,
+      "viscosity": null,
+      "collocation_points": 1024,
+      "fit_steps": 2000,
+      "learning_rate": 0.001,
+      "divergence_weight": 1.0,
+      "momentum_weight": 1.0
+    }
+  },
+  "models": [
+    {
+      "model": "mean",
+      "encoder_parameters": 0,
+      "decoder_parameters": 0,
+      "total_trainable_parameters": 0,
+      "dataset_gradient_training": false,
+      "case_fit_parameters": "none",
+      "viscosity_required": false,
+      "hyperparameters_validation_tuned": false,
+      "hyperparameters": {},
+      "notes": "Training-only empirical mean; zero learned gradient parameters."
+    },
+    {
+      "model": "pod",
+      "encoder_parameters": 0,
+      "decoder_parameters": 0,
+      "total_trainable_parameters": 0,
+      "dataset_gradient_training": false,
+      "case_fit_parameters": "K + N*(3-rank(P_initial)); K=min(requested_rank,training_numerical_rank)",
+      "viscosity_required": false,
+      "hyperparameters_validation_tuned": false,
+      "hyperparameters": {
+        "rank": 32
+      },
+      "notes": "Training-only POD fit; effective rank cannot be known before fitting training snapshots.",
+      "requested_rank": 32,
+      "effective_rank": null
+    },
+    {
+      "model": "unet",
+      "encoder_parameters": 165184,
+      "decoder_parameters": 4008515,
+      "total_trainable_parameters": 4173699,
+      "dataset_gradient_training": true,
+      "case_fit_parameters": "none",
+      "viscosity_required": false,
+      "hyperparameters_validation_tuned": false,
+      "hyperparameters": {
+        "base_channels": 32,
+        "channel_multipliers": [
+          1,
+          2,
+          4
+        ],
+        "dropout": 0.0
+      },
+      "notes": "Counts include the shared motion-residual-v2 encoder and auxiliary flow head."
+    },
+    {
+      "model": "fno",
+      "encoder_parameters": 165184,
+      "decoder_parameters": 16788003,
+      "total_trainable_parameters": 16953187,
+      "dataset_gradient_training": true,
+      "case_fit_parameters": "none",
+      "viscosity_required": false,
+      "hyperparameters_validation_tuned": false,
+      "hyperparameters": {
+        "width": 32,
+        "depth": 4,
+        "modes": 8,
+        "padding": 4
+      },
+      "notes": "Counts include the shared motion-residual-v2 encoder and auxiliary flow head."
+    },
+    {
+      "model": "cnn",
+      "encoder_parameters": 165184,
+      "decoder_parameters": 264323,
+      "total_trainable_parameters": 429507,
+      "dataset_gradient_training": true,
+      "case_fit_parameters": "none",
+      "viscosity_required": false,
+      "hyperparameters_validation_tuned": false,
+      "hyperparameters": {
+        "width": 32,
+        "depth": 4
+      },
+      "notes": "Counts include the shared motion-residual-v2 encoder and auxiliary flow head."
+    },
+    {
+      "model": "deeponet",
+      "encoder_parameters": 165184,
+      "decoder_parameters": 149123,
+      "total_trainable_parameters": 314307,
+      "dataset_gradient_training": true,
+      "case_fit_parameters": "none",
+      "viscosity_required": false,
+      "hyperparameters_validation_tuned": false,
+      "hyperparameters": {
+        "latent": 128,
+        "hidden": 128,
+        "layers": 3
+      },
+      "notes": "Counts include the shared motion-residual-v2 encoder and auxiliary flow head."
+    },
+    {
+      "model": "unet_diffusion",
+      "encoder_parameters": 165184,
+      "decoder_parameters": 1288979,
+      "total_trainable_parameters": 1454163,
+      "dataset_gradient_training": true,
+      "case_fit_parameters": "none",
+      "viscosity_required": false,
+      "hyperparameters_validation_tuned": false,
+      "hyperparameters": {
+        "base_channels": 16,
+        "channel_multipliers": [
+          1,
+          2,
+          4
+        ],
+        "time_embedding_dim": 64,
+        "dropout": 0.0
+      },
+      "notes": "Counts include the shared motion-residual-v2 encoder and auxiliary flow head."
+    },
+    {
+      "model": "pinn",
+      "encoder_parameters": 0,
+      "decoder_parameters": 67076,
+      "total_trainable_parameters": 67076,
+      "dataset_gradient_training": false,
+      "case_fit_parameters": "67076 + N*(3-rank(P_initial))",
+      "viscosity_required": true,
+      "hyperparameters_validation_tuned": false,
+      "hyperparameters": {
+        "hidden": 128,
+        "layers": 5,
+        "viscosity": null,
+        "collocation_points": 1024,
+        "fit_steps": 2000,
+        "learning_rate": 0.001,
+        "divergence_weight": 1.0,
+        "momentum_weight": 1.0
+      },
+      "notes": "Per-case optimization, not a network pretrained across the dataset. Depth unknowns are zero for full-rank multiview initial geometry. Viscosity=1 was used only to count parameters; configured viscosity remains None and must be supplied."
+    },
+    {
+      "model": "rbf",
+      "encoder_parameters": 0,
+      "decoder_parameters": 195,
+      "total_trainable_parameters": 195,
+      "dataset_gradient_training": false,
+      "case_fit_parameters": "195 + N*(3-rank(P_initial))",
+      "viscosity_required": false,
+      "hyperparameters_validation_tuned": false,
+      "hyperparameters": {
+        "centers_per_axis": 4,
+        "length_scale": 0.35,
+        "ridge": 0.0001
+      },
+      "notes": "Per-case optimization, not a network pretrained across the dataset. Depth unknowns are zero for full-rank multiview initial geometry."
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+{
+  "schema": "jhtdb_fs_tensor_dit_experiment_setting_v1",
+  "experiment_id": "jhtdb_fs_tensor_dit_20261026",
+  "created_at_local": "2026-10-26T18:25:09.237005-05:00",
+  "status": "prepared_requires_adapters",
+  "proposed_model": "tensor_dit",
+  "settings_root": "/u/zguan2/projects/flow3d_runs/experiments/jhtdb_fs_tensor_dit_20261026",
+  "result_root": "/work/hdd/biup/zguan2/results/jhtdb_fs_tensor_dit_20261026",
+  "submission_enabled": false,
+  "jobs_submitted": [],
+  "shared": {
+    "particle_counts": [
+      12,
+      24,
+      48,
+      96
+    ],
+    "training_seeds": [
+      31,
+      32,
+      33
+    ],
+    "observation_seed": 47,
+    "sampling_seed": 47,
+    "input_views": [
+      "xz"
+    ],
+    "observations_per_flow": 1,
+    "observation_times_per_example": 20,
+    "heldout_probes": 32,
+    "conditioning_truth_policy": "Only selected projected XZ tracks, masks, camera, times and declared domain; no XYZ, hidden Y or target velocity in inference.",
+    "observation_selection": {
+      "training": "Dataset-specific selection overrides are mandatory: JHTDB uses a shared epoch-keyed nested permutation after reserving probes; FS uses fixed published nested seed47 particle IDs in every epoch and split.",
+      "validation_test": "Frozen IDs across methods/seeds; nested N; no target-guided particle selection."
+    },
+    "epochs": 100,
+    "batch_size": 1,
+    "gradient_accumulation": 1,
+    "num_workers": 0,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "ema_decay": 0.999,
+    "amp": true,
+    "condition_encoder": "motion-residual-v2",
+    "condition_dim": 128,
+    "condition_flow_grid": 4,
+    "condition_flow_weight": 0.1,
+    "paired_encoder_initialization": true,
+    "schedule": "cosine",
+    "diffusion_steps": 1000,
+    "prediction_type": "v",
+    "condition_dropout": 0.1,
+    "sampling": {
+      "sampler": "ddim",
+      "steps": 50,
+      "eta": 1.0,
+      "cfg_scale": 1.0,
+      "num_samples": 2,
+      "seed": 47,
+      "uncertainty_scope": "Descriptive two-draw variation only; no calibrated posterior claim."
+    },
+    "auxiliary_losses": {
+      "track": 0.0,
+      "divergence": 0.0,
+      "boundary": 0.0
+    },
+    "boundary_information": "No ground-truth boundary velocities in ANY model inputs. All Tensor/DiT known-boundary masks must be empty for BOTH datasets; their final projection is a no-op. FS prescribed/support/material masks are for masked supervision and evaluation, not prescribed-velocity conditioning.",
+    "checkpoint_selection": {
+      "main": "Fixed final epoch 100; EMA for applicable learned models. No test selection.",
+      "diffusion_file": "epoch_0100.pt",
+      "baseline_final_file": "latest.pt; verify completed epoch=100",
+      "best_checkpoint": "Diagnostic only; validation training loss is not generated-field accuracy."
+    },
+    "normalization": "Training split only; masked on FS. Separate statistics for each dataset. Never reuse LBM statistics or Tucker artifact.",
+    "canonical_coordinates": {
+      "grid_shape_zyx": [
+        32,
+        32,
+        32
+      ],
+      "derived_xyz_bounds": [
+        [
+          0,
+          31
+        ],
+        [
+          0,
+          31
+        ],
+        [
+          0,
+          31
+        ]
+      ],
+      "transform": "x_cell_i=(x_physical_i-lower_i)*31/(upper_i-lower_i); u_cell_i=u_physical_i*31/(upper_i-lower_i). Time stays in native physical units. Save inverse transform and compute reported errors in original units. Raw releases unchanged.",
+      "fs_domain_information": "Existing release bounds (union of exported material points over the process) are declared common known-domain side information, not hidden training-fitted statistics; report this provenance."
+    },
+    "fitting": {
+      "pod_requested_rank": 32,
+      "pod_rank_policy": "Truncate to centered training numerical rank. Build basis once, reuse across N/seeds.",
+      "fit_steps": 1000,
+      "fit_learning_rate": 0.01,
+      "depth_learning_rate": 0.01,
+      "coefficient_weight": 0.0001,
+      "sigma_initial_cell_units": 0.05,
+      "sigma_validation_candidates_cell_units": [
+        0.02,
+        0.05,
+        0.1
+      ],
+      "sigma_policy": "Optimization likelihood scale, not asserted measurement noise. Select on validation then freeze; no test tuning."
+    }
+  },
+  "datasets": {
+    "jhtdb": "datasets/jhtdb.json",
+    "fs_sph": "datasets/fs_sph.json"
+  },
+  "models": [
+    {
+      "id": "mean",
+      "role": "baseline",
+      "action": "fit_train_statistics",
+      "enabled": true,
+      "config": "models/mean.json",
+      "exclusion_reason": null
+    },
+    {
+      "id": "pod",
+      "role": "baseline",
+      "action": "fit_train_statistics",
+      "enabled": true,
+      "config": "models/pod.json",
+      "exclusion_reason": null
+    },
+    {
+      "id": "unet",
+      "role": "baseline",
+      "action": "train",
+      "enabled": true,
+      "config": "models/unet.json",
+      "exclusion_reason": null
+    },
+    {
+      "id": "fno",
+      "role": "baseline",
+      "action": "train",
+      "enabled": true,
+      "config": "models/fno.json",
+      "exclusion_reason": null
+    },
+    {
+      "id": "cnn",
+      "role": "baseline",
+      "action": "train",
+      "enabled": true,
+      "config": "models/cnn.json",
+      "exclusion_reason": null
+    },
+    {
+      "id": "deeponet",
+      "role": "baseline",
+      "action": "train",
+      "enabled": true,
+      "config": "models/deeponet.json",
+      "exclusion_reason": null
+    },
+    {
+      "id": "unet_diffusion",
+      "role": "baseline",
+      "action": "train",
+      "enabled": true,
+      "config": "models/unet_diffusion.json",
+      "exclusion_reason": null
+    },
+    {
+      "id": "pinn",
+      "role": "baseline",
+      "action": "fit_each_case",
+      "enabled": false,
+      "config": "models/pinn.json",
+      "exclusion_reason": "Existing steady unforced constant-viscosity NS residual is not justified for either forced turbulent snapshot or thermomechanical SPH. No guessed viscosity."
+    },
+    {
+      "id": "rbf",
+      "role": "baseline",
+      "action": "fit_each_case",
+      "enabled": true,
+      "config": "models/rbf.json",
+      "exclusion_reason": null
+    },
+    {
+      "id": "dit3d",
+      "role": "architecture_control",
+      "action": "train",
+      "enabled": true,
+      "config": "models/dit3d.json"
+    },
+    {
+      "id": "tensor_dit",
+      "role": "proposed",
+      "action": "train",
+      "enabled": true,
+      "config": "models/tensor_dit.json"
+    }
+  ],
+  "main_learned_models": [
+    "unet",
+    "fno",
+    "cnn",
+    "deeponet",
+    "unet_diffusion",
+    "dit3d",
+    "tensor_dit"
+  ],
+  "tensor_space": {
+    "candidate_spatial_ranks": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "hooi_iterations": 2,
+    "fit_split": "train",
+    "selection_split": "validation",
+    "selection_rule": "Smallest rank with validation mean relativeL2<=0.05 and maximum<=0.20; if no candidate passes, stop/review rather than silently accept.",
+    "mean_relative_l2_limit": 0.05,
+    "max_relative_l2_limit": 0.2,
+    "fit_statistics_train_only": true,
+    "fs_masked_temporal_factorization_required": true,
+    "refit_per_dataset": true,
+    "reuse_old_lbm_rank8": false
+  },
+  "metrics": {
+    "primary": [
+      "physical_velocity_relative_l2",
+      "physical_velocity_vector_rmse"
+    ],
+    "jhtdb_mask": "All fluid native-grid samples; derivative diagnostics exclude crop edges as required by stencil. No prescribed boundary velocity supplied.",
+    "fs_mask": "material & interpolation_support & ~prescribed; time-weighted with native times, report coverage.",
+    "fs_independent_metric": "Heldout native transport-velocity probe RMSE in m/s",
+    "secondary": [
+      "per_component_relative_l2",
+      "per_component_rmse",
+      "heldout_projected_track_rmse",
+      "trajectory_valid_fraction",
+      "walltime",
+      "peak_gpu_memory",
+      "trainable_parameters"
+    ],
+    "evaluation_depth": "Inference-only hidden initial Y fit for observed tracks; target XYZ never initializes reconstruction. Any full-XYZ evaluation-only probe initialization is explicitly disclosed and isolated. Do not feed extra cameras to inference.",
+    "generative_aggregation": "Report mean per-draw field error separately from error of sample-mean field.",
+    "summary": "First average cases/windows within each seed, then mean and sample std(ddof=1) across training seeds. FS results remain one-case conditional time extrapolation. Mean has no fake repeated seeds.",
+    "test_policy": "Test untouched for horizon, sigma, rank, normalization, checkpoint or architecture selection."
+  },
+  "runtime": {
+    "cluster": "DeltaAI",
+    "account": "biup-dtai-gh",
+    "qos": "biup-dtai-gh",
+    "partition": "ghx4",
+    "gpus_per_task": 1,
+    "cpus_per_task": 8,
+    "memory": "64G",
+    "max_concurrent_full_tasks": 2,
+    "pilot_concurrency": 1,
+    "pilot_walltime": "00:30:00",
+    "full_walltime_cap": "12:00:00",
+    "walltime_is_performance_estimate": false,
+    "full_release_requires_pilot_benchmark": true,
+    "python": "/sw/user/python/miniforge3-pytorch-2.10.0/bin/python",
+    "module": "python/miniforge3_pytorch/2.10.0",
+    "conda_environment": "base",
+    "environment": {
+      "PYTHONNOUSERSITE": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "gpu_runtime_verified": false,
+    "login_node_training_allowed": false
+  },
+  "pilot": {
+    "models": [
+      "unet",
+      "dit3d",
+      "tensor_dit"
+    ],
+    "N": 48,
+    "seed": 31,
+    "epochs": 1,
+    "max_train_examples": 32,
+    "max_validation_examples": 8,
+    "test_examples": 0,
+    "purpose": "Data/geometry/no-leakage checks, finite gradients, memory and timing. No scientific comparison claims.",
+    "implementation_smoke_requirements": {
+      "learned_models": [
+        "unet",
+        "fno",
+        "cnn",
+        "deeponet",
+        "unet_diffusion",
+        "dit3d",
+        "tensor_dit"
+      ],
+      "checks": [
+        "tiny forward/backward with finite loss and gradients for every enabled learned implementation",
+        "one-case POD and RBF fitting smoke, finite output and hidden-depth information isolation",
+        "mean train-only statistics and finite predictions",
+        "shared selected observations and empty known-boundary inputs",
+        "three listed architectures additionally provide resource/timing benchmarks"
+      ],
+      "these_smokes_are_not_scientific_runs": true
+    }
+  },
+  "readiness_gates": {
+    "jhtdb": {
+      "jhtdb_frozen_track_adapter": {
+        "passed": false,
+        "evidence": null
+      },
+      "jhtdb_terminate_mask_and_unit_transform": {
+        "passed": false,
+        "evidence": null
+      },
+      "jhtdb_spatial_manifest_adapter": {
+        "passed": false,
+        "evidence": null
+      },
+      "conditioning_only_xz_no_truth_leakage": {
+        "passed": false,
+        "evidence": null
+      },
+      "single_xz_evaluator_with_latent_depth": {
+        "passed": false,
+        "evidence": null
+      },
+      "jhtdb_train_only_tucker_rank_selected": {
+        "passed": false,
+        "evidence": null
+      },
+      "real_gpu_pilot": {
+        "passed": false,
+        "evidence": null
+      },
+      "adapted_source_locked_and_reviewed": {
+        "passed": false,
+        "evidence": null
+      }
+    },
+    "fs_sph": {
+      "fs_v2_native_transport_velocity_grid_adapter": {
+        "passed": false,
+        "evidence": null
+      },
+      "fs_same_reference_donors_all_N": {
+        "passed": false,
+        "evidence": null
+      },
+      "fs_material_support_loss_and_metrics": {
+        "passed": false,
+        "evidence": null
+      },
+      "fs_temporal_block_loader_without_fake_groups": {
+        "passed": false,
+        "evidence": null
+      },
+      "fs_transient_model_and_baseline_outputs": {
+        "passed": false,
+        "evidence": null
+      },
+      "conditioning_only_xz_no_truth_leakage": {
+        "passed": false,
+        "evidence": null
+      },
+      "single_xz_evaluator_with_latent_depth": {
+        "passed": false,
+        "evidence": null
+      },
+      "fs_train_only_tucker_rank_selected": {
+        "passed": false,
+        "evidence": null
+      },
+      "real_gpu_pilot": {
+        "passed": false,
+        "evidence": null
+      },
+      "adapted_source_locked_and_reviewed": {
+        "passed": false,
+        "evidence": null
+      }
+    }
+  },
+  "matrix": {
+    "file": "matrix.csv",
+    "training_runs_per_dataset": 84,
+    "training_runs_total": 168,
+    "pilot_runs_total": 6,
+    "statistics_fits_per_dataset": 2,
+    "evaluation_settings_per_dataset": 112,
+    "all_rows": 402,
+    "note": "This is a planned matrix, not submitted jobs. Per-case POD/RBF optimization is distinct from supervised training.",
+    "dit3d_secondary_control_training_runs_per_dataset": 12,
+    "dit3d_secondary_control_training_runs_total": 24,
+    "parameter_matching_claimed": false
+  },
+  "source_policy": "Reference implementations locked by SHA256. Required adapter/model changes must produce a new reviewed source snapshot and updated lock before a readiness gate can pass; do not modify the historical production snapshot in place."
+}

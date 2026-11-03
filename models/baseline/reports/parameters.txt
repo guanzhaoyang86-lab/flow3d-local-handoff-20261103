@@ -1,0 +1,39 @@
+Flow3D baseline defaults: 32 x 32 x 32; hyperparameters NOT validation-tuned.
+Counts are real scalar trainable parameters; statistical fits and per-case optimization are distinguished.
+
+mean: encoder=0; decoder=0; total=0
+  settings: {}
+  per-case: none
+  Training-only empirical mean; zero learned gradient parameters.
+pod: encoder=0; decoder=0; total=0
+  settings: {"rank": 32}
+  per-case: K + N*(3-rank(P_initial)); K=min(requested_rank,training_numerical_rank)
+  Training-only POD fit; effective rank cannot be known before fitting training snapshots.
+unet: encoder=165,184; decoder=4,008,515; total=4,173,699
+  settings: {"base_channels": 32, "channel_multipliers": [1, 2, 4], "dropout": 0.0}
+  per-case: none
+  Counts include the shared motion-residual-v2 encoder and auxiliary flow head.
+fno: encoder=165,184; decoder=16,788,003; total=16,953,187
+  settings: {"depth": 4, "modes": 8, "padding": 4, "width": 32}
+  per-case: none
+  Counts include the shared motion-residual-v2 encoder and auxiliary flow head.
+cnn: encoder=165,184; decoder=264,323; total=429,507
+  settings: {"depth": 4, "width": 32}
+  per-case: none
+  Counts include the shared motion-residual-v2 encoder and auxiliary flow head.
+deeponet: encoder=165,184; decoder=149,123; total=314,307
+  settings: {"hidden": 128, "latent": 128, "layers": 3}
+  per-case: none
+  Counts include the shared motion-residual-v2 encoder and auxiliary flow head.
+unet_diffusion: encoder=165,184; decoder=1,288,979; total=1,454,163
+  settings: {"base_channels": 16, "channel_multipliers": [1, 2, 4], "dropout": 0.0, "time_embedding_dim": 64}
+  per-case: none
+  Counts include the shared motion-residual-v2 encoder and auxiliary flow head.
+pinn: encoder=0; decoder=67,076; total=67,076
+  settings: {"collocation_points": 1024, "divergence_weight": 1.0, "fit_steps": 2000, "hidden": 128, "layers": 5, "learning_rate": 0.001, "momentum_weight": 1.0, "viscosity": null}
+  per-case: 67076 + N*(3-rank(P_initial))
+  Per-case optimization, not a network pretrained across the dataset. Depth unknowns are zero for full-rank multiview initial geometry. Viscosity=1 was used only to count parameters; configured viscosity remains None and must be supplied.
+rbf: encoder=0; decoder=195; total=195
+  settings: {"centers_per_axis": 4, "length_scale": 0.35, "ridge": 0.0001}
+  per-case: 195 + N*(3-rank(P_initial))
+  Per-case optimization, not a network pretrained across the dataset. Depth unknowns are zero for full-rank multiview initial geometry.

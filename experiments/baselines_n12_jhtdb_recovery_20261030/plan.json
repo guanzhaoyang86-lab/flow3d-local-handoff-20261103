@@ -1,0 +1,338 @@
+{
+  "schema": "baselines_n12_submission_v1",
+  "created_at_utc": "2026-10-31T04:44:42.709138+00:00",
+  "N": 12,
+  "input_views": [
+    "xz"
+  ],
+  "training_seeds": [
+    31
+  ],
+  "epochs": 100,
+  "datasets": {
+    "jhtdb": {
+      "raw_root": "/work/hdd/biup/zguan2/datasets/jhtdb_iso1024_native32_3125_t1_20261024",
+      "derived_root": "/work/hdd/biup/zguan2/datasets/experiment_adapters_20261027/jhtdb_frozen32"
+    }
+  },
+  "result_root": "/work/hdd/biup/zguan2/results/baselines_n12_20261027",
+  "learned_models": [
+    "cnn",
+    "deeponet",
+    "unet",
+    "fno",
+    "unet_diffusion"
+  ],
+  "excluded_models": [
+    "pinn",
+    "dit3d",
+    "tensor_dit"
+  ],
+  "account": "biup-dtai-gh",
+  "partition": "ghx4",
+  "gpus_per_task": 1,
+  "python": "/sw/user/python/miniforge3-pytorch-2.10.0/bin/python",
+  "max_concurrent_allocations": 1,
+  "concurrency_policy": "One JHTDB dependency chain, training seed31 only; existing FS-SPH chain continues separately.",
+  "sigma_candidates": [
+    0.02,
+    0.05,
+    0.1
+  ],
+  "calibration_cases": 8,
+  "evaluation_phase": "Validation calibration only; test is held out until validation choices are frozen.",
+  "jobs": [
+    {
+      "key": "jhtdb_pilot",
+      "dataset": "jhtdb",
+      "stage": "pilot",
+      "time": "01:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": []
+    },
+    {
+      "key": "jhtdb_mean",
+      "dataset": "jhtdb",
+      "stage": "fit_statistics",
+      "time": "01:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "jhtdb_pilot"
+        ]
+      ],
+      "tasks": [
+        {
+          "dataset": "jhtdb",
+          "stage": "fit_statistics",
+          "model": "mean",
+          "N": 12,
+          "seed": 31,
+          "epochs": 0,
+          "output_dir": "/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/mean"
+        }
+      ],
+      "array_concurrency": 1
+    },
+    {
+      "key": "jhtdb_pod",
+      "dataset": "jhtdb",
+      "stage": "fit_statistics",
+      "time": "04:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "jhtdb_pilot"
+        ],
+        [
+          "afterany",
+          "jhtdb_mean"
+        ]
+      ],
+      "tasks": [
+        {
+          "dataset": "jhtdb",
+          "stage": "fit_statistics",
+          "model": "pod",
+          "N": 12,
+          "seed": 31,
+          "epochs": 0,
+          "output_dir": "/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/pod"
+        }
+      ],
+      "array_concurrency": 1
+    },
+    {
+      "key": "jhtdb_cnn",
+      "dataset": "jhtdb",
+      "stage": "train",
+      "time": "08:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "jhtdb_pilot"
+        ],
+        [
+          "afterany",
+          "jhtdb_pod"
+        ]
+      ],
+      "tasks": [
+        {
+          "dataset": "jhtdb",
+          "stage": "train",
+          "model": "cnn",
+          "N": 12,
+          "seed": 31,
+          "epochs": 100,
+          "output_dir": "/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/cnn_s31"
+        }
+      ],
+      "array_concurrency": 1
+    },
+    {
+      "key": "jhtdb_deeponet",
+      "dataset": "jhtdb",
+      "stage": "train",
+      "time": "08:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "jhtdb_pilot"
+        ],
+        [
+          "afterany",
+          "jhtdb_cnn"
+        ]
+      ],
+      "tasks": [
+        {
+          "dataset": "jhtdb",
+          "stage": "train",
+          "model": "deeponet",
+          "N": 12,
+          "seed": 31,
+          "epochs": 100,
+          "output_dir": "/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/deeponet_s31"
+        }
+      ],
+      "array_concurrency": 1
+    },
+    {
+      "key": "jhtdb_unet",
+      "dataset": "jhtdb",
+      "stage": "train",
+      "time": "12:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "jhtdb_pilot"
+        ],
+        [
+          "afterany",
+          "jhtdb_deeponet"
+        ]
+      ],
+      "tasks": [
+        {
+          "dataset": "jhtdb",
+          "stage": "train",
+          "model": "unet",
+          "N": 12,
+          "seed": 31,
+          "epochs": 100,
+          "output_dir": "/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/unet_s31"
+        }
+      ],
+      "array_concurrency": 1
+    },
+    {
+      "key": "jhtdb_fno",
+      "dataset": "jhtdb",
+      "stage": "train",
+      "time": "12:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "jhtdb_pilot"
+        ],
+        [
+          "afterany",
+          "jhtdb_unet"
+        ]
+      ],
+      "tasks": [
+        {
+          "dataset": "jhtdb",
+          "stage": "train",
+          "model": "fno",
+          "N": 12,
+          "seed": 31,
+          "epochs": 100,
+          "output_dir": "/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/fno_s31"
+        }
+      ],
+      "array_concurrency": 1
+    },
+    {
+      "key": "jhtdb_unet_diffusion",
+      "dataset": "jhtdb",
+      "stage": "train",
+      "time": "12:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "jhtdb_pilot"
+        ],
+        [
+          "afterany",
+          "jhtdb_fno"
+        ]
+      ],
+      "tasks": [
+        {
+          "dataset": "jhtdb",
+          "stage": "train",
+          "model": "unet_diffusion",
+          "N": 12,
+          "seed": 31,
+          "epochs": 100,
+          "output_dir": "/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/unet_diffusion_s31"
+        }
+      ],
+      "array_concurrency": 1
+    },
+    {
+      "key": "jhtdb_pod_calibration",
+      "dataset": "jhtdb",
+      "stage": "calibration",
+      "time": "08:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "jhtdb_pilot"
+        ],
+        [
+          "afterany",
+          "jhtdb_unet_diffusion"
+        ],
+        [
+          "afterok",
+          "jhtdb_pod"
+        ]
+      ],
+      "tasks": [
+        {
+          "dataset": "jhtdb",
+          "stage": "calibration",
+          "model": "pod",
+          "N": 12,
+          "seed": 31,
+          "output_dir": "/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/calibration/pod"
+        }
+      ]
+    },
+    {
+      "key": "jhtdb_rbf_calibration",
+      "dataset": "jhtdb",
+      "stage": "calibration",
+      "time": "08:00:00",
+      "cpus": 8,
+      "memory": "64G",
+      "dependencies": [
+        [
+          "afterok",
+          "jhtdb_pilot"
+        ],
+        [
+          "afterany",
+          "jhtdb_pod_calibration"
+        ],
+        [
+          "afterany",
+          "jhtdb_unet_diffusion"
+        ]
+      ],
+      "tasks": [
+        {
+          "dataset": "jhtdb",
+          "stage": "calibration",
+          "model": "rbf",
+          "N": 12,
+          "seed": 31,
+          "output_dir": "/work/hdd/biup/zguan2/results/baselines_n12_20261027/jhtdb/calibration/rbf"
+        }
+      ]
+    }
+  ],
+  "sbatch_submission_count": 10,
+  "logical_allocations": 10,
+  "requested_gpu_hour_upper_bound": 74.0,
+  "resource_note": "Caps, not measured durations. Actual dataset GPU pilot logs timing before training starts. Latest completed epochs are resumable; no automatic requeue.",
+  "initial_account_balance_gpu_hours": 802.0,
+  "recovery": {
+    "original_experiment": "/u/zguan2/projects/flow3d_runs/experiments/baselines_n12_20261027",
+    "completed_preparation_job_id": "3477662",
+    "failed_pilot_job_id": "3487230",
+    "reuse_completed_pilot_checkpoints": true,
+    "reason": "Separate smoke config paths from prediction/metadata paths; preserve original frozen inputs."
+  },
+  "account_balance_verified_at_utc": "2026-10-31T04:45:44.510517+00:00"
+}

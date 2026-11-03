@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "slide_count": 5,
+  "std_ddof": 1,
+  "seed_std_n": 3,
+  "case_std_n": 44,
+  "seed_stats_displayed": 9,
+  "case_stats_displayed": 9,
+  "raw_source_hash_checks": "passed",
+  "mean_cross_checks": "passed",
+  "independent_std_cross_checks": "passed",
+  "pptx_text_number_checks": "passed",
+  "pdf_text_fit": "passed",
+  "font_adjustments": [],
+  "generated_at_chicago": "2026-10-20T09:44:41-05:00"
+}

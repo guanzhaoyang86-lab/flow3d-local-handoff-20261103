@@ -1,0 +1,8 @@
+{
+  "paired_initialization": true,
+  "encoder_sha256": "55cd2a95e826e7232b5d185d4a719af70007bc9991a6bbbe1a99e6b74834f1a8",
+  "denoiser_sha256": "a74664767075469a1444db6a7196a3b67946456cd78277176a21152b456cd3e7",
+  "training_rng_seed": 27215,
+  "motion_scale_fit_split": "train",
+  "train_example_count": 798
+}

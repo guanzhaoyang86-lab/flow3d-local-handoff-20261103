@@ -1,0 +1,42 @@
+{
+  "checked_at_utc": "2026-10-20T19:31:27.314475+00:00",
+  "overall": "core_method_implemented_for_steady_3d_after_repairs",
+  "image_equation_mapping": {
+    "unconditional_prior": "implemented_and_cpu_tested",
+    "independent_particle_gaussian_transition_likelihood": "implemented_and_cpu_tested",
+    "full_3d_equation_2": "implemented_end_to_end_for_steady_3d",
+    "projected_transition_and_forward_operator": "implemented_for_steady_3d",
+    "unknown_initial_depth": "bounded_uniform_prior_and_reflected_langevin_approximation",
+    "dps_noisy_state_gradient_through_denoiser": "implemented_and_finite_difference_tested",
+    "general_v_x_t": "not_implemented"
+  },
+  "fixed_findings": [
+    "Recoverable AMP gradient overflow no longer aborts before scaler backoff; skip EMA on skipped steps",
+    "True boundary velocity conditioning now opt-in and recorded",
+    "Inconsistent initial multiview constraints rejected instead of silently averaged",
+    "Full3d observation mode now has an independent CLI/data/replay/evaluation path",
+    "Unsupported temporal fields rejected rather than evaluated using unintended frame times",
+    "Disconnected noisy-state gradients rejected; zero guidance and final replay validity correctly recorded"
+  ],
+  "additional_assumptions_and_limits": [
+    "Steady field only",
+    "Known finite domain geometry",
+    "Bounded uniform initial-depth prior with discretized reflected Langevin; not specified by screenshot",
+    "Multiview extension assumes independent camera residuals and needs protocol-specific sigma",
+    "Initial projected coordinates treated as exact constraints",
+    "Clamp forward surrogate can have low projected NLL with invalid hidden-coordinate replay",
+    "DPS/DDIM and update clipping give approximate, not proven calibrated, posterior samples",
+    "No formal prior, actual GPU execution, or posterior calibration established"
+  ],
+  "evidence": {
+    "cpu_tests": "validation/audit_cpu_tests.xml",
+    "cpu_tests_passed": 40,
+    "real_data_preflight": "validation/real_data_preflight.json",
+    "real_data_observation_geometries_checked": 16,
+    "baseline_files_unchanged": 20,
+    "slurm_syntax": "passed",
+    "python_ast_files_checked": 36
+  },
+  "existing_36_conditional_training_jobs_modified": false,
+  "new_training_jobs_submitted": false
+}
