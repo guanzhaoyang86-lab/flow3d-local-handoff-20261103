@@ -86,7 +86,7 @@ Windows 5090 / 64 GB 本地接续说明（2026-11-03 快照）
   POD/RBF 每案例逆问题优化参数少，但 FS 每步涉及全部原生时间帧和 RK4，所以可能耗时。
 
 其他模型代码入口（本轮服务器负责，本地不重复启动）
-  本轮正式入口、数据适配与观测协议以 server_operations/server_own_models_20261103/ 的冻结快照为准。
+  JHTDB/FS-SPH 正式入口以 server_operations/server_own_models_20261103/ 为准；LBM 使用 server_operations/lbm_split_fix_20261104/ 的修订冻结入口（2499/313/313），旧 LBM 入口已被替代。
   以下 models/ 命令用于查看原始开发接口；正式观测选择、时间适配和模型标签需使用本轮冻结实现。
   1. DiT3D 条件扩散：
        & $py models/flow3d-current/scripts/train_sparse_track_diffusion.py --help

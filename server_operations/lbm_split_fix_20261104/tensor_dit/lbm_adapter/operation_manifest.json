@@ -1,0 +1,10 @@
+{
+  "files": {
+    "README.txt": "dc6d77fabe7f35a274ad42d62efc583b249b928f0da2e74cef4d992907c49c0b",
+    "plan.json": "bf56fce446264c17af3aead1d6dc5cd4d446d59e9667ae98f495b220ab2403d3",
+    "prepare.py": "792184c2470ba60fff49fbd1756279a0274aa108f4f2b7e0972a7482ed9c8e8f",
+    "prepare.slurm": "a5ff8240e7c61f1dca8e75cc148f753e9001ba97db288aac032a6989311fd564",
+    "test_prepare.py": "88668cebb81b25fa57a0ce5392a970aaeb1486ae36bae86db5355a66da655a17"
+  },
+  "schema": "lbm_split_fix_adapter_v1"
+}

@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "jobs": [
+    {
+      "job_id": "3529274",
+      "stage": "prepare",
+      "model": null,
+      "state": "PENDING",
+      "dependency": "(null)",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/tensor_dit/lbm_adapter/prepare.slurm"
+    },
+    {
+      "job_id": "3529275",
+      "stage": "train",
+      "model": "dit3d",
+      "state": "PENDING",
+      "dependency": "afterok:3529274(unfulfilled)",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dit3d_lbm/lbm.slurm"
+    },
+    {
+      "job_id": "3529276",
+      "stage": "train",
+      "model": "dps",
+      "state": "PENDING",
+      "dependency": "afterok:3529274(unfulfilled),afterany:3529275(unfulfilled)",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/train.sbatch"
+    },
+    {
+      "job_id": "3529277",
+      "stage": "calibration",
+      "model": "dps",
+      "state": "PENDING",
+      "dependency": "afterok:3529276(unfulfilled)",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/calibrate.sbatch"
+    },
+    {
+      "job_id": "3529278",
+      "stage": "evaluate",
+      "model": "dps",
+      "state": "PENDING",
+      "dependency": "afterok:3529277(unfulfilled)",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/test.sbatch"
+    },
+    {
+      "job_id": "3529279",
+      "stage": "train",
+      "model": "tensor_dit",
+      "state": "PENDING",
+      "dependency": "afterok:3529274(unfulfilled),afterany:3529278(unfulfilled)",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/tensor_dit/lbm_tensor/continuous.slurm"
+    }
+  ]
+}

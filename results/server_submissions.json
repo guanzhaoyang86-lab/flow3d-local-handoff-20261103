@@ -1,0 +1,211 @@
+{
+  "schema": "own_models_actual_submissions_v1",
+  "training_seed": 31,
+  "total_jobs_including_existing_generation": 17,
+  "model_training_jobs": 9,
+  "dps_calibration_and_test_jobs": 6,
+  "dataset_generation_and_adapter_jobs": 2,
+  "jobs": [
+    {
+      "job_id": "3515292",
+      "dataset": "lbm",
+      "model": null,
+      "stage": "generation",
+      "existing_job_preserved": true
+    },
+    {
+      "job_id": "3529274",
+      "dataset": "lbm",
+      "model": null,
+      "stage": "prepare",
+      "dependency": null,
+      "supersedes": "3523604",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/tensor_dit/lbm_adapter/prepare.slurm",
+      "fingerprint": "cb64270498d045f5d97bd750545b05add46b79ed0bfe21a675727e1b913f9c32",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--hold",
+        "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/tensor_dit/lbm_adapter/prepare.slurm",
+        "cb64270498d045f5d97bd750545b05add46b79ed0bfe21a675727e1b913f9c32"
+      ],
+      "submitted_at_utc": "2026-11-04T20:35:43.444072+00:00"
+    },
+    {
+      "job_id": "3523416",
+      "dataset": "jhtdb",
+      "model": "tensor_dit",
+      "stage": "train",
+      "dependency": null
+    },
+    {
+      "job_id": "3523537",
+      "dataset": "jhtdb",
+      "model": "dit3d",
+      "stage": "train",
+      "dependency": "afterany:3523416"
+    },
+    {
+      "job_id": "3523601",
+      "dataset": "jhtdb",
+      "model": "dps",
+      "stage": "train",
+      "dependency": "afterany:3523537"
+    },
+    {
+      "job_id": "3523602",
+      "dataset": "jhtdb",
+      "model": "dps",
+      "stage": "calibration",
+      "dependency": "afterok:3523601"
+    },
+    {
+      "job_id": "3523603",
+      "dataset": "jhtdb",
+      "model": "dps",
+      "stage": "evaluate",
+      "dependency": "afterok:3523602"
+    },
+    {
+      "job_id": "3523417",
+      "dataset": "fs_sph",
+      "model": "tensor_dit",
+      "stage": "train",
+      "dependency": null
+    },
+    {
+      "job_id": "3523561",
+      "dataset": "fs_sph",
+      "model": "dit3d",
+      "stage": "train",
+      "dependency": "afterany:3523417"
+    },
+    {
+      "job_id": "3523728",
+      "dataset": "fs_sph",
+      "model": "dps",
+      "stage": "train",
+      "dependency": "afterany:3523561"
+    },
+    {
+      "job_id": "3523729",
+      "dataset": "fs_sph",
+      "model": "dps",
+      "stage": "calibration",
+      "dependency": "afterok:3523728"
+    },
+    {
+      "job_id": "3523730",
+      "dataset": "fs_sph",
+      "model": "dps",
+      "stage": "evaluate",
+      "dependency": "afterok:3523729"
+    },
+    {
+      "job_id": "3529275",
+      "dataset": "lbm",
+      "model": "dit3d",
+      "stage": "train",
+      "dependency": "afterok:3529274",
+      "supersedes": "3523879",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dit3d_lbm/lbm.slurm",
+      "fingerprint": "38814ca8357caeb5b710869b9dcab2f6f1b86b7c8e352af54e72ca9400c849dc",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--hold",
+        "--dependency=afterok:3529274",
+        "--export=ALL,DIT_LBM_FROZEN_SHA256=38814ca8357caeb5b710869b9dcab2f6f1b86b7c8e352af54e72ca9400c849dc",
+        "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dit3d_lbm/lbm.slurm"
+      ],
+      "submitted_at_utc": "2026-11-04T20:35:43.479285+00:00"
+    },
+    {
+      "job_id": "3529276",
+      "dataset": "lbm",
+      "model": "dps",
+      "stage": "train",
+      "dependency": "afterok:3529274,afterany:3529275",
+      "supersedes": "3523884",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/train.sbatch",
+      "fingerprint": "ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--hold",
+        "--dependency=afterok:3529274,afterany:3529275",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+        "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/train.sbatch"
+      ],
+      "submitted_at_utc": "2026-11-04T20:35:43.505409+00:00"
+    },
+    {
+      "job_id": "3529277",
+      "dataset": "lbm",
+      "model": "dps",
+      "stage": "calibration",
+      "dependency": "afterok:3529276",
+      "supersedes": "3523885",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/calibrate.sbatch",
+      "fingerprint": "ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--hold",
+        "--dependency=afterok:3529276",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+        "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/calibrate.sbatch"
+      ],
+      "submitted_at_utc": "2026-11-04T20:35:43.531325+00:00"
+    },
+    {
+      "job_id": "3529278",
+      "dataset": "lbm",
+      "model": "dps",
+      "stage": "evaluate",
+      "dependency": "afterok:3529277",
+      "supersedes": "3523886",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/test.sbatch",
+      "fingerprint": "ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--hold",
+        "--dependency=afterok:3529277",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+        "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/test.sbatch"
+      ],
+      "submitted_at_utc": "2026-11-04T20:35:43.555439+00:00"
+    },
+    {
+      "job_id": "3529279",
+      "dataset": "lbm",
+      "model": "tensor_dit",
+      "stage": "train",
+      "dependency": "afterok:3529274,afterany:3529278",
+      "supersedes": "3523903",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/tensor_dit/lbm_tensor/continuous.slurm",
+      "fingerprint": "b0a9e21c749d4bacf5d4d53a58dd11ee7eb42d6c258b271b010e25e25eb63053",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--hold",
+        "--dependency=afterok:3529274,afterany:3529278",
+        "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/tensor_dit/lbm_tensor/continuous.slurm",
+        "b0a9e21c749d4bacf5d4d53a58dd11ee7eb42d6c258b271b010e25e25eb63053"
+      ],
+      "submitted_at_utc": "2026-11-04T20:35:43.582115+00:00"
+    }
+  ],
+  "state_note": "LBM generation completed. Six LBM preparation/model stages were replaced with the reviewed 2499/313/313 release binding; consult live queue for execution state. JHTDB/FS-SPH jobs are unchanged.",
+  "last_updated_at_utc": "2026-11-04T20:36:16.835731+00:00",
+  "repair_operation": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104",
+  "superseded_lbm_job_ids": [
+    "3523604",
+    "3523879",
+    "3523884",
+    "3523885",
+    "3523886",
+    "3523903"
+  ]
+}

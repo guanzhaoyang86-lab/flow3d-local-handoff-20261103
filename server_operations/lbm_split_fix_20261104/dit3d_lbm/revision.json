@@ -1,0 +1,20 @@
+{
+  "upstream_package": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dit3d_lbm",
+  "upstream_manifest_sha256": "b0b8e89564b39a405c1531eaeeb2740ed1ab693bcc9c58fa52dbd9c8fc6399bd",
+  "change": "Correct the checked split to the finalized generator manifest; do not repartition data",
+  "old_counts": {
+    "train": 2500,
+    "validation": 312,
+    "test": 313
+  },
+  "new_counts": {
+    "train": 2499,
+    "validation": 313,
+    "test": 313
+  },
+  "model_source_unchanged": true,
+  "submission_status": "not_submitted",
+  "status": "ready_for_parent_submission",
+  "wrapper_manifest_sha256": "38814ca8357caeb5b710869b9dcab2f6f1b86b7c8e352af54e72ca9400c849dc",
+  "final_adapter_operation_sha256": "cb64270498d045f5d97bd750545b05add46b79ed0bfe21a675727e1b913f9c32"
+}

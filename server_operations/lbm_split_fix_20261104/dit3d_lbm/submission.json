@@ -1,0 +1,24 @@
+{
+  "status": "replacement_submitted_and_released",
+  "jobs": [
+    {
+      "job_id": "3529275",
+      "dataset": "lbm",
+      "model": "dit3d",
+      "stage": "train",
+      "dependency": "afterok:3529274",
+      "supersedes": "3523879",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dit3d_lbm/lbm.slurm",
+      "fingerprint": "38814ca8357caeb5b710869b9dcab2f6f1b86b7c8e352af54e72ca9400c849dc",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--hold",
+        "--dependency=afterok:3529274",
+        "--export=ALL,DIT_LBM_FROZEN_SHA256=38814ca8357caeb5b710869b9dcab2f6f1b86b7c8e352af54e72ca9400c849dc",
+        "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dit3d_lbm/lbm.slurm"
+      ],
+      "submitted_at_utc": "2026-11-04T20:35:43.479285+00:00"
+    }
+  ]
+}

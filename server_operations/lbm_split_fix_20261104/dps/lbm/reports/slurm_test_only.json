@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "frozen_manifest_sha256": "ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+  "source_files_verified": 46,
+  "jobs_created": false,
+  "records": [
+    {
+      "stage": "train",
+      "command": [
+        "sbatch",
+        "--test-only",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+        "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/train.sbatch"
+      ],
+      "status": "passed",
+      "stdout": "",
+      "stderr": "sbatch: Job 3529269 to start at 2026-11-12T17:12:25 a using 8 processors on nodes gh026 in partition ghx4\n"
+    },
+    {
+      "stage": "calibrate",
+      "command": [
+        "sbatch",
+        "--test-only",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+        "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/calibrate.sbatch"
+      ],
+      "status": "passed",
+      "stdout": "",
+      "stderr": "sbatch: Job 3529270 to start at 2026-11-12T17:12:25 a using 8 processors on nodes gh026 in partition ghx4\n"
+    },
+    {
+      "stage": "test",
+      "command": [
+        "sbatch",
+        "--test-only",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+        "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/test.sbatch"
+      ],
+      "status": "passed",
+      "stdout": "",
+      "stderr": "sbatch: Job 3529271 to start at 2026-11-12T17:12:25 a using 8 processors on nodes gh026 in partition ghx4\n"
+    }
+  ]
+}

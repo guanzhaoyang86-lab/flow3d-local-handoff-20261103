@@ -1,0 +1,23 @@
+{
+  "status": "replacement_submitted_and_released",
+  "jobs": [
+    {
+      "job_id": "3529274",
+      "dataset": "lbm",
+      "model": null,
+      "stage": "prepare",
+      "dependency": null,
+      "supersedes": "3523604",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/tensor_dit/lbm_adapter/prepare.slurm",
+      "fingerprint": "cb64270498d045f5d97bd750545b05add46b79ed0bfe21a675727e1b913f9c32",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--hold",
+        "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/tensor_dit/lbm_adapter/prepare.slurm",
+        "cb64270498d045f5d97bd750545b05add46b79ed0bfe21a675727e1b913f9c32"
+      ],
+      "submitted_at_utc": "2026-11-04T20:35:43.444072+00:00"
+    }
+  ]
+}

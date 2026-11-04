@@ -4,16 +4,36 @@
   "epochs": 100,
   "N": 12,
   "observation_seed": 47,
-  "server_models": ["dit3d", "tensor_dit", "dps"],
-  "datasets": ["jhtdb", "fs_sph", "lbm"],
+  "server_models": [
+    "dit3d",
+    "tensor_dit",
+    "dps"
+  ],
+  "datasets": [
+    "jhtdb",
+    "fs_sph",
+    "lbm"
+  ],
   "model_order_by_dataset": {
-    "jhtdb": ["tensor_dit", "dit3d", "dps"],
-    "fs_sph": ["tensor_dit", "dit3d", "dps"],
-    "lbm": ["dit3d", "dps", "tensor_dit"]
+    "jhtdb": [
+      "tensor_dit",
+      "dit3d",
+      "dps"
+    ],
+    "fs_sph": [
+      "tensor_dit",
+      "dit3d",
+      "dps"
+    ],
+    "lbm": [
+      "dit3d",
+      "dps",
+      "tensor_dit"
+    ]
   },
   "scheduling": "Independent methods within a dataset use afterany to serialize resource use without making one method's success a prerequisite for another. DPS calibration and test require afterok of their previous stage. Every LBM model also requires afterok of the complete verified adapter.",
   "protected_lbm_generation_job": "3515292",
-  "lbm_adapter_job": "3523604",
+  "lbm_adapter_job": "3529274",
   "local_baselines": "Eight original baseline jobs were cancelled with accounting evidence. Preserve completed results; run remaining baselines locally using the published work_assignment.json.",
   "lbm_protocol": "Native lattice units; public solid geometry; boundary_projection=none; do not expose true per-case lid velocity to inference. Formal models require the verified 3125-case, 500000-trajectory release.",
   "evaluation_scope": {
@@ -22,5 +42,13 @@
     "tensor_dit": "Train-only Tucker preparation, validation rank gate, real GPU pilot, 100-epoch formal training; held-out prediction evaluation remains a subsequent stage."
   },
   "job_evidence": "Use per-directory submission.json and the timestamped server_queue.json; test-only job numbers are not submissions.",
-  "gpu_execution_status": "Pending actual allocations; CPU checks and scheduler preflight do not certify completed training."
+  "gpu_execution_status": "Pending actual allocations; CPU checks and scheduler preflight do not certify completed training.",
+  "lbm_revision_operation": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104",
+  "lbm_split_counts": {
+    "train": 2499,
+    "validation": 313,
+    "test": 313
+  },
+  "lbm_generation_state": "COMPLETED with full validation, 2026-11-04",
+  "last_updated_at_utc": "2026-11-04T20:36:16.835731+00:00"
 }

@@ -1,0 +1,362 @@
+{
+  "status": "completed",
+  "updated_at_utc": "2026-11-04T20:15:36.809415+00:00",
+  "request": {
+    "generator": "Taichi-LBM3D",
+    "grid_shape": [
+      32,
+      32,
+      32
+    ],
+    "physical_tracks": 500000,
+    "single_view_tracks": 500000,
+    "cases": 3125,
+    "tracks_per_case": 160,
+    "observation_points": 20,
+    "projection": "xz"
+  },
+  "scientific_scope": "Frozen lid-driven cavity flow using original parameter ranges; not validated turbulence.",
+  "environment": {
+    "cluster": "DeltaAI",
+    "machine": "aarch64",
+    "gpu_requested": "GH200 120GB",
+    "account": "biup-dtai-gh",
+    "toolchain_installed": true,
+    "llvm_version": "20.1.8",
+    "isolated_python": "/u/zguan2/projects/flow3d_runs/lbm_generation_500k/arm_env/venv/bin/python",
+    "taichi_source_commit": "93c190f603b676ec1f8871e4f46cf5d5be89548e",
+    "taichi_build_completed": true,
+    "cuda_and_lbm32_validated": true
+  },
+  "submission": {
+    "submitted_at_utc": "2026-11-03T04:04:05.170099+00:00",
+    "cluster": "DeltaAI",
+    "account": "biup-dtai-gh",
+    "partitions_per_stage": {
+      "build_environment": "ghx4-interactive",
+      "validate_first_chunk": "ghx4",
+      "remaining_chunks": "ghx4",
+      "finalize": "ghx4"
+    },
+    "gpus_per_stage": {
+      "build_environment": 1,
+      "validate_first_chunk": 1,
+      "remaining_chunks": 1,
+      "finalize": 1
+    },
+    "output_dir": "/work/hdd/biup/zguan2/datasets/lbm32_xz_500k_deltaai_arm_20261023",
+    "arm_dir": "/u/zguan2/projects/flow3d_runs/lbm_generation_500k/arm_env",
+    "runtime_profile": "deltaai-arm-llvm20",
+    "phase": "submitted",
+    "previous_record": "/u/zguan2/projects/flow3d_runs/operations/lbm500k_continuous_20261103T040322Z/previous_submission.json",
+    "physical_trajectories": 500000,
+    "projection": "xz",
+    "grid_shape": [
+      32,
+      32,
+      32
+    ],
+    "jobs": {
+      "build_environment": "3497467",
+      "validate_first_chunk": "3497468",
+      "remaining_chunks": "3515292",
+      "finalize": "3515292"
+    },
+    "execution_mode": "continuous",
+    "operation_record": "/u/zguan2/projects/flow3d_runs/operations/lbm500k_continuous_20261103T040322Z/operation.json",
+    "superseded_jobs": {
+      "remaining_chunks": "3497469",
+      "finalize": "3497470"
+    },
+    "walltime": "16:00:00",
+    "continuous_script": "/u/zguan2/projects/flow3d_runs/lbm_generation_500k/arm_env/generate_continuous.slurm",
+    "finalize_in_same_allocation": true,
+    "max_concurrent_gpus": 1
+  },
+  "last_observed_queue": {
+    "3497467": {
+      "state": "COMPLETED",
+      "source": "accounting",
+      "exit_code": "0:0"
+    },
+    "3497468": {
+      "state": "COMPLETED",
+      "source": "accounting",
+      "exit_code": "0:0"
+    },
+    "3515292": {
+      "state": "COMPLETED",
+      "source": "accounting",
+      "exit_code": "0:0"
+    }
+  },
+  "completed_production_cases": 3125,
+  "completed_physical_tracks": 500000,
+  "dataset_dir": "/work/hdd/biup/zguan2/datasets/lbm32_xz_500k_deltaai_arm_20261023",
+  "completion_condition": "Validated COMPLETE.json counts/checksum list and final Slurm allocation COMPLETED with exit code 0:0.",
+  "notes": [
+    "Production counts come from per-case validated chunk records, never NPZ file counts.",
+    "Start predictions are scheduler estimates, in the cluster's local time.",
+    "Only successful compiler and GPU validation release dependent production stages."
+  ],
+  "chunk_progress": [
+    {
+      "chunk_index": 0,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3497468"
+    },
+    {
+      "chunk_index": 1,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3499334"
+    },
+    {
+      "chunk_index": 2,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3499354"
+    },
+    {
+      "chunk_index": 3,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3499390"
+    },
+    {
+      "chunk_index": 4,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3501222"
+    },
+    {
+      "chunk_index": 5,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3508947"
+    },
+    {
+      "chunk_index": 6,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3511554"
+    },
+    {
+      "chunk_index": 7,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3512614"
+    },
+    {
+      "chunk_index": 8,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 9,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 10,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 11,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 12,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 13,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 14,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 15,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 16,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 17,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 18,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 19,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 20,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 21,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 22,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 23,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    },
+    {
+      "chunk_index": 24,
+      "status": "completed",
+      "completed_cases": 125,
+      "num_cases": 125,
+      "slurm_job_id": "3515292"
+    }
+  ],
+  "progress_errors": [],
+  "failure_history": [
+    {
+      "stage": "build_environment",
+      "job_id": "3445971",
+      "state": "FAILED",
+      "exit_code": "1:0",
+      "elapsed": "00:01:56",
+      "start_local": "2026-10-24T02:58:09",
+      "end_local": "2026-10-24T03:00:05",
+      "timezone": "America/Chicago",
+      "cause": "ARM host clang rejected the PTX 64-bit asm input constraint 'l' in cuda_match_any_sync_i64",
+      "log": "/u/zguan2/projects/flow3d_runs/lbm_generation_500k/arm_env/logs/lbm500k-arm-build_3445971.err",
+      "dependents_cancelled": [
+        "3445972",
+        "3445973_[1-24%1]",
+        "3445974"
+      ],
+      "production_cases_at_failure": 0
+    }
+  ],
+  "repair": {
+    "updated_at_utc": "2026-10-24T23:23:54.609424+00:00",
+    "description": "Use LLVM20 native NVVM match-any i64 intrinsic with full internal-op enum/type registration. Preserve LBM solver and generation parameters.",
+    "compiler_patch_sha256": "040fff6c55cee97a80334e9d77ae8e4a79548661889ec5049cb79f3153e2a13d",
+    "checks_passed": [
+      "LLVM20 llc emits match.any.sync.b64 for Hopper sm_90/PTX8.0",
+      "Actual compiler diff equals recorded patch and SHA256",
+      "Python AST and Bash syntax checks",
+      "Directed CUDA i64 test/type registration reviewed",
+      "Progress reporting: 4 CPU mock tests passed"
+    ],
+    "checks_pending": [
+      "Taichi wheel rebuild on ARM Slurm node",
+      "Real CUDA arithmetic and low/high-32-bit i64 warp-match tests",
+      "Original 32^3 LBM pilot generation and validation"
+    ],
+    "new_jobs": {
+      "build_environment": "3450731",
+      "validate_first_chunk": "3450732",
+      "remaining_chunks": "3450733",
+      "finalize": "3450734"
+    }
+  },
+  "review_assessment": {
+    "reviewed_at_utc": "2026-10-24T23:43:57.812271+00:00",
+    "static_blockers_found_after_compiler_fix": [],
+    "additional_issue_fixed": "Progress query now handles completed/expired Slurm job IDs correctly by querying the user queue then filtering recorded jobs.",
+    "reporting_cpu_tests_passed": 8,
+    "still_requires_runtime_evidence": [
+      "ARM Taichi wheel rebuild",
+      "Real CUDA arithmetic and 64-bit warp match tests",
+      "Original 32^3 LBM pilot",
+      "125-case batch wall time versus the 2-hour allocation limit"
+    ],
+    "scientific_scope": "Frozen cavity snapshots, not validated turbulence."
+  },
+  "resumption": {
+    "operation_record": "/u/zguan2/projects/flow3d_runs/operations/lbm500k_resume_20261031T232920Z/operation.json",
+    "jobs": {
+      "build_environment": "3497467",
+      "validate_first_chunk": "3497468",
+      "remaining_chunks": "3497469",
+      "finalize": "3497470"
+    },
+    "submitted_at_utc": "2026-10-31T23:29:58.931007+00:00",
+    "existing_cases_validated_before_resume": 125,
+    "remaining_cases": 3000,
+    "target_cases": 3125,
+    "target_tracks": 500000
+  },
+  "continuous_execution": {
+    "operation_record": "/u/zguan2/projects/flow3d_runs/operations/lbm500k_continuous_20261103T040322Z/operation.json",
+    "job_id": "3515292",
+    "walltime": "16:00:00",
+    "superseded_jobs": {
+      "remaining_chunks": "3497469",
+      "finalize": "3497470"
+    },
+    "completed_cases_at_switch": 1000,
+    "remaining_cases_at_switch": 2125,
+    "finalize_in_same_allocation": true
+  }
+}

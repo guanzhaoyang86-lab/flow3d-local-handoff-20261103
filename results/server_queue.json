@@ -1,18 +1,8 @@
 {
-  "captured_at_utc": "2026-11-03T23:04:27.282056+00:00",
+  "captured_at_utc": "2026-11-04T20:36:31.197063+00:00",
   "server_timezone": "America/Chicago",
-  "source": "live squeue after reassignment",
+  "source": "live squeue after LBM split fix",
   "jobs": [
-    {
-      "job_id": "3515292",
-      "name": "lbm500k-arm-continuous",
-      "dataset": "lbm",
-      "model": null,
-      "stage": "generation",
-      "state": "PENDING",
-      "reason": "Priority",
-      "estimated_start_server_local": "2026-11-04T17:13:51"
-    },
     {
       "job_id": "3523417",
       "name": "own3_fs_sph_tensor_dit",
@@ -34,7 +24,7 @@
       "estimated_start_server_local": "N/A"
     },
     {
-      "job_id": "3523903",
+      "job_id": "3529279",
       "name": "own3_lbm_tensor_dit",
       "dataset": "lbm",
       "model": "tensor_dit",
@@ -44,7 +34,7 @@
       "estimated_start_server_local": "N/A"
     },
     {
-      "job_id": "3523886",
+      "job_id": "3529278",
       "name": "own3_lbm_dps_evaluate",
       "dataset": "lbm",
       "model": "dps",
@@ -54,7 +44,7 @@
       "estimated_start_server_local": "N/A"
     },
     {
-      "job_id": "3523885",
+      "job_id": "3529277",
       "name": "own3_lbm_dps_calibration",
       "dataset": "lbm",
       "model": "dps",
@@ -64,7 +54,7 @@
       "estimated_start_server_local": "N/A"
     },
     {
-      "job_id": "3523884",
+      "job_id": "3529276",
       "name": "own3_lbm_dps",
       "dataset": "lbm",
       "model": "dps",
@@ -74,13 +64,23 @@
       "estimated_start_server_local": "N/A"
     },
     {
-      "job_id": "3523879",
+      "job_id": "3529275",
       "name": "own3_lbm_dit3d",
       "dataset": "lbm",
       "model": "dit3d",
       "stage": "train",
       "state": "PENDING",
       "reason": "Dependency",
+      "estimated_start_server_local": "N/A"
+    },
+    {
+      "job_id": "3529274",
+      "name": "own3_lbm_adapter",
+      "dataset": "lbm",
+      "model": null,
+      "stage": "prepare",
+      "state": "PENDING",
+      "reason": "None",
       "estimated_start_server_local": "N/A"
     },
     {
@@ -109,16 +109,6 @@
       "dataset": "fs_sph",
       "model": "dps",
       "stage": "train",
-      "state": "PENDING",
-      "reason": "Dependency",
-      "estimated_start_server_local": "N/A"
-    },
-    {
-      "job_id": "3523604",
-      "name": "own3_lbm_adapter",
-      "dataset": "lbm",
-      "model": null,
-      "stage": "prepare",
       "state": "PENDING",
       "reason": "Dependency",
       "estimated_start_server_local": "N/A"
@@ -247,5 +237,15 @@
       "final_state": "CANCELLED",
       "accounting_state": "CANCELLED by 98230"
     }
-  ]
+  ],
+  "superseded_lbm_jobs": [
+    "3523604",
+    "3523879",
+    "3523884",
+    "3523885",
+    "3523886",
+    "3523903"
+  ],
+  "completed_generation_job": "3515292",
+  "repair_record": "server_operations/lbm_split_fix_20261104/repair.json"
 }

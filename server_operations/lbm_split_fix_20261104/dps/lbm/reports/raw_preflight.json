@@ -1,0 +1,12 @@
+{
+  "status": "verified_complete_raw_release",
+  "split_counts": {
+    "train": 2499,
+    "validation": 313,
+    "test": 313
+  },
+  "manifest_sha256": "95486a012893bf9b2dd7f93fbc2e8e37a8ef89bc06e2885ae2dfcde41ef77344",
+  "complete_sha256": "8f3c8e13285c48fb888a324a7e2439e567432238eb127e00879993403f04c82a",
+  "dataset_version": "6e3cc034cab1e9d203e22f6aa20c30a20fe850411f477f09b9bd73440ef7be00",
+  "independent_flow_groups": 3125
+}

@@ -1,0 +1,49 @@
+{
+  "status": "passed_with_explicit_scope_limitations",
+  "checked_at_utc": "2026-10-20T19:31:27.314475+00:00",
+  "checked_at_chicago": "2026-10-20T14:31:27.314475-05:00",
+  "method_scope": "steady_3d_specialization_of_supplied_section_2_2",
+  "general_time_dependent_velocity_field_supported": false,
+  "cpu_tests": {
+    "command": "python -m pytest -q --junitxml=validation/audit_cpu_tests.xml",
+    "passed": 40,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 7.559
+  },
+  "slurm_scripts_syntax": "passed",
+  "python_ast_files_checked": 36,
+  "real_data_preflight": "passed",
+  "real_data_model_inference_invoked": false,
+  "real_data_observation_geometries_checked": 16,
+  "projected_particle_counts_checked": [
+    2,
+    4,
+    6,
+    12,
+    24,
+    48,
+    96
+  ],
+  "projected_views_checked": [
+    "three-view",
+    "single-view"
+  ],
+  "full3d_particle_counts_checked": [
+    2,
+    96
+  ],
+  "noisy_state_gradient_finite_difference": "passed",
+  "hidden_depth_recovery": "passed",
+  "flow_and_probe_leakage_isolation": "passed",
+  "true_boundary_velocity_isolation_default": "passed",
+  "unconditional_resume_equivalence": "passed",
+  "amp_overflow_control_flow": "passed_on_cpu; actual_cuda_amp_not_validated",
+  "baseline_files_unchanged": 20,
+  "new_formal_training_submitted": false,
+  "real_32cubed_prior_trained": false,
+  "gpu_training_and_inference_validated": false,
+  "posterior_accuracy_and_calibration": "not established; requires trained priors and validation experiments",
+  "review_report": "validation/method_conformance_review_20261020.txt"
+}

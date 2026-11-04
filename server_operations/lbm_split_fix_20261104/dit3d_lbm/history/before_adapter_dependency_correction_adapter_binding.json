@@ -1,0 +1,15 @@
+{
+  "source": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/tensor_dit/lbm_adapter/prepare.py",
+  "source_sha256": "792184c2470ba60fff49fbd1756279a0274aa108f4f2b7e0972a7482ed9c8e8f",
+  "operation_manifest": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/tensor_dit/lbm_adapter/operation_manifest.json",
+  "operation_manifest_sha256": "a8b380fd999b9f47ebd0b73341c6f5c8cf52ee986ad0211dcde3f06817c1df88",
+  "data_root": "/work/hdd/biup/zguan2/datasets/experiment_adapters_20261103/lbm_frozen32",
+  "dataset_id": "lbm32_xz_500k_20261103",
+  "split_counts": {
+    "train": 2499,
+    "validation": 313,
+    "test": 313
+  },
+  "raw_dataset_version": "6e3cc034cab1e9d203e22f6aa20c30a20fe850411f477f09b9bd73440ef7be00",
+  "raw_manifest_sha256": "95486a012893bf9b2dd7f93fbc2e8e37a8ef89bc06e2885ae2dfcde41ef77344"
+}

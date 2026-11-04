@@ -1,0 +1,10 @@
+{
+  "status": "not_submitted",
+  "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dit3d_lbm/lbm.slurm",
+  "export": "ALL,DIT_LBM_FROZEN_SHA256=38814ca8357caeb5b710869b9dcab2f6f1b86b7c8e352af54e72ca9400c849dc",
+  "required_dependency": "afterok:<revised_adapter_job_id>",
+  "supersedes_dit_job_id": "3523879",
+  "old_adapter_job_not_for_new_submission": "3523604",
+  "adapter_binding": "adapter_binding.json",
+  "output": "/work/hdd/biup/zguan2/results/lbm_split_fix_20261104/dit3d/lbm_s31"
+}

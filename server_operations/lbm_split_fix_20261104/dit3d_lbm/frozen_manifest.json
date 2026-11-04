@@ -1,0 +1,13 @@
+{
+  "model": "dit3d",
+  "dataset": "lbm",
+  "revision": "actual_release_split_20261104",
+  "files": {
+    "run_lbm.py": "77009400efc96916a18e005487ca885d2bfa33b06e5e74a241008fe6fc724124",
+    "configs/lbm_s31.json": "6b1c121fa2eea4a492f6fe0fec036b949aa79bcbcbc94aec89d98ef3db606bce",
+    "lbm.slurm": "ce5a2f730650378813841ff3c9a8ebeac0c32a6a5fd4b9bfb64033e12d7fb794",
+    "adapter_binding.json": "7e0cb2b9095238b2f8194c4e95c6cb7f4029b81a9c0f7e6adc413bbd41eb006e"
+  },
+  "referenced_model_manifest_sha256": "400e72abd126bbd48555e3fbad55967191795a036c3ac9bf19c615dabe101084",
+  "adapter_operation_manifest_sha256": "cb64270498d045f5d97bd750545b05add46b79ed0bfe21a675727e1b913f9c32"
+}

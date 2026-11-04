@@ -1,0 +1,10 @@
+{
+  "model": "dit3d",
+  "dataset": "lbm",
+  "files": {
+    "run_lbm.py": "14bee78190c74223449f3ea8274381749c4960e06130ecbc97f09149052b1887",
+    "configs/lbm_s31.json": "6b1c121fa2eea4a492f6fe0fec036b949aa79bcbcbc94aec89d98ef3db606bce",
+    "lbm.slurm": "7a590a7a9589036b4d4ee6c5faae0c1fb1c96d1e59e737e0aa90d350f59d8905"
+  },
+  "referenced_model_manifest_sha256": "400e72abd126bbd48555e3fbad55967191795a036c3ac9bf19c615dabe101084"
+}

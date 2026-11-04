@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-11-04T20:35:08.881412+00:00",
+  "approved_for_submission": true,
+  "fingerprints": {
+    "adapter": "cb64270498d045f5d97bd750545b05add46b79ed0bfe21a675727e1b913f9c32",
+    "tensor_dit": "b0a9e21c749d4bacf5d4d53a58dd11ee7eb42d6c258b271b010e25e25eb63053",
+    "dit3d": "38814ca8357caeb5b710869b9dcab2f6f1b86b7c8e352af54e72ca9400c849dc",
+    "dps": "ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2"
+  },
+  "frozen_files_verified": {
+    "adapter": 5,
+    "tensor_dit": 67,
+    "dit3d": 4,
+    "dps": 46
+  },
+  "split_counts": {
+    "train": 2499,
+    "validation": 313,
+    "test": 313
+  },
+  "cpu_tests": {
+    "adapter": 7,
+    "tensor_dit": 10,
+    "dit3d": 17,
+    "dps": 40
+  },
+  "cpu_tests_total": 74,
+  "cpu_tests_status": "passed",
+  "original_frozen_sources_unchanged": true,
+  "raw_release_regression": "passed",
+  "data_regenerated": false,
+  "splits_reassigned": false,
+  "gpu_training_verified": false,
+  "adapter_full_copy_validation": "Deferred to replacement Slurm adapter job; raw completion/metadata verified now",
+  "slurm_test_only": "All six replacement scripts passed",
+  "review_completed_at_utc": "2026-11-04T20:35:41.195850+00:00"
+}

@@ -1,0 +1,198 @@
+{
+  "status": "byte_identical",
+  "source_root": "/u/zguan2/projects/flow3d_runs/operations/server_own_models_20261103/dps/lbm_source",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "29154faddecd19fae849ed689c8ab2b259f2ae9fdf71f8492443b2bcd6ffbdae"
+    },
+    {
+      "path": "BASELINE_PROVENANCE.json",
+      "sha256": "747afcbc21d94e8516d0e5090c081eefe71f96a5a6f351d6fc1d35932d41e191"
+    },
+    {
+      "path": "FILES_MANIFEST.json",
+      "sha256": "bf4493a80b6aa264266a4d12a4c7cf5602e007fc07a1e9f90ae5510369b2f9d3"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6df60a345783f50454d8c01fe0bcd16d1b309f639bd1fbfff552b753e663b508"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "8bd53af47f9b87783ee46c254801bf9b3c50d22faa6447bea4fff02871dc1fe1"
+    },
+    {
+      "path": "scripts/preflight.py",
+      "sha256": "e20621d6ff26db55e97f71809d6658c0a5ecdf289c79bf1c39b20dec620b9556"
+    },
+    {
+      "path": "scripts/sample_dps.slurm",
+      "sha256": "ec2dc799e38112b3c1fb45e2349606422fed2113c171904ffc148421ef899bdf"
+    },
+    {
+      "path": "scripts/sample_flow_dps.py",
+      "sha256": "0503992482dbf758ff11f84e01a9533b2cbab1adfd942884c031f87c884c04b6"
+    },
+    {
+      "path": "scripts/train_flow_prior.py",
+      "sha256": "d9a40198e6e4ba4d519e66bb2ec8662f5c1faeeb52e919a92dc5d6663a723886"
+    },
+    {
+      "path": "scripts/train_prior.slurm",
+      "sha256": "cf282ab7dccacf8d68b6026366b873b62e0faa05ee2de6fbae5eb881eca3bc7f"
+    },
+    {
+      "path": "scripts/verify_artifact.py",
+      "sha256": "660dc3fe1c4353327e0355cf6ff789c0214f06f1769b6fa3a52bd34c9384e95e"
+    },
+    {
+      "path": "src/flow_observation/__init__.py",
+      "sha256": "a5c4b5fe032610a9f782e988bdf3721573a463d6a2bb4abb00ba0a03f3263cd7"
+    },
+    {
+      "path": "src/flow_observation/advection.py",
+      "sha256": "17933a724d290cbdd0f2d4979f9520e044181f025df357e75498e07e81c063d8"
+    },
+    {
+      "path": "src/flow_observation/cfd.py",
+      "sha256": "28d40bbc52437a12adc50fe51f5468e59863f69bb92429b71e0e523d19e8297f"
+    },
+    {
+      "path": "src/flow_observation/checkpoint_io.py",
+      "sha256": "9bdf4bf1b5c7ad886700a02fa1beef6aeee741e7a8e1ac7cc401d4aee5e1b884"
+    },
+    {
+      "path": "src/flow_observation/conditioning.py",
+      "sha256": "6344287f68c9836088fafc5606aa526ec911962e333c6be961eab81858418aad"
+    },
+    {
+      "path": "src/flow_observation/diffusion.py",
+      "sha256": "a0511973140b1fb23adfd39c733848505851ace20cd519d0aa998d32b2a46ffe"
+    },
+    {
+      "path": "src/flow_observation/dps/__init__.py",
+      "sha256": "a14af6126c72ff38fcd880569bc767221481124fd5d8e8e5de7e8c386d1567f5"
+    },
+    {
+      "path": "src/flow_observation/dps/audit.py",
+      "sha256": "dff0c4102131109034183221ea881878958de4d5fb47668778914163fe1abe10"
+    },
+    {
+      "path": "src/flow_observation/dps/data.py",
+      "sha256": "eba9d8f610cdca9bb05c0754b9d8dfef0ecc9b2ecd0a29dc12ea5221805ee050"
+    },
+    {
+      "path": "src/flow_observation/dps/inference.py",
+      "sha256": "6392cf07093e4b038ab9924c4cfce09f5ba45eb5ce58b5d0e91bf8395d1a9b3b"
+    },
+    {
+      "path": "src/flow_observation/dps/observations.py",
+      "sha256": "b48f2c59cc1de5b390f15077bdacfb8c99bd28b266de85f98d1d9cda98e3c9ca"
+    },
+    {
+      "path": "src/flow_observation/dps/sampler.py",
+      "sha256": "58aba5949fc291694cc1753b0fd41485ba717738f3e57fc3102f51e556ee9f5e"
+    },
+    {
+      "path": "src/flow_observation/dps/training.py",
+      "sha256": "34622f539caa50090daac260119a3253b91e3c68d15935402c1e2570a802eaae"
+    },
+    {
+      "path": "src/flow_observation/interpolation.py",
+      "sha256": "2448b1321a6b5936694f302ebb770cf35e51fac55a5c9930e35c023c56f07afa"
+    },
+    {
+      "path": "src/flow_observation/likelihood.py",
+      "sha256": "61633fd1b4a5b2cfad1cd18ff9b4d7cf93ea3cc297e7996424b094e318c11f87"
+    },
+    {
+      "path": "src/flow_observation/models/__init__.py",
+      "sha256": "2debf394ebae79ca736ed45a580084d5fbdbc8c8c318463726af1d8cfff74910"
+    },
+    {
+      "path": "src/flow_observation/models/dit.py",
+      "sha256": "a1fd77ce6e19685fb76e66d16e23d53830b16af44f6d26b56a62c049674b78d8"
+    },
+    {
+      "path": "src/flow_observation/models/factory.py",
+      "sha256": "f585727912f610003f8f34ac3b16a7b92c4ab85e92a990917e9b43f1527e012b"
+    },
+    {
+      "path": "src/flow_observation/models/trajectory_encoder.py",
+      "sha256": "f29aa563419639c3dd6dde367d7df3f5dcef770c7ba547f82976b46096600d12"
+    },
+    {
+      "path": "src/flow_observation/models/unet3d.py",
+      "sha256": "120619da44ce9ad2722746fc07f5131c200b8b5c3cc9278356f56df697255240"
+    },
+    {
+      "path": "src/flow_observation/multiview.py",
+      "sha256": "d7868cbedd928ee8bf5d31b460dbc6c0eaff834053172a1574785ecb5f485efe"
+    },
+    {
+      "path": "src/flow_observation/projection.py",
+      "sha256": "09b9cb53ebd53d0da47fad68878ad4017ab0203188515b9ede464d4e025f5988"
+    },
+    {
+      "path": "src/flow_observation/recovery.py",
+      "sha256": "fb433887fcd107da3b2f98ba116d408d4dd4c0fb8eb93b678cffc67c4ce09a74"
+    },
+    {
+      "path": "src/flow_observation/sparse_dataset.py",
+      "sha256": "0b4154709f17798d4028bfc81b5156682acc13b6bdb90c3bae91cc11abebd281"
+    },
+    {
+      "path": "src/flow_observation/sparse_physics.py",
+      "sha256": "c2e5275e004fef58eca1ee842e9cbe32bfd2c41e9d1b80549eaa59c6fe477c57"
+    },
+    {
+      "path": "src/flow_observation/taichi_lbm3d.py",
+      "sha256": "1c8e649655a775d26164c9691029a4df3053b1e66e86dfb1750da9d30e06f310"
+    },
+    {
+      "path": "src/flow_observation/tensor_space.py",
+      "sha256": "35320450af0af73587035b1d5cec57f2b78baa81d0a5dad1fabcc1072592593d"
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "1a20955d1bd55bdd3510795b79bd59d1fe5f06770b2cc13c18655b7cbea8cd0a"
+    },
+    {
+      "path": "tests/test_amp_training.py",
+      "sha256": "c6d39ebdac403bb061709f32372c9dcafb78b133921f65cf67963268d91550b1"
+    },
+    {
+      "path": "tests/test_dps.py",
+      "sha256": "2aec4219c222933bbb11f4c231e26ee8f9e6e125d70dc361650bce298dfedfea"
+    },
+    {
+      "path": "tests/test_inference_audit.py",
+      "sha256": "050b8f45deaa42279d65af4a70140028989ddd0241c4695519f79deddea637e3"
+    },
+    {
+      "path": "tests/test_observation_audit.py",
+      "sha256": "2c3845f54d47bd90a412855f97c0b6e153e09108071cc66e337dc3de090400ce"
+    },
+    {
+      "path": "validation/audit_cpu_tests.xml",
+      "sha256": "bb9522ab8950bf85deb266334b277e521567fa2a1b6689488c28b8620dd6f8be"
+    },
+    {
+      "path": "validation/method_conformance_review_20261020.json",
+      "sha256": "d6f04ee8b697a85017755f2a8312a2c2fa0154ad0a5238f7011a5ea96cf8c20b"
+    },
+    {
+      "path": "validation/method_conformance_review_20261020.txt",
+      "sha256": "0933840bf7efecc2cb21f4f64b8beec54563b3360a6a40bb9c17f65d572da26f"
+    },
+    {
+      "path": "validation/real_data_preflight.json",
+      "sha256": "0282d9565788256c9be3416319cf59a8744e15ae78de54fe122b2c7aed98e632"
+    },
+    {
+      "path": "validation/summary.json",
+      "sha256": "cd68f3145d52d3a4e9f268f94eb515a3446b0dcdafcf774ee2bd80f97f30482b"
+    }
+  ]
+}

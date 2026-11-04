@@ -1,0 +1,62 @@
+{
+  "status": "replacement_submitted_and_released",
+  "jobs": [
+    {
+      "job_id": "3529276",
+      "dataset": "lbm",
+      "model": "dps",
+      "stage": "train",
+      "dependency": "afterok:3529274,afterany:3529275",
+      "supersedes": "3523884",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/train.sbatch",
+      "fingerprint": "ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--hold",
+        "--dependency=afterok:3529274,afterany:3529275",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+        "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/train.sbatch"
+      ],
+      "submitted_at_utc": "2026-11-04T20:35:43.505409+00:00"
+    },
+    {
+      "job_id": "3529277",
+      "dataset": "lbm",
+      "model": "dps",
+      "stage": "calibration",
+      "dependency": "afterok:3529276",
+      "supersedes": "3523885",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/calibrate.sbatch",
+      "fingerprint": "ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--hold",
+        "--dependency=afterok:3529276",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+        "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/calibrate.sbatch"
+      ],
+      "submitted_at_utc": "2026-11-04T20:35:43.531325+00:00"
+    },
+    {
+      "job_id": "3529278",
+      "dataset": "lbm",
+      "model": "dps",
+      "stage": "evaluate",
+      "dependency": "afterok:3529277",
+      "supersedes": "3523886",
+      "script": "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/test.sbatch",
+      "fingerprint": "ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--hold",
+        "--dependency=afterok:3529277",
+        "--export=ALL,FLOW3D_DPS_FROZEN_SHA256=ca7b94d997b29b454e384a22af2bd4ce72a1526a21d6d049c735f40de4208fa2",
+        "/u/zguan2/projects/flow3d_runs/operations/lbm_split_fix_20261104/dps/lbm/test.sbatch"
+      ],
+      "submitted_at_utc": "2026-11-04T20:35:43.555439+00:00"
+    }
+  ]
+}

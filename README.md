@@ -1,6 +1,6 @@
 # Flow3D 本地接续包 · 2026-11-03
 
-这是服务器实验的代码与结果快照，适用于把后续工作交给本地 Codex。分工已按用户新指令更新：服务器负责 DiT3D、Tensor-DiT、Flow3D-DPS，JHTDB 和 FS-SPH 都跑，LBM 完成后追加。原 8 个 baseline 作业已取消转本地，已有结果保留；LBM 生成作业保留。最新分工见 [work_assignment.json](results/work_assignment.json)。
+这是服务器实验的代码与结果快照，适用于把后续工作交给本地 Codex。服务器负责 DiT3D、Tensor-DiT、Flow3D-DPS，覆盖 JHTDB、FS-SPH 和 LBM。LBM 50 万轨迹已完成生成与校验，修订后的适配和模型作业已提交排队。原 8 个 baseline 作业已取消转本地，已有结果保留。最新分工见 [work_assignment.json](results/work_assignment.json)。
 
 ## 从这里开始
 
@@ -37,7 +37,7 @@ python local_support/local_baselines.py list
 | JHTDB Mean/POD 拟合与 CNN seed31 | 完成；CNN 为 100 epochs |
 | JHTDB 其余四个神经 baseline | 已取消服务器作业，交本地继续 |
 | 两个数据集的 POD/RBF 校准 | 已取消服务器作业，交本地继续 |
-| LBM 50 万轨迹 | 已完成 1,000/3,125 案例、160,000/500,000 轨迹；连续生成任务仍由服务器负责 |
+| LBM 50 万轨迹 | 3,125 个案例、500,000 条轨迹已完成并校验；训练/验证/测试为 2499/313/313 |
 | 本轮 Tensor-DiT | 服务器负责；本地不重复运行 |
 | 本轮 DiT3D / Flow3D-DPS | 服务器负责；本地不重复运行 |
 
@@ -69,3 +69,5 @@ python results/transfer_assets.py --list
 
 这次上传是时间点快照，服务器后续产生的新结果不会自动同步到 GitHub。
 
+
+LBM 2026-11-04 修复：保留原始数据及划分，将适配器、DiT3D、Tensor-DiT、DPS 的数量检查与数据绑定改为实际发布版本。新的冻结入口位于 [lbm_split_fix_20261104](server_operations/lbm_split_fix_20261104/)，旧 LBM 入口仅保留作历史记录。作业替换证据见 [lbm_split_fix.json](results/lbm_split_fix.json)，实际进度以时间戳队列为准；CPU 预检通过不代表 GPU 训练完成。

@@ -1,0 +1,28 @@
+{
+  "schema": "own_models_actual_submissions_v1",
+  "training_seed": 31,
+  "total_jobs_including_existing_generation": 17,
+  "model_training_jobs": 9,
+  "dps_calibration_and_test_jobs": 6,
+  "dataset_generation_and_adapter_jobs": 2,
+  "jobs": [
+    {"job_id":"3515292","dataset":"lbm","model":null,"stage":"generation","existing_job_preserved":true},
+    {"job_id":"3523604","dataset":"lbm","model":null,"stage":"prepare","dependency":"afterok:3515292"},
+    {"job_id":"3523416","dataset":"jhtdb","model":"tensor_dit","stage":"train","dependency":null},
+    {"job_id":"3523537","dataset":"jhtdb","model":"dit3d","stage":"train","dependency":"afterany:3523416"},
+    {"job_id":"3523601","dataset":"jhtdb","model":"dps","stage":"train","dependency":"afterany:3523537"},
+    {"job_id":"3523602","dataset":"jhtdb","model":"dps","stage":"calibration","dependency":"afterok:3523601"},
+    {"job_id":"3523603","dataset":"jhtdb","model":"dps","stage":"evaluate","dependency":"afterok:3523602"},
+    {"job_id":"3523417","dataset":"fs_sph","model":"tensor_dit","stage":"train","dependency":null},
+    {"job_id":"3523561","dataset":"fs_sph","model":"dit3d","stage":"train","dependency":"afterany:3523417"},
+    {"job_id":"3523728","dataset":"fs_sph","model":"dps","stage":"train","dependency":"afterany:3523561"},
+    {"job_id":"3523729","dataset":"fs_sph","model":"dps","stage":"calibration","dependency":"afterok:3523728"},
+    {"job_id":"3523730","dataset":"fs_sph","model":"dps","stage":"evaluate","dependency":"afterok:3523729"},
+    {"job_id":"3523879","dataset":"lbm","model":"dit3d","stage":"train","dependency":"afterok:3523604"},
+    {"job_id":"3523884","dataset":"lbm","model":"dps","stage":"train","dependency":"afterok:3523604,afterany:3523879"},
+    {"job_id":"3523885","dataset":"lbm","model":"dps","stage":"calibration","dependency":"afterok:3523884"},
+    {"job_id":"3523886","dataset":"lbm","model":"dps","stage":"evaluate","dependency":"afterok:3523885"},
+    {"job_id":"3523903","dataset":"lbm","model":"tensor_dit","stage":"train","dependency":"afterok:3523604,afterany:3523886"}
+  ],
+  "state_note": "These are actual submitted IDs. Use server_queue.json for timestamped scheduler states. DiT3D/Tensor-DiT held-out evaluation remains a subsequent stage; GPU execution has not yet been verified."
+}

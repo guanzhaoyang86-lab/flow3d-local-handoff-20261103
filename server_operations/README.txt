@@ -1,11 +1,8 @@
-Server operation source snapshot, 2026-11-03.
-The user assigns DiT3D, Tensor-DiT and Flow3D-DPS to the server, on both JHTDB and FS-SPH;
-LBM is appended only after full generation and adapter verification.
-This directory contains source/configuration/provenance and submission evidence.
-Server absolute paths and Slurm guards are intentionally preserved. Do not launch these
-server jobs on the laptop or globally replace paths in frozen files. Local baseline work
-uses local_support/ and results/work_assignment.json. Large data/checkpoints stay outside Git.
-Pending source adaptations are not completed or submitted jobs; inspect per-model reports
-and the timestamped server_queue.json. No CPU check proves real GPU training succeeded.
-LBM uses native lattice units, public solid geometry and boundary_projection=none;
-true per-case lid velocity is not supplied as an inference condition.
+Server source and task evidence; refreshed 2026-11-04.
+JHTDB and FS-SPH retain server_own_models_20261103.
+LBM uses lbm_split_fix_20261104; its original adapter/model packages are historical.
+The completed release has 2499 training, 313 validation and 313 test cases.
+No raw split, archive, model architecture or seed was changed.
+Do not rewrite frozen paths or run server Slurm entry points on the laptop.
+Local baselines use local_support/ and results/work_assignment.json.
+Large datasets and checkpoints remain outside Git. GPU success requires actual execution.

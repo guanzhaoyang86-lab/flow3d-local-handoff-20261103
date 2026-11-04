@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-11-04T20:32:29.075886+00:00",
+  "source_split_counts": {
+    "train": 2499,
+    "validation": 313,
+    "test": 313
+  },
+  "source_manifest_sha256": "95486a012893bf9b2dd7f93fbc2e8e37a8ef89bc06e2885ae2dfcde41ef77344",
+  "source_dataset_version": "6e3cc034cab1e9d203e22f6aa20c30a20fe850411f477f09b9bd73440ef7be00",
+  "source_data_modified": false,
+  "original_frozen_packages_modified": false,
+  "jobs_submitted": false,
+  "scope": "CPU interface and read-only release checks; no training, decomposition, full dataset hashing/copy, or generation.",
+  "prepare_sha256": "792184c2470ba60fff49fbd1756279a0274aa108f4f2b7e0972a7482ed9c8e8f",
+  "operation_manifest_sha256": "cb64270498d045f5d97bd750545b05add46b79ed0bfe21a675727e1b913f9c32",
+  "frozen_files_verified": 5,
+  "cpu_tests": 7,
+  "test_runs": [
+    {
+      "command": "python -B test_prepare.py",
+      "tests": 6,
+      "seconds": 140.836,
+      "result": "passed"
+    },
+    {
+      "command": "python -B -m unittest -v test_prepare.CompletedOutputIsNotTrustedTests",
+      "tests": 1,
+      "seconds": 0.004,
+      "result": "passed"
+    }
+  ],
+  "real_source_ready": "passed (3125 cases, 3129 checksum-list entries, original split membership)",
+  "original_builder_regression": "_split_counts(3125,0.8,0.1)==(2499,313,313)",
+  "wrong_old_counts_rejected": true,
+  "existing_complete_cannot_skip_archive_checks": true,
+  "syntax_checks": "passed",
+  "slurm_test_only": {
+    "exit_code": 0,
+    "estimated_start_server_local": "2026-11-12T17:12:25",
+    "dependency": null
+  },
+  "dependency_change": "Old completed3515292 afterok rejected by controller; removed only scheduler dependency. Strict completed-source and pinned hash gates remain."
+}
