@@ -2,6 +2,8 @@
 
 这是服务器实验的代码与结果快照，适用于把后续工作交给本地 Codex。服务器负责 DiT3D、Tensor-DiT、Flow3D-DPS，覆盖 JHTDB、FS-SPH 和 LBM。LBM 50 万轨迹已完成生成与校验，修订后的适配和模型作业已提交排队。原 8 个 baseline 作业已取消转本地，已有结果保留。最新分工见 [work_assignment.json](results/work_assignment.json)。
 
+**2026-11-08 本地结果更新。** JHTDB 的 DeepONet、UNet、FNO 和 UNet diffusion 已各完成 100 轮训练和 313 个独立 test 案例。[查看训练记录与 test 指标](results/local_jhtdb_s31_20261108/README.md)。
+
 ## 从这里开始
 
 ```powershell
@@ -11,7 +13,7 @@ git config core.autocrlf false
 python local_support/local_baselines.py list
 ```
 
-然后阅读 [本地运行说明](local_support/README.txt) 和 [Codex 接续约定](AGENTS.md)。这份代码在服务器端做过 CPU 检查；尚未在你的 Windows / RTX 5090 笔记本上做 CUDA 实测。Tensor-DiT 的冻结准备代码使用 Linux 文件锁，需 WSL2/Linux 的独立本地入口。
+然后阅读 [本地运行说明](local_support/README.txt) 和 [Codex 接续约定](AGENTS.md)。上述四项 JHTDB 训练与 test 已在 Windows / RTX 5090 Laptop GPU 上实际完成。Tensor-DiT 的冻结准备代码使用 Linux 文件锁，需 WSL2/Linux 的独立本地入口。
 
 ## 包含的模型
 
@@ -28,7 +30,7 @@ python local_support/local_baselines.py list
 
 ## 已有结果与服务器分工
 
-[结果摘要](results/summary.json)、[训练记录 CSV](results/current_training_objectives.csv)、[完整结果索引](results/results_inventory.json) 保存导出时的证据。训练 loss、校准分数、旧数据集的验证结果分别标注，不能视为本轮统一的最终测试集对比。
+[结果摘要](results/summary.json)、[训练记录 CSV](results/current_training_objectives.csv)、[完整结果索引](results/results_inventory.json) 保存 2026-11-03 交接快照的证据。训练 loss、校准分数、旧数据集的验证结果分别标注，不能视为本轮统一的最终测试集对比。
 
 | 实验 | 导出时状态 |
 | --- | --- |
@@ -59,6 +61,8 @@ python results/transfer_assets.py --list
 完整复制适配数据目录，保持 manifest 与 NPZ 的相对布局；不要修改 manifest 内容或冻结源文件的换行。下载目标应是本仓库根目录，权重放在 `results/` 对应运行目录，数据放在 `data/`；这些下载文件和本地新输出已加入忽略规则。
 
 ## 给本地 Codex 的任务
+
+以下是初始交接计划，四项 JHTDB 训练和 test 的最新状态见上方的本地结果更新。
 
 > 阅读仓库根目录 AGENTS.md 和 local_support/README.txt，核对已完成结果与服务器分工。
 > 先配置本机 CUDA、按需取回适配数据和 checkpoint，完成独立的单案例 validation smoke。

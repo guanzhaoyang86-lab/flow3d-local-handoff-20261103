@@ -1,3 +1,11 @@
+Local JHTDB result update — 2026-11-08 (Asia/Shanghai)
+
+See local_jhtdb_s31_20261108/README.md and local_jhtdb_s31_20261108/summary.json.
+DeepONet, UNet, FNO and UNet diffusion each completed 100 epochs and all
+313 held-out JHTDB test cases with seed 31 and 12 observed particles.
+This dated supplement includes epoch histories and per-case metrics.
+The November 3 files described below retain the original server export.
+
 Flow3D completed-result metadata export — 2026-11-03
 
 Start with summary.json. results_inventory.json gives source paths, dataset scope,

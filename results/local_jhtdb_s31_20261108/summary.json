@@ -1,0 +1,1109 @@
+{
+  "format": "flow3d-local-jhtdb-publication-v1",
+  "dataset": "JHTDB",
+  "dataset_scope": "spatial holdout from a single frozen scientific DNS snapshot",
+  "source_git_commit": "53c91bff53a61ea08f74b24cdf77d1700988fa79",
+  "dataset_manifest_sha256": "9b2faf3c0f28c6322fe7e071f1ca2fa914a191c052df674cdc0c8d8f9accdfb6",
+  "frozen_source_manifest_sha256": "93f9c8c20722a60405cf8a0e2f0778a7df2ab431b3875a2f7ddf47b1081b4d7c",
+  "split_counts": {
+    "train": 2500,
+    "validation": 312,
+    "test": 313
+  },
+  "training_seed": 31,
+  "num_particles": 12,
+  "runtime": {
+    "os": "Windows x86-64",
+    "python": "3.12.4",
+    "torch": "2.9.1+cu128",
+    "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU"
+  },
+  "training_completed_at_utc": "2026-11-07T19:34:45.114687+00:00",
+  "test_completed_at_utc": "2026-11-07T23:52:53.080566+00:00",
+  "test_completed_at_beijing": "2026-11-08T07:52:53.080566+08:00",
+  "aggregation": "Equal-weight mean across 313 held-out cases within the single training seed.",
+  "metric_definitions": {
+    "field_relative_l2": "Relative L2 over the unknown fluid interior, averaged over samples within each case.",
+    "mean_field_relative_l2": "Relative L2 over the unknown fluid interior of the mean prediction field.",
+    "probe_rmse": "Post-hoc probe trajectory RMSE in grid cells, using all stored cameras for triangulation.",
+    "observed_track_rmse": "Observed trajectory replay RMSE in grid cells."
+  },
+  "models": [
+    {
+      "model": "deeponet",
+      "training": {
+        "config": {
+          "seed": 31,
+          "num_particles": 12,
+          "views": [
+            0
+          ],
+          "boundary_projection": "none",
+          "epochs": 100,
+          "batch_size": 1,
+          "learning_rate": 0.0002,
+          "weight_decay": 0.0001,
+          "gradient_clip": 1.0,
+          "ema_decay": 0.999,
+          "amp": true,
+          "condition_dim": 128,
+          "condition_flow_grid": 4,
+          "condition_flow_weight": 0.1,
+          "condition_dropout": 0.1,
+          "diffusion_steps": 1000,
+          "prediction_type": "v",
+          "sampling_steps": 50,
+          "sampling_eta": 1.0,
+          "cfg_scale": 1.0,
+          "clip_x0": 8.0,
+          "observation_seed": 47,
+          "sampling_seed": 47,
+          "num_probes": 32,
+          "num_samples": 2,
+          "fit_steps": 1000,
+          "fit_learning_rate": 0.01,
+          "sigma": 0.05,
+          "coefficient_weight": 0.0001,
+          "depth_learning_rate": 0.01,
+          "unet": {
+            "base_channels": 32,
+            "channel_multipliers": [
+              1,
+              2,
+              4
+            ],
+            "dropout": 0.0
+          },
+          "cnn": {
+            "width": 32,
+            "depth": 4
+          },
+          "fno": {
+            "width": 32,
+            "depth": 4,
+            "modes": 8,
+            "padding": 4
+          },
+          "deeponet": {
+            "latent": 128,
+            "hidden": 128,
+            "layers": 3
+          },
+          "unet_diffusion": {
+            "base_channels": 16,
+            "channel_multipliers": [
+              1,
+              2,
+              4
+            ],
+            "time_embedding_dim": 64,
+            "dropout": 0.0
+          },
+          "pod": {
+            "rank": 32
+          },
+          "rbf": {
+            "centers_per_axis": 4,
+            "length_scale": 0.35,
+            "ridge": 0.0001
+          },
+          "pinn": {
+            "hidden": 128,
+            "layers": 5,
+            "viscosity": null,
+            "collocation_points": 1024,
+            "fit_steps": 2000,
+            "learning_rate": 0.001,
+            "divergence_weight": 1.0,
+            "momentum_weight": 1.0
+          }
+        },
+        "normalization_fit_split": "train",
+        "checkpoint_weights": "ema",
+        "final_epoch": {
+          "epoch": 100,
+          "train_loss": 0.4390785499356687,
+          "validation_loss": 0.5178233513083214,
+          "optimizer_steps": 249896,
+          "amp_skips": 104,
+          "elapsed_seconds": 63.07899999999972
+        },
+        "minimum_validation_loss": 0.4700838013504369,
+        "minimum_validation_epoch": 15,
+        "sum_epoch_seconds": 6274.780000000001,
+        "run_record_sha256": "7a48849e1b5767a72925dec4eb752c34d8f231a571eb2ec22e986292fcfc2bd2",
+        "source_history_sha256": "2ca19ff5f3c48f92bb7928419efdea81392a5f5c357f7f81e5c830416611e35f",
+        "history": "deeponet/history.jsonl",
+        "exported_history_sha256": "6c48d4f7f7361780509acdd9e1b3fc0612389bcc72fa5dcaad84f78dda1ef536"
+      },
+      "test": {
+        "protocol": {
+          "model": "deeponet",
+          "num_particles": 12,
+          "training_num_particles": 12,
+          "training_views": [
+            0
+          ],
+          "training_boundary_projection": "none",
+          "checkpoint_selection": "final_epoch",
+          "checkpoint_epoch": 100,
+          "views": [
+            0
+          ],
+          "boundary_projection": "none",
+          "split": "test",
+          "manifest_sha256": "9b2faf3c0f28c6322fe7e071f1ca2fa914a191c052df674cdc0c8d8f9accdfb6",
+          "scope": "steady_3d_projected_trajectory_reconstruction",
+          "observation_protocol": "single_view",
+          "evaluation_protocol": {
+            "field_region": "unknown_fluid_interior",
+            "probe_error_views": "all_stored_cameras",
+            "probe_initialization": "triangulated_from_all_stored_cameras_posthoc_only",
+            "extra_probe_information_used_for_generation": false
+          },
+          "prediction_type": "point_estimate",
+          "actual_predictions": 1,
+          "scientific_dataset": true,
+          "physical_information": {},
+          "config": {
+            "num_particles": 12,
+            "views": [
+              0
+            ],
+            "boundary_projection": "none",
+            "epochs": 100,
+            "batch_size": 1,
+            "learning_rate": 0.0002,
+            "weight_decay": 0.0001,
+            "gradient_clip": 1.0,
+            "ema_decay": 0.999,
+            "amp": true,
+            "condition_dim": 128,
+            "condition_flow_grid": 4,
+            "condition_flow_weight": 0.1,
+            "condition_dropout": 0.1,
+            "diffusion_steps": 1000,
+            "prediction_type": "v",
+            "sampling_steps": 50,
+            "sampling_eta": 1.0,
+            "cfg_scale": 1.0,
+            "clip_x0": 8.0,
+            "observation_seed": 47,
+            "sampling_seed": 47,
+            "num_probes": 32,
+            "num_samples": 2,
+            "fit_steps": 1000,
+            "fit_learning_rate": 0.01,
+            "sigma": 0.05,
+            "coefficient_weight": 0.0001,
+            "depth_learning_rate": 0.01,
+            "unet": {
+              "base_channels": 32,
+              "channel_multipliers": [
+                1,
+                2,
+                4
+              ],
+              "dropout": 0.0
+            },
+            "cnn": {
+              "width": 32,
+              "depth": 4
+            },
+            "fno": {
+              "width": 32,
+              "depth": 4,
+              "modes": 8,
+              "padding": 4
+            },
+            "deeponet": {
+              "latent": 128,
+              "hidden": 128,
+              "layers": 3
+            },
+            "unet_diffusion": {
+              "base_channels": 16,
+              "channel_multipliers": [
+                1,
+                2,
+                4
+              ],
+              "time_embedding_dim": 64,
+              "dropout": 0.0
+            },
+            "pod": {
+              "rank": 32
+            },
+            "rbf": {
+              "centers_per_axis": 4,
+              "length_scale": 0.35,
+              "ridge": 0.0001
+            },
+            "pinn": {
+              "hidden": 128,
+              "layers": 5,
+              "viscosity": null,
+              "collocation_points": 1024,
+              "fit_steps": 2000,
+              "learning_rate": 0.001,
+              "divergence_weight": 1.0,
+              "momentum_weight": 1.0
+            }
+          }
+        },
+        "case_count": 313,
+        "metrics": {
+          "field_relative_l2": {
+            "mean": 0.7208579865316994,
+            "std": null,
+            "seed_count": 1
+          },
+          "mean_field_relative_l2": {
+            "mean": 0.7208579865316994,
+            "std": null,
+            "seed_count": 1
+          },
+          "probe_rmse": {
+            "mean": 0.21349932120059625,
+            "std": null,
+            "seed_count": 1
+          },
+          "observed_track_rmse": {
+            "mean": 0.08427556399434519,
+            "std": null,
+            "seed_count": 1
+          },
+          "replay_valid_fraction": {
+            "mean": 0.9895101275306921,
+            "std": null,
+            "seed_count": 1
+          },
+          "prediction_valid_fraction": {
+            "mean": 0.8434504792332268,
+            "std": null,
+            "seed_count": 1
+          },
+          "generation_fitting_and_diagnostics_seconds": {
+            "mean": 9.230638977635651,
+            "std": null,
+            "seed_count": 1
+          }
+        },
+        "completed_at_utc": "2026-11-07T20:27:01.693638+00:00",
+        "checkpoint_sha256": "3879ccf1e8adac4cc78370addff0b4edf44ca29ee4da46c43c4bbbbd2ed3ab38",
+        "source_request_sha256": "af3c7845e8940e50fb691aad143e92969f5088d76af0af8914392471583ef962",
+        "source_summary_sha256": "5862965947d6f8de59d7e44dac0357274e7a7b6a66bc7db1b66f079fa865c915",
+        "source_per_case_metrics_sha256": "0dfc98adc78e9fb7cdbce1367268461f2a71f5e73c0c963cf3231ddb449f3579",
+        "per_case_metrics": "deeponet/per_case_metrics.jsonl",
+        "exported_per_case_metrics_sha256": "c831da9daa2d2df3c9b1af0546b49c62a93caea412c7adacae995aa2c6f7ed89"
+      }
+    },
+    {
+      "model": "unet",
+      "training": {
+        "config": {
+          "seed": 31,
+          "num_particles": 12,
+          "views": [
+            0
+          ],
+          "boundary_projection": "none",
+          "epochs": 100,
+          "batch_size": 1,
+          "learning_rate": 0.0002,
+          "weight_decay": 0.0001,
+          "gradient_clip": 1.0,
+          "ema_decay": 0.999,
+          "amp": true,
+          "condition_dim": 128,
+          "condition_flow_grid": 4,
+          "condition_flow_weight": 0.1,
+          "condition_dropout": 0.1,
+          "diffusion_steps": 1000,
+          "prediction_type": "v",
+          "sampling_steps": 50,
+          "sampling_eta": 1.0,
+          "cfg_scale": 1.0,
+          "clip_x0": 8.0,
+          "observation_seed": 47,
+          "sampling_seed": 47,
+          "num_probes": 32,
+          "num_samples": 2,
+          "fit_steps": 1000,
+          "fit_learning_rate": 0.01,
+          "sigma": 0.05,
+          "coefficient_weight": 0.0001,
+          "depth_learning_rate": 0.01,
+          "unet": {
+            "base_channels": 32,
+            "channel_multipliers": [
+              1,
+              2,
+              4
+            ],
+            "dropout": 0.0
+          },
+          "cnn": {
+            "width": 32,
+            "depth": 4
+          },
+          "fno": {
+            "width": 32,
+            "depth": 4,
+            "modes": 8,
+            "padding": 4
+          },
+          "deeponet": {
+            "latent": 128,
+            "hidden": 128,
+            "layers": 3
+          },
+          "unet_diffusion": {
+            "base_channels": 16,
+            "channel_multipliers": [
+              1,
+              2,
+              4
+            ],
+            "time_embedding_dim": 64,
+            "dropout": 0.0
+          },
+          "pod": {
+            "rank": 32
+          },
+          "rbf": {
+            "centers_per_axis": 4,
+            "length_scale": 0.35,
+            "ridge": 0.0001
+          },
+          "pinn": {
+            "hidden": 128,
+            "layers": 5,
+            "viscosity": null,
+            "collocation_points": 1024,
+            "fit_steps": 2000,
+            "learning_rate": 0.001,
+            "divergence_weight": 1.0,
+            "momentum_weight": 1.0
+          }
+        },
+        "normalization_fit_split": "train",
+        "checkpoint_weights": "ema",
+        "final_epoch": {
+          "epoch": 100,
+          "train_loss": 0.45275530369132755,
+          "validation_loss": 0.4928297436891649,
+          "optimizer_steps": 249900,
+          "amp_skips": 100,
+          "elapsed_seconds": 186.26499999999942
+        },
+        "minimum_validation_loss": 0.4658855173068169,
+        "minimum_validation_epoch": 19,
+        "sum_epoch_seconds": 18478.37800000001,
+        "run_record_sha256": "1fc47b668b76fb092b419fb648e080d6b71a8a17c0f1dc73908c9a40adb79641",
+        "source_history_sha256": "7964803e631b65e960db783afa329c79becc87c3034a1211034f1488dfd173fa",
+        "history": "unet/history.jsonl",
+        "exported_history_sha256": "3e807593e73d834660179d1f8c24c01688456ec7261349b1fc2556686bb61e8c"
+      },
+      "test": {
+        "protocol": {
+          "model": "unet",
+          "num_particles": 12,
+          "training_num_particles": 12,
+          "training_views": [
+            0
+          ],
+          "training_boundary_projection": "none",
+          "checkpoint_selection": "final_epoch",
+          "checkpoint_epoch": 100,
+          "views": [
+            0
+          ],
+          "boundary_projection": "none",
+          "split": "test",
+          "manifest_sha256": "9b2faf3c0f28c6322fe7e071f1ca2fa914a191c052df674cdc0c8d8f9accdfb6",
+          "scope": "steady_3d_projected_trajectory_reconstruction",
+          "observation_protocol": "single_view",
+          "evaluation_protocol": {
+            "field_region": "unknown_fluid_interior",
+            "probe_error_views": "all_stored_cameras",
+            "probe_initialization": "triangulated_from_all_stored_cameras_posthoc_only",
+            "extra_probe_information_used_for_generation": false
+          },
+          "prediction_type": "point_estimate",
+          "actual_predictions": 1,
+          "scientific_dataset": true,
+          "physical_information": {},
+          "config": {
+            "num_particles": 12,
+            "views": [
+              0
+            ],
+            "boundary_projection": "none",
+            "epochs": 100,
+            "batch_size": 1,
+            "learning_rate": 0.0002,
+            "weight_decay": 0.0001,
+            "gradient_clip": 1.0,
+            "ema_decay": 0.999,
+            "amp": true,
+            "condition_dim": 128,
+            "condition_flow_grid": 4,
+            "condition_flow_weight": 0.1,
+            "condition_dropout": 0.1,
+            "diffusion_steps": 1000,
+            "prediction_type": "v",
+            "sampling_steps": 50,
+            "sampling_eta": 1.0,
+            "cfg_scale": 1.0,
+            "clip_x0": 8.0,
+            "observation_seed": 47,
+            "sampling_seed": 47,
+            "num_probes": 32,
+            "num_samples": 2,
+            "fit_steps": 1000,
+            "fit_learning_rate": 0.01,
+            "sigma": 0.05,
+            "coefficient_weight": 0.0001,
+            "depth_learning_rate": 0.01,
+            "unet": {
+              "base_channels": 32,
+              "channel_multipliers": [
+                1,
+                2,
+                4
+              ],
+              "dropout": 0.0
+            },
+            "cnn": {
+              "width": 32,
+              "depth": 4
+            },
+            "fno": {
+              "width": 32,
+              "depth": 4,
+              "modes": 8,
+              "padding": 4
+            },
+            "deeponet": {
+              "latent": 128,
+              "hidden": 128,
+              "layers": 3
+            },
+            "unet_diffusion": {
+              "base_channels": 16,
+              "channel_multipliers": [
+                1,
+                2,
+                4
+              ],
+              "time_embedding_dim": 64,
+              "dropout": 0.0
+            },
+            "pod": {
+              "rank": 32
+            },
+            "rbf": {
+              "centers_per_axis": 4,
+              "length_scale": 0.35,
+              "ridge": 0.0001
+            },
+            "pinn": {
+              "hidden": 128,
+              "layers": 5,
+              "viscosity": null,
+              "collocation_points": 1024,
+              "fit_steps": 2000,
+              "learning_rate": 0.001,
+              "divergence_weight": 1.0,
+              "momentum_weight": 1.0
+            }
+          }
+        },
+        "case_count": 313,
+        "metrics": {
+          "field_relative_l2": {
+            "mean": 0.7080479598940371,
+            "std": null,
+            "seed_count": 1
+          },
+          "mean_field_relative_l2": {
+            "mean": 0.7080479598940371,
+            "std": null,
+            "seed_count": 1
+          },
+          "probe_rmse": {
+            "mean": 0.20898743285633886,
+            "std": null,
+            "seed_count": 1
+          },
+          "observed_track_rmse": {
+            "mean": 0.08036400894292246,
+            "std": null,
+            "seed_count": 1
+          },
+          "replay_valid_fraction": {
+            "mean": 0.9851038488336264,
+            "std": null,
+            "seed_count": 1
+          },
+          "prediction_valid_fraction": {
+            "mean": 0.7827476038338658,
+            "std": null,
+            "seed_count": 1
+          },
+          "generation_fitting_and_diagnostics_seconds": {
+            "mean": 9.170076677315866,
+            "std": null,
+            "seed_count": 1
+          }
+        },
+        "completed_at_utc": "2026-11-07T21:18:35.001962+00:00",
+        "checkpoint_sha256": "1e03a77c089128f26b2dfd1bc08a5060094d7502ecd27f9e4b406257fcdef475",
+        "source_request_sha256": "203dffc1f38b5bff2f7a2aa26b3eeec5f5bfdfe6b55f773bd6711a716891f8c4",
+        "source_summary_sha256": "770125c01572363e8b0437842b8533b91721e83422f9c25a9fd88663707442d4",
+        "source_per_case_metrics_sha256": "2e6be987d6befc5a7e03130b7c5d31d59395c9570dc6136ae7b801e8c4be6c1b",
+        "per_case_metrics": "unet/per_case_metrics.jsonl",
+        "exported_per_case_metrics_sha256": "71f528a2d924f41be16db274770e96817e64305760599936337d45dc1aaa5592"
+      }
+    },
+    {
+      "model": "fno",
+      "training": {
+        "config": {
+          "seed": 31,
+          "num_particles": 12,
+          "views": [
+            0
+          ],
+          "boundary_projection": "none",
+          "epochs": 100,
+          "batch_size": 1,
+          "learning_rate": 0.0002,
+          "weight_decay": 0.0001,
+          "gradient_clip": 1.0,
+          "ema_decay": 0.999,
+          "amp": true,
+          "condition_dim": 128,
+          "condition_flow_grid": 4,
+          "condition_flow_weight": 0.1,
+          "condition_dropout": 0.1,
+          "diffusion_steps": 1000,
+          "prediction_type": "v",
+          "sampling_steps": 50,
+          "sampling_eta": 1.0,
+          "cfg_scale": 1.0,
+          "clip_x0": 8.0,
+          "observation_seed": 47,
+          "sampling_seed": 47,
+          "num_probes": 32,
+          "num_samples": 2,
+          "fit_steps": 1000,
+          "fit_learning_rate": 0.01,
+          "sigma": 0.05,
+          "coefficient_weight": 0.0001,
+          "depth_learning_rate": 0.01,
+          "unet": {
+            "base_channels": 32,
+            "channel_multipliers": [
+              1,
+              2,
+              4
+            ],
+            "dropout": 0.0
+          },
+          "cnn": {
+            "width": 32,
+            "depth": 4
+          },
+          "fno": {
+            "width": 32,
+            "depth": 4,
+            "modes": 8,
+            "padding": 4
+          },
+          "deeponet": {
+            "latent": 128,
+            "hidden": 128,
+            "layers": 3
+          },
+          "unet_diffusion": {
+            "base_channels": 16,
+            "channel_multipliers": [
+              1,
+              2,
+              4
+            ],
+            "time_embedding_dim": 64,
+            "dropout": 0.0
+          },
+          "pod": {
+            "rank": 32
+          },
+          "rbf": {
+            "centers_per_axis": 4,
+            "length_scale": 0.35,
+            "ridge": 0.0001
+          },
+          "pinn": {
+            "hidden": 128,
+            "layers": 5,
+            "viscosity": null,
+            "collocation_points": 1024,
+            "fit_steps": 2000,
+            "learning_rate": 0.001,
+            "divergence_weight": 1.0,
+            "momentum_weight": 1.0
+          }
+        },
+        "normalization_fit_split": "train",
+        "checkpoint_weights": "ema",
+        "final_epoch": {
+          "epoch": 100,
+          "train_loss": 0.4205144862890244,
+          "validation_loss": 0.5251208673326824,
+          "optimizer_steps": 249897,
+          "amp_skips": 103,
+          "elapsed_seconds": 117.10900000000402
+        },
+        "minimum_validation_loss": 0.47755471969214386,
+        "minimum_validation_epoch": 14,
+        "sum_epoch_seconds": 11757.003999999997,
+        "run_record_sha256": "9b66e956905141b1a628ad65d307e1eb4a31cffd51052ed2fe6f3ef391658596",
+        "source_history_sha256": "db477cc2b69eebc5318d531645d26580af8d3b74a5b77bebc4c2a85a4600eaf2",
+        "history": "fno/history.jsonl",
+        "exported_history_sha256": "47460814da26c4ca20c1209d9938f436b519f0a1efcaed01d361e132dc0a92a6"
+      },
+      "test": {
+        "protocol": {
+          "model": "fno",
+          "num_particles": 12,
+          "training_num_particles": 12,
+          "training_views": [
+            0
+          ],
+          "training_boundary_projection": "none",
+          "checkpoint_selection": "final_epoch",
+          "checkpoint_epoch": 100,
+          "views": [
+            0
+          ],
+          "boundary_projection": "none",
+          "split": "test",
+          "manifest_sha256": "9b2faf3c0f28c6322fe7e071f1ca2fa914a191c052df674cdc0c8d8f9accdfb6",
+          "scope": "steady_3d_projected_trajectory_reconstruction",
+          "observation_protocol": "single_view",
+          "evaluation_protocol": {
+            "field_region": "unknown_fluid_interior",
+            "probe_error_views": "all_stored_cameras",
+            "probe_initialization": "triangulated_from_all_stored_cameras_posthoc_only",
+            "extra_probe_information_used_for_generation": false
+          },
+          "prediction_type": "point_estimate",
+          "actual_predictions": 1,
+          "scientific_dataset": true,
+          "physical_information": {},
+          "config": {
+            "num_particles": 12,
+            "views": [
+              0
+            ],
+            "boundary_projection": "none",
+            "epochs": 100,
+            "batch_size": 1,
+            "learning_rate": 0.0002,
+            "weight_decay": 0.0001,
+            "gradient_clip": 1.0,
+            "ema_decay": 0.999,
+            "amp": true,
+            "condition_dim": 128,
+            "condition_flow_grid": 4,
+            "condition_flow_weight": 0.1,
+            "condition_dropout": 0.1,
+            "diffusion_steps": 1000,
+            "prediction_type": "v",
+            "sampling_steps": 50,
+            "sampling_eta": 1.0,
+            "cfg_scale": 1.0,
+            "clip_x0": 8.0,
+            "observation_seed": 47,
+            "sampling_seed": 47,
+            "num_probes": 32,
+            "num_samples": 2,
+            "fit_steps": 1000,
+            "fit_learning_rate": 0.01,
+            "sigma": 0.05,
+            "coefficient_weight": 0.0001,
+            "depth_learning_rate": 0.01,
+            "unet": {
+              "base_channels": 32,
+              "channel_multipliers": [
+                1,
+                2,
+                4
+              ],
+              "dropout": 0.0
+            },
+            "cnn": {
+              "width": 32,
+              "depth": 4
+            },
+            "fno": {
+              "width": 32,
+              "depth": 4,
+              "modes": 8,
+              "padding": 4
+            },
+            "deeponet": {
+              "latent": 128,
+              "hidden": 128,
+              "layers": 3
+            },
+            "unet_diffusion": {
+              "base_channels": 16,
+              "channel_multipliers": [
+                1,
+                2,
+                4
+              ],
+              "time_embedding_dim": 64,
+              "dropout": 0.0
+            },
+            "pod": {
+              "rank": 32
+            },
+            "rbf": {
+              "centers_per_axis": 4,
+              "length_scale": 0.35,
+              "ridge": 0.0001
+            },
+            "pinn": {
+              "hidden": 128,
+              "layers": 5,
+              "viscosity": null,
+              "collocation_points": 1024,
+              "fit_steps": 2000,
+              "learning_rate": 0.001,
+              "divergence_weight": 1.0,
+              "momentum_weight": 1.0
+            }
+          }
+        },
+        "case_count": 313,
+        "metrics": {
+          "field_relative_l2": {
+            "mean": 0.7390695016224164,
+            "std": null,
+            "seed_count": 1
+          },
+          "mean_field_relative_l2": {
+            "mean": 0.7390695016224164,
+            "std": null,
+            "seed_count": 1
+          },
+          "probe_rmse": {
+            "mean": 0.21803070844029085,
+            "std": null,
+            "seed_count": 1
+          },
+          "observed_track_rmse": {
+            "mean": 0.08551876724789889,
+            "std": null,
+            "seed_count": 1
+          },
+          "replay_valid_fraction": {
+            "mean": 0.982321635412332,
+            "std": null,
+            "seed_count": 1
+          },
+          "prediction_valid_fraction": {
+            "mean": 0.731629392971246,
+            "std": null,
+            "seed_count": 1
+          },
+          "generation_fitting_and_diagnostics_seconds": {
+            "mean": 9.242156549520715,
+            "std": null,
+            "seed_count": 1
+          }
+        },
+        "completed_at_utc": "2026-11-07T22:10:39.667796+00:00",
+        "checkpoint_sha256": "5279419d36d2eb39e19d6fe236d7cac856ab7fa83978fe239961954eef7f6ece",
+        "source_request_sha256": "87fc382af96843a84e1bad98bb03369c785643be9ab75d80fab6219dfc8c5897",
+        "source_summary_sha256": "45a8ad0f57b842321ae2c32ca30514136d6ea8619cc24a89054ec5fda977868d",
+        "source_per_case_metrics_sha256": "cdf022792f873b6ecadcd56a21636db10ba8cdddebe5807b0d0041fcb083f8a6",
+        "per_case_metrics": "fno/per_case_metrics.jsonl",
+        "exported_per_case_metrics_sha256": "45cca3b6b53ad5f57ab9ab416292c996014ac86629cf07db397f0de31a29d2d3"
+      }
+    },
+    {
+      "model": "unet_diffusion",
+      "training": {
+        "config": {
+          "seed": 31,
+          "num_particles": 12,
+          "views": [
+            0
+          ],
+          "boundary_projection": "none",
+          "epochs": 100,
+          "batch_size": 1,
+          "learning_rate": 0.0002,
+          "weight_decay": 0.0001,
+          "gradient_clip": 1.0,
+          "ema_decay": 0.999,
+          "amp": true,
+          "condition_dim": 128,
+          "condition_flow_grid": 4,
+          "condition_flow_weight": 0.1,
+          "condition_dropout": 0.1,
+          "diffusion_steps": 1000,
+          "prediction_type": "v",
+          "sampling_steps": 50,
+          "sampling_eta": 1.0,
+          "cfg_scale": 1.0,
+          "clip_x0": 8.0,
+          "observation_seed": 47,
+          "sampling_seed": 47,
+          "num_probes": 32,
+          "num_samples": 2,
+          "fit_steps": 1000,
+          "fit_learning_rate": 0.01,
+          "sigma": 0.05,
+          "coefficient_weight": 0.0001,
+          "depth_learning_rate": 0.01,
+          "unet": {
+            "base_channels": 32,
+            "channel_multipliers": [
+              1,
+              2,
+              4
+            ],
+            "dropout": 0.0
+          },
+          "cnn": {
+            "width": 32,
+            "depth": 4
+          },
+          "fno": {
+            "width": 32,
+            "depth": 4,
+            "modes": 8,
+            "padding": 4
+          },
+          "deeponet": {
+            "latent": 128,
+            "hidden": 128,
+            "layers": 3
+          },
+          "unet_diffusion": {
+            "base_channels": 16,
+            "channel_multipliers": [
+              1,
+              2,
+              4
+            ],
+            "time_embedding_dim": 64,
+            "dropout": 0.0
+          },
+          "pod": {
+            "rank": 32
+          },
+          "rbf": {
+            "centers_per_axis": 4,
+            "length_scale": 0.35,
+            "ridge": 0.0001
+          },
+          "pinn": {
+            "hidden": 128,
+            "layers": 5,
+            "viscosity": null,
+            "collocation_points": 1024,
+            "fit_steps": 2000,
+            "learning_rate": 0.001,
+            "divergence_weight": 1.0,
+            "momentum_weight": 1.0
+          }
+        },
+        "normalization_fit_split": "train",
+        "checkpoint_weights": "ema",
+        "final_epoch": {
+          "epoch": 100,
+          "train_loss": 0.0716968255314976,
+          "validation_loss": 0.06970639900268558,
+          "optimizer_steps": 249902,
+          "amp_skips": 98,
+          "elapsed_seconds": 190.17199999999866
+        },
+        "minimum_validation_loss": 0.0685966139098104,
+        "minimum_validation_epoch": 98,
+        "sum_epoch_seconds": 18934.74700000001,
+        "run_record_sha256": "00b67121cb87efb4856f191d28c0cd633462ae3fc66c7289d7ea87897f705590",
+        "source_history_sha256": "9bacd7e057ff08a901c3d6a0ce82bb9c628c2aeb73b40a34c46469dfaf1b805f",
+        "history": "unet_diffusion/history.jsonl",
+        "exported_history_sha256": "cf96762241ddd9508afe2da6e20eb00a5261024266ab7a8a446ece49dbbccd12"
+      },
+      "test": {
+        "protocol": {
+          "model": "unet_diffusion",
+          "num_particles": 12,
+          "training_num_particles": 12,
+          "training_views": [
+            0
+          ],
+          "training_boundary_projection": "none",
+          "checkpoint_selection": "final_epoch",
+          "checkpoint_epoch": 100,
+          "views": [
+            0
+          ],
+          "boundary_projection": "none",
+          "split": "test",
+          "manifest_sha256": "9b2faf3c0f28c6322fe7e071f1ca2fa914a191c052df674cdc0c8d8f9accdfb6",
+          "scope": "steady_3d_projected_trajectory_reconstruction",
+          "observation_protocol": "single_view",
+          "evaluation_protocol": {
+            "field_region": "unknown_fluid_interior",
+            "probe_error_views": "all_stored_cameras",
+            "probe_initialization": "triangulated_from_all_stored_cameras_posthoc_only",
+            "extra_probe_information_used_for_generation": false
+          },
+          "prediction_type": "conditional_diffusion_samples",
+          "actual_predictions": 2,
+          "scientific_dataset": true,
+          "physical_information": {},
+          "config": {
+            "num_particles": 12,
+            "views": [
+              0
+            ],
+            "boundary_projection": "none",
+            "epochs": 100,
+            "batch_size": 1,
+            "learning_rate": 0.0002,
+            "weight_decay": 0.0001,
+            "gradient_clip": 1.0,
+            "ema_decay": 0.999,
+            "amp": true,
+            "condition_dim": 128,
+            "condition_flow_grid": 4,
+            "condition_flow_weight": 0.1,
+            "condition_dropout": 0.1,
+            "diffusion_steps": 1000,
+            "prediction_type": "v",
+            "sampling_steps": 50,
+            "sampling_eta": 1.0,
+            "cfg_scale": 1.0,
+            "clip_x0": 8.0,
+            "observation_seed": 47,
+            "sampling_seed": 47,
+            "num_probes": 32,
+            "num_samples": 2,
+            "fit_steps": 1000,
+            "fit_learning_rate": 0.01,
+            "sigma": 0.05,
+            "coefficient_weight": 0.0001,
+            "depth_learning_rate": 0.01,
+            "unet": {
+              "base_channels": 32,
+              "channel_multipliers": [
+                1,
+                2,
+                4
+              ],
+              "dropout": 0.0
+            },
+            "cnn": {
+              "width": 32,
+              "depth": 4
+            },
+            "fno": {
+              "width": 32,
+              "depth": 4,
+              "modes": 8,
+              "padding": 4
+            },
+            "deeponet": {
+              "latent": 128,
+              "hidden": 128,
+              "layers": 3
+            },
+            "unet_diffusion": {
+              "base_channels": 16,
+              "channel_multipliers": [
+                1,
+                2,
+                4
+              ],
+              "time_embedding_dim": 64,
+              "dropout": 0.0
+            },
+            "pod": {
+              "rank": 32
+            },
+            "rbf": {
+              "centers_per_axis": 4,
+              "length_scale": 0.35,
+              "ridge": 0.0001
+            },
+            "pinn": {
+              "hidden": 128,
+              "layers": 5,
+              "viscosity": null,
+              "collocation_points": 1024,
+              "fit_steps": 2000,
+              "learning_rate": 0.001,
+              "divergence_weight": 1.0,
+              "momentum_weight": 1.0
+            }
+          }
+        },
+        "case_count": 313,
+        "metrics": {
+          "field_relative_l2": {
+            "mean": 0.7988008855821226,
+            "std": null,
+            "seed_count": 1
+          },
+          "mean_field_relative_l2": {
+            "mean": 0.7624321340943296,
+            "std": null,
+            "seed_count": 1
+          },
+          "probe_rmse": {
+            "mean": 0.2348004426485814,
+            "std": null,
+            "seed_count": 1
+          },
+          "observed_track_rmse": {
+            "mean": 0.12086986527799036,
+            "std": null,
+            "seed_count": 1
+          },
+          "replay_valid_fraction": {
+            "mean": 0.9824081636465396,
+            "std": null,
+            "seed_count": 1
+          },
+          "prediction_valid_fraction": {
+            "mean": 0.7428115015974441,
+            "std": null,
+            "seed_count": 1
+          },
+          "generation_fitting_and_diagnostics_seconds": {
+            "mean": 18.64859744408964,
+            "std": null,
+            "seed_count": 1
+          }
+        },
+        "completed_at_utc": "2026-11-07T23:52:53.080566+00:00",
+        "checkpoint_sha256": "31c6d9020c33ecba6d9f73e4447bb744ed7a40abd69ddfb1ac6d0d3734680a3c",
+        "source_request_sha256": "b68e7b48bf1d4f4defe2e584f4895c9caba98d8ded5f11c95fc29de370bea282",
+        "source_summary_sha256": "8b1b9152b5faba852b6b3dc0c167852cbe7dbc268ad650c06efa9435b07d9556",
+        "source_per_case_metrics_sha256": "5e02af8f5b131bc51b14086f2f1ac073118bc1851a1d7e5003c8dde9bd092359",
+        "per_case_metrics": "unet_diffusion/per_case_metrics.jsonl",
+        "exported_per_case_metrics_sha256": "940de2e88451ac9036fc86791d53116e25d3640033016d400d9937a9e42166b0"
+      }
+    }
+  ]
+}
